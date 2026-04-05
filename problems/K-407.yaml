@@ -1,0 +1,22 @@
+id: K-407
+title: QNM excitation factors and universality theorems
+cluster: spectral-scattering
+status: open
+statement: Prove rigorous bounds and genericity results for how strongly specific
+  Kerr quasinormal modes are excited by broad classes of initial data.
+math_required: Green-function residues; asymptotics of radial and angular mode solutions;
+  contour methods; genericity in data spaces.
+why_it_matters: Even if modes exist, one still needs to know which ones are actually
+  visible for generic perturbations.
+completion_criteria: A complete answer must bound excitation coefficients in terms
+  of initial-data norms and prove generic nonzero excitation for specified mode families.
+implications: Would make the interpretive link between mathematical modes and observed
+  ringdown structure much sharper.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

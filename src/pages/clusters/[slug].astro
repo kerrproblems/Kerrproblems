@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllProblems, getStats, CLUSTER_LABELS } from '../../lib/problems.js';
+
+export async function getStaticPaths() {
+  return Object.keys(CLUSTER_LABELS).map(slug => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const allProblems = getAllProblems();
+const problems = allProblems.filter(p => p.cluster === slug);
+const stats = getStats(problems);
+const label = CLUSTER_LABELS[slug];
+---
+<Base title={label}>
+  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-bottom: 1.5rem">
+    <a href="/problems" style="color: var(--text-faint); border-bottom: none">Problems</a>
+    <span style="margin: 0 0.5rem">→</span>
+    {label}
+  </div>
+
+  <h1 style="margin-bottom: 1rem">{label}</h1>
+
+  <div style="display: flex; gap: 1.5rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2.5rem">
+    <span>{stats.total} problems</span>
+    <span style="color: var(--open)">{stats.open} open</span>
+    <span style="color: var(--partial)">{stats.partial} partial</span>
+  </div>
+
+  <div class="problem-grid">
+    {problems.map(p => (
+      <a href={`/problems/${p.id}`} class="problem-card">
+        <div class="card-id">{p.id}</div>
+        <div class="card-title">{p.title}</div>
+        <div class="card-meta">
+          <span class={`badge badge-${p.status}`}>{p.status}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>

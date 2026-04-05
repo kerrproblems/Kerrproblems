@@ -1,0 +1,340 @@
+/* ============================================
+   kerrproblems.com — Design System
+   Aesthetic: scientific precision meets deep space.
+   Dark background, high-contrast type, 
+   no decorative noise — only structural clarity.
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@300;400&family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+:root {
+  /* Palette */
+  --bg:          #0a0a0f;
+  --bg-surface:  #10101a;
+  --bg-raised:   #16161f;
+  --border:      #2a2a3a;
+  --border-light: #3a3a50;
+  --text:        #e8e4dc;
+  --text-muted:  #8a8699;
+  --text-faint:  #4a4860;
+  --accent:      #c8b97a;        /* warm gold — Kerr ring */
+  --accent-dim:  #7a6e40;
+  --open:        #e05a5a;
+  --partial:     #c8903a;
+  --conditional: #7a9ae0;
+  --solved:      #5ab87a;
+
+  /* Cluster colours */
+  --exterior:    #3a9a7a;
+  --interior:    #9a3a4a;
+  --extremal:    #3a5a9a;
+  --rigidity:    #7a3a9a;
+  --spectral:    #9a7a3a;
+
+  /* Typography */
+  --font-serif:  'EB Garamond', 'Cormorant Garamond', Georgia, serif;
+  --font-mono:   'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Layout */
+  --max-width:   860px;
+  --sidebar:     260px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-dim);
+  transition: border-color 0.15s, color 0.15s;
+}
+a:hover {
+  color: #fff;
+  border-color: var(--accent);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.4rem; }
+h2 { font-size: 1.6rem; color: var(--accent); margin-bottom: 0.5rem; }
+h3 { font-size: 1.2rem; }
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+code { padding: 0.1em 0.4em; }
+pre  { padding: 1rem; overflow-x: auto; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2.5rem 0;
+}
+
+/* Status badges */
+.badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2em 0.6em;
+  border-radius: 2px;
+  border: 1px solid;
+  font-weight: 400;
+}
+.badge-open        { color: var(--open);        border-color: var(--open);        background: rgba(224,90,90,0.08); }
+.badge-partial     { color: var(--partial);     border-color: var(--partial);     background: rgba(200,144,58,0.08); }
+.badge-conditional { color: var(--conditional); border-color: var(--conditional); background: rgba(122,154,224,0.08); }
+.badge-solved      { color: var(--solved);      border-color: var(--solved);      background: rgba(90,184,122,0.08); }
+
+/* Cluster badges */
+.cluster-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.15em 0.5em;
+  border-radius: 2px;
+}
+.cluster-exterior-stability   { background: rgba(58,154,122,0.15); color: var(--exterior); }
+.cluster-interior-scc         { background: rgba(154,58,74,0.15);  color: var(--interior); }
+.cluster-extremal             { background: rgba(58,90,154,0.15);  color: var(--extremal); }
+.cluster-rigidity-uniqueness  { background: rgba(122,58,154,0.15); color: var(--rigidity); }
+.cluster-spectral-scattering  { background: rgba(154,122,58,0.15); color: var(--spectral); }
+
+/* Problem card */
+.problem-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1.2rem 1.4rem;
+  transition: border-color 0.15s, background 0.15s;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+.problem-card:hover {
+  border-color: var(--border-light);
+  background: var(--bg-raised);
+  color: inherit;
+}
+.problem-card .card-id {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.3rem;
+}
+.problem-card .card-title {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+.problem-card .card-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Layout containers */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+.site-header .wordmark {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  border-bottom: none;
+}
+.site-header nav a {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin-left: 1.8rem;
+  color: var(--text-muted);
+  border-bottom: none;
+  letter-spacing: 0.04em;
+}
+.site-header nav a:hover { color: var(--text); }
+
+.page-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+}
+
+/* Problem detail sections */
+.problem-section {
+  margin: 2rem 0;
+}
+.problem-section h3 {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+.problem-section p {
+  color: var(--text);
+  max-width: 66ch;
+}
+
+/* Filter bar */
+.filter-bar {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+.filter-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.3em 0.8em;
+  border-radius: 2px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.12s;
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--bg-raised);
+}
+
+/* Stats bar */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+.stat-cell {
+  background: var(--bg-surface);
+  padding: 1rem 1.2rem;
+  text-align: center;
+}
+.stat-cell .stat-number {
+  font-family: var(--font-mono);
+  font-size: 1.8rem;
+  font-weight: 300;
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+.stat-cell .stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* Problem grid */
+.problem-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Difficulty pips */
+.difficulty-pips {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+.pip {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--border-light);
+}
+.pip.filled { background: var(--accent-dim); }
+
+/* Hero */
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 3rem;
+}
+.hero .tagline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  color: var(--text);
+  max-width: 20ch;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+.hero p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 58ch;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stats-bar { grid-template-columns: repeat(2, 1fr); }
+  h1 { font-size: 1.8rem; }
+  .site-header { padding: 1rem; }
+  .page-main  { padding: 2rem 1rem 4rem; }
+}

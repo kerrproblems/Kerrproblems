@@ -1,0 +1,21 @@
+id: K-303
+title: Quantitative Kerr characterization via the Mars–Simon tensor
+cluster: rigidity-uniqueness
+status: partial
+statement: Turn the invariant characterization of Kerr by vanishing Mars–Simon tensor
+  into a stable quantitative theorem with explicit constants.
+math_required: Invariant tensors; stationary Einstein equations; elliptic estimates;
+  quantitative rigidity.
+why_it_matters: An exact characterization is powerful, but a stability theorem needs
+  quantitative control.
+completion_criteria: A complete answer must bound distance to Kerr in terms of an
+  explicit norm of the Mars–Simon tensor and recover the nearby parameters effectively.
+implications: Would produce a practical near-Kerr recognition theorem.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

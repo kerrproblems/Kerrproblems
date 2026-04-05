@@ -1,0 +1,41 @@
+clusters:
+  exterior-stability:
+    label: "Exterior Stability"
+    slug: exterior-stability
+    description: >
+      Global exterior dynamics, decay, scattering, and radiation for 
+      near-Kerr spacetimes. Includes the main Kerr stability conjecture 
+      and its extensions to matter fields and near-extremal regimes.
+    color: "#1a6b5a"
+
+  interior-scc:
+    label: "Interior / SCC"
+    slug: interior-scc
+    description: >
+      Cauchy horizon structure, blue-shift instability, strong cosmic 
+      censorship, and the singularity structure of the Kerr interior.
+    color: "#6b1a2a"
+
+  extremal:
+    label: "Extremal / Near-Extremal"
+    slug: extremal
+    description: >
+      Zero surface gravity, Aretakis instability, NHEK geometry, 
+      and the transition from subextremal to extremal dynamics.
+    color: "#1a3d6b"
+
+  rigidity-uniqueness:
+    label: "Rigidity / Uniqueness"
+    slug: rigidity-uniqueness
+    description: >
+      Stationary black hole characterization, hidden symmetries, 
+      Mars–Simon tensor, and near-Kerr recognition theorems.
+    color: "#4a1a6b"
+
+  spectral-scattering:
+    label: "Spectral / Scattering"
+    slug: spectral-scattering
+    description: >
+      Quasinormal modes, resolvents, inverse problems, scattering maps, 
+      pseudospectrum, and excitation factors.
+    color: "#6b4a1a"

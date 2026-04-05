@@ -1,0 +1,22 @@
+id: K-009
+title: Einstein–massive Klein–Gordon near Kerr endstates
+cluster: exterior-stability
+status: open
+statement: Classify whether small Einstein–massive KG perturbations near Kerr disperse
+  to Kerr, form long-lived clouds, or trigger nonlinear superradiant phenomena.
+math_required: Massive wave spectral theory; quasi-bound states; nonlinear bifurcation;
+  dispersive estimates with trapping and superradiance.
+why_it_matters: Massive fields are the canonical place where the clean vacuum dispersive
+  picture may fail.
+completion_criteria: A complete answer must give a theorem-level dynamical classification
+  with explicit parameter regimes and asymptotic alternatives.
+implications: Would clarify the long-time dynamics of rotating black holes coupled
+  to realistic matter models.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

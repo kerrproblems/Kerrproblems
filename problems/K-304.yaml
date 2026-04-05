@@ -1,0 +1,22 @@
+id: K-304
+title: Near-Kerr implies Kerr with computable constants
+cluster: rigidity-uniqueness
+status: open
+statement: Upgrade perturbative uniqueness theorems near Kerr so that the hypotheses
+  are checkable geometric inequalities with explicit constants.
+math_required: Perturbative uniqueness; unique continuation; invariant boundary data;
+  effective estimates.
+why_it_matters: Current near-Kerr rigidity results are often too implicit for direct
+  geometric use.
+completion_criteria: A complete answer must state finite, computable conditions implying
+  exact Kerrness and give quantitative parameter control.
+implications: Would make rigidity much more usable for both analysis and numerical
+  relativity.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

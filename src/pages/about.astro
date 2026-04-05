@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="About">
+  <h1 style="margin-bottom: 2rem">About</h1>
+
+  <div style="max-width: 62ch; display: flex; flex-direction: column; gap: 1.4rem; font-size: 1rem; color: var(--text)">
+
+    <p>
+      This site tracks open problems in the mathematics and physics of the Kerr 
+      spacetime — the exact rotating black hole solution to Einstein's vacuum field equations, 
+      discovered by Roy Kerr in 1963.
+    </p>
+
+    <p>
+      The database was started in April 2026. Every problem statement is traced to a 
+      primary source: a paper, a survey, or a recorded lecture by a researcher working 
+      in the field. This site curates and organises — it does not adjudicate.
+    </p>
+
+    <p>
+      The status labels mean:
+    </p>
+
+    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; padding-left: 0">
+      <li><span class="badge badge-open">open</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">No theorem in the stated form is currently known.</span></li>
+      <li><span class="badge badge-partial">partial</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">Important special cases, reductions, or adjacent results exist.</span></li>
+      <li><span class="badge badge-conditional">conditional</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">The problem is reduced to a specific missing input.</span></li>
+      <li><span class="badge badge-solved">solved</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">A complete theorem in the stated form is known.</span></li>
+    </ul>
+
+    <p>
+      Difficulty ratings (1–5) are heuristic estimates based on the current state of the 
+      field, not permanent verdicts. A problem rated 5 today may become 3 tomorrow.
+    </p>
+
+    <h2 style="margin-top: 1rem">Contributing</h2>
+
+    <p>
+      All problems are stored as YAML files in the 
+      <a href="https://github.com/kerrproblems/Kerrproblems">GitHub repository</a>.
+      To propose a correction, a new problem, or a status update, open a pull request.
+      See <a href="https://github.com/kerrproblems/Kerrproblems/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> 
+      for the full guide.
+    </p>
+
+    <p>
+      If you have worked on one of these problems and believe the statement or status 
+      is wrong, please open an issue or email <a href="mailto:admin@kerrproblems.com">admin@kerrproblems.com</a>. Accuracy is the 
+      site's only claim to authority.
+    </p>
+
+  </div>
+</Base>

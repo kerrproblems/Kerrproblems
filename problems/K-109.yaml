@@ -1,0 +1,21 @@
+id: K-109
+title: Near-extremal interior scaling laws
+cluster: interior-scc
+status: open
+statement: Find universal scaling relations for interior blow-up, weak singularity
+  structure, and regularity thresholds as the Kerr spin approaches extremality.
+math_required: Matched asymptotics between throat and bulk interior; scaling analysis
+  in ε=1−|a|/M; uniform energy estimates.
+why_it_matters: Near-extremal interiors are where ordinary blue-shift theory meets
+  extremal degeneracy.
+completion_criteria: A complete answer must quantify how the relevant norms or exponents
+  depend on ε and identify any limiting profile.
+implications: Would connect interior SCC with extremal black-hole theory.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

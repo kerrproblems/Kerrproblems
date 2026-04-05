@@ -1,0 +1,23 @@
+id: K-301
+title: Global Kerr uniqueness without analyticity
+cluster: rigidity-uniqueness
+status: partial
+statement: Prove that any smooth stationary asymptotically flat vacuum black-hole
+  exterior satisfying natural nondegeneracy assumptions is Kerr, without analyticity
+  assumptions.
+math_required: Rigidity theory; Carleman unique continuation; stationary reduction;
+  horizon geometry; elliptic-hyperbolic coupled systems.
+why_it_matters: This is the stationary counterpart to the dynamical Kerr stability
+  problem.
+completion_criteria: A complete answer must state a sharp hypothesis set and prove
+  a global isometry to a Kerr exterior.
+implications: Would finish the classical uniqueness story in the physically natural
+  smooth category.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

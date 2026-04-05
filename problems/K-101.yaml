@@ -1,0 +1,24 @@
+id: K-101
+title: Strong Cosmic Censorship threshold for Kerr interiors
+cluster: interior-scc
+status: partial
+statement: Determine the strongest regularity class in which the maximal globally
+  hyperbolic development of generic near-Kerr vacuum data is inextendible across the
+  Cauchy horizon.
+math_required: Interior Einstein dynamics; blue-shift amplification; weak null singularities;
+  regularity-sensitive extension theory.
+why_it_matters: For Kerr, C^0-extendibility and stronger inextendibility can coexist,
+  so the regularity threshold matters.
+completion_criteria: A complete answer must state genericity precisely, identify both
+  any weak extendibility and any stronger inextendibility, and prove the relevant
+  blow-up or continuity mechanisms.
+implications: Would sharpen Strong Cosmic Censorship specifically for rotating vacuum
+  black holes.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

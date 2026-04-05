@@ -1,0 +1,22 @@
+id: K-209
+title: Codimension and modulation theory for extremal endstates
+cluster: extremal
+status: open
+statement: Build a nonlinear stable-manifold/modulation framework showing precisely
+  which perturbations converge to extremal versus subextremal Kerr endstates.
+math_required: Invariant manifold theory in PDE; modulation equations; degenerate
+  parameter dynamics; constraint control.
+why_it_matters: The phrase 'codimension-1 extremal stability' needs a concrete theorem-level
+  dynamical meaning.
+completion_criteria: A complete answer must define the stable manifold, prove transversality,
+  and describe the flow off the manifold.
+implications: Would turn the current conjectural picture of extremal dynamics into
+  a structured phase portrait.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

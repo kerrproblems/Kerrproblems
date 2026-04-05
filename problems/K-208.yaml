@@ -1,0 +1,21 @@
+id: K-208
+title: Near-extremal QNM accumulation and branch-cut structure
+cluster: extremal
+status: open
+statement: Classify what happens to Kerr quasinormal modes and low-frequency singular
+  structure as the black hole approaches extremality.
+math_required: Semiclassical resonance theory; branch-cut analysis; near-throat scaling;
+  non-selfadjoint perturbation theory.
+why_it_matters: Ringdown behavior near extremality depends sensitively on spectral
+  accumulation and low-energy structure.
+completion_criteria: A complete answer must identify resonance trajectories, any limiting
+  continuum or branch phenomena, and the corresponding time-domain consequences.
+implications: Would resolve a major uncertainty in near-extremal black-hole spectroscopy.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

@@ -1,0 +1,124 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllProblems, CLUSTER_LABELS } from '../../lib/problems.js';
+
+export async function getStaticPaths() {
+  const problems = getAllProblems();
+  return problems.map(p => ({
+    params: { id: p.id },
+    props: { problem: p, all: problems },
+  }));
+}
+
+const { problem: p, all } = Astro.props;
+const related = (p.related || []).map(id => all.find(x => x.id === id)).filter(Boolean);
+
+function pips(n) {
+  return Array.from({length: 5}, (_, i) => `<span class="pip${i < n ? ' filled' : ''}"></span>`).join('');
+}
+---
+<Base title={`${p.id} — ${p.title}`} description={p.statement}>
+  <!-- Breadcrumb -->
+  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-bottom: 2rem; letter-spacing: 0.04em;">
+    <a href="/problems" style="color: var(--text-faint); border-bottom: none;">Problems</a>
+    <span style="margin: 0 0.5rem">→</span>
+    <a href={`/clusters/${p.cluster}`} style="color: var(--text-faint); border-bottom: none;">{CLUSTER_LABELS[p.cluster]}</a>
+    <span style="margin: 0 0.5rem">→</span>
+    {p.id}
+  </div>
+
+  <!-- Header -->
+  <div style="margin-bottom: 2.5rem">
+    <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); letter-spacing: 0.1em; margin-bottom: 0.6rem">{p.id}</div>
+    <h1 style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.2">{p.title}</h1>
+    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center">
+      <span class={`badge badge-${p.status}`}>{p.status}</span>
+      <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
+      <span class="difficulty-pips" set:html={pips(p.difficulty)} style="margin-left: 0.4rem" title={`Difficulty: ${p.difficulty}/5`}></span>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- Statement -->
+  <div class="problem-section">
+    <h3>Statement</h3>
+    <p>{p.statement}</p>
+  </div>
+
+  <!-- Math required -->
+  <div class="problem-section">
+    <h3>Mathematical prerequisites</h3>
+    <p>{p.math_required}</p>
+  </div>
+
+  <!-- Why it matters -->
+  <div class="problem-section">
+    <h3>Why it matters</h3>
+    <p>{p.why_it_matters}</p>
+  </div>
+
+  <!-- Completion criteria -->
+  <div class="problem-section">
+    <h3>Completion criteria</h3>
+    <p>{p.completion_criteria}</p>
+  </div>
+
+  <!-- Implications -->
+  <div class="problem-section">
+    <h3>Implications if solved</h3>
+    <p>{p.implications}</p>
+  </div>
+
+  <!-- References -->
+  {p.references && p.references.length > 0 && (
+    <div class="problem-section">
+      <h3>Key references</h3>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+        {p.references.map(ref => (
+          <li style="font-family: var(--font-mono); font-size: 0.78rem;">
+            {ref.arxiv
+              ? <a href={`https://arxiv.org/abs/${ref.arxiv}`} target="_blank" rel="noopener">arXiv:{ref.arxiv}</a>
+              : null}
+            {ref.note ? <span style="color: var(--text-muted); margin-left: 0.6rem">— {ref.note}</span> : null}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  <!-- Related problems -->
+  {related.length > 0 && (
+    <div class="problem-section">
+      <h3>Related problems</h3>
+      <div class="problem-grid" style="margin-top: 0.6rem">
+        {related.map(r => (
+          <a href={`/problems/${r.id}`} class="problem-card">
+            <div class="card-id">{r.id}</div>
+            <div class="card-title">{r.title}</div>
+            <div class="card-meta">
+              <span class={`badge badge-${r.status}`}>{r.status}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <!-- Notes -->
+  {p.notes && (
+    <div class="problem-section">
+      <h3>Maintainer notes</h3>
+      <p style="color: var(--text-muted); font-style: italic">{p.notes}</p>
+    </div>
+  )}
+
+  <hr />
+  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
+    Last updated: {p.last_updated || 'April 2026'} · 
+    <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} 
+       target="_blank" rel="noopener" style="color: var(--text-faint)">
+      Edit on GitHub →
+    </a>
+  </div>
+</Base>

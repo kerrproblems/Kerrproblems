@@ -1,0 +1,22 @@
+id: K-307
+title: Photon-region and trapping stability in dynamical near-Kerr spacetimes
+cluster: rigidity-uniqueness
+status: open
+statement: Show that the normally hyperbolic trapped set of Kerr persists, in a quantitatively
+  useful sense, under dynamical perturbations compatible with nonlinear stability.
+math_required: Dynamical systems near trapped sets; semiclassical propagation; microlocal
+  resolvent estimates; time-dependent geometry.
+why_it_matters: Trapping is one of the main analytic obstacles in every decay estimate
+  on Kerr.
+completion_criteria: A complete answer must prove persistence of the trapped structure
+  and derive Morawetz or resolvent consequences from it.
+implications: Would provide a geometric backbone for robust decay theory on dynamical
+  near-Kerr backgrounds.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

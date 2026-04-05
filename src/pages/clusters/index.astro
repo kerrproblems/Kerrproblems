@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllProblems, CLUSTER_LABELS } from '../../lib/problems.js';
+
+const problems = getAllProblems();
+---
+<Base title="Clusters">
+  <h1 style="margin-bottom: 2rem">Problem Clusters</h1>
+  <div style="display: grid; gap: 1rem">
+    {Object.entries(CLUSTER_LABELS).map(([slug, label]) => {
+      const clusterProblems = problems.filter(p => p.cluster === slug);
+      const openCount = clusterProblems.filter(p => p.status === 'open').length;
+      return (
+        <a href={`/clusters/${slug}`} class="problem-card">
+          <div class="card-title">{label}</div>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem">
+            {clusterProblems.length} problems · {openCount} open
+          </div>
+        </a>
+      );
+    })}
+  </div>
+</Base>

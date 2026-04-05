@@ -1,0 +1,22 @@
+id: K-014
+title: Nonlinear decay versus resonance expansions
+cluster: exterior-stability
+status: open
+statement: Relate late-time nonlinear Einstein dynamics near Kerr to a rigorous resonance/QNM
+  plus tail expansion.
+math_required: Resonance theory; meromorphic resolvents; nonlinear normal forms; late-time
+  asymptotics.
+why_it_matters: Linear ringdown expansions are useful, but the theorem-level nonlinear
+  version is still missing.
+completion_criteria: A complete answer must state when resonance expansions are asymptotic
+  or convergent and bound the nonlinear remainder in explicit norms.
+implications: Would connect PDE stability theory directly to mathematical models of
+  ringdown.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

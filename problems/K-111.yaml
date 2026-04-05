@@ -1,0 +1,22 @@
+id: K-111
+title: 'Global interior boundary type: null versus spacelike pieces'
+cluster: interior-scc
+status: open
+statement: Determine whether generic near-Kerr collapse leads only to a null weak
+  singularity near the Cauchy horizon or also to a spacelike terminal singular boundary.
+math_required: Global causal geometry; focusing; continuation/breakdown criteria;
+  mixed null/spacelike boundary analysis.
+why_it_matters: This is the large-scale geometric version of the SCC problem inside
+  rotating black holes.
+completion_criteria: A complete answer must prove existence or absence of each boundary
+  type for a generic class of near-Kerr data.
+implications: Would reveal the global shape of the singular future boundary in rotating
+  collapse.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

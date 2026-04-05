@@ -1,0 +1,44 @@
+---
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+const siteTitle = "Kerr Problems";
+const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
+const desc = description || "A living database of open problems in Kerr black hole physics.";
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{fullTitle}</title>
+  <meta name="description" content={desc} />
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={desc} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kerrproblems.com" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate" type="application/rss+xml" title="Kerr Problems — Recent Updates" href="/rss.xml" />
+</head>
+<body>
+  <header class="site-header">
+    <a href="/" class="wordmark">kerrproblems.com</a>
+    <nav>
+      <a href="/problems">Problems</a>
+      <a href="/clusters">Clusters</a>
+      <a href="/about">About</a>
+      <a href="https://github.com/kerrproblems/Kerrproblems" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    kerrproblems.com — a community database of open problems in Kerr black hole physics.
+    <br/>
+    All problem statements traced to primary sources. Contributions welcome via GitHub pull request.
+  </footer>
+</body>
+</html>

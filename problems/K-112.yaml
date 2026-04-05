@@ -1,0 +1,23 @@
+id: K-112
+title: Teukolsky interior asymptotics beyond the current state of the art
+cluster: interior-scc
+status: partial
+statement: Extend precise interior asymptotics to both spin signs, prove genericity
+  of leading coefficients, and reconstruct metric perturbations in a regular gauge
+  suited for SCC.
+math_required: Teukolsky equations; mode asymptotics; gauge reconstruction; regular
+  frame analysis at the Cauchy horizon.
+why_it_matters: Teukolsky asymptotics are currently one of the cleanest windows into
+  gravitational interior instability.
+completion_criteria: A complete answer must cover both radiative scalars, reconstruction,
+  and blow-up consequences in metric-level norms.
+implications: Would make the link between spin-field asymptotics and geometric inextendibility
+  much tighter.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

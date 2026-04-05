@@ -1,0 +1,61 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getAllProblems, getStats, CLUSTER_LABELS } from '../../lib/problems.js';
+
+const problems = getAllProblems();
+const stats = getStats(problems);
+---
+<Base title="All Problems">
+  <h1 style="margin-bottom: 0.3rem">All Problems</h1>
+  <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 2rem;">
+    {stats.total} problems · {stats.open} open · {stats.partial} partial · status: April 2026
+  </p>
+
+  <!-- Client-side filter bar -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="open">Open</button>
+    <button class="filter-btn" data-filter="partial">Partial</button>
+    <button class="filter-btn" data-filter="conditional">Conditional</button>
+    {Object.entries(CLUSTER_LABELS).map(([slug, label]) => (
+      <button class="filter-btn" data-filter={slug}>{label}</button>
+    ))}
+  </div>
+
+  <div class="problem-grid" id="problem-grid">
+    {problems.map(p => (
+      <a 
+        href={`/problems/${p.id}`} 
+        class="problem-card"
+        data-status={p.status}
+        data-cluster={p.cluster}
+      >
+        <div class="card-id">{p.id}</div>
+        <div class="card-title">{p.title}</div>
+        <div class="card-meta">
+          <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
+        </div>
+      </a>
+    ))}
+  </div>
+</Base>
+
+<script>
+const btns = document.querySelectorAll('.filter-btn');
+const cards = document.querySelectorAll('.problem-card[data-status]');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    cards.forEach(card => {
+      const show = f === 'all' 
+        || card.dataset.status === f 
+        || card.dataset.cluster === f;
+      card.style.display = show ? 'block' : 'none';
+    });
+  });
+});
+</script>

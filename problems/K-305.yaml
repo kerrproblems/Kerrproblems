@@ -1,0 +1,20 @@
+id: K-305
+title: Kerr characterization from horizon intrinsic data
+cluster: rigidity-uniqueness
+status: partial
+statement: Find minimal intrinsic conditions on a horizon cross-section that force
+  the ambient vacuum spacetime to be locally Kerr.
+math_required: Isolated-horizon formalism; Petrov type D conditions; geometric PDE
+  on two-spheres; local-to-global extension.
+why_it_matters: This asks how much of Kerr is encoded directly on the horizon.
+completion_criteria: A complete answer must identify intrinsic horizon data and prove
+  a local or global reconstruction theorem to Kerr.
+implications: Would give a horizon-based recognition principle for the Kerr geometry.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

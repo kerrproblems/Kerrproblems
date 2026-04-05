@@ -1,0 +1,24 @@
+id: K-013
+title: Formation plus relaxation to Kerr
+cluster: exterior-stability
+status: open
+statement: Prove a global theorem in which generic asymptotically flat vacuum data
+  form a black hole and the exterior subsequently relaxes to Kerr with quantitative
+  radiation control.
+math_required: Trapped-surface formation; global causal geometry; continuation criteria;
+  matching formation and relaxation regimes.
+why_it_matters: This would turn the standard numerical-relativity narrative into a
+  theorem.
+completion_criteria: A complete answer must specify an open class of initial data,
+  prove black-hole formation, establish complete null infinity, and show quantitative
+  Kerr asymptotics outside the hole.
+implications: Would unite collapse theory and Kerr stability into one coherent mathematical
+  picture.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

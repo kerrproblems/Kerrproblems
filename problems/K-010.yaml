@@ -1,0 +1,23 @@
+id: K-010
+title: Nonlinear superradiant endstates in Kerr–AdS
+cluster: exterior-stability
+status: partial
+statement: Determine the theorem-level nonlinear endstate for small perturbations
+  of Kerr–AdS in the presence of reflecting infinity and superradiance.
+math_required: AdS boundary value problems; long-time nonlinear dynamics; spectral
+  instability; stable trapping; matched asymptotics.
+why_it_matters: Kerr–AdS is the canonical setting where rotation, confinement, and
+  superradiance collide.
+completion_criteria: A complete answer must prove either instability or convergence
+  to a precisely identified stationary or time-periodic family under explicit boundary
+  conditions.
+implications: Would clarify one of the most dramatic known departures from the asymptotically
+  flat Kerr story.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

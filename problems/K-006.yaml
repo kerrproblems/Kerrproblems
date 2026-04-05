@@ -1,0 +1,23 @@
+id: K-006
+title: Kerr stability with BMS charges and nonlinear memory
+cluster: exterior-stability
+status: open
+statement: Build a Kerr stability theorem that simultaneously controls Bondi mass/angular
+  momentum aspects, BMS ambiguities, and nonlinear memory observables.
+math_required: Bondi-Sachs expansions; asymptotic symmetries; flux laws; gauge fixing
+  at null infinity; nonlinear radiation estimates.
+why_it_matters: A stability theorem should describe not only decay, but also the asymptotic
+  observables seen by distant detectors.
+completion_criteria: A complete answer must define charges and memory in the chosen
+  regularity class, prove their finiteness and flux laws, and show consistency with
+  the final Kerr parameters.
+implications: Would connect rigorous black-hole PDE theory to the clean mathematical
+  structure behind gravitational-wave observables.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

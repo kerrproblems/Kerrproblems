@@ -1,0 +1,22 @@
+id: K-105
+title: Critical horizon-decay exponent controlling extendibility
+cluster: interior-scc
+status: partial
+statement: Identify the exact exterior decay rate along the event horizon that separates
+  weaker extendibility from stronger blow-up at the Cauchy horizon.
+math_required: Price-law asymptotics; transport into the interior; threshold Sobolev
+  estimates; logarithmic corrections.
+why_it_matters: Interior regularity is driven by exterior tails, so there should be
+  a sharp threshold law.
+completion_criteria: A complete answer must prove both directions of the threshold
+  and exhibit sharpness by examples or counterexamples.
+implications: Would turn SCC for Kerr into a threshold phenomenon tied directly to
+  exterior decay.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

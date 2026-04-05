@@ -1,0 +1,22 @@
+id: K-004
+title: Peeling and polyhomogeneous null infinity for near-Kerr
+cluster: exterior-stability
+status: open
+statement: Prove a sharp asymptotic expansion for curvature and connection coefficients
+  at future null infinity for nonlinear near-Kerr evolutions.
+math_required: Null foliation geometry; transport equations; conformal compactification;
+  asymptotic expansions; weighted regularity along null hypersurfaces.
+why_it_matters: Decay alone does not determine the detailed asymptotic geometry; peeling
+  data encode physically meaningful radiation structure.
+completion_criteria: A complete answer must provide the expansion order, the gauge,
+  the leading coefficients as functionals of data, and rigorous remainder bounds.
+implications: Would clarify radiation memory, asymptotic charges, and how Kerr asymptotics
+  differ from generic asymptotically flat vacua.
+difficulty: 4
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

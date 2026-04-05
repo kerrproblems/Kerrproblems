@@ -1,0 +1,22 @@
+id: K-107
+title: Scattering map to the Cauchy horizon for linearized gravity
+cluster: interior-scc
+status: partial
+statement: Construct a precise scattering map from exterior or horizon data to asymptotic
+  data at the Kerr Cauchy horizon for gravitational perturbations.
+math_required: Teukolsky separation; physical-space asymptotics; scattering operators
+  in non-globally-hyperbolic regions; gauge reconstruction.
+why_it_matters: The Cauchy horizon is best understood through a precise data-to-asymptotics
+  map.
+completion_criteria: A complete answer must define the map in explicit norms and prove
+  sharp asymptotic formulas, including generic leading coefficients.
+implications: Would clarify how exterior information is reprocessed by the blue-shift
+  region.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

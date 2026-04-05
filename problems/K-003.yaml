@@ -1,0 +1,24 @@
+id: K-003
+title: Nonlinear asymptotic completeness near Kerr
+cluster: exterior-stability
+status: partial
+statement: Construct a nonlinear scattering map between near-Kerr initial data and
+  asymptotic radiation data at null infinity plus final Kerr parameters.
+math_required: Hyperboloidal or conformal compactification techniques; nonlinear scattering
+  theory; Bondi framework; constraint propagation; inverse problems for radiation
+  fields.
+why_it_matters: This is the cleanest theorem-level formulation of relaxation to Kerr
+  plus radiation.
+completion_criteria: A complete answer must define the forward and inverse scattering
+  maps in explicit function spaces and prove existence, uniqueness, and continuous
+  dependence modulo symmetries.
+implications: Would make the Kerr endstate picture mathematically precise and usable
+  for waveform extraction and uniqueness questions.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'

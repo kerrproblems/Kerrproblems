@@ -1,0 +1,21 @@
+id: K-403
+title: Scattering theory for linearized gravity on Kerr
+cluster: spectral-scattering
+status: partial
+statement: Construct a complete gauge-invariant scattering theory for linearized vacuum
+  Einstein perturbations on Kerr, paralleling the scalar-wave case.
+math_required: Gauge fixing; Teukolsky-to-metric reconstruction; horizon and infinity
+  radiation fields; asymptotic completeness for constrained systems.
+why_it_matters: Decay results are stronger when organized into a full scattering theory.
+completion_criteria: A complete answer must define the scattering states, wave operators,
+  and asymptotic completeness modulo stationary/gauge modes.
+implications: Would give the definitive linearized-gravity input for both exterior
+  stability and interior genericity problems.
+difficulty: 3
+posed_by: null
+posed_year: null
+references: []
+related: []
+prizes: null
+notes: null
+last_updated: '2026-04-05'
