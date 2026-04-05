@@ -1,6 +1,6 @@
 # kerrproblems.com — Complete Agent Build Plan
 
-**Objective:** Take a purchased domain and zero code to a fully live, production-quality website tracking 46 open problems in Kerr black hole physics. Every action is listed in execution order. No steps are assumed.
+**Objective:** Take a purchased domain and zero code to a fully live, production-quality website tracking 50 open problems in Kerr black hole physics. Every action is listed in execution order. No steps are assumed.
 
 **Agent assumptions:**
 - Domain is already purchased (kerrproblems.com) and DNS is accessible
@@ -250,7 +250,7 @@ pip install pyyaml --break-system-packages
 python scripts/convert_problems.py
 ```
 
-Verify: `ls problems/ | wc -l` should return 46.
+Verify: `ls problems/*.yaml | wc -l` should return 50.
 
 ### Action 1.5 — Manually patch titles
 
@@ -1420,7 +1420,7 @@ dist/
 npm install
 node -e "const {getAllProblems} = await import('./src/lib/problems.js'); console.log(getAllProblems().length + ' problems loaded')"
 ```
-Expected output: `46 problems loaded`
+Expected output: `50 problems loaded`
 
 ### Action 6.2 — Run dev server and verify all routes
 ```bash
@@ -1447,7 +1447,7 @@ Must complete with zero errors. Check `dist/` exists and contains HTML files.
 ```bash
 ls dist/problems/ | wc -l
 ```
-Expected: 46 directories (one per problem).
+Expected: **51** lines (50 `K-*` problem folders plus `index.html` for the problems index). Alternatively count YAML only: `ls problems/*.yaml | wc -l` → **50**.
 
 ---
 
@@ -1456,7 +1456,7 @@ Expected: 46 directories (one per problem).
 ### Action 7.1 — Push to GitHub
 ```bash
 git add -A
-git commit -m "Initial build: 46 Kerr problems, Astro site"
+git commit -m "Initial build: 50 Kerr problems, Astro site"
 git push origin main
 ```
 
@@ -1464,7 +1464,7 @@ git push origin main
 
 In the Cloudflare dashboard:
 1. Go to **Workers & Pages → Create → Pages → Connect to Git**
-2. Select the `kerrproblems` repository
+2. Select the `Kerrproblems` repository (`kerrproblems/Kerrproblems` on GitHub)
 3. Set build configuration:
    - **Framework preset:** Astro
    - **Build command:** `npm run build`
@@ -1497,12 +1497,12 @@ Cloudflare issues and renews TLS automatically. Verify in browser that the padlo
 The agent should verify every item before marking the project complete.
 
 **Content**
-- [ ] All 46 problems are live and accessible at `/problems/K-XXX`
+- [ ] All 50 problems are live and accessible at `/problems/K-XXX`
 - [ ] Every problem page renders: statement, math required, why it matters, completion criteria, implications
 - [ ] Status badges render in correct colours (open=red, partial=amber, conditional=blue)
 - [ ] Cluster tags render correctly on all cards
 - [ ] Flagship problems (K-001, K-101, K-201) appear on homepage
-- [ ] Stats bar on homepage shows correct counts (total=46)
+- [ ] Stats bar on homepage shows correct counts (total=50)
 - [ ] Cluster pages each list the correct subset of problems
 
 **Navigation**
