@@ -1,0 +1,5 @@
+# Cloudflare Pages — keep in sync with the project name in the dashboard
+# https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+name = "Kerrproblems"
+compatibility_date = "2025-04-05"
+pages_build_output_dir = "dist"
