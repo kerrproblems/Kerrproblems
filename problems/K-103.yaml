@@ -2,16 +2,11 @@ id: K-103
 title: Vacuum curvature blow-up rates on the Kerr Cauchy horizon
 cluster: interior-scc
 status: open
-statement: Prove sharp quantitative blow-up rates for curvature or gauge-invariant
-  gravitational quantities along the Kerr Cauchy horizon for generic perturbations.
-math_required: Nonlinear Bianchi analysis; Teukolsky asymptotics; blue-shift energy
-  estimates; tetrad regularity.
-why_it_matters: SCC is not just about whether blow-up occurs, but about which geometric
-  quantities diverge and how fast.
-completion_criteria: A complete answer must provide matching upper and lower blow-up
-  rates in a regular frame and show generic nonvanishing of leading coefficients.
-implications: Would make the weak-null-singularity picture quantitative instead of
-  merely qualitative.
+statement: Prove sharp quantitative blow-up rates for curvature or gauge-invariant gravitational quantities along the Kerr Cauchy horizon for generic perturbations.
+math_required: Nonlinear Bianchi analysis; Teukolsky asymptotics; blue-shift energy estimates; tetrad regularity.
+why_it_matters: SCC is not just about whether blow-up occurs, but about which geometric quantities diverge and how fast.
+completion_criteria: A complete answer must provide matching upper and lower blow-up rates in a regular frame and show generic nonvanishing of leading coefficients.
+implications: Would make the weak-null-singularity picture quantitative instead of merely qualitative.
 difficulty: 4
 posed_by: null
 posed_year: null

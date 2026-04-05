@@ -2,14 +2,10 @@ id: K-402
 title: Nonlinear QNMs from full Einstein evolution
 cluster: spectral-scattering
 status: partial
-statement: Derive theorem-level nonlinear ringdown expansions directly from near-Kerr
-  Einstein dynamics, including quadratic or higher corrections to linear QNM behavior.
-math_required: Second-order perturbation theory; nonlinear normal forms; matched asymptotics;
-  control of nonlinear waveform remainders.
-why_it_matters: Observational ringdown analysis increasingly depends on knowing when
-  linear mode models are justified and when nonlinear corrections matter.
-completion_criteria: A complete answer must bound the difference between the full
-  Einstein waveform and a stated nonlinear QNM model over an explicit time interval.
+statement: Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics, including quadratic or higher corrections to linear QNM behavior.
+math_required: Second-order perturbation theory; nonlinear normal forms; matched asymptotics; control of nonlinear waveform remainders.
+why_it_matters: Observational ringdown analysis increasingly depends on knowing when linear mode models are justified and when nonlinear corrections matter.
+completion_criteria: A complete answer must bound the difference between the full Einstein waveform and a stated nonlinear QNM model over an explicit time interval.
 implications: Would bridge rigorous PDE theory and high-precision black-hole spectroscopy.
 difficulty: 3
 posed_by: null

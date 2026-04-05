@@ -227,6 +227,10 @@ hr {
   max-width: 66ch;
 }
 
+/* KaTeX on dark theme */
+.katex { color: var(--text); font-size: 1.05em; }
+.katex .mord, .katex .mrel, .katex .mbin { color: inherit; }
+
 /* Filter bar */
 .filter-bar {
   display: flex;

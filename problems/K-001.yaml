@@ -2,21 +2,11 @@ id: K-001
 title: Full nonlinear stability of subextremal Kerr
 cluster: exterior-stability
 status: partial
-statement: Prove that asymptotically flat vacuum initial data sufficiently close to
-  a Kerr slice with |a|<M evolve to a spacetime with complete future null infinity,
-  a regular event horizon, and quantitative convergence to a nearby Kerr metric modulo
-  gauge and parameter modulation.
-math_required: Geometric analysis of Einstein vacuum equations; null structure equations;
-  gauge fixing; weighted Sobolev spaces; vector-field and r^p methods; trapping/superradiance
-  control; modulation of mass and angular momentum.
-why_it_matters: This is the main Kerr stability conjecture in the physically relevant
-  asymptotically flat vacuum setting.
-completion_criteria: A complete answer must specify the initial-data topology, prove
-  global exterior existence, identify the final Kerr parameters, establish quantitative
-  decay rates in a fixed gauge, and control all nonlinear error terms for the full
-  subextremal range.
-implications: Would settle the core exterior black-hole stability problem for rotating
-  vacuum black holes and give the exterior half of a precise cosmic censorship picture.
+statement: Prove that asymptotically flat vacuum initial data sufficiently close to a Kerr slice with $|a|<M$ evolve to a spacetime with complete future null infinity, a regular event horizon, and quantitative convergence to a nearby Kerr metric modulo gauge and parameter modulation.
+math_required: Geometric analysis of Einstein vacuum equations; null structure equations; gauge fixing; weighted Sobolev spaces; vector-field and $r^p$ methods; trapping/superradiance control; modulation of mass and angular momentum.
+why_it_matters: This is the main Kerr stability conjecture in the physically relevant asymptotically flat vacuum setting.
+completion_criteria: A complete answer must specify the initial-data topology, prove global exterior existence, identify the final Kerr parameters, establish quantitative decay rates in a fixed gauge, and control all nonlinear error terms for the full subextremal range.
+implications: Would settle the core exterior black-hole stability problem for rotating vacuum black holes and give the exterior half of a precise cosmic censorship picture.
 difficulty: 3
 posed_by: null
 posed_year: null

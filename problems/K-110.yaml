@@ -2,14 +2,10 @@ id: K-110
 title: Bifurcation-sphere stability and full interior series completion
 cluster: interior-scc
 status: partial
-statement: Complete the geometric analysis of the perturbed Kerr interior all the
-  way to the bifurcation sphere and global Cauchy-horizon structure.
-math_required: Double-null interior geometry; regularity propagation to bifurcate
-  sets; characteristic PDE methods.
-why_it_matters: The interior picture is not complete until the full boundary geometry
-  is understood, not just a local Cauchy-horizon segment.
-completion_criteria: A complete answer must classify all future interior boundary
-  pieces and prove regularity statements up to the bifurcation region.
+statement: Complete the geometric analysis of the perturbed Kerr interior all the way to the bifurcation sphere and global Cauchy-horizon structure.
+math_required: Double-null interior geometry; regularity propagation to bifurcate sets; characteristic PDE methods.
+why_it_matters: The interior picture is not complete until the full boundary geometry is understood, not just a local Cauchy-horizon segment.
+completion_criteria: A complete answer must classify all future interior boundary pieces and prove regularity statements up to the bifurcation region.
 implications: Would finish the geometric part of the vacuum rotating interior program.
 difficulty: 3
 posed_by: null

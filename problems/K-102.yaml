@@ -2,16 +2,11 @@ id: K-102
 title: Derive the interior theorem directly from exterior data
 cluster: interior-scc
 status: open
-statement: Remove interior auxiliary assumptions by proving the Kerr interior Cauchy-horizon
-  picture directly from asymptotically flat exterior Cauchy data and exterior decay.
-math_required: Matching gauges across the event horizon; transfer of Price-law decay
-  into the interior; nonlinear continuation.
-why_it_matters: The cleanest SCC theorem should begin with ordinary exterior initial
-  data, not data already prescribed inside the black hole.
-completion_criteria: A complete answer must derive the needed horizon asymptotics
-  from exterior estimates and then prove the interior extension or singularity conclusions.
-implications: Would connect the exterior and interior Kerr programs into one theorem
-  chain.
+statement: Remove interior auxiliary assumptions by proving the Kerr interior Cauchy-horizon picture directly from asymptotically flat exterior Cauchy data and exterior decay.
+math_required: Matching gauges across the event horizon; transfer of Price-law decay into the interior; nonlinear continuation.
+why_it_matters: The cleanest SCC theorem should begin with ordinary exterior initial data, not data already prescribed inside the black hole.
+completion_criteria: A complete answer must derive the needed horizon asymptotics from exterior estimates and then prove the interior extension or singularity conclusions.
+implications: Would connect the exterior and interior Kerr programs into one theorem chain.
 difficulty: 4
 posed_by: null
 posed_year: null

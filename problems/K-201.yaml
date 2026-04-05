@@ -2,18 +2,11 @@ id: K-201
 title: Nonlinear codimension-1 stability of extremal Kerr with horizon hair
 cluster: extremal
 status: open
-statement: Prove that a codimension-1 family of perturbations of extremal Kerr stays
-  globally close to an extremal endstate while exhibiting Aretakis-type horizon growth
-  in transversal derivatives.
-math_required: Degenerate horizon geometry; conserved charges; nonlinear modulation
-  with reduced parameter freedom; null structure at κ=0.
-why_it_matters: Extremal Kerr is expected to be stable only in a codimension-1 sense,
-  not in the same way as subextremal Kerr.
-completion_criteria: A complete answer must identify the stable manifold, prove global
-  exterior control, describe the final extremal parameters, and quantify the horizon
-  growth.
-implications: Would define the correct nonlinear stability statement for extremal
-  rotating black holes.
+statement: Prove that a codimension-1 family of perturbations of extremal Kerr stays globally close to an extremal endstate while exhibiting Aretakis-type horizon growth in transversal derivatives.
+math_required: Degenerate horizon geometry; conserved charges; nonlinear modulation with reduced parameter freedom; null structure at $\kappa = 0$.
+why_it_matters: Extremal Kerr is expected to be stable only in a codimension-1 sense, not in the same way as subextremal Kerr.
+completion_criteria: A complete answer must identify the stable manifold, prove global exterior control, describe the final extremal parameters, and quantify the horizon growth.
+implications: Would define the correct nonlinear stability statement for extremal rotating black holes.
 difficulty: 4
 posed_by: null
 posed_year: null

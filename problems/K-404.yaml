@@ -2,13 +2,10 @@ id: K-404
 title: Zero-frequency structure and tail universality
 cluster: spectral-scattering
 status: partial
-statement: Relate the low-energy resolvent structure of Kerr operators to universal
-  late-time tail laws, including logarithmic singularities and their coefficients.
-math_required: Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion
-  of Laplace/Fourier transforms.
+statement: Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws, including logarithmic singularities and their coefficients.
+math_required: Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion of Laplace/Fourier transforms.
 why_it_matters: The tail law is a spectral statement in disguise.
-completion_criteria: A complete answer must provide explicit resolvent expansions
-  and derive the corresponding time-domain asymptotics with sharp remainders.
+completion_criteria: A complete answer must provide explicit resolvent expansions and derive the corresponding time-domain asymptotics with sharp remainders.
 implications: Would unify QNM language and Price-law language in a single framework.
 difficulty: 3
 posed_by: null

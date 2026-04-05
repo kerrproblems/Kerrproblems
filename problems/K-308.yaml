@@ -2,14 +2,10 @@ id: K-308
 title: 'Rigidity and uniqueness with matter: full Kerr–Newman regime'
 cluster: rigidity-uniqueness
 status: partial
-statement: Prove the full stationary uniqueness and perturbative rigidity theory for
-  Kerr–Newman without smallness assumptions.
-math_required: Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon
-  regularity; unique continuation.
-why_it_matters: Kerr–Newman is the natural charged rotating family, but its full rigidity
-  theory is still not as complete as one would like.
-completion_criteria: A complete answer must characterize the full stationary family
-  under natural hypotheses and support the coupled dynamical theory.
+statement: Prove the full stationary uniqueness and perturbative rigidity theory for Kerr–Newman without smallness assumptions.
+math_required: Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon regularity; unique continuation.
+why_it_matters: Kerr–Newman is the natural charged rotating family, but its full rigidity theory is still not as complete as one would like.
+completion_criteria: A complete answer must characterize the full stationary family under natural hypotheses and support the coupled dynamical theory.
 implications: Would unify the stationary Einstein–Maxwell black-hole classification.
 difficulty: 3
 posed_by: null

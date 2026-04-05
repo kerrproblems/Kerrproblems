@@ -2,15 +2,10 @@ id: K-007
 title: Einstein–Maxwell stability near Kerr
 cluster: exterior-stability
 status: partial
-statement: Prove asymptotic stability for coupled gravitational and electromagnetic
-  perturbations near a rotating black-hole endstate.
-math_required: Coupled hyperbolic systems; gravito-electromagnetic gauge fixing; Teukolsky-type
-  equations with coupling; conserved fluxes for charge and angular momentum.
-why_it_matters: Realistic black-hole models often involve coupled fields, and the
-  Einstein–Maxwell system is the next natural extension of the vacuum problem.
-completion_criteria: A complete answer must identify the final stationary family,
-  derive quantitative decay for the coupled fields, and prove orbital stability in
-  a precise topology.
+statement: Prove asymptotic stability for coupled gravitational and electromagnetic perturbations near a rotating black-hole endstate.
+math_required: Coupled hyperbolic systems; gravito-electromagnetic gauge fixing; Teukolsky-type equations with coupling; conserved fluxes for charge and angular momentum.
+why_it_matters: Realistic black-hole models often involve coupled fields, and the Einstein–Maxwell system is the next natural extension of the vacuum problem.
+completion_criteria: A complete answer must identify the final stationary family, derive quantitative decay for the coupled fields, and prove orbital stability in a precise topology.
 implications: Would open a path toward the full Kerr–Newman stability program.
 difficulty: 3
 posed_by: null

@@ -1,19 +1,12 @@
 id: K-104
-title: Generic C²- or Lipschitz-inextendibility of near-Kerr MGHDs
+title: Generic $C^2$- or Lipschitz-inextendibility of near-Kerr MGHDs
 cluster: interior-scc
 status: open
-statement: Show that although C^0 extensions can exist, generic near-Kerr vacuum developments
-  admit no extension with enough regularity to preserve a meaningful Einstein evolution
-  across the Cauchy horizon.
-math_required: Curvature lower bounds; regularity comparison; extension theory; blow-up
-  of connection or curvature invariants.
-why_it_matters: This is the strongest currently plausible version of SCC for Kerr-type
-  interiors.
-completion_criteria: A complete answer must specify the regularity class, prove generic
-  blow-up of the corresponding geometric quantity, and rule out every extension in
-  that class.
-implications: Would restore deterministic predictability at the correct mathematical
-  regularity level.
+statement: Show that although $C^0$ extensions can exist, generic near-Kerr vacuum developments admit no extension with enough regularity to preserve a meaningful Einstein evolution across the Cauchy horizon.
+math_required: Curvature lower bounds; regularity comparison; extension theory; blow-up of connection or curvature invariants.
+why_it_matters: This is the strongest currently plausible version of SCC for Kerr-type interiors.
+completion_criteria: A complete answer must specify the regularity class, prove generic blow-up of the corresponding geometric quantity, and rule out every extension in that class.
+implications: Would restore deterministic predictability at the correct mathematical regularity level.
 difficulty: 4
 posed_by: null
 posed_year: null

@@ -2,15 +2,11 @@ id: K-302
 title: Rigidity for extremal horizons
 cluster: rigidity-uniqueness
 status: open
-statement: Extend black-hole rigidity and axisymmetry results to extremal stationary
-  horizons where nondegeneracy assumptions fail.
-math_required: Degenerate horizon geometry; near-horizon expansion; unique continuation
-  in degenerate settings; Killing field extension.
+statement: Extend black-hole rigidity and axisymmetry results to extremal stationary horizons where nondegeneracy assumptions fail.
+math_required: Degenerate horizon geometry; near-horizon expansion; unique continuation in degenerate settings; Killing field extension.
 why_it_matters: Extremal horizons fall outside some of the standard rigidity machinery.
-completion_criteria: A complete answer must prove the existence of the needed symmetry
-  or identify a counterexample under natural hypotheses.
-implications: Would clarify whether extremal stationary black holes are as rigid as
-  their nonextremal counterparts.
+completion_criteria: A complete answer must prove the existence of the needed symmetry or identify a counterexample under natural hypotheses.
+implications: Would clarify whether extremal stationary black holes are as rigid as their nonextremal counterparts.
 difficulty: 4
 posed_by: null
 posed_year: null

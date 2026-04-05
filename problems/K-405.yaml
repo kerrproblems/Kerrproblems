@@ -2,16 +2,11 @@ id: K-405
 title: Inverse scattering for Kerr parameters
 cluster: spectral-scattering
 status: open
-statement: Determine whether scattering data for a natural field equation uniquely
-  and stably determine the Kerr mass and spin.
-math_required: Inverse scattering; geometric optics; spectral invariants; uniqueness
-  and stability estimates for parameter recovery.
-why_it_matters: The forward scattering map on Kerr is rich enough that one expects
-  inverse geometric information to be hidden in it.
-completion_criteria: A complete answer must specify the data set, prove uniqueness
-  of (M,a), and give quantitative stability estimates.
-implications: Would turn black-hole scattering into a geometric inverse problem with
-  direct interpretive value.
+statement: Determine whether scattering data for a natural field equation uniquely and stably determine the Kerr mass and spin.
+math_required: Inverse scattering; geometric optics; spectral invariants; uniqueness and stability estimates for parameter recovery.
+why_it_matters: The forward scattering map on Kerr is rich enough that one expects inverse geometric information to be hidden in it.
+completion_criteria: A complete answer must specify the data set, prove uniqueness of $(M,a)$, and give quantitative stability estimates.
+implications: Would turn black-hole scattering into a geometric inverse problem with direct interpretive value.
 difficulty: 4
 posed_by: null
 posed_year: null

@@ -1,16 +1,11 @@
 id: K-108
-title: Strong Cosmic Censorship in rotating Λ>0 backgrounds
+title: Strong Cosmic Censorship in rotating $\Lambda > 0$ backgrounds
 cluster: interior-scc
 status: conditional
-statement: Determine the correct SCC threshold for Kerr–de Sitter or Kerr–Newman–de
-  Sitter, especially near extremality, where quasinormal-mode decay may compete with
-  blue-shift.
-math_required: Spectral-gap estimates; de Sitter horizon boundary conditions; Sobolev
-  regularity at the Cauchy horizon; coupled gravito-electromagnetic systems.
-why_it_matters: Positive cosmological constant changes both decay and interior amplification,
-  so SCC can look different than in the asymptotically flat case.
-completion_criteria: A complete answer must connect spectral decay rates to extension
-  regularity and prove either violation or restoration of SCC in a stated class.
+statement: Determine the correct SCC threshold for Kerr–de Sitter or Kerr–Newman–de Sitter, especially near extremality, where quasinormal-mode decay may compete with blue-shift.
+math_required: Spectral-gap estimates; de Sitter horizon boundary conditions; Sobolev regularity at the Cauchy horizon; coupled gravito-electromagnetic systems.
+why_it_matters: Positive cosmological constant changes both decay and interior amplification, so SCC can look different than in the asymptotically flat case.
+completion_criteria: A complete answer must connect spectral decay rates to extension regularity and prove either violation or restoration of SCC in a stated class.
 implications: Would clarify one of the most delicate modern versions of SCC.
 difficulty: 3
 posed_by: null

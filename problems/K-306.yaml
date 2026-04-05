@@ -2,17 +2,11 @@ id: K-306
 title: Hidden symmetries under perturbation
 cluster: rigidity-uniqueness
 status: open
-statement: Determine whether near-Kerr spacetimes admit robust approximate hidden
-  symmetries strong enough to reproduce useful Carter-type commutators or conserved
-  quantities.
-math_required: Killing tensors and Killing–Yano structures; perturbation theory of
-  integrable systems; commutator algebra for PDE estimates.
-why_it_matters: Kerr owes much of its analytic tractability to hidden symmetry and
-  separability.
-completion_criteria: A complete answer must either construct approximate symmetry
-  operators with usable error control or prove a no-go theorem.
-implications: Would reveal whether Kerr’s special integrable structure survives in
-  a useful approximate sense under perturbation.
+statement: Determine whether near-Kerr spacetimes admit robust approximate hidden symmetries strong enough to reproduce useful Carter-type commutators or conserved quantities.
+math_required: Killing tensors and Killing–Yano structures; perturbation theory of integrable systems; commutator algebra for PDE estimates.
+why_it_matters: Kerr owes much of its analytic tractability to hidden symmetry and separability.
+completion_criteria: A complete answer must either construct approximate symmetry operators with usable error control or prove a no-go theorem.
+implications: Would reveal whether Kerr’s special integrable structure survives in a useful approximate sense under perturbation.
 difficulty: 4
 posed_by: null
 posed_year: null

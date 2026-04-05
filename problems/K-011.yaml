@@ -2,16 +2,11 @@ id: K-011
 title: Spin fields on dynamical near-Kerr backgrounds
 cluster: exterior-stability
 status: partial
-statement: Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields
-  on time-dependent metrics that stay close to Kerr within a nonlinear bootstrap regime.
-math_required: Physical-space decay without exact separability; perturbative microlocal
-  analysis; nonstationary commutator methods.
-why_it_matters: Nonlinear Einstein proofs require estimates on fields propagating
-  on dynamical, not exactly stationary, backgrounds.
-completion_criteria: A complete answer must give coercive estimates compatible with
-  nonlinear closure and quantify all losses due to the time-dependent background.
-implications: Would remove a major technical bottleneck between linear theory and
-  a full nonlinear Kerr theorem.
+statement: Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics that stay close to Kerr within a nonlinear bootstrap regime.
+math_required: Physical-space decay without exact separability; perturbative microlocal analysis; nonstationary commutator methods.
+why_it_matters: Nonlinear Einstein proofs require estimates on fields propagating on dynamical, not exactly stationary, backgrounds.
+completion_criteria: A complete answer must give coercive estimates compatible with nonlinear closure and quantify all losses due to the time-dependent background.
+implications: Would remove a major technical bottleneck between linear theory and a full nonlinear Kerr theorem.
 difficulty: 3
 posed_by: null
 posed_year: null

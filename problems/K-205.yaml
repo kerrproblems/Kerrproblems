@@ -2,16 +2,11 @@ id: K-205
 title: Rigorous near-horizon scattering theory for NHEK
 cluster: extremal
 status: open
-statement: Construct a mathematically precise scattering theory for the near-horizon
-  extremal Kerr limit and prove convergence from rescaled near-extremal Kerr dynamics.
-math_required: Geometric blow-up limits; near-horizon analysis; scattering on non-asymptotically-flat
-  geometries; matched expansions.
-why_it_matters: The near-horizon extremal geometry is the natural local model controlling
-  many extremal phenomena.
-completion_criteria: A complete answer must prove operator and solution convergence
-  under rescaling and define a genuine scattering theory in the limit geometry.
-implications: Would isolate the intrinsic throat dynamics responsible for extremal
-  instabilities.
+statement: Construct a mathematically precise scattering theory for the near-horizon extremal Kerr limit and prove convergence from rescaled near-extremal Kerr dynamics.
+math_required: Geometric blow-up limits; near-horizon analysis; scattering on non-asymptotically-flat geometries; matched expansions.
+why_it_matters: The near-horizon extremal geometry is the natural local model controlling many extremal phenomena.
+completion_criteria: A complete answer must prove operator and solution convergence under rescaling and define a genuine scattering theory in the limit geometry.
+implications: Would isolate the intrinsic throat dynamics responsible for extremal instabilities.
 difficulty: 4
 posed_by: null
 posed_year: null

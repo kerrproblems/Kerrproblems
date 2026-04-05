@@ -2,16 +2,11 @@ id: K-207
 title: Extremal tail asymptotics versus conserved charges
 cluster: extremal
 status: partial
-statement: Prove sharp late-time asymptotics for waves and spin fields on extremal
-  Kerr in terms of both infinity charges and horizon Aretakis charges.
-math_required: Low-frequency asymptotics; time inversion; charge extraction; mode
-  coupling in degenerate horizon settings.
-why_it_matters: In extremal geometry, the horizon itself stores conserved information
-  that changes the tail law.
-completion_criteria: A complete answer must give leading terms, error bounds, and
-  genericity of nonzero coefficients in the exterior and on the horizon.
-implications: Would quantify exactly how extremal tails differ from subextremal Price
-  laws.
+statement: Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both infinity charges and horizon Aretakis charges.
+math_required: Low-frequency asymptotics; time inversion; charge extraction; mode coupling in degenerate horizon settings.
+why_it_matters: In extremal geometry, the horizon itself stores conserved information that changes the tail law.
+completion_criteria: A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in the exterior and on the horizon.
+implications: Would quantify exactly how extremal tails differ from subextremal Price laws.
 difficulty: 3
 posed_by: null
 posed_year: null

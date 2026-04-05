@@ -2,18 +2,11 @@ id: K-406
 title: Spectral stability and pseudospectrum of Kerr QNMs
 cluster: spectral-scattering
 status: open
-statement: Quantify how Kerr resonances and pseudospectra move under small perturbations
-  of the geometry or operator and identify transient-growth mechanisms associated
-  with non-normality.
-math_required: Pseudospectral theory; non-selfadjoint semiclassics; resolvent norm
-  growth; perturbation of resonances.
-why_it_matters: QNMs are not enough by themselves if non-normal transient amplification
-  dominates some time windows.
-completion_criteria: A complete answer must give either stability theorems or explicit
-  instability mechanisms for resonance motion and pseudospectral growth under a stated
-  perturbation class.
-implications: Would sharpen the mathematical meaning of mode stability in non-selfadjoint
-  black-hole problems.
+statement: Quantify how Kerr resonances and pseudospectra move under small perturbations of the geometry or operator and identify transient-growth mechanisms associated with non-normality.
+math_required: Pseudospectral theory; non-selfadjoint semiclassics; resolvent norm growth; perturbation of resonances.
+why_it_matters: QNMs are not enough by themselves if non-normal transient amplification dominates some time windows.
+completion_criteria: A complete answer must give either stability theorems or explicit instability mechanisms for resonance motion and pseudospectral growth under a stated perturbation class.
+implications: Would sharpen the mathematical meaning of mode stability in non-selfadjoint black-hole problems.
 difficulty: 4
 posed_by: null
 posed_year: null

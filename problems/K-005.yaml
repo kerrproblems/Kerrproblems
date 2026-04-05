@@ -2,16 +2,11 @@ id: K-005
 title: Sharp nonlinear Price law for curvature
 cluster: exterior-stability
 status: partial
-statement: Prove optimal late-time inverse-power decay for gauge-invariant curvature
-  quantities and relevant metric coefficients in nonlinear near-Kerr evolution.
-math_required: Sharp r^p hierarchies; resonance/low-frequency analysis; nonlinear
-  bootstrap estimates; Bianchi equations; asymptotic mode coupling.
-why_it_matters: Sharp tails control how exterior decay feeds into interior instability
-  and into the interpretation of ringdown signals.
-completion_criteria: A complete answer must state exact exponents, identify generic
-  nonvanishing leading coefficients, and prove matching upper and lower bounds.
-implications: Would connect linear tail predictions to the full Einstein dynamics
-  and feed directly into SCC formulations.
+statement: Prove optimal late-time inverse-power decay for gauge-invariant curvature quantities and relevant metric coefficients in nonlinear near-Kerr evolution.
+math_required: Sharp $r^p$ hierarchies; resonance/low-frequency analysis; nonlinear bootstrap estimates; Bianchi equations; asymptotic mode coupling.
+why_it_matters: Sharp tails control how exterior decay feeds into interior instability and into the interpretation of ringdown signals.
+completion_criteria: A complete answer must state exact exponents, identify generic nonvanishing leading coefficients, and prove matching upper and lower bounds.
+implications: Would connect linear tail predictions to the full Einstein dynamics and feed directly into SCC formulations.
 difficulty: 3
 posed_by: null
 posed_year: null

@@ -1,18 +1,12 @@
 id: K-002
-title: Uniform nonlinear stability as a→M−
+title: Uniform nonlinear stability as $a \to M^-$
 cluster: exterior-stability
 status: open
-statement: Prove a version of Kerr stability whose constants and decay estimates remain
-  uniform, or quantitatively controlled, as the spin approaches extremality.
-math_required: Degenerate redshift analysis; near-horizon scaling; semiclassical control
-  near the photon region; uniform weighted energies in the surface-gravity parameter
-  κ.
-why_it_matters: Near-extremal Kerr is the transition region between the standard subextremal
-  theory and the qualitatively different extremal regime.
-completion_criteria: A complete answer must track dependence on ε=1−|a|/M in all coercive
-  estimates and separate unavoidable degeneracies from removable technical losses.
-implications: Would bridge ordinary Kerr stability to extremal dynamics and sharpen
-  what actually fails as κ→0.
+statement: Prove a version of Kerr stability whose constants and decay estimates remain uniform, or quantitatively controlled, as the spin approaches extremality.
+math_required: Degenerate redshift analysis; near-horizon scaling; semiclassical control near the photon region; uniform weighted energies in the surface-gravity parameter $\kappa$.
+why_it_matters: Near-extremal Kerr is the transition region between the standard subextremal theory and the qualitatively different extremal regime.
+completion_criteria: A complete answer must track dependence on $\varepsilon = 1 - |a|/M$ in all coercive estimates and separate unavoidable degeneracies from removable technical losses.
+implications: Would bridge ordinary Kerr stability to extremal dynamics and sharpen what actually fails as $\kappa \to 0$.
 difficulty: 4
 posed_by: null
 posed_year: null

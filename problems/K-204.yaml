@@ -1,17 +1,12 @@
 id: K-204
-title: Uniform estimates in the surface-gravity limit κ→0
+title: Uniform estimates in the surface-gravity limit $\kappa \to 0$
 cluster: extremal
 status: open
-statement: Develop estimates for wave and gravitational fields that remain meaningful
-  as the subextremal surface gravity tends to zero.
-math_required: Uniform microlocal analysis; two-scale near-horizon asymptotics; replacement
-  for standard redshift positivity.
-why_it_matters: Every near-extremal problem ultimately runs into constants that blow
-  up as κ→0.
-completion_criteria: A complete answer must state explicit κ-dependence in the coercive
-  and decay estimates and identify the limiting operator or geometry.
-implications: Would unify subextremal and extremal analysis instead of treating them
-  as disconnected cases.
+statement: Develop estimates for wave and gravitational fields that remain meaningful as the subextremal surface gravity tends to zero.
+math_required: Uniform microlocal analysis; two-scale near-horizon asymptotics; replacement for standard redshift positivity.
+why_it_matters: Every near-extremal problem ultimately runs into constants that blow up as $\kappa \to 0$.
+completion_criteria: A complete answer must state explicit $\kappa$-dependence in the coercive and decay estimates and identify the limiting operator or geometry.
+implications: Would unify subextremal and extremal analysis instead of treating them as disconnected cases.
 difficulty: 4
 posed_by: null
 posed_year: null

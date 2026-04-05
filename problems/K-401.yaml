@@ -2,16 +2,11 @@ id: K-401
 title: QNM completeness for Kerr ringdown expansions
 cluster: spectral-scattering
 status: open
-statement: Prove or refute a mathematically precise completeness statement for Kerr
-  quasinormal modes plus tails in late-time expansions of wave or gravitational fields.
-math_required: Meromorphic continuation of resolvents; contour deformation; branch-cut
-  analysis; asymptotic expansions for non-selfadjoint operators.
-why_it_matters: This is the clean mathematical version of the folklore claim that
-  ringdown is 'a sum of QNMs'.
-completion_criteria: A complete answer must define the function space, the notion
-  of completeness or asymptotic completeness, and the tail remainder precisely.
-implications: Would settle one of the central structural questions behind black-hole
-  spectroscopy.
+statement: Prove or refute a mathematically precise completeness statement for Kerr quasinormal modes plus tails in late-time expansions of wave or gravitational fields.
+math_required: Meromorphic continuation of resolvents; contour deformation; branch-cut analysis; asymptotic expansions for non-selfadjoint operators.
+why_it_matters: This is the clean mathematical version of the folklore claim that ringdown is 'a sum of QNMs'.
+completion_criteria: A complete answer must define the function space, the notion of completeness or asymptotic completeness, and the tail remainder precisely.
+implications: Would settle one of the central structural questions behind black-hole spectroscopy.
 difficulty: 4
 posed_by: null
 posed_year: null
