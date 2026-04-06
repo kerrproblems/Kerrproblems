@@ -1,9 +1,5 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getAllProblems } from '../lib/problems.js';
-
-const problems = getAllProblems();
-const solved = problems.filter(p => p.status === 'solved').length;
 ---
 <Base>
   <div class="home-landing">
@@ -31,14 +27,6 @@ const solved = problems.filter(p => p.status === 'solved').length;
         We are at an unusual moment. Formal proof assistants like Lean are making it possible to verify arguments at a scale and speed previously unimaginable, and AI systems are beginning to contribute meaningfully to research-level mathematics &mdash; finding references, closing partial arguments, and in some cases generating genuine new proofs. The Kerr problem landscape is exactly the kind of structured, precisely-stated territory where these tools can have real impact. This database is designed with that future in mind: a shared map of the open problems, so that human mathematicians, formal verification projects, and AI systems can orient themselves and push the frontier forward together.
       </p>
     </div>
-
-    <p class="home-count-line">
-      There are {problems.length} problems in this database, of which {solved} have been fully solved.
-    </p>
-
-    <p class="home-prose">
-      The Kerr spacetime &mdash; the exact solution to Einstein&apos;s vacuum equations describing a rotating black hole &mdash; lies at the centre of modern mathematical general relativity. Discovered by Roy Kerr in 1963, it remains the subject of deep open problems spanning stability, singularities, scattering, and uniqueness. This database tracks those problems, their current status, and the partial results that surround them.
-    </p>
 
     <div class="home-columns">
       <section class="home-col">
@@ -116,15 +104,6 @@ const solved = problems.filter(p => p.status === 'solved').length;
   }
   .home-intro-below-quote p:last-child {
     margin-bottom: 0;
-  }
-
-  .home-count-line {
-    margin: 0 0 1rem;
-  }
-
-  .home-prose {
-    margin: 0;
-    max-width: 62ch;
   }
 
   .home-pill {
