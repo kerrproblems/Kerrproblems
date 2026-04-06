@@ -1,57 +1,172 @@
 ---
 import Base from '../layouts/Base.astro';
-import { getAllProblems, getStats, CLUSTER_LABELS } from '../lib/problems.js';
+import { getAllProblems } from '../lib/problems.js';
 
 const problems = getAllProblems();
-const stats = getStats(problems);
-
-const flagship = ['K-001', 'K-101', 'K-201'];
-const flagshipProblems = flagship.map(id => problems.find(p => p.id === id));
+const solved = problems.filter(p => p.status === 'solved').length;
 ---
 <Base>
-  <p class="intro-prose">
-    A community-maintained list of open problems on Kerr spacetime, with each
-    statement tied to a primary source.
-    <a href="/problems">Browse all {stats.total} problems</a>.
-  </p>
+  <div class="home-landing">
+    <blockquote class="chandrasekhar-quote">
+      <p>
+        &ldquo;In my entire scientific life, extending over forty-five years, the most
+        shattering experience has been the realization that an exact solution of
+        Einstein&apos;s equations of general relativity, discovered by the New Zealand
+        mathematician, Roy Kerr, provides the absolutely exact representation of
+        untold numbers of massive black holes that populate the universe.&rdquo;
+      </p>
+      <footer>
+        &mdash; S. Chandrasekhar, <em>Shakespeare, Newton, and Beethoven</em>, 1975
+      </footer>
+    </blockquote>
 
-  <p class="stats-line">
-    {stats.total} problems · {stats.open} open · {stats.partial} partial · {stats.conditional} conditional · {stats.solved} solved
-  </p>
+    <p class="home-count-line">
+      There are {problems.length} problems in this database, of which {solved} have been fully solved.
+    </p>
 
-  <h2>Flagship problems</h2>
-  <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.25rem;">
-    Three central questions in the archive.
-  </p>
-  <div class="problem-grid" style="margin-bottom: 2.5rem">
-    {flagshipProblems.map(p => (
-      <a href={`/problems/${p.id}`} class="problem-card">
-        <div class="card-id">{p.id}</div>
-        <div class="card-title">{p.title}</div>
-        <div class="card-meta">
-          <span class={`badge badge-${p.status}`}>{p.status}</span>
-          <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
-        </div>
-      </a>
-    ))}
-  </div>
+    <p class="home-prose">
+      The Kerr spacetime &mdash; the exact solution to Einstein&apos;s vacuum equations describing a rotating black hole &mdash; lies at the centre of modern mathematical general relativity. Discovered by Roy Kerr in 1963, it remains the subject of deep open problems spanning stability, singularities, scattering, and uniqueness. This database tracks those problems, their current status, and the partial results that surround them.
+    </p>
 
-  <h2>By cluster</h2>
-  <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
-    {Object.entries(CLUSTER_LABELS).map(([slug, label]) => {
-      const count = problems.filter(p => p.cluster === slug).length;
-      const openCount = problems.filter(p => p.cluster === slug && p.status === 'open').length;
-      return (
-        <a href={`/clusters/${slug}`} class="problem-card" style="display: flex; justify-content: space-between; align-items: center;">
-          <div>
-            <div class="card-id" style="margin-bottom: 0.15rem">{label}</div>
-            <div style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-mono);">
-              {openCount} open of {count}
-            </div>
+    <div class="home-columns">
+      <section class="home-col">
+        <h2 class="home-pill">Recent progress</h2>
+        <div class="home-col-stack">
+          <div class="home-progress-item">
+            <a href="/problems/K-001">K-001 &nbsp; Full nonlinear stability of subextremal Kerr</a>
+            <div class="home-progress-date">(April 2026)</div>
           </div>
-          <span style="font-family: var(--font-mono); color: var(--text-faint); font-size: 0.75rem;">→</span>
-        </a>
-      );
-    })}
+          <div class="home-progress-item">
+            <a href="/problems/K-101">K-101 &nbsp; Strong Cosmic Censorship threshold for Kerr interiors</a>
+            <div class="home-progress-date">(April 2026)</div>
+          </div>
+          <div class="home-progress-item">
+            <a href="/problems/K-201">K-201 &nbsp; Nonlinear codimension-1 stability of extremal Kerr</a>
+            <div class="home-progress-date">(April 2026)</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-col">
+        <h2 class="home-pill">Key references</h2>
+        <div class="home-col-stack">
+          <div class="home-ref-item">
+            Giorgi, Klainerman, Szeftel &mdash; Full stability of Schwarzschild{' '}
+            <a href="https://arxiv.org/abs/2205.14808">arXiv:2205.14808</a>
+          </div>
+          <div class="home-ref-item">
+            Dafermos, Luk &mdash; Interior of dynamical vacuum black holes{' '}
+            <a href="https://arxiv.org/abs/1710.01722">arXiv:1710.01722</a>
+          </div>
+          <div class="home-ref-item">
+            Teukolsky &mdash; The Kerr metric (review){' '}
+            <a href="https://arxiv.org/abs/1410.2130">arXiv:1410.2130</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-col">
+        <h2 class="home-pill">Open &rarr; solved</h2>
+        <p class="home-solved-placeholder">
+          Problems whose status changes to solved will be listed here with the date this site was updated.
+        </p>
+      </section>
+    </div>
   </div>
 </Base>
+
+<style>
+  .chandrasekhar-quote {
+    background: #f0f4f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    max-width: 780px;
+    margin: 0 auto 2rem;
+  }
+  .chandrasekhar-quote p {
+    margin: 0;
+  }
+  .chandrasekhar-quote footer {
+    text-align: right;
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+    margin-top: 1rem;
+  }
+
+  .home-count-line {
+    margin: 0 0 1rem;
+  }
+
+  .home-prose {
+    margin: 0;
+    max-width: 62ch;
+  }
+
+  .home-pill {
+    display: inline-block;
+    border: 1px solid #999;
+    border-radius: 999px;
+    padding: 0.3em 1.1em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: transparent;
+    color: #333;
+    font-weight: 400;
+    margin: 0 0 0.75rem;
+  }
+
+  .home-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    align-items: start;
+  }
+
+  .home-col-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .home-progress-item a {
+    color: var(--link, #0066cc);
+    text-decoration: none;
+  }
+  .home-progress-item a:hover {
+    text-decoration: underline;
+  }
+
+  .home-progress-date {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 0.15rem;
+  }
+
+  .home-ref-item {
+    font-size: inherit;
+  }
+  .home-ref-item a {
+    color: var(--link, #0066cc);
+    text-decoration: none;
+  }
+  .home-ref-item a:hover {
+    text-decoration: underline;
+  }
+
+  .home-solved-placeholder {
+    margin: 0;
+    font-style: italic;
+    color: #777;
+  }
+
+  @media (max-width: 600px) {
+    .home-columns {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
