@@ -1,7 +1,65 @@
 id: K-108
-title: Strong Cosmic Censorship in rotating $\Lambda > 0$ backgrounds
+title: Strong cosmic censorship in rotating $\Lambda>0$ black-hole interiors (conditional on a spectral–interior bridge)
+short_title: SCC for Kerr–de Sitter type interiors (conditional)
 cluster: interior-scc
-status: conditional
+theorem_status: conditional
+problem_type: literature_reformulation
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: editorial_revision_needed
+priority: normal
+summary: >-
+  Relate quasinormal-mode decay and interior extendibility for Kerr–de Sitter / Kerr–Newman–de Sitter models;
+  conclusions depend on which SCC regularity formulation and which linear spectral input are assumed.
+problem_statement: >-
+  Fix (i) a precise strong cosmic censorship regularity class ($C^k$ inextendibility, weaker $C^0$
+  formulations, etc.) and (ii) a quantitative bridge from linear spectral data (quasinormal decay on the
+  chosen $\Lambda>0$ background) to interior Cauchy-horizon behavior. Under that pair, determine whether SCC
+  holds or fails for rotating charged $\Lambda>0$ black holes—especially tracking how thresholds move near
+  extremality compared with $\Lambda=0$.
+statement: >-
+  Fix (i) a precise strong cosmic censorship regularity class ($C^k$ inextendibility, weaker $C^0$
+  formulations, etc.) and (ii) a quantitative bridge from linear spectral data (quasinormal decay on the
+  chosen $\Lambda>0$ background) to interior Cauchy-horizon behavior. Under that pair, determine whether SCC
+  holds or fails for rotating charged $\Lambda>0$ black holes—especially tracking how thresholds move near
+  extremality compared with $\Lambda=0$.
+why_it_matters: >-
+  Positive $\Lambda$ changes exterior decay and interior amplification; SCC statements are sensitive to both
+  the regularity notion and the spectral input used.
+scope:
+  background: Kerr–de Sitter and Kerr–Newman–de Sitter–type solutions; interior up to Cauchy horizons.
+  equation_type: >-
+    Typically begins with test fields (scalar EM) and spectral theory; full gravity interior statements are
+    further out.
+  linearity: >-
+    Much of the sharpest $\Lambda>0$ literature is linearized around a fixed background; nonlinear interior
+    claims require separate hypotheses.
+  regularity: >-
+    Must name the SCC variant ($C^0$ extendibility vs higher regularity blow-up, etc.); different variants
+    are not interchangeable.
+  parameter_regime: >-
+    Subextremal vs near-extremal rotation/charge; competition between slow QNM decay and blue-shift along
+    inner horizons is regime-dependent.
+  asymptotics: de Sitter / black-hole–de Sitter asymptotics as in the stated model.
+  gauge_or_formulation: As in the cited spectral and interior PDE setups.
+known_results: []
+remaining_gap: >-
+  Turn the conditional template above into a single published-quality conjecture with matching hypotheses,
+  or a theorem under explicitly listed spectral and regularity assumptions.
+status_explanation: >-
+  **Condition (explicit):** results hinge on (A) the chosen SCC formulation and (B) the assumed implication
+  from linear QNM decay (or related spectral quantities) to nonlinear interior regularity. Different papers
+  may use different pairs $(A,B)$; this entry does not collapse them without further editorial verification.
+  Marked `editorial_revision_needed` until maintainers align wording with a pinned reference set.
+math_required: >-
+  Spectral-gap estimates; de Sitter horizon boundary conditions; Sobolev regularity at Cauchy horizons;
+  coupled gravito-electromagnetic systems where relevant.
+completion_criteria: >-
+  Connect spectral decay rates to extension regularity and prove either violation or restoration of SCC in a
+  stated class matching $(A,B)$.
+implications: >-
+  Clarifies how SCC issues differ between $\Lambda=0$ and $\Lambda>0$ rotating models.
+difficulty: 3
 family: kerr-de-sitter
 asymptotics: de-sitter
 coupling: matter-coupled
@@ -13,36 +71,73 @@ regime:
 relevance: mixed
 fv_suitability: high
 fv_reason: >-
-  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
-  formalization boundaries.
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer formalization
+  boundaries.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Recent literature studies SCC questions for Kerr–Newman–de Sitter using linear scalar QNM scans; a
+  consolidated theorem matching one SCC definition is still conditional on the bridge hypotheses above.
+dependencies: []
+related_problem_ids:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-109
+  - K-110
+  - K-111
+  - K-112
+related:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-109
+  - K-110
+  - K-111
+  - K-112
+references:
+  - key: ddg-knads-scc
+    authors: Davey, Dias, Sola Gil
+    title: Strong Cosmic Censorship in Kerr–Newman–de Sitter
+    venue: arXiv
+    year: 2024
+    url: https://arxiv.org/abs/2404.03724
+    arxiv: '2404.03724'
+    kind: primary
+    relevance: >-
+      Recent QNM-based scan of SCC issues for Kerr–Newman–de Sitter; illustrates dependence on parameter
+      space and linear scalar input.
+  - key: dafermos-luk-kerr-horizon
+    authors: Dafermos, Luk
+    title: 'The interior of dynamical vacuum black holes I: The $C^0$-stability of the Kerr Cauchy horizon'
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1710.01722
+    arxiv: '1710.01722'
+    kind: primary
+    relevance: >-
+      Foundational $\Lambda=0$ interior/Cauchy-horizon stability context; contrasts with $\Lambda>0$
+      spectral narratives and regularity formulations.
+tags: []
+aliases: []
 related_families_note: Spelled Kerr–de Sitter / Kerr–Newman–de Sitter in the statement.
 caution_note: >-
-  Positive Λ and Kerr–Newman–de Sitter variants make this conceptually distinct from asymptotically
-  flat interior/SCC formulations; do not conflate decay rates or thresholds with the Λ=0 case.
-statement: >-
-  Determine the correct SCC threshold for Kerr–de Sitter or Kerr–Newman–de Sitter, especially near
-  extremality, where quasinormal-mode decay may compete with blue-shift.
-math_required: >-
-  Spectral-gap estimates; de Sitter horizon boundary conditions; Sobolev regularity at the Cauchy
-  horizon; coupled gravito-electromagnetic systems.
-why_it_matters: >-
-  Positive cosmological constant changes both decay and interior amplification, so SCC can look
-  different than in the asymptotically flat case.
-completion_criteria: >-
-  A complete answer must connect spectral decay rates to extension regularity and prove either
-  violation or restoration of SCC in a stated class.
-implications: Would clarify one of the most delicate modern versions of SCC.
-difficulty: 3
-dependencies: []
-related: []
-references: []
+  Positive $\Lambda$ and charged rotating variants are not interchangeable with asymptotically flat SCC
+  formulations; decay thresholds and regularity notions differ.
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Conditional: progress assumes an identified missing input or restricted hypothesis class.
-  TODO(editorial): name the dependency explicitly.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: >-
+  Verification_state is editorial_revision_needed because the site has not yet pinned a single SCC definition
+  and spectral-to-interior bridge as authoritative for this entry.
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

@@ -9,7 +9,19 @@ Each file in `/problems/` is `{id}.yaml` (e.g. `K-001.yaml`). The `id` must matc
 | `id` | string | `K-` + three digits |
 | `title` | string | Short descriptive title |
 | `cluster` | string | One of: `exterior-stability`, `interior-scc`, `extremal`, `rigidity-uniqueness`, `spectral-scattering` |
-| `status` | string | `open` \| `partial` \| `conditional` \| `solved` |
+| `theorem_status` | string | `open` \| `partial` \| `conditional` \| `solved` \| `needs_review` |
+| `problem_type` | string | `classical_frontier` \| `literature_reformulation` \| `quantitative_sharpening` \| `formalization_target` \| `speculative_direction` |
+| `maturity` | string | `well_scoped` \| `mostly_scoped` \| `provisional` |
+| `evidence_level` | string | `primary_refs_present` \| `secondary_refs_only` \| `refs_missing` |
+| `verification_state` | string | `verified_recently` \| `imported_unverified` \| `editorial_revision_needed` |
+| `scope` | object | Background, equation type, linearity, regularity, parameter regime, asymptotics, optional gauge |
+| `known_results` | list | `{ statement, regime?, significance? }` |
+| `remaining_gap` | string | What remains open (often mirrors completion criteria until refined) |
+| `status_explanation` | string | Especially for `conditional` / editorial nuance |
+| `summary` / `short_title` | string | One-line summary and card title |
+| `related_problem_ids` | list | IDs (merged with `related` in the loader) |
+| `last_verified_at` / `last_verified_by` | string | Editorial audit trail |
+| `editorial_notes` / `public_notes` | string | Maintainer-only vs public-facing notes |
 | `statement` | string | Precise problem statement (multiline OK) |
 | `math_required` | string | Mathematical prerequisites |
 | `why_it_matters` | string | Motivation |
@@ -27,7 +39,7 @@ Each file in `/problems/` is `{id}.yaml` (e.g. `K-001.yaml`). The `id` must matc
 | `progress_summary` | string | Conservative summary of what is known (no fabricated theorems) |
 | `dependencies` | string[] | Problem IDs this entry conceptually builds on |
 | `related` | string[] | Related problems (peer links; may be empty) |
-| `references` | list | Bibliographic entries (may use TODO placeholders; empty triggers UI + validator warnings) |
+| `references` | list | Structured entries with `kind` + `relevance` (empty allowed only for `theorem_status: needs_review`) |
 
 ## Optional fields
 

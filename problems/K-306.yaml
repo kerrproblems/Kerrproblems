@@ -1,7 +1,53 @@
 id: K-306
-title: Hidden symmetries under perturbation
+title: Hidden symmetries and approximate Carter-type operators under metric perturbation
+short_title: Approximate hidden symmetries near Kerr
 cluster: rigidity-uniqueness
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Decide whether near-Kerr metrics admit controlled approximate symmetry operators usable like Carter’s
+  constants—not the same question as photon-region spectral geometry (K-504) or Killing–Yano stability
+  (K-508).
+problem_statement: >-
+  Determine whether vacuum spacetimes sufficiently close to Kerr admit tensors or differential operators that
+  (i) approximately commute with the wave operator or geodesic Hamiltonian in a quantitative sense, and
+  (ii) reproduce enough of the Carter commutator algebra to sharpen PDE estimates—either construct them with
+  explicit error bounds or prove a no-go theorem.
+statement: >-
+  Determine whether vacuum spacetimes sufficiently close to Kerr admit tensors or differential operators that
+  (i) approximately commute with the wave operator or geodesic Hamiltonian in a quantitative sense, and
+  (ii) reproduce enough of the Carter commutator algebra to sharpen PDE estimates—either construct them with
+  explicit error bounds or prove a no-go theorem.
+why_it_matters: >-
+  Kerr’s integrable structure underpins many analytic tools; the open issue is whether a useful remnant
+  survives under perturbation of the metric itself.
+scope:
+  background: Near-Kerr vacuum spacetimes (not fixed Kerr linearization only).
+  equation_type: Full vacuum Einstein constraints coupled with operator estimates on the perturbed geometry.
+  linearity: >-
+    Question is about operators on the perturbed spacetime; linearized modes on fixed Kerr are only
+    motivational.
+  regularity: Smooth or high Sobolev metrics in a neighborhood of Kerr.
+  parameter_regime: Smallness of Kerr distance in a stated topology.
+  asymptotics: Asymptotically flat near-Kerr context as in stability/rigidity discussions.
+  gauge_or_formulation: Operator definitions must be gauge-coherent or gauge-fixed.
+known_results: []
+remaining_gap: >-
+  Construct approximate operators with uniform estimates or obstruct them with a sharp theorem.
+status_explanation: >-
+  Distinct from K-504 (focus: photon shell / null geodesic locus under perturbation) and K-508 (focus:
+  approximate Killing–Yano 2-forms). This entry targets Carter-type operator algebras for PDEs.
+math_required: >-
+  Killing tensors; Killing–Yano structures; perturbation of integrable systems; commutator estimates for PDEs.
+completion_criteria: >-
+  Either quantitative construction with error control or a rigorous no-go under explicit hypotheses.
+implications: >-
+  Determines whether Kerr’s separability is a stable analytic feature beyond exact symmetry.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,31 +59,62 @@ relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Exact Carter symmetry is classical on Kerr; controlled approximate analogues on perturbed metrics are not
+  established at theorem level here.
+dependencies: []
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-307
+  - K-308
+  - K-504
+  - K-508
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-307
+  - K-308
+  - K-504
+  - K-508
+references:
+  - key: carter-kerr-symmetry
+    authors: Carter
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Comm. Math. Phys. (classic; cite via review)
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: >-
+      Foundational separability / fourth constant for geodesics—baseline exact symmetry this entry seeks to
+      perturb.
+  - key: ks-brief-intro
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: '2210.14400'
+    kind: survey
+    relevance: >-
+      Explains reliance on Kerr’s special structure in nonlinear estimates—motivation for approximate
+      symmetry questions.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Determine whether near-Kerr spacetimes admit robust approximate hidden symmetries strong enough to
-  reproduce useful Carter-type commutators or conserved quantities.
-math_required: >-
-  Killing tensors and Killing–Yano structures; perturbation theory of integrable systems; commutator
-  algebra for PDE estimates.
-why_it_matters: Kerr owes much of its analytic tractability to hidden symmetry and separability.
-completion_criteria: >-
-  A complete answer must either construct approximate symmetry operators with usable error control
-  or prove a no-go theorem.
-implications: >-
-  Would reveal whether Kerr’s special integrable structure survives in a useful approximate sense
-  under perturbation.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

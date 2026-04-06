@@ -1,7 +1,50 @@
 id: K-507
 title: Finite-data inverse resonance recovery of Kerr parameters
+short_title: Finite-data inverse resonance recovery of Kerr parameters
 cluster: spectral-scattering
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Finite-data inverse resonance recovery of Kerr parameters
+problem_statement: >-
+  From a finite set of observed quasinormal frequencies (with stated error bars) associated to a
+  subextremal Kerr background, derive stability estimates for $(M,a)$ and quantify when uniqueness
+  fails (e.g. isospectral ambiguities).
+statement: >-
+  From a finite set of observed quasinormal frequencies (with stated error bars) associated to a
+  subextremal Kerr background, derive stability estimates for $(M,a)$ and quantify when uniqueness
+  fails (e.g. isospectral ambiguities).
+why_it_matters: Clarifies what mathematical inverse problems can and cannot justify for “spectroscopy” claims.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: inverse-problem, spectral-operator.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Explicit theorems with hypotheses on mode set, error, and parameter range, plus counterexamples or
+  non-uniqueness mechanisms where they occur.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Complex analysis of resonance poles; inverse spectral theory; stability of nonlinear least-
+  squares maps; possible connections to scattering phase.
+completion_criteria: >-
+  Explicit theorems with hypotheses on mode set, error, and parameter range, plus counterexamples or
+  non-uniqueness mechanisms where they occur.
+implications: Grounds physics-facing inference in rigorous spectral inverse theory.
+difficulty: 5
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -18,35 +61,45 @@ fv_reason: >-
   classical analysis than full nonlinear stability, though uniqueness proofs may still be analytic.
 progress_summary: >-
   Linearized spectral uniqueness programs exist in fragments; a definitive finite-data theorem with
-  realistic noise model is not asserted on this site. See references/TODO.
+  realistic noise model is not asserted on this site. See .
+dependencies:
+  - K-401
+  - K-405
+related_problem_ids:
+  - K-402
+  - K-501
+  - K-502
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-508
+  - K-509
+  - K-510
+related:
+  - K-402
+  - K-501
+  - K-502
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-508
+  - K-509
+  - K-510
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: >-
   Inverse results are sensitive to asymptotics, mode counting, and whether data come from linearized
   theory vs. physical waveforms; hypotheses must be stated precisely.
-statement: >-
-  From a finite set of observed quasinormal frequencies (with stated error bars) associated to a
-  subextremal Kerr background, derive stability estimates for $(M,a)$ and quantify when uniqueness
-  fails (e.g. isospectral ambiguities).
-math_required: >-
-  Complex analysis of resonance poles; inverse spectral theory; stability of nonlinear least-
-  squares maps; possible connections to scattering phase.
-why_it_matters: >-
-  Clarifies what mathematical inverse problems can and cannot justify for “spectroscopy” claims.
-completion_criteria: >-
-  Explicit theorems with hypotheses on mode set, error, and parameter range, plus counterexamples or
-  non-uniqueness mechanisms where they occur.
-implications: >-
-  Grounds physics-facing inference in rigorous spectral inverse theory.
-difficulty: 5
-dependencies:
-  - K-401
-  - K-405
-related:
-  - K-402
-references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
 posed_by: null
 posed_year: null
 prizes: null
 notes: Mixed relevance; connects to observationally adjacent topics only through stated hypotheses.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-06'

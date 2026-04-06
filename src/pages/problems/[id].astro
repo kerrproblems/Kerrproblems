@@ -5,7 +5,7 @@ import {
   CLUSTER_LABELS,
   getUnlocksMap,
   getRelatedByTags,
-  needsReferencesCuration,
+  needsEditorialBanner,
 } from '../../lib/problems.js';
 import {
   FAMILY_LABELS,
@@ -15,6 +15,9 @@ import {
   REGIME_LABELS,
   RELEVANCE_LABELS,
   FV_LABELS,
+  THEOREM_STATUS_LABELS,
+  PROBLEM_TYPE_LABELS,
+  MATURITY_LABELS,
 } from '../../lib/taxonomy.js';
 
 export async function getStaticPaths() {
@@ -34,7 +37,7 @@ const depends = (p.dependencies || []).map(id => all.find(x => x.id === id)).fil
 const relatedByTags = getRelatedByTags(p, all, 8).filter(
   x => !p.related?.includes(x.id) && x.id !== p.id,
 );
-const refNeeded = needsReferencesCuration(p);
+const showEditorialBanner = needsEditorialBanner(p);
 
 function pips(n) {
   return Array.from({ length: 5 }, (_, i) => `<span class="pip${i < n ? ' filled' : ''}"></span>`).join('');
@@ -51,8 +54,16 @@ function relClass(r) {
   if (r === 'mixed') return 'rel-mixed';
   return 'rel-physics-facing';
 }
+
+function badgeTheorem(ts) {
+  const safe = String(ts || 'open').replace(/[^a-z_]/g, '');
+  return `badge-${safe}`;
+}
+
+const scope = p.scope || {};
+const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
 ---
-<Base title={`${p.id} — ${p.title}`} description={p.statement}>
+<Base title={`${p.id} — ${p.title}`} description={p.summary || p.problem_statement}>
   <div class="crumbs">
     <a href="/problems">Problems</a>
     <span style="margin: 0 0.5rem">→</span>
@@ -63,15 +74,30 @@ function relClass(r) {
 
   <div class="problem-layout">
     <article class="problem-main">
+      {showEditorialBanner && (
+        <div class="editorial-banner" role="status">
+          <strong>Editorial notice.</strong>{' '}
+          This entry needs editorial verification and should not be cited as a literature-grounded status
+          summary yet.
+        </div>
+      )}
+
       <div style="margin-bottom: 1.5rem">
         <div class="problem-id-line">{p.id}</div>
         <h1 style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.2">{p.title}</h1>
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem">
-          <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class={`badge ${badgeTheorem(p.theorem_status)}`} title="Theorem status">
+            {THEOREM_STATUS_LABELS[p.theorem_status] || p.theorem_status}
+          </span>
+          <span class="badge-problem-type" title="Problem type">
+            {PROBLEM_TYPE_LABELS[p.problem_type] || p.problem_type}
+          </span>
+          <span class="badge-maturity" title="Scoping maturity">
+            {MATURITY_LABELS[p.maturity] || p.maturity}
+          </span>
           <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
           <span class={`rel-badge ${relClass(p.relevance)}`} title="Relevance class">{RELEVANCE_LABELS[p.relevance]}</span>
           <span class={`fv-badge ${fvClass(p.fv_suitability)}`} title={p.fv_reason}>{FV_LABELS[p.fv_suitability]}</span>
-          {refNeeded && <span class="badge-ref-needed">References need curation</span>}
           <span class="difficulty-pips" set:html={pips(p.difficulty)} title={`Difficulty: ${p.difficulty}/5`}></span>
         </div>
         <div style="display: flex; flex-wrap: wrap; margin-top: 0.5rem">
@@ -90,23 +116,87 @@ function relClass(r) {
       <hr />
 
       <div class="problem-section">
-        <h3>Statement</h3>
-        <p>{p.statement}</p>
+        <h3>Summary</h3>
+        <p>{p.summary}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Why this matters</h3>
+        <p>{p.why_it_matters}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Exact scope</h3>
+        <dl class="scope-block">
+          <dt>Background / setting</dt>
+          <dd>{scope.background}</dd>
+          <dt>Equation type</dt>
+          <dd>{scope.equation_type}</dd>
+          <dt>Linearity</dt>
+          <dd>{scope.linearity}</dd>
+          <dt>Regularity</dt>
+          <dd>{scope.regularity}</dd>
+          <dt>Parameter regime</dt>
+          <dd>{scope.parameter_regime}</dd>
+          <dt>Asymptotics</dt>
+          <dd>{scope.asymptotics}</dd>
+          {scope.gauge_or_formulation && (
+            <>
+              <dt>Gauge / formulation</dt>
+              <dd>{scope.gauge_or_formulation}</dd>
+            </>
+          )}
+        </dl>
+      </div>
+
+      {p.status_explanation && String(p.status_explanation).trim() && (
+        <div class="problem-section">
+          <h3>Status explanation</h3>
+          <p>{p.status_explanation}</p>
+        </div>
+      )}
+
+      <div class="problem-section">
+        <h3>Problem statement</h3>
+        <p>{p.problem_statement}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>What is already known</h3>
+        {knownResults.length ? (
+          <ul class="known-results-list">
+            {knownResults.map(k => (
+              <li>
+                <div>{k.statement}</div>
+                {k.regime && (
+                  <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.35rem">
+                    <em>Regime:</em> {k.regime}
+                  </div>
+                )}
+                {k.significance && (
+                  <div style="font-size: 0.88rem; margin-top: 0.35rem">{k.significance}</div>
+                )}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p style="color: var(--text-muted)">No structured “known results” bullets recorded for this entry yet.</p>
+        )}
+        {p.progress_summary && (
+          <p style="margin-top: 0.75rem; font-size: 0.92rem; color: var(--text-muted)">
+            <em>Progress summary:</em> {p.progress_summary}
+          </p>
+        )}
+      </div>
+
+      <div class="problem-section">
+        <h3>What remains open</h3>
+        <p>{p.remaining_gap || p.completion_criteria}</p>
       </div>
 
       <div class="problem-section">
         <h3>Mathematical prerequisites</h3>
         <p>{p.math_required}</p>
-      </div>
-
-      <div class="problem-section">
-        <h3>Known progress</h3>
-        <p>{p.progress_summary}</p>
-      </div>
-
-      <div class="problem-section">
-        <h3>Why it matters</h3>
-        <p>{p.why_it_matters}</p>
       </div>
 
       {(p.related_families_note || p.caution_note) && (
@@ -147,29 +237,27 @@ function relClass(r) {
       </div>
 
       <div class="problem-section">
-        <h3>Key references</h3>
-        {refNeeded ? (
-          <div class="callout callout--empty">
-            <strong>References pending / needs curation.</strong> This entry does not yet list verified
-            bibliographic pointers in YAML. Editors should add <code>arxiv</code>, <code>doi</code>, or
-            vetted <code>note</code> fields — not guessed citations.
-          </div>
+        <h3>References</h3>
+        {!p.references?.length ? (
+          <p style="color: var(--text-muted)">No references listed (often paired with <code>needs_review</code>).</p>
         ) : (
           <ul class="ref-list">
-            {p.references.map((ref, i) => (
+            {p.references.map(ref => (
               <li>
-                {ref.arxiv && (
-                  <a href={`https://arxiv.org/abs/${ref.arxiv}`} target="_blank" rel="noopener">arXiv:{ref.arxiv}</a>
+                <span class="ref-kind">{ref.kind}</span>
+                {ref.url ? (
+                  <a href={ref.url} target="_blank" rel="noopener">
+                    {ref.title || ref.url}
+                  </a>
+                ) : (
+                  <span>{ref.title || 'Reference'}</span>
                 )}
-                {ref.doi && (
-                  <>
-                    {ref.arxiv ? ' · ' : ''}
-                    <a href={`https://doi.org/${ref.doi}`} target="_blank" rel="noopener">doi:{ref.doi}</a>
-                  </>
-                )}
-                {ref.placeholder && <span>{ref.placeholder}</span>}
-                {ref.note && (
-                  <span style="color: var(--text-muted); margin-left: 0.5rem">— {ref.note}</span>
+                {ref.authors && <span style="color: var(--text-muted)"> — {ref.authors}</span>}
+                {ref.year && <span style="color: var(--text-muted)"> ({ref.year})</span>}
+                {ref.relevance && (
+                  <div style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.25rem">
+                    {ref.relevance}
+                  </div>
                 )}
               </li>
             ))}
@@ -209,7 +297,7 @@ function relClass(r) {
                 <div class="card-id">{r.id}</div>
                 <div class="card-title">{r.title}</div>
                 <div class="card-meta">
-                  <span class={`badge badge-${r.status}`}>{r.status}</span>
+                  <span class={`badge ${badgeTheorem(r.theorem_status)}`}>{THEOREM_STATUS_LABELS[r.theorem_status] || r.theorem_status}</span>
                 </div>
               </a>
             ))}
@@ -229,16 +317,28 @@ function relClass(r) {
         </div>
       )}
 
-      {p.notes && (
+      {(p.public_notes || p.editorial_notes || p.notes) && (
         <div class="problem-section">
-          <h3>Maintainer notes</h3>
-          <p style="color: var(--text-muted); font-style: italic; white-space: pre-wrap">{p.notes}</p>
+          <h3>Editorial / maintainer notes</h3>
+          {p.public_notes && <p style="white-space: pre-wrap">{p.public_notes}</p>}
+          {p.editorial_notes && (
+            <p style="color: var(--text-muted); font-style: italic; white-space: pre-wrap">{p.editorial_notes}</p>
+          )}
+          {p.notes && <p style="color: var(--text-muted); white-space: pre-wrap">{p.notes}</p>}
         </div>
       )}
 
       <hr />
       <div class="page-meta">
-        Last updated: {p.last_updated || '—'} ·{' '}
+        Last updated: {p.last_updated || '—'}
+        {p.last_verified_at && (
+          <>
+            {' '}
+            · Last verified (editorial): {p.last_verified_at}
+            {p.last_verified_by && ` (${p.last_verified_by})`}
+          </>
+        )}
+        {' · '}
         <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} target="_blank" rel="noopener">Edit on GitHub →</a>
       </div>
     </article>
@@ -248,8 +348,16 @@ function relClass(r) {
       <dl class="metadata-dl">
         <dt>Cluster</dt>
         <dd><a href={`/clusters/${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</a></dd>
-        <dt>Status</dt>
-        <dd><span class={`badge badge-${p.status}`}>{p.status}</span></dd>
+        <dt>Theorem status</dt>
+        <dd><span class={`badge ${badgeTheorem(p.theorem_status)}`}>{THEOREM_STATUS_LABELS[p.theorem_status]}</span></dd>
+        <dt>Problem type</dt>
+        <dd>{PROBLEM_TYPE_LABELS[p.problem_type]}</dd>
+        <dt>Maturity</dt>
+        <dd>{MATURITY_LABELS[p.maturity]}</dd>
+        <dt>Evidence</dt>
+        <dd>{p.evidence_level}</dd>
+        <dt>Verification</dt>
+        <dd>{p.verification_state}</dd>
         <dt>Difficulty</dt>
         <dd>{p.difficulty} / 5</dd>
         <dt>Family</dt>

@@ -1,7 +1,48 @@
 id: K-305
 title: Kerr characterization from horizon intrinsic data
+short_title: Kerr characterization from horizon intrinsic data
 cluster: rigidity-uniqueness
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Kerr characterization from horizon intrinsic data
+problem_statement: >-
+  Find minimal intrinsic conditions on a horizon cross-section that force the ambient vacuum
+  spacetime to be locally Kerr.
+statement: >-
+  Find minimal intrinsic conditions on a horizon cross-section that force the ambient vacuum
+  spacetime to be locally Kerr.
+why_it_matters: This asks how much of Kerr is encoded directly on the horizon.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must identify intrinsic horizon data and prove a local or global reconstruction
+  theorem to Kerr.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Isolated-horizon formalism; Petrov type D conditions; geometric PDE on two-spheres;
+  local-to-global extension.
+completion_criteria: >-
+  A complete answer must identify intrinsic horizon data and prove a local or global reconstruction
+  theorem to Kerr.
+implications: Would give a horizon-based recognition principle for the Kerr geometry.
+difficulty: 3
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,31 +55,37 @@ fv_suitability: high
 fv_reason: >-
   Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
   formalization boundaries.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-306
+  - K-307
+  - K-308
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-306
+  - K-307
+  - K-308
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Find minimal intrinsic conditions on a horizon cross-section that force the ambient vacuum
-  spacetime to be locally Kerr.
-math_required: >-
-  Isolated-horizon formalism; Petrov type D conditions; geometric PDE on two-spheres;
-  local-to-global extension.
-why_it_matters: This asks how much of Kerr is encoded directly on the horizon.
-completion_criteria: >-
-  A complete answer must identify intrinsic horizon data and prove a local or global reconstruction
-  theorem to Kerr.
-implications: Would give a horizon-based recognition principle for the Kerr geometry.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

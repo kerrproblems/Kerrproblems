@@ -1,7 +1,50 @@
 id: K-007
 title: Einstein–Maxwell stability near Kerr
+short_title: Einstein–Maxwell stability near Kerr
 cluster: exterior-stability
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Einstein–Maxwell stability near Kerr
+problem_statement: >-
+  Prove asymptotic stability for coupled gravitational and electromagnetic perturbations near a
+  rotating black-hole endstate.
+statement: >-
+  Prove asymptotic stability for coupled gravitational and electromagnetic perturbations near a
+  rotating black-hole endstate.
+why_it_matters: >-
+  Realistic black-hole models often involve coupled fields, and the Einstein–Maxwell system is the
+  next natural extension of the vacuum problem.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: maxwell, einstein-maxwell.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must identify the final stationary family, derive quantitative decay for the
+  coupled fields, and prove orbital stability in a precise topology.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Coupled hyperbolic systems; gravito-electromagnetic gauge fixing; Teukolsky-type equations with
+  coupling; conserved fluxes for charge and angular momentum.
+completion_criteria: >-
+  A complete answer must identify the final stationary family, derive quantitative decay for the
+  coupled fields, and prove orbital stability in a precise topology.
+implications: Would open a path toward the full Kerr–Newman stability program.
+difficulty: 3
 family: kerr-newman
 asymptotics: asymptotically-flat
 coupling: matter-coupled
@@ -16,33 +59,27 @@ fv_suitability: high
 fv_reason: >-
   Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
   formalization boundaries.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-008
+  - K-308
+related:
+  - K-008
+  - K-308
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove asymptotic stability for coupled gravitational and electromagnetic perturbations near a
-  rotating black-hole endstate.
-math_required: >-
-  Coupled hyperbolic systems; gravito-electromagnetic gauge fixing; Teukolsky-type equations with
-  coupling; conserved fluxes for charge and angular momentum.
-why_it_matters: >-
-  Realistic black-hole models often involve coupled fields, and the Einstein–Maxwell system is the
-  next natural extension of the vacuum problem.
-completion_criteria: >-
-  A complete answer must identify the final stationary family, derive quantitative decay for the
-  coupled fields, and prove orbital stability in a precise topology.
-implications: Would open a path toward the full Kerr–Newman stability program.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

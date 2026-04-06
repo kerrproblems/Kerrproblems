@@ -8,7 +8,29 @@ export const CLUSTERS = [
   'spectral-scattering',
 ];
 
-export const STATUSES = ['open', 'partial', 'conditional', 'solved'];
+/** Legacy single-axis status (kept for YAML migration); prefer `theorem_status`. */
+export const STATUSES = ['open', 'partial', 'conditional', 'solved', 'needs_review'];
+
+/** Theorem / solution status (orthogonal to problem_type). */
+export const THEOREM_STATUSES = ['open', 'partial', 'conditional', 'solved', 'needs_review'];
+
+export const PROBLEM_TYPES = [
+  'classical_frontier',
+  'literature_reformulation',
+  'quantitative_sharpening',
+  'formalization_target',
+  'speculative_direction',
+];
+
+export const MATURITY_LEVELS = ['well_scoped', 'mostly_scoped', 'provisional'];
+
+export const EVIDENCE_LEVELS = ['primary_refs_present', 'secondary_refs_only', 'refs_missing'];
+
+export const VERIFICATION_STATES = [
+  'verified_recently',
+  'imported_unverified',
+  'editorial_revision_needed',
+];
 
 export const FAMILIES = [
   'exact-kerr',
@@ -109,4 +131,38 @@ export const FV_LABELS = {
   high: 'FV: high',
   medium: 'FV: medium',
   low: 'FV: low',
+};
+
+export const THEOREM_STATUS_LABELS = {
+  open: 'Open',
+  partial: 'Partial progress',
+  conditional: 'Conditional',
+  solved: 'Solved',
+  needs_review: 'Needs review',
+};
+
+export const PROBLEM_TYPE_LABELS = {
+  classical_frontier: 'Classical frontier',
+  literature_reformulation: 'Literature reformulation',
+  quantitative_sharpening: 'Quantitative sharpening',
+  formalization_target: 'Formalization target',
+  speculative_direction: 'Speculative direction',
+};
+
+export const MATURITY_LABELS = {
+  well_scoped: 'Well scoped',
+  mostly_scoped: 'Mostly scoped',
+  provisional: 'Provisional',
+};
+
+export const EVIDENCE_LEVEL_LABELS = {
+  primary_refs_present: 'Primary refs present',
+  secondary_refs_only: 'Secondary / survey only',
+  refs_missing: 'References missing',
+};
+
+export const VERIFICATION_STATE_LABELS = {
+  verified_recently: 'Verified recently',
+  imported_unverified: 'Imported, unverified',
+  editorial_revision_needed: 'Editorial revision needed',
 };

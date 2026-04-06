@@ -1,7 +1,68 @@
 id: K-504
-title: Quantitative classification of spherical null geodesics and the photon region in Kerr
+title: Quantitative stability of the photon region and spherical null geodesics under near-Kerr perturbations
+short_title: Photon-region stability (near-Kerr, quantitative)
 cluster: spectral-scattering
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Exact Kerr photon-sphere / photon-region geometry is classical; the open issue is quantitative control of
+  how spherical null geodesics and the photon-region locus deform under near-Kerr metric perturbations.
+problem_statement: >-
+  Establish quantitative stability (in a sharp topology on the metric) for the photon-region foliation and
+  spherical null geodesic structure under perturbations of subextremal Kerr—tracking bifurcations in $(M,a)$
+  with explicit constants. The **exact** Kerr classification is classical; this problem targets **robust
+  perturbation theory**, not rediscovering exact Kerr null geometry.
+statement: >-
+  Establish quantitative stability (in a sharp topology on the metric) for the photon-region foliation and
+  spherical null geodesic structure under perturbations of subextremal Kerr—tracking bifurcations in $(M,a)$
+  with explicit constants. The **exact** Kerr classification is classical; this problem targets **robust
+  perturbation theory**, not rediscovering exact Kerr null geometry.
+why_it_matters: >-
+  The photon region anchors trapping estimates for decay and QNM problems; quantitative deformation theory feeds
+  uniform microlocal bounds.
+scope:
+  background: >-
+    Stationary or near-stationary vacuum exteriors close to Kerr; null geodesic flow and Hamiltonian dynamics
+    on energy surfaces.
+  equation_type: Null geodesic equations / Hamiltonian dynamics; spectral consequences stated separately.
+  linearity: >-
+    Metric perturbation is nonlinear in Einstein’s equations, but the first target may be geodesic/Morse
+    theory on a **given** perturbed Lorentzian metric.
+  regularity: $C^k$ or Sobolev metric perturbations as in the desired Morse/resolvent theorems.
+  parameter_regime: >-
+    Compact subintervals of subextremal $(M,a)$ where photon spheres persist and bifurcation points are
+    isolated.
+  asymptotics: Local to the trapping region; global asymptotic flatness as needed for the metric class.
+  gauge_or_formulation: >-
+    Invariant formulation of photon region (e.g. via conserved quantities / turning points) to avoid
+    coordinate artifacts.
+known_results:
+  - statement: >-
+      Classical description of spherical null geodesics and photon shells on **exact** Kerr (textbook /
+      review level).
+    regime: Exact Kerr geometry.
+    significance: >-
+      Baseline qualitative picture; this entry asks for **quantitative perturbation** refinements, not this
+      baseline alone.
+remaining_gap: >-
+  Explicit structural theorems with constants controlling photon-region deformation under $C^k$ or Sobolev
+  metric perturbations, including bifurcation tracking.
+status_explanation: >-
+  Quantitative sharpening relative to exact Kerr null geometry; paired conceptually with K-307 (dynamical
+  trapping persistence) but focused here on **stationary null locus** stability.
+math_required: >-
+  Hamiltonian dynamics; Morse theory on energy surfaces; Kerr geometry; microlocal interpretation of trapped
+  null geodesics.
+completion_criteria: >-
+  Structural theorems with constants relating metric deviation to photon-region deviation and bifurcation
+  control.
+implications: >-
+  Uniform decay estimates and inverse-scattering geometric subproblems.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,39 +75,56 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Photon region geometry reduces to polynomial conditions and ODEs along null generators; strong
-  candidate for computer-checked inequalities and normal forms.
+  Photon region geometry reduces to polynomial conditions and ODEs along null generators; strong candidate for
+  computer-checked inequalities and normal forms.
 progress_summary: >-
-  Qualitative descriptions of the photon shell are classical; fully quantitative Morse-theoretic or
-  microlocal stability statements under perturbation are fragmented. See references/TODO.
-related_families_note: null
-caution_note: >-
-  Natural rigidity formulations also appear in the Rigidity / Uniqueness cluster (K-307); this entry
-  emphasizes spectral/microlocal consequences for operators with trapped null geodesics.
-statement: >-
-  Establish a quantitative classification of spherical null geodesics (including bifurcations with
-  parameters $(M,a)$) and stability of the photon-region foliation under perturbations of the metric
-  in a sharp topology.
-math_required: >-
-  Hamiltonian dynamics; Morse theory on energy surfaces; Kerr geometry; microlocal analysis of
-  trapped sets as conic manifolds.
-why_it_matters: >-
-  The photon region anchors trapping estimates used across decay and QNM theory; a quantitative
-  classification propagates into resolvent bounds.
-completion_criteria: >-
-  Explicit structural theorems with constants controlling how photon spheres deform under
-  $C^k$ or Sobolev metric perturbations, including bifurcation tracking.
-implications: >-
-  Feeds uniform decay estimates and inverse-scattering geometric subproblems.
-difficulty: 4
+  Exact Kerr photon geometry is classical; sharp quantitative stability under perturbation is the open
+  effective problem.
 dependencies: []
+related_problem_ids:
+  - K-307
+  - K-305
+  - K-401
+  - K-501
 related:
   - K-307
   - K-305
+  - K-401
+  - K-501
 references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - key: teo-lrr-kerr
+    authors: Teo, E.
+    title: The Kerr spacetime (review)
+    venue: Living Reviews in Relativity
+    year: 2013
+    url: https://link.springer.com/article/10.12942/lrr-2013-9
+    kind: survey
+    relevance: >-
+      Authoritative review of Kerr geometry including spherical photon orbits—documents the classical
+      exact-Kerr picture before perturbation.
+  - key: simon-mars-3plus1
+    authors: García-Parrado Gómez-Lobo, Mars, Simon
+    title: A characterization of 3+1 spacetimes via the Simon–Mars tensor
+    venue: arXiv
+    year: 2014
+    url: https://arxiv.org/abs/1412.6542
+    arxiv: '1412.6542'
+    kind: primary
+    relevance: >-
+      Tensor-level toolkit often used when comparing near-Kerr geometry to Kerr via curvature invariants tied
+      to special null structure.
+tags: []
+aliases: []
+related_families_note: null
+caution_note: >-
+  Do not misread the title as claiming exact Kerr photon-region classification is open; the open part is
+  quantitative perturbation theory.
 posed_by: null
 posed_year: null
 prizes: null
-notes: Cross-linked conceptually to rigidity / trapping (K-307).
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
 last_updated: '2026-04-06'

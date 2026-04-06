@@ -9,6 +9,7 @@ import yaml from 'js-yaml';
 import {
   CLUSTERS,
   STATUSES,
+  THEOREM_STATUSES,
   FAMILIES,
   ASYMPTOTICS,
   COUPLINGS,
@@ -60,9 +61,10 @@ function main() {
     if (`${id}.yaml` !== f) err(`${f}: filename does not match id ${id}`);
     allIds.add(id);
 
+    const theoremStatus = raw.theorem_status || raw.status;
     [
       ['title', raw.title],
-      ['statement', raw.statement],
+      ['statement', raw.problem_statement || raw.statement],
       ['math_required', raw.math_required],
       ['why_it_matters', raw.why_it_matters],
       ['completion_criteria', raw.completion_criteria],
@@ -76,7 +78,7 @@ function main() {
     }
 
     checkEnum(`${id} cluster`, raw.cluster, CLUSTERS);
-    checkEnum(`${id} status`, raw.status, STATUSES);
+    checkEnum(`${id} theorem_status`, theoremStatus, THEOREM_STATUSES);
     checkEnum(`${id} family`, raw.family, FAMILIES);
     checkEnum(`${id} asymptotics`, raw.asymptotics, ASYMPTOTICS);
     checkEnum(`${id} coupling`, raw.coupling, COUPLINGS);
@@ -114,8 +116,8 @@ function main() {
       if (!ID_RE.test(r)) err(`${id}: bad related id "${r}"`);
     }
 
-    if (!raw.references.length) {
-      warn(`${id}: references empty — needs curation`);
+    if (!raw.references.length && theoremStatus !== 'needs_review') {
+      warn(`${id}: references empty — needs curation or mark theorem_status: needs_review`);
     }
 
     if (

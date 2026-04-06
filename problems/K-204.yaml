@@ -1,7 +1,48 @@
 id: K-204
 title: Uniform estimates in the surface-gravity limit $\kappa \to 0$
+short_title: Uniform estimates in the surface-gravity limit $\kappa \to 0$
 cluster: extremal
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Uniform estimates in the surface-gravity limit $\kappa \to 0$
+problem_statement: >-
+  Develop estimates for wave and gravitational fields that remain meaningful as the subextremal
+  surface gravity tends to zero.
+statement: >-
+  Develop estimates for wave and gravitational fields that remain meaningful as the subextremal
+  surface gravity tends to zero.
+why_it_matters: Every near-extremal problem ultimately runs into constants that blow up as $\kappa \to 0$.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must state explicit $\kappa$-dependence in the coercive and decay estimates and
+  identify the limiting operator or geometry.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Uniform microlocal analysis; two-scale near-horizon asymptotics; replacement for standard redshift
+  positivity.
+completion_criteria: >-
+  A complete answer must state explicit $\kappa$-dependence in the coercive and decay estimates and
+  identify the limiting operator or geometry.
+implications: Would unify subextremal and extremal analysis instead of treating them as disconnected cases.
+difficulty: 4
 family: related-rotating-black-hole
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,30 +55,39 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-201
+  - K-202
+  - K-203
+  - K-205
+  - K-206
+  - K-207
+  - K-208
+  - K-209
+related:
+  - K-201
+  - K-202
+  - K-203
+  - K-205
+  - K-206
+  - K-207
+  - K-208
+  - K-209
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Develop estimates for wave and gravitational fields that remain meaningful as the subextremal
-  surface gravity tends to zero.
-math_required: >-
-  Uniform microlocal analysis; two-scale near-horizon asymptotics; replacement for standard redshift
-  positivity.
-why_it_matters: Every near-extremal problem ultimately runs into constants that blow up as $\kappa \to 0$.
-completion_criteria: >-
-  A complete answer must state explicit $\kappa$-dependence in the coercive and decay estimates and
-  identify the limiting operator or geometry.
-implications: Would unify subextremal and extremal analysis instead of treating them as disconnected cases.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

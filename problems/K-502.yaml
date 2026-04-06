@@ -1,7 +1,54 @@
 id: K-502
 title: Horizon-data rigidity and effective reconstruction of Kerr parameters
+short_title: Horizon-data rigidity and effective reconstruction of Kerr parameters
 cluster: rigidity-uniqueness
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Horizon-data rigidity and effective reconstruction of Kerr parameters
+problem_statement: >-
+  From a minimal package of intrinsic data on a cross-section of a stationary event horizon (e.g.
+  induced metric, expansion/shear class, or spin coefficients restricted to the horizon), derive
+  stability estimates that determine mass and angular momentum parameters of the ambient Kerr
+  solution within explicit error bounds.
+statement: >-
+  From a minimal package of intrinsic data on a cross-section of a stationary event horizon (e.g.
+  induced metric, expansion/shear class, or spin coefficients restricted to the horizon), derive
+  stability estimates that determine mass and angular momentum parameters of the ambient Kerr
+  solution within explicit error bounds.
+why_it_matters: >-
+  Connects horizon observables (as idealized in mathematical relativity) to uniqueness parameters
+  without requiring full spacetime knowledge.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: stationary-reduction, inverse-problem.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A precise theorem: horizon data in stated function classes implies closeness to Kerr horizon data
+  and recovers $(M,a)$ modulo gauge with quantitative bounds.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Isolated horizons; Newman–Penrose spin coefficients; geometric analysis on 2-spheres; inverse
+  problems for spectral or curvature invariants on compact surfaces.
+completion_criteria: >-
+  A precise theorem: horizon data in stated function classes implies closeness to Kerr horizon data
+  and recovers $(M,a)$ modulo gauge with quantitative bounds.
+implications: Feeds both uniqueness theory and idealized “black hole spectroscopy from horizons” mathematics.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -19,34 +66,42 @@ fv_reason: >-
 progress_summary: >-
   Partial progress exists in isolated-horizon and geometric characterization literature; a single
   quantitative “effective reconstruction” theorem with explicit stability is not catalogued here.
-  See references/TODO.
-related_families_note: null
-caution_note: null
-statement: >-
-  From a minimal package of intrinsic data on a cross-section of a stationary event horizon (e.g.
-  induced metric, expansion/shear class, or spin coefficients restricted to the horizon), derive
-  stability estimates that determine mass and angular momentum parameters of the ambient Kerr
-  solution within explicit error bounds.
-math_required: >-
-  Isolated horizons; Newman–Penrose spin coefficients; geometric analysis on 2-spheres; inverse
-  problems for spectral or curvature invariants on compact surfaces.
-why_it_matters: >-
-  Connects horizon observables (as idealized in mathematical relativity) to uniqueness parameters
-  without requiring full spacetime knowledge.
-completion_criteria: >-
-  A precise theorem: horizon data in stated function classes implies closeness to Kerr horizon data
-  and recovers $(M,a)$ modulo gauge with quantitative bounds.
-implications: >-
-  Feeds both uniqueness theory and idealized “black hole spectroscopy from horizons” mathematics.
-difficulty: 4
+  See .
 dependencies:
   - K-305
+related_problem_ids:
+  - K-305
+  - K-501
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-507
+  - K-508
+  - K-509
+  - K-510
 related:
   - K-305
-references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - K-501
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-507
+  - K-508
+  - K-509
+  - K-510
+references: []
+tags: []
+aliases: []
+related_families_note: null
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
 notes: Math-leaning formal verification track problem.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-06'

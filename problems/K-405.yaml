@@ -1,7 +1,50 @@
 id: K-405
 title: Inverse scattering for Kerr parameters
+short_title: Inverse scattering for Kerr parameters
 cluster: spectral-scattering
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Inverse scattering for Kerr parameters
+problem_statement: >-
+  Determine whether scattering data for a natural field equation uniquely and stably determine the
+  Kerr mass and spin.
+statement: >-
+  Determine whether scattering data for a natural field equation uniquely and stably determine the
+  Kerr mass and spin.
+why_it_matters: >-
+  The forward scattering map on Kerr is rich enough that one expects inverse geometric information
+  to be hidden in it.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: spectral-operator.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must specify the data set, prove uniqueness of $(M,a)$, and give quantitative
+  stability estimates.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Inverse scattering; geometric optics; spectral invariants; uniqueness and stability estimates for
+  parameter recovery.
+completion_criteria: >-
+  A complete answer must specify the data set, prove uniqueness of $(M,a)$, and give quantitative
+  stability estimates.
+implications: Would turn black-hole scattering into a geometric inverse problem with direct interpretive value.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,32 +56,35 @@ regime:
 relevance: mixed
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-401
+  - K-402
+  - K-403
+  - K-404
+  - K-406
+  - K-407
+related:
+  - K-401
+  - K-402
+  - K-403
+  - K-404
+  - K-406
+  - K-407
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Determine whether scattering data for a natural field equation uniquely and stably determine the
-  Kerr mass and spin.
-math_required: >-
-  Inverse scattering; geometric optics; spectral invariants; uniqueness and stability estimates for
-  parameter recovery.
-why_it_matters: >-
-  The forward scattering map on Kerr is rich enough that one expects inverse geometric information
-  to be hidden in it.
-completion_criteria: >-
-  A complete answer must specify the data set, prove uniqueness of $(M,a)$, and give quantitative
-  stability estimates.
-implications: Would turn black-hole scattering into a geometric inverse problem with direct interpretive value.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

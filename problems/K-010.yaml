@@ -1,7 +1,46 @@
 id: K-010
 title: Nonlinear superradiant endstates in Kerr–AdS
+short_title: Nonlinear superradiant endstates in Kerr–AdS
 cluster: exterior-stability
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Nonlinear superradiant endstates in Kerr–AdS
+problem_statement: >-
+  Determine the theorem-level nonlinear endstate for small perturbations of Kerr–AdS in the presence
+  of reflecting infinity and superradiance.
+statement: >-
+  Determine the theorem-level nonlinear endstate for small perturbations of Kerr–AdS in the presence
+  of reflecting infinity and superradiance.
+why_it_matters: Kerr–AdS is the canonical setting where rotation, confinement, and superradiance collide.
+scope:
+  background: Anti-de Sitter asymptotics as tagged.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: anti-de-sitter
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must prove either instability or convergence to a precisely identified
+  stationary or time-periodic family under explicit boundary conditions.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  AdS boundary value problems; long-time nonlinear dynamics; spectral instability; stable trapping;
+  matched asymptotics.
+completion_criteria: >-
+  A complete answer must prove either instability or convergence to a precisely identified
+  stationary or time-periodic family under explicit boundary conditions.
+implications: Would clarify one of the most dramatic known departures from the asymptotically flat Kerr story.
+difficulty: 3
 family: kerr-ads
 asymptotics: anti-de-sitter
 coupling: vacuum
@@ -14,33 +53,25 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids: []
+related: []
+references: []
+tags: []
+aliases: []
 related_families_note: 'Title says Kerr–AdS: the geometry is a distinct asymptotic class from asymptotically flat Kerr.'
 caution_note: >-
   Not a plain asymptotically flat Kerr exterior problem; boundary conditions and AdS global
   structure differ materially from the AF setting.
-statement: >-
-  Determine the theorem-level nonlinear endstate for small perturbations of Kerr–AdS in the presence
-  of reflecting infinity and superradiance.
-math_required: >-
-  AdS boundary value problems; long-time nonlinear dynamics; spectral instability; stable trapping;
-  matched asymptotics.
-why_it_matters: Kerr–AdS is the canonical setting where rotation, confinement, and superradiance collide.
-completion_criteria: >-
-  A complete answer must prove either instability or convergence to a precisely identified
-  stationary or time-periodic family under explicit boundary conditions.
-implications: Would clarify one of the most dramatic known departures from the asymptotically flat Kerr story.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

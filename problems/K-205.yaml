@@ -1,7 +1,48 @@
 id: K-205
 title: Rigorous near-horizon scattering theory for NHEK
+short_title: Rigorous near-horizon scattering theory for NHEK
 cluster: extremal
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Rigorous near-horizon scattering theory for NHEK
+problem_statement: >-
+  Construct a mathematically precise scattering theory for the near-horizon extremal Kerr limit and
+  prove convergence from rescaled near-extremal Kerr dynamics.
+statement: >-
+  Construct a mathematically precise scattering theory for the near-horizon extremal Kerr limit and
+  prove convergence from rescaled near-extremal Kerr dynamics.
+why_it_matters: The near-horizon extremal geometry is the natural local model controlling many extremal phenomena.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must prove operator and solution convergence under rescaling and define a
+  genuine scattering theory in the limit geometry.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Geometric blow-up limits; near-horizon analysis; scattering on non-asymptotically-flat geometries;
+  matched expansions.
+completion_criteria: >-
+  A complete answer must prove operator and solution convergence under rescaling and define a
+  genuine scattering theory in the limit geometry.
+implications: Would isolate the intrinsic throat dynamics responsible for extremal instabilities.
+difficulty: 4
 family: nhek
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -16,30 +57,39 @@ fv_suitability: high
 fv_reason: >-
   Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
   formalization boundaries.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-206
+  - K-207
+  - K-208
+  - K-209
+related:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-206
+  - K-207
+  - K-208
+  - K-209
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Construct a mathematically precise scattering theory for the near-horizon extremal Kerr limit and
-  prove convergence from rescaled near-extremal Kerr dynamics.
-math_required: >-
-  Geometric blow-up limits; near-horizon analysis; scattering on non-asymptotically-flat geometries;
-  matched expansions.
-why_it_matters: The near-horizon extremal geometry is the natural local model controlling many extremal phenomena.
-completion_criteria: >-
-  A complete answer must prove operator and solution convergence under rescaling and define a
-  genuine scattering theory in the limit geometry.
-implications: Would isolate the intrinsic throat dynamics responsible for extremal instabilities.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

@@ -1,7 +1,48 @@
 id: K-012
 title: Low-regularity Kerr stability threshold
+short_title: Low-regularity Kerr stability threshold
 cluster: exterior-stability
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Low-regularity Kerr stability threshold
+problem_statement: >-
+  Find the minimal differentiability and asymptotic-flatness assumptions under which a Kerr
+  stability theorem can hold.
+statement: >-
+  Find the minimal differentiability and asymptotic-flatness assumptions under which a Kerr
+  stability theorem can hold.
+why_it_matters: Current high-regularity proofs are powerful but not obviously close to the true threshold.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must give a stability theorem at explicit regularity $N$ and falloff $\delta$,
+  or produce a sharp obstruction below that threshold.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Low-regularity hyperbolic PDE; rough wave gauges; bilinear and null-structure estimates under weak
+  decay; weighted Sobolev spaces.
+completion_criteria: >-
+  A complete answer must give a stability theorem at explicit regularity $N$ and falloff $\delta$,
+  or produce a sharp obstruction below that threshold.
+implications: Would reveal how robust the Kerr stability mechanism really is.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,30 +54,33 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-006
+  - K-013
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-006
+  - K-013
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Find the minimal differentiability and asymptotic-flatness assumptions under which a Kerr
-  stability theorem can hold.
-math_required: >-
-  Low-regularity hyperbolic PDE; rough wave gauges; bilinear and null-structure estimates under weak
-  decay; weighted Sobolev spaces.
-why_it_matters: Current high-regularity proofs are powerful but not obviously close to the true threshold.
-completion_criteria: >-
-  A complete answer must give a stability theorem at explicit regularity $N$ and falloff $\delta$,
-  or produce a sharp obstruction below that threshold.
-implications: Would reveal how robust the Kerr stability mechanism really is.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

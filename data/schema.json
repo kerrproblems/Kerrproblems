@@ -6,7 +6,7 @@
     "id",
     "title",
     "cluster",
-    "status",
+    "theorem_status",
     "statement",
     "math_required",
     "why_it_matters",
@@ -37,7 +37,53 @@
         "spectral-scattering"
       ]
     },
-    "status": { "enum": ["open", "partial", "conditional", "solved"] },
+    "theorem_status": {
+      "enum": ["open", "partial", "conditional", "solved", "needs_review"]
+    },
+    "status": {
+      "description": "Deprecated; use theorem_status",
+      "enum": ["open", "partial", "conditional", "solved", "needs_review"]
+    },
+    "problem_type": {
+      "enum": [
+        "classical_frontier",
+        "literature_reformulation",
+        "quantitative_sharpening",
+        "formalization_target",
+        "speculative_direction"
+      ]
+    },
+    "maturity": {
+      "enum": ["well_scoped", "mostly_scoped", "provisional"]
+    },
+    "evidence_level": {
+      "enum": ["primary_refs_present", "secondary_refs_only", "refs_missing"]
+    },
+    "verification_state": {
+      "enum": [
+        "verified_recently",
+        "imported_unverified",
+        "editorial_revision_needed"
+      ]
+    },
+    "summary": { "type": "string" },
+    "short_title": { "type": "string" },
+    "problem_statement": { "type": "string" },
+    "scope": { "type": "object" },
+    "known_results": { "type": "array" },
+    "remaining_gap": { "type": "string" },
+    "status_explanation": { "type": "string" },
+    "related_problem_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^K-[0-9]{3}$" }
+    },
+    "last_verified_at": { "type": ["string", "null"] },
+    "last_verified_by": { "type": ["string", "null"] },
+    "editorial_notes": { "type": ["string", "null"] },
+    "public_notes": { "type": ["string", "null"] },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "priority": { "type": "string" },
     "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
     "family": {
       "type": "string",
@@ -106,10 +152,18 @@
       "items": {
         "type": "object",
         "properties": {
+          "key": { "type": "string" },
+          "authors": { "type": "string" },
+          "title": { "type": "string" },
+          "venue": { "type": "string" },
+          "year": { "type": ["integer", "null"] },
+          "url": { "type": "string" },
           "arxiv": { "type": "string" },
           "doi": { "type": "string" },
           "note": { "type": "string" },
-          "placeholder": { "type": "string" }
+          "placeholder": { "type": "string" },
+          "kind": { "enum": ["primary", "survey", "secondary"] },
+          "relevance": { "type": "string" }
         }
       }
     }

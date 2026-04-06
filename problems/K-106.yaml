@@ -1,7 +1,53 @@
 id: K-106
 title: Genericity of lower bounds for linearized-gravity interior instability
+short_title: Genericity of lower bounds for linearized-gravity interior instability
 cluster: interior-scc
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Genericity of lower bounds for linearized-gravity interior instability
+problem_statement: >-
+  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
+  instability results are generic for exterior initial data.
+statement: >-
+  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
+  instability results are generic for exterior initial data.
+why_it_matters: >-
+  Instability theorems are strongest when their hypotheses are shown to hold for open dense or
+  full-measure sets of data.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise. Cauchy horizon / interior regularity formulations of strong cosmic censorship are in
+    play; distinguish $C^0$ vs higher regularity notions.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: >-
+    State intended regularity class for extensions across horizons explicitly (e.g. $C^0$,
+    Lipschitz, $C^2$).
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must specify the data topology and prove generic nonvanishing of the
+  instability-triggering quantity.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data
+  spaces.
+completion_criteria: >-
+  A complete answer must specify the data topology and prove generic nonvanishing of the
+  instability-triggering quantity.
+implications: Would turn conditional interior blow-up statements into genuinely generic ones.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -16,32 +62,45 @@ fv_suitability: low
 fv_reason: >-
   Global nonlinear PDE or open-ended dynamics; not a practical first formalization target without
   major scoping.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-107
+  - K-108
+  - K-109
+  - K-110
+  - K-111
+  - K-112
+related:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-107
+  - K-108
+  - K-109
+  - K-110
+  - K-111
+  - K-112
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
-  instability results are generic for exterior initial data.
-math_required: >-
-  Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data
-  spaces.
-why_it_matters: >-
-  Instability theorems are strongest when their hypotheses are shown to hold for open dense or
-  full-measure sets of data.
-completion_criteria: >-
-  A complete answer must specify the data topology and prove generic nonvanishing of the
-  instability-triggering quantity.
-implications: Would turn conditional interior blow-up statements into genuinely generic ones.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

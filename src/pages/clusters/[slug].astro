@@ -10,7 +10,12 @@ import {
 import {
   FAMILY_LABELS,
   RELEVANCE_LABELS,
+  THEOREM_STATUS_LABELS,
 } from '../../lib/taxonomy.js';
+
+function badgeTheoremClass(ts) {
+  return `badge-${String(ts || 'open').replace(/[^a-z_]/g, '')}`;
+}
 
 export async function getStaticPaths() {
   return Object.keys(CLUSTER_LABELS).map(slug => ({
@@ -44,6 +49,7 @@ const relevanceEntries = Object.entries(tagCounts.relevance).filter(([, n]) => n
     <span>{stats.total} problems</span>
     <span style="color: var(--open)">{stats.open} open</span>
     <span style="color: var(--partial)">{stats.partial} partial</span>
+    <span style="color: var(--needs-review)">{stats.needs_review} needs review</span>
   </div>
 
   <div class="cluster-summary-panels">
@@ -92,7 +98,7 @@ const relevanceEntries = Object.entries(tagCounts.relevance).filter(([, n]) => n
         <div class="card-id">{p.id}</div>
         <div class="card-title">{p.title}</div>
         <div class="card-meta">
-          <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class={`badge ${badgeTheoremClass(p.theorem_status)}`}>{THEOREM_STATUS_LABELS[p.theorem_status] || p.theorem_status}</span>
           <span class="tag-chip tag-chip--family">{FAMILY_LABELS[p.family] || p.family}</span>
           <span class={`rel-badge rel-${p.relevance === 'pure-math' ? 'pure-math' : p.relevance === 'mixed' ? 'mixed' : 'physics-facing'}`}>{RELEVANCE_LABELS[p.relevance]}</span>
         </div>

@@ -1,7 +1,51 @@
 id: K-109
 title: Near-extremal interior scaling laws
+short_title: Near-extremal interior scaling laws
 cluster: interior-scc
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Near-extremal interior scaling laws
+problem_statement: >-
+  Find universal scaling relations for interior blow-up, weak singularity structure, and regularity
+  thresholds as the Kerr spin approaches extremality.
+statement: >-
+  Find universal scaling relations for interior blow-up, weak singularity structure, and regularity
+  thresholds as the Kerr spin approaches extremality.
+why_it_matters: Near-extremal interiors are where ordinary blue-shift theory meets extremal degeneracy.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise. Cauchy horizon / interior regularity formulations of strong cosmic censorship are in
+    play; distinguish $C^0$ vs higher regularity notions.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: >-
+    State intended regularity class for extensions across horizons explicitly (e.g. $C^0$,
+    Lipschitz, $C^2$).
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must quantify how the relevant norms or exponents depend on $\varepsilon$ and
+  identify any limiting profile.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Matched asymptotics between throat and bulk interior; scaling analysis in $\varepsilon = 1 -
+  |a|/M$; uniform energy estimates.
+completion_criteria: >-
+  A complete answer must quantify how the relevant norms or exponents depend on $\varepsilon$ and
+  identify any limiting profile.
+implications: Would connect interior SCC with extremal black-hole theory.
+difficulty: 4
 family: nhek
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,30 +57,45 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-108
+  - K-110
+  - K-111
+  - K-112
+related:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-108
+  - K-110
+  - K-111
+  - K-112
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Find universal scaling relations for interior blow-up, weak singularity structure, and regularity
-  thresholds as the Kerr spin approaches extremality.
-math_required: >-
-  Matched asymptotics between throat and bulk interior; scaling analysis in $\varepsilon = 1 -
-  |a|/M$; uniform energy estimates.
-why_it_matters: Near-extremal interiors are where ordinary blue-shift theory meets extremal degeneracy.
-completion_criteria: >-
-  A complete answer must quantify how the relevant norms or exponents depend on $\varepsilon$ and
-  identify any limiting profile.
-implications: Would connect interior SCC with extremal black-hole theory.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

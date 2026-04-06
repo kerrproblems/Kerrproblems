@@ -1,7 +1,52 @@
 id: K-002
 title: Uniform nonlinear stability as $a \to M^-$
+short_title: Uniform nonlinear stability as $a \to M^-$
 cluster: exterior-stability
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Uniform nonlinear stability as $a \to M^-$
+problem_statement: >-
+  Prove a version of Kerr stability whose constants and decay estimates remain uniform, or
+  quantitatively controlled, as the spin approaches extremality.
+statement: >-
+  Prove a version of Kerr stability whose constants and decay estimates remain uniform, or
+  quantitatively controlled, as the spin approaches extremality.
+why_it_matters: >-
+  Near-extremal Kerr is the transition region between the standard subextremal theory and the
+  qualitatively different extremal regime.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must track dependence on $\varepsilon = 1 - |a|/M$ in all coercive estimates and
+  separate unavoidable degeneracies from removable technical losses.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Degenerate redshift analysis; near-horizon scaling; semiclassical control near the photon region;
+  uniform weighted energies in the surface-gravity parameter $\kappa$.
+completion_criteria: >-
+  A complete answer must track dependence on $\varepsilon = 1 - |a|/M$ in all coercive estimates and
+  separate unavoidable degeneracies from removable technical losses.
+implications: >-
+  Would bridge ordinary Kerr stability to extremal dynamics and sharpen what actually fails as
+  $\kappa \to 0$.
+difficulty: 4
 family: related-rotating-black-hole
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,34 +59,23 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
-related_families_note: null
-caution_note: null
-statement: >-
-  Prove a version of Kerr stability whose constants and decay estimates remain uniform, or
-  quantitatively controlled, as the spin approaches extremality.
-math_required: >-
-  Degenerate redshift analysis; near-horizon scaling; semiclassical control near the photon region;
-  uniform weighted energies in the surface-gravity parameter $\kappa$.
-why_it_matters: >-
-  Near-extremal Kerr is the transition region between the standard subextremal theory and the
-  qualitatively different extremal regime.
-completion_criteria: >-
-  A complete answer must track dependence on $\varepsilon = 1 - |a|/M$ in all coercive estimates and
-  separate unavoidable degeneracies from removable technical losses.
-implications: >-
-  Would bridge ordinary Kerr stability to extremal dynamics and sharpen what actually fails as
-  $\kappa \to 0$.
-difficulty: 4
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
 dependencies: []
+related_problem_ids: []
 related: []
 references: []
+tags: []
+aliases: []
+related_families_note: null
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

@@ -1,52 +1,27 @@
 # Contributing to kerrproblems.com
 
-All problems are stored in `problems/` as YAML files, one per problem.
-The site rebuilds automatically from these files on every push to `main`.
+All problems live in `problems/` as YAML (`K-XXX.yaml`). Pushes to `main` should pass `npm run validate`.
 
-## How to propose a correction
+## Quick rules
 
-1. Fork the repository
-2. Edit the relevant `problems/K-XXX.yaml` file
-3. Open a pull request with a short explanation
+1. **No TODO/FIXME/references-pending** text in fields that render on the public site.
+2. Use **`theorem_status`** (not legacy `status`) plus **`problem_type`**, **`maturity`**, **`evidence_level`**, **`verification_state`**.
+3. Fill the **`scope`** block and structured **`known_results`** / **`remaining_gap`** when possible.
+4. **References:** at least two items with at least one `kind: primary`, each with a `relevance` sentence—**unless** the row is explicitly `theorem_status: needs_review`.
+5. **`solved`** only if `known_results` states the exact matching theorem and references back it up.
+6. **`quantitative_sharpening`** must point to the known qualitative baseline (usually in `known_results`).
 
-For status updates, cite the paper that justifies the change in the PR description.
+See also:
 
-## How to propose a new problem
+- `/methodology` on the built site (or `docs/STATUS_TAXONOMY.md`)
+- `docs/EDITORIAL_POLICY.md`, `docs/PROBLEM_SCHEMA.md`
+- `docs/contribute` page source: `src/pages/contribute.astro`
 
-1. Copy `problems/K-001.yaml` as a template
-2. Assign the next available ID in the appropriate cluster range:
-   - K-001 to K-099: Exterior stability
-   - K-101 to K-199: Interior / SCC
-   - K-201 to K-299: Extremal / near-extremal
-   - K-301 to K-399: Rigidity / uniqueness
-   - K-401 to K-499: Spectral / scattering
-3. Fill in all required fields (see `data/schema.md`)
-4. Open a pull request
+## Scripts
 
-## Field definitions
+- `npm run validate` — taxonomy (`scripts/validate_problems.mjs`) + editorial report (`scripts/validate_editorial.mjs` → `docs/audit/problem_validation_report.md`).
+- `node scripts/migrate_editorial_schema.mjs` — idempotent bulk cleanup / cross-links (run only when you understand the diff).
 
-| Field | Required | Values |
-|-------|----------|--------|
-| id | yes | e.g. K-042 |
-| title | yes | short string |
-| cluster | yes | exterior-stability, interior-scc, extremal, rigidity-uniqueness, spectral-scattering |
-| status | yes | open, partial, conditional, solved |
-| statement | yes | precise mathematical statement |
-| math_required | yes | prerequisites |
-| why_it_matters | yes | motivation |
-| completion_criteria | yes | what a full answer must establish |
-| implications | yes | what follows if solved |
-| difficulty | yes | integer 1–5 |
-| references | no | list of {arxiv, note} |
-| related | no | list of problem IDs |
-| notes | no | maintainer notes |
-| last_updated | yes | YYYY-MM-DD |
+## PR expectations
 
-## What makes a good problem statement
-
-- Precise enough that a specialist could say definitively whether it is solved
-- Traceable to a primary source (paper, talk, or known conjecture)
-- Scoped to Kerr or near-Kerr vacuum or near-vacuum settings
-
-Problems that are too vague, too broad (covering all of GR), or not traceable 
-to a source will be returned with a request for revision.
+Explain literature changes in the PR body; cite papers for status upgrades or new `known_results` bullets.

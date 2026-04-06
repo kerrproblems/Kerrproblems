@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Methodology & status taxonomy" description="How Kerr Problems labels theorem status, problem type, evidence, and editorial verification.">
+  <h1>Methodology & status taxonomy</h1>
+  <p style="max-width: 68ch; margin-bottom: 1.5rem">
+    kerrproblems.com is edited as a <strong>curated research problem database</strong>. The old single
+    “status” chip is split into orthogonal axes so “open” is not overloaded with “speculative,”
+    “quantitative,” or “unverified import.”
+  </p>
+
+  <h2>Theorem status</h2>
+  <dl style="max-width: 72ch">
+    <dt><strong>Open</strong></dt>
+    <dd>No theorem matching the stated conclusion is known to editors under the listed hypotheses.</dd>
+    <dt><strong>Partial progress</strong></dt>
+    <dd>Nontrivial proved subcases or restricted regimes exist; the page should list them under “What is already known.”</dd>
+    <dt><strong>Conditional</strong></dt>
+    <dd>The conclusion depends on an explicit extra hypothesis bridge (e.g. spectral-to-interior). The condition must appear in <code>status_explanation</code>.</dd>
+    <dt><strong>Solved</strong></dt>
+    <dd>Reserved for entries where <code>known_results</code> contains a statement that matches a cited theorem in the references. Do not use without that match.</dd>
+    <dt><strong>Needs review</strong></dt>
+    <dd>Bibliography or scope is not yet literature-anchored in-repo; may have empty references by policy.</dd>
+  </dl>
+
+  <h2>Problem type</h2>
+  <ul style="max-width: 72ch">
+    <li><strong>Classical frontier</strong> — community-scale conjectures or standard research targets.</li>
+    <li><strong>Literature reformulation</strong> — packaging or bridging statements built from published threads.</li>
+    <li><strong>Quantitative sharpening</strong> — effective constants, stability gaps, or remainders once a qualitative theorem exists.</li>
+    <li><strong>Formalization target</strong> — especially suitable for staged formal verification.</li>
+    <li><strong>Speculative direction</strong> — exploratory; should be rare and clearly scoped.</li>
+  </ul>
+
+  <h2>Maturity, evidence, verification</h2>
+  <ul style="max-width: 72ch">
+    <li><strong>Maturity</strong> — how complete the scoping block is (<code>well_scoped</code> / <code>mostly_scoped</code> / <code>provisional</code>).</li>
+    <li><strong>Evidence level</strong> — whether primary literature pointers are attached (<code>primary_refs_present</code>, <code>secondary_refs_only</code>, <code>refs_missing</code>).</li>
+    <li><strong>Verification state</strong> — editorial pipeline (<code>verified_recently</code>, <code>imported_unverified</code>, <code>editorial_revision_needed</code>).</li>
+  </ul>
+
+  <h2>Reference policy (summary)</h2>
+  <p style="max-width: 68ch">
+    Public entries that are not <code>needs_review</code> should carry at least two references, including at least one
+    <code>primary</code> pointer, and each reference needs a short relevance note. Do not ship TODO/FIXME language
+    on public fields. Full maintainer text lives in <a href="https://github.com/kerrproblems/Kerrproblems">the repository</a>
+    under <code>docs/EDITORIAL_POLICY.md</code> and <code>docs/PROBLEM_SCHEMA.md</code>.
+  </p>
+
+  <p style="margin-top: 2rem">
+    <a href="/problems">← All problems</a>
+    ·
+    <a href="/contribute">Contribution rules</a>
+  </p>
+</Base>

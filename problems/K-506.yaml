@@ -1,7 +1,60 @@
 id: K-506
-title: High-frequency Kerr quasinormal-mode quantization with explicit remainders
+title: High-frequency Kerr quasinormal-mode laws with explicit remainder bounds
+short_title: High-frequency QNMs on Kerr — explicit remainders
 cluster: spectral-scattering
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Prove semiclassical quantization laws for QNM frequencies on fixed subextremal Kerr with explicit
+  remainder bounds in frequency and in $(M,a)$; “explicit remainder” means stated inverse-polynomial or
+  exponential-small error terms, not formal series alone.
+problem_statement: >-
+  Fix a compact subextremal parameter window for $(M,a)$ and a high-frequency regime $|\omega|\to\infty$
+  along a chosen QNM branch. Prove an asymptotic law $\omega_n = f(n;M,a) + R_n(M,a)$ with **explicit**
+  bounds on $R_n$ (rate in $n$, uniformity in $(M,a)$, and dependence on spin of the perturbing field).
+  Extensions to an agreed near-Kerr class should be stated as separate theorems with modified remainders.
+statement: >-
+  Fix a compact subextremal parameter window for $(M,a)$ and a high-frequency regime $|\omega|\to\infty$
+  along a chosen QNM branch. Prove an asymptotic law $\omega_n = f(n;M,a) + R_n(M,a)$ with **explicit**
+  bounds on $R_n$ (rate in $n$, uniformity in $(M,a)$, and dependence on spin of the perturbing field).
+  Extensions to an agreed near-Kerr class should be stated as separate theorems with modified remainders.
+why_it_matters: >-
+  Connects rigorous spectral theory with asymptotic formulas used in ringdown interpretation.
+scope:
+  background: Linearized Teukolsky/master equations on exact Kerr (first target); near-Kerr only if hypotheses
+    are added.
+  equation_type: Spectral/non-selfadjoint operator theory for separated ODEs or coupled systems.
+  linearity: Linearized fields on a fixed background.
+  regularity: Analytic/microlocal hypotheses standard in semiclassical scattering on Kerr.
+  parameter_regime: >-
+    **Fixed subextremal** $(M,a)$ in compact sets; near-extremal limits require separate scaling assumptions
+    stated explicitly.
+  asymptotics: Asymptotically flat Kerr.
+  gauge_or_formulation: Teukolsky vs RW gauge recorded; frequencies are gauge-invariant where claimed.
+known_results:
+  - statement: >-
+      Asymptotic expansions for Schwarzschild QNM frequencies with explicit leading terms (Motl’s analytic
+      derivation).
+    regime: Schwarzschild (non-rotating) background.
+    significance: >-
+      Model for what “explicit asymptotic law” means; Kerr extension with remainders is strictly harder.
+remaining_gap: >-
+  Kerr analogues with **uniform** remainder estimates in $(M,a)$ for high-frequency branches, and extension
+  statements to near-Kerr if desired.
+status_explanation: >-
+  Classified as a quantitative spectral problem; not a new qualitative existence conjecture for QNMs.
+math_required: >-
+  Semiclassical analysis; phase-integral methods; microlocal analysis near trapped sets; spectral theory of
+  non-selfadjoint operators.
+completion_criteria: >-
+  Bounds $| \omega_n - f(n;M,a) | \le \cdots$ with explicit rates and domains of validity.
+implications: >-
+  Sharpens inverse-spectral programs (cf. K-507) and scattering-phase intuition.
+difficulty: 5
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,38 +66,54 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: >-
-  High-frequency regimes connect to geometric optics and quantizable phase integrals; remainders
-  involve microlocal error terms that are substantial but more structured than full nonlinear
-  Einstein evolution.
+  High-frequency regimes connect to geometric optics; microlocal remainder terms remain substantial.
 progress_summary: >-
-  Physics and mathematics literature contains asymptotic QNM constructions; a single theorem
-  matching this site’s “explicit remainder” phrasing is not verified here. See references/TODO.
-related_families_note: >-
-  High-frequency QNM laws often treat Kerr or near-Kerr backgrounds interchangeably at leading
-  order; verify which hypotheses are used in any cited source.
-caution_note: null
-statement: >-
-  Prove an asymptotic quantization law for high-frequency quasinormal frequencies on Kerr (or an
-  agreed near-Kerr class) with explicit remainder estimates in frequency and in black-hole
-  parameters.
-math_required: >-
-  Semiclassical analysis; phase-integral methods; microlocal analysis near trapped sets; spectral
-  theory of non-selfadjoint operators.
-why_it_matters: >-
-  Bridges rigorous spectral theory with asymptotic formulas used in ringdown interpretation.
-completion_criteria: >-
-  Theorem-level bounds on $| \omega_n - f(n;M,a) |$ with explicit rates and domains of validity.
-implications: >-
-  Sharpens inverse-spectral programs (cf. K-507) and scattering-phase intuition.
-difficulty: 5
+  Physics literature and partial mathematics give asymptotic constructions; a single theorem matching the
+  “explicit remainder” requirement here is the open packaging.
 dependencies:
   - K-401
-related:
+related_problem_ids:
+  - K-401
   - K-407
+  - K-505
+related:
+  - K-401
+  - K-407
+  - K-505
 references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - key: teukolsky-1973-I
+    authors: Teukolsky, S. A.
+    title: 'Perturbations of a rotating black hole. I.'
+    venue: Astrophysical Journal
+    year: 1973
+    url: https://ui.adsabs.harvard.edu/abs/1973ApJ...185..635T/abstract
+    kind: primary
+    relevance: >-
+      Foundational separated ODE formulation whose high-frequency spectral asymptotics are being targeted.
+  - key: motl-schwarzschild-qnm-asymptotics
+    authors: Motl, L.
+    title: An analytical computation of asymptotic Schwarzschild quasinormal frequencies
+    venue: arXiv
+    year: 2002
+    url: https://arxiv.org/abs/gr-qc/0212096
+    arxiv: gr-qc/0212096
+    kind: primary
+    relevance: >-
+      Rigorous asymptotic QNM law in the Schwarzschild case—template for the level of explicitness sought
+      for Kerr analogues (this entry does **not** claim the Schwarzschild result implies the Kerr remainder
+      theorem).
+tags: []
+aliases: []
+related_families_note: >-
+  High-frequency QNM laws often treat Kerr or near-Kerr interchangeably at leading order in physics sources;
+  any theorem must record which hypotheses are used.
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
-notes: Formal verification track; medium suitability due to microlocal remainder complexity.
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
 last_updated: '2026-04-06'

@@ -1,7 +1,55 @@
 id: K-307
-title: Photon-region and trapping stability in dynamical near-Kerr spacetimes
+title: Persistence of normally hyperbolic trapping for dynamical near-Kerr spacetimes
+short_title: Dynamical trapping stability (near-Kerr)
 cluster: rigidity-uniqueness
-status: open
+theorem_status: open
+problem_type: classical_frontier
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Show the Kerr normally hyperbolic trapped set persists in a quantitative microlocal sense for spacetimes
+  compatible with nonlinear stability—not the static photon-region deformation problem in K-504.
+problem_statement: >-
+  Show that the normally hyperbolic trapped set of Kerr persists, in a quantitatively useful sense, for
+  vacuum developments arising from initial data compatible with the nonlinear near-Kerr stability program
+  (or a stated substitute class), and derive microlocal consequences (e.g. resolvent/Morawetz templates) from
+  that persistence.
+statement: >-
+  Show that the normally hyperbolic trapped set of Kerr persists, in a quantitatively useful sense, for
+  vacuum developments arising from initial data compatible with the nonlinear near-Kerr stability program
+  (or a stated substitute class), and derive microlocal consequences (e.g. resolvent/Morawetz templates) from
+  that persistence.
+why_it_matters: >-
+  Trapping governs decay estimates; dynamical persistence links geometry to time-dependent PDE control.
+scope:
+  background: Dynamical vacuum spacetimes near Kerr, not only linearized fields on fixed Kerr.
+  equation_type: Full Einstein vacuum (global hypotheses as in stability).
+  linearity: Nonlinear metric dynamics; microlocal analysis on evolving backgrounds.
+  regularity: >-
+    Sufficient regularity for normally hyperbolic dynamics on trapped sets (typically $C^2$ or stronger on
+    the metric).
+  parameter_regime: Near subextremal Kerr parameters in the stability topology on data.
+  asymptotics: Asymptotically flat.
+  gauge_or_formulation: >-
+    Trapped-set statements should be diffeomorphism-invariant or stated modulo gauge used in decay theory.
+known_results: []
+remaining_gap: >-
+  Quantitative persistence of trapped-set geometry with uniform microlocal constants under the dynamical
+  class considered.
+status_explanation: >-
+  Complementary to K-504: this entry emphasizes **time-dependent** near-Kerr geometry and trapping for PDEs,
+  whereas K-504 emphasizes **quantitative deformation** of the photon-region / spherical null geodesic locus
+  in stationary or near-stationary settings.
+math_required: >-
+  Dynamical systems near trapped sets; semiclassical propagation; microlocal resolvent estimates;
+  time-dependent geometry.
+completion_criteria: >-
+  Prove persistence and derive Morawetz/resolvent consequences with explicit hypotheses tied to stability data.
+implications: >-
+  Geometric backbone for robust decay on dynamical near-Kerr backgrounds.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,32 +62,61 @@ relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Trapping analysis on fixed Kerr is advanced; dynamical persistence compatible with nonlinear stability is
+  the open gap.
+dependencies: []
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-308
+  - K-504
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-308
+  - K-504
+references:
+  - key: ks-kerr-stability-small-a
+    authors: Klainerman, Szeftel (sequence)
+    title: Nonlinear stability of Kerr (small angular momentum regime)
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2104.11857
+    arxiv: '2104.11857'
+    kind: primary
+    relevance: >-
+      Nonlinear near-Kerr dynamics where trapping estimates are an ingredient; this entry asks for dynamical
+      persistence of trapped-set geometry beyond what is explicitly packaged in one paper.
+  - key: ks-brief-intro
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: '2210.14400'
+    kind: survey
+    relevance: >-
+      High-level map of how Kerr’s geometry enters decay/stability proofs—motivation for trapping persistence
+      questions.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: >-
-  Photon-region/trapping sits at the boundary between geometric rigidities and microlocal/spectral
-  exterior analysis; some formulations align as naturally with spectral-scattering as with
-  rigidity-uniqueness.
-statement: >-
-  Show that the normally hyperbolic trapped set of Kerr persists, in a quantitatively useful sense,
-  under dynamical perturbations compatible with nonlinear stability.
-math_required: >-
-  Dynamical systems near trapped sets; semiclassical propagation; microlocal resolvent estimates;
-  time-dependent geometry.
-why_it_matters: Trapping is one of the main analytic obstacles in every decay estimate on Kerr.
-completion_criteria: >-
-  A complete answer must prove persistence of the trapped structure and derive Morawetz or resolvent
-  consequences from it.
-implications: Would provide a geometric backbone for robust decay theory on dynamical near-Kerr backgrounds.
-difficulty: 4
-dependencies: []
-related: []
-references: []
+  Photon-region geometry also appears in spectral-scattering entries; this formulation is dynamical PDE–centric.
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

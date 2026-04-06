@@ -1,7 +1,48 @@
 id: K-207
 title: Extremal tail asymptotics versus conserved charges
+short_title: Extremal tail asymptotics versus conserved charges
 cluster: extremal
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Extremal tail asymptotics versus conserved charges
+problem_statement: >-
+  Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both
+  infinity charges and horizon Aretakis charges.
+statement: >-
+  Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both
+  infinity charges and horizon Aretakis charges.
+why_it_matters: In extremal geometry, the horizon itself stores conserved information that changes the tail law.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in
+  the exterior and on the horizon.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Low-frequency asymptotics; time inversion; charge extraction; mode coupling in degenerate horizon
+  settings.
+completion_criteria: >-
+  A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in
+  the exterior and on the horizon.
+implications: Would quantify exactly how extremal tails differ from subextremal Price laws.
+difficulty: 3
 family: related-rotating-black-hole
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,31 +55,39 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-205
+  - K-206
+  - K-208
+  - K-209
+related:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-205
+  - K-206
+  - K-208
+  - K-209
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both
-  infinity charges and horizon Aretakis charges.
-math_required: >-
-  Low-frequency asymptotics; time inversion; charge extraction; mode coupling in degenerate horizon
-  settings.
-why_it_matters: In extremal geometry, the horizon itself stores conserved information that changes the tail law.
-completion_criteria: >-
-  A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in
-  the exterior and on the horizon.
-implications: Would quantify exactly how extremal tails differ from subextremal Price laws.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

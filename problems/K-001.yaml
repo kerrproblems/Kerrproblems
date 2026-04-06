@@ -1,7 +1,79 @@
 id: K-001
 title: Full nonlinear stability of subextremal Kerr
+short_title: Nonlinear stability of subextremal Kerr (full $|a|<M$ range)
 cluster: exterior-stability
-status: partial
+theorem_status: partial
+problem_type: classical_frontier
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: high
+summary: >-
+  Prove asymptotically flat vacuum stability for the entire subextremal Kerr family; small-angular-momentum
+  nonlinear regimes have theorem-level results, while the unrestricted subextremal range remains open.
+problem_statement: >-
+  Prove that asymptotically flat vacuum initial data sufficiently close to a Kerr slice with $|a|<M$
+  evolve to a spacetime with complete future null infinity, a regular event horizon, and quantitative
+  convergence to a nearby Kerr metric modulo gauge and parameter modulation—without restricting to
+  $|a|\ll M$ once a full theorem is available.
+statement: >-
+  Prove that asymptotically flat vacuum initial data sufficiently close to a Kerr slice with $|a|<M$
+  evolve to a spacetime with complete future null infinity, a regular event horizon, and quantitative
+  convergence to a nearby Kerr metric modulo gauge and parameter modulation—without restricting to
+  $|a|\ll M$ once a full theorem is available.
+why_it_matters: >-
+  This is the central exterior vacuum stability benchmark for rotating black holes in asymptotically flat
+  general relativity; a full theorem would anchor the nonlinear theory of Kerr as a dynamical attractor.
+scope:
+  background: >-
+    Four-dimensional Einstein vacuum equations, asymptotically flat Cauchy development from a spacelike
+    slice, comparing to the subextremal Kerr family ($|a|<M$).
+  equation_type: Full nonlinear vacuum Einstein equations (not a fixed-background model).
+  linearity: Nonlinear evolution; linearized theory is a tool, not the target claim.
+  regularity: >-
+    As in the cited stability program: strong enough Sobolev/decay assumptions on data to close nonlinear
+    estimates; exact minimal regularity is part of a complete solution.
+  parameter_regime: >-
+    Target is the full subextremal range $|a|<M$ at fixed mass scale. Current theorem-level nonlinear
+    stability is established in restricted regimes (notably small $|a|/M$), not for all subextremal
+    parameters simultaneously.
+  asymptotics: Asymptotically flat (no cosmological constant in the primary formulation).
+  gauge_or_formulation: >-
+    Stability is understood modulo diffeomorphisms and modulation of Kerr parameters $(M,a)$ along the flow.
+known_results:
+  - statement: >-
+      Nonlinear stability of Kerr for sufficiently small angular momentum per unit mass (a theorem-level
+      result in the Klainerman–Szeftel program for $|a|/M$ small).
+    regime: Vacuum, asymptotically flat, $|a|/M$ small in the sense of that work.
+    significance: >-
+      Establishes a genuine nonlinear stability theorem for Kerr in a nontrivial open subset of parameters;
+      it does not yet cover the full subextremal family.
+  - statement: >-
+      Large body of linearized decay and mode stability results on fixed subextremal Kerr backgrounds.
+    regime: Linearized Einstein vacuum on exact Kerr.
+    significance: >-
+      Necessary input and partial evidence; not equivalent to a nonlinear stability theorem for the full
+      $|a|<M$ family.
+remaining_gap: >-
+  Close a global nonlinear stability theorem for asymptotically flat vacuum data near arbitrary subextremal
+  Kerr slices (all $|a|<M$), including sharp modulation of parameters, uniform trapping/superradiance
+  estimates, and a complete causal/geometric description of the developed spacetime.
+status_explanation: >-
+  Marked “partial” because restricted-parameter nonlinear theorems exist, while the statement as written
+  (full subextremal family without small-$|a|$ restriction) remains open. “Partial” here does not mean the
+  unrestricted case is nearly proved—only that some nontrivial nonlinear regimes are settled.
+math_required: >-
+  Geometric analysis of Einstein vacuum equations; null structure equations; gauge fixing; weighted Sobolev
+  spaces; vector-field and $r^p$ methods; trapping/superradiance control; modulation of mass and angular
+  momentum.
+completion_criteria: >-
+  A complete answer must specify the initial-data topology, prove global exterior existence, identify the
+  final Kerr parameters, establish quantitative decay rates in a fixed gauge, and control nonlinear errors
+  uniformly over the claimed subextremal parameter window.
+implications: >-
+  Would settle the core exterior black-hole stability problem for rotating vacuum black holes and supply the
+  exterior half of a precise strong cosmic censorship–compatible picture in the vacuum setting.
+difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,40 +86,56 @@ regime:
 relevance: pure-math
 fv_suitability: low
 fv_reason: >-
-  Full nonlinear vacuum Einstein stability is a global PDE program; formalization should target
-  lemmas and restricted regimes first.
+  Full nonlinear vacuum Einstein stability is a global PDE program; formalization should target lemmas and
+  restricted regimes first.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Nonlinear Kerr stability is proved for small $|a|/M$; the full subextremal family remains a major open
+  frontier. Linearized decay on fixed Kerr is much better developed.
+dependencies: []
+related_problem_ids:
+  - K-003
+  - K-005
+  - K-006
+  - K-012
+  - K-013
+related:
+  - K-003
+  - K-005
+  - K-006
+  - K-012
+  - K-013
+references:
+  - key: ks-kerr-stability-small-a
+    authors: Klainerman, Szeftel (sequence)
+    title: Nonlinear stability of Kerr (small angular momentum regime)
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2104.11857
+    arxiv: '2104.11857'
+    kind: primary
+    relevance: >-
+      Primary stability theorem in a small-$|a|/M$ window; anchors what “partial” refers to for nonlinear
+      vacuum Kerr.
+  - key: ks-brief-intro
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: '2210.14400'
+    kind: survey
+    relevance: >-
+      Survey of the program, hypotheses, and relation between linear tools and the nonlinear theorem.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove that asymptotically flat vacuum initial data sufficiently close to a Kerr slice with $|a|<M$
-  evolve to a spacetime with complete future null infinity, a regular event horizon, and
-  quantitative convergence to a nearby Kerr metric modulo gauge and parameter modulation.
-math_required: >-
-  Geometric analysis of Einstein vacuum equations; null structure equations; gauge fixing; weighted
-  Sobolev spaces; vector-field and $r^p$ methods; trapping/superradiance control; modulation of mass
-  and angular momentum.
-why_it_matters: >-
-  This is the main Kerr stability conjecture in the physically relevant asymptotically flat vacuum
-  setting.
-completion_criteria: >-
-  A complete answer must specify the initial-data topology, prove global exterior existence,
-  identify the final Kerr parameters, establish quantitative decay rates in a fixed gauge, and
-  control all nonlinear error terms for the full subextremal range.
-implications: >-
-  Would settle the core exterior black-hole stability problem for rotating vacuum black holes and
-  give the exterior half of a precise cosmic censorship picture.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

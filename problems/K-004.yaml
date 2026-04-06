@@ -1,7 +1,58 @@
 id: K-004
-title: Peeling and polyhomogeneous null infinity for near-Kerr
+title: Peeling and polyhomogeneous expansions at null infinity for nonlinear near-Kerr evolutions
+short_title: Peeling / polyhomogeneity at $\mathscr{I}^+$ for near-Kerr
 cluster: exterior-stability
-status: open
+theorem_status: open
+problem_type: classical_frontier
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Establish sharp asymptotic (peeling-type or polyhomogeneous) expansions at future null infinity for
+  solutions of the nonlinear vacuum Einstein equations arising from near-Kerr data.
+problem_statement: >-
+  Prove a sharp asymptotic expansion for curvature and connection coefficients at future null infinity
+  ($\mathscr{I}^+$) for nonlinear vacuum evolutions starting from initial data sufficiently close to a Kerr
+  slice in an asymptotically flat setting—specifying the expansion order, gauge hypotheses, leading
+  coefficients as functionals of data, and rigorous remainder bounds appropriate to the nonlinear problem.
+statement: >-
+  Prove a sharp asymptotic expansion for curvature and connection coefficients at future null infinity
+  ($\mathscr{I}^+$) for nonlinear vacuum evolutions starting from initial data sufficiently close to a Kerr
+  slice in an asymptotically flat setting—specifying the expansion order, gauge hypotheses, leading
+  coefficients as functionals of data, and rigorous remainder bounds appropriate to the nonlinear problem.
+why_it_matters: >-
+  Decay estimates alone do not pin down the fine radiation field; peeling and polyhomogeneous structure
+  encode BMS charges, memory, and compatibility with scattering formulations at null infinity.
+scope:
+  background: Asymptotically flat vacuum general relativity; global nonlinear development from Cauchy data.
+  equation_type: Nonlinear vacuum Einstein equations (full Einstein, not a linearized model on fixed Kerr).
+  linearity: Nonlinear near-Kerr evolutions; comparison to linearized null-asymptotics is context only.
+  regularity: Polyhomogeneous or smooth-compactified formulations as in modern null-infinity analysis.
+  parameter_regime: >-
+    Near subextremal Kerr in mass/angular momentum; the open question is the nonlinear map from data to
+    asymptotic coefficients, not the leading linearized mode on fixed Kerr alone.
+  asymptotics: Asymptotically flat with future null infinity in the usual sense of causal completeness toward $\mathscr{I}^+$.
+  gauge_or_formulation: >-
+    Expansion should be stated in a Bondi or conformal gauge class compatible with the nonlinear stability
+    framework (not a purely formal expansion without remainder control).
+known_results: []
+remaining_gap: >-
+  Provide a theorem-level polyhomogeneous or peeling-compatible expansion with remainder estimates for
+  solutions controlled by the nonlinear stability program (or an alternative global Cauchy theory), not
+  only for Minkowski or linearized models.
+status_explanation: >-
+  Open: nonlinear near-Kerr peeling/polyhomogeneity is not packaged here as a single proved theorem.
+math_required: >-
+  Null foliation geometry; transport equations; conformal compactification; weighted regularity along null
+  hypersurfaces; b-analysis / polyhomogeneous calculus where applicable.
+completion_criteria: >-
+  A complete answer must provide the expansion order, the gauge class, the leading coefficients as
+  functionals of data, and rigorous remainder bounds uniform for the stated class of near-Kerr data.
+implications: >-
+  Clarifies radiation memory, asymptotic charges, and compatibility between nonlinear stability and
+  scattering/BMS-based descriptions.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,36 +65,55 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
-  formalization boundaries.
+  Null-asymptotic substatements often reduce to structured transport and compactified PDE—more amenable to
+  staged formalization than full nonlinear stability.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Polyhomogeneous asymptotics are well developed for Minkowski stability and related linearized settings;
+  the nonlinear near-Kerr case targeted here is a distinct global PDE frontier.
+dependencies: []
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-006
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-006
+references:
+  - key: hintz-vasy-polyhom-minkowski
+    authors: Hintz, Vasy
+    title: Stability of Minkowski space and polyhomogeneity of the metric
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1711.00195
+    arxiv: '1711.00195'
+    kind: primary
+    relevance: >-
+      Landmark polyhomogeneous null-infinity structure in a nonlinear vacuum setting (Minkowski); model for
+      what “sharp asymptotics at $\mathscr{I}^+$” means at theorem level.
+  - key: ks-brief-intro
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: '2210.14400'
+    kind: survey
+    relevance: >-
+      Context for nonlinear Kerr stability and gauge infrastructure with which null-infinity expansions
+      would need to be compatible.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove a sharp asymptotic expansion for curvature and connection coefficients at future null
-  infinity for nonlinear near-Kerr evolutions.
-math_required: >-
-  Null foliation geometry; transport equations; conformal compactification; asymptotic expansions;
-  weighted regularity along null hypersurfaces.
-why_it_matters: >-
-  Decay alone does not determine the detailed asymptotic geometry; peeling data encode physically
-  meaningful radiation structure.
-completion_criteria: >-
-  A complete answer must provide the expansion order, the gauge, the leading coefficients as
-  functionals of data, and rigorous remainder bounds.
-implications: >-
-  Would clarify radiation memory, asymptotic charges, and how Kerr asymptotics differ from generic
-  asymptotically flat vacua.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

@@ -1,7 +1,52 @@
 id: K-509
 title: Charge–tail correspondence in the extremal limit
+short_title: Charge–tail correspondence in the extremal limit
 cluster: extremal
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Charge–tail correspondence in the extremal limit
+problem_statement: >-
+  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal
+  Kerr–Newman backgrounds to conserved charges (electric/magnetic) and angular momentum in a
+  quantitative theorem with explicit extremal limits.
+statement: >-
+  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal
+  Kerr–Newman backgrounds to conserved charges (electric/magnetic) and angular momentum in a
+  quantitative theorem with explicit extremal limits.
+why_it_matters: >-
+  Extremal limits mix long-range electromagnetic and gravitational effects; tails encode observables
+  in idealized models.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: einstein-maxwell, full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data,
+  including convergence as extremality is approached.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Einstein–Maxwell perturbations; Aretakis-type blow-up mechanisms; matched asymptotics; Price-law
+  heuristics vs. theorem-level decay rates.
+completion_criteria: >-
+  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data,
+  including convergence as extremality is approached.
+implications: Unifies extremal decay phenomenology with conserved-charge algebra.
+difficulty: 5
 family: kerr-newman
 asymptotics: asymptotically-flat
 coupling: matter-coupled
@@ -19,37 +64,46 @@ fv_reason: >-
   identities are partially algebraic, though tail–charge correspondence may still need PDE control.
 progress_summary: >-
   Near-extremal and extremal decay literature exists for several equations; a sharp unified
-  “charge–tail” correspondence statement is not catalogued as proved on this site. See
-  references/TODO.
+  “charge–tail” correspondence statement is not catalogued as proved on this site. See .
+dependencies:
+  - K-201
+related_problem_ids:
+  - K-008
+  - K-207
+  - K-501
+  - K-502
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-507
+  - K-508
+  - K-510
+related:
+  - K-008
+  - K-207
+  - K-501
+  - K-502
+  - K-503
+  - K-504
+  - K-505
+  - K-506
+  - K-507
+  - K-508
+  - K-510
+references: []
+tags: []
+aliases: []
 related_families_note: >-
   Kerr–Newman and near-extremal families differ from vacuum Kerr; asymptotic tail rates couple to
   charge and spin.
 caution_note: null
-statement: >-
-  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal
-  Kerr–Newman backgrounds to conserved charges (electric/magnetic) and angular momentum in a
-  quantitative theorem with explicit extremal limits.
-math_required: >-
-  Einstein–Maxwell perturbations; Aretakis-type blow-up mechanisms; matched asymptotics; Price-law
-  heuristics vs. theorem-level decay rates.
-why_it_matters: >-
-  Extremal limits mix long-range electromagnetic and gravitational effects; tails encode
-  observables in idealized models.
-completion_criteria: >-
-  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data, including
-  convergence as extremality is approached.
-implications: >-
-  Unifies extremal decay phenomenology with conserved-charge algebra.
-difficulty: 5
-dependencies:
-  - K-201
-related:
-  - K-207
-  - K-008
-references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
 posed_by: null
 posed_year: null
 prizes: null
 notes: Mixed math–physics; not asserted solved.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-06'

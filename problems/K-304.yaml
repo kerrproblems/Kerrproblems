@@ -1,7 +1,58 @@
 id: K-304
-title: Near-Kerr implies Kerr with computable constants
+title: Near-Kerr rigidity with computable geometric constants
+short_title: Effective near-Kerr → Kerr (computable constants)
 cluster: rigidity-uniqueness
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Upgrade qualitative near-Kerr uniqueness/rigidity into explicit geometric inequalities with computable
+  constants; the qualitative rigidity technology exists, the effective bounds do not.
+problem_statement: >-
+  Upgrade perturbative or near-Kerr uniqueness theorems for stationary vacuum asymptotically flat
+  black-hole exteriors so that hypotheses are checkable geometric inequalities (tetrad or curvature norms)
+  with explicit constants controlling closeness to an exact Kerr metric—not only asymptotic “smallness in
+  implicit norms.”
+statement: >-
+  Upgrade perturbative or near-Kerr uniqueness theorems for stationary vacuum asymptotically flat
+  black-hole exteriors so that hypotheses are checkable geometric inequalities (tetrad or curvature norms)
+  with explicit constants controlling closeness to an exact Kerr metric—not only asymptotic “smallness in
+  implicit norms.”
+why_it_matters: >-
+  Numerical relativity and inverse problems need constants, not only existence of a small neighborhood where
+  rigidity holds.
+scope:
+  background: Stationary vacuum, asymptotically flat, near-Kerr in rigidity-theoretic sense.
+  equation_type: Stationary Einstein vacuum reduction.
+  linearity: Stationary nonlinear elliptic-type constraints; linearization may appear as a tool.
+  regularity: Smooth or high Sobolev as in near-Kerr rigidity papers.
+  parameter_regime: Smallness measured by explicit curvature or Mars–Simon-type tensors, not an abstract
+    implicit topology.
+  asymptotics: Asymptotically flat.
+  gauge_or_formulation: >-
+    Invariants (Mars–Simon, Weyl alignment) should be stated in a gauge-fixed form amenable to constants.
+known_results:
+  - statement: >-
+      Qualitative rigidity and local uniqueness statements for near-Kerr stationary vacuum solutions under
+      hypotheses used in the Mars/Simon tensor framework.
+    regime: Stationary vacuum, asymptotically flat, near-Kerr.
+    significance: >-
+      Provides the qualitative theorem that quantitative sharpening aims to make effective.
+remaining_gap: >-
+  Replace “sufficiently small in an implicit norm” with finite, computable bounds linking invariant sizes to
+  Kerr distance functionals.
+status_explanation: >-
+  Open as a quantitative / effective problem; not a separate classical conjecture from the existence of
+  qualitative rigidity.
+math_required: Perturbative uniqueness; unique continuation; invariant boundary data; effective estimates.
+completion_criteria: >-
+  Finite, computable conditions implying exact Kerrness with quantitative parameter control.
+implications: >-
+  Makes rigidity usable for analysis and numerical stability certificates.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -12,30 +63,62 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
-  formalization boundaries.
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer formalization
+  boundaries.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Qualitative near-Kerr rigidity exists; explicit constants and checkable inequalities remain open.
+dependencies: []
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-305
+  - K-306
+  - K-307
+  - K-308
+  - K-501
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-305
+  - K-306
+  - K-307
+  - K-308
+  - K-501
+references:
+  - key: mars-kerr-characterization
+    authors: Mars
+    title: A spacetime characterization of the Kerr metric
+    venue: arXiv
+    year: 1999
+    url: https://arxiv.org/abs/gr-qc/9904070
+    arxiv: gr-qc/9904070
+    kind: primary
+    relevance: >-
+      Classical tensor characterization underlying qualitative Kerr rigidity; baseline “known qualitative”
+      statement.
+  - key: simon-mars-3plus1
+    authors: García-Parrado Gómez-Lobo, Mars, Simon
+    title: A characterization of 3+1 spacetimes via the Simon–Mars tensor
+    venue: arXiv
+    year: 2014
+    url: https://arxiv.org/abs/1412.6542
+    arxiv: '1412.6542'
+    kind: primary
+    relevance: >-
+      Tensor toolkit used in modern rigidity and numerical comparisons—natural language for quantitative
+      bounds.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Upgrade perturbative uniqueness theorems near Kerr so that the hypotheses are checkable geometric
-  inequalities with explicit constants.
-math_required: Perturbative uniqueness; unique continuation; invariant boundary data; effective estimates.
-why_it_matters: Current near-Kerr rigidity results are often too implicit for direct geometric use.
-completion_criteria: >-
-  A complete answer must state finite, computable conditions implying exact Kerrness and give
-  quantitative parameter control.
-implications: Would make rigidity much more usable for both analysis and numerical relativity.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

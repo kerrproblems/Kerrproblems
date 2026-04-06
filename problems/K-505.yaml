@@ -1,7 +1,62 @@
 id: K-505
-title: Threshold-mode classification for separated Kerr ODEs
+title: Threshold phenomena in separated Teukolsky-type ODEs on Kerr (zero modes, algebraically special limits, superradiant edges)
+short_title: Kerr separated ODEs — threshold classification
 cluster: spectral-scattering
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Classify threshold behavior (zero-frequency modes, algebraically special / repeated-root regimes,
+  superradiant frequency boundaries) for separated radial/angular ODEs on Kerr with uniform $(M,a)$ control.
+problem_statement: >-
+  For the separated ODEs arising from Teukolsky or Regge–Wheeler–type reductions on Kerr, classify threshold
+  resonant phenomena including (i) **zero-frequency** limits affecting low-energy resolvents, (ii)
+  **algebraically special / repeated-root** regimes in the radial ODE, and (iii) edges of the **superradiant**
+  frequency window—each with uniform bounds as parameters vary in compact subintervals of subextremality.
+  The catalog should be checkable mode-by-mode and include uniformity statements in $(M,a)$.
+statement: >-
+  For the separated ODEs arising from Teukolsky or Regge–Wheeler–type reductions on Kerr, classify threshold
+  resonant phenomena including (i) **zero-frequency** limits affecting low-energy resolvents, (ii)
+  **algebraically special / repeated-root** regimes in the radial ODE, and (iii) edges of the **superradiant**
+  frequency window—each with uniform bounds as parameters vary in compact subintervals of subextremality.
+  The catalog should be checkable mode-by-mode and include uniformity statements in $(M,a)$.
+why_it_matters: >-
+  Threshold modes control low-frequency resolvent behavior and appear in stability and scattering
+  constructions.
+scope:
+  background: Exact Kerr or agreed near-Kerr ODE coefficients after separation.
+  equation_type: Coupled radial/angular ODEs from spin-weighted master equations.
+  linearity: Linearized field equations on a fixed background.
+  regularity: Analytic coefficients in the ODE domain away from singular points; Frobenius analysis at singularities.
+  parameter_regime: >-
+    Compact subsets of subextremal $(M,a)$ excluding extremality unless a separate limit is explicitly
+    formulated.
+  asymptotics: Asymptotically flat Kerr boundary conditions encoded in the ODEs.
+  gauge_or_formulation: Teukolsky vs RW–Zerilli gauge choices recorded explicitly when comparing thresholds.
+known_results:
+  - statement: >-
+      Separation of the Teukolsky master equation into radial and angular ODEs on Kerr (classical derivation).
+    regime: Linearized perturbations of exact Kerr.
+    significance: >-
+      Foundational ODE setup; this entry targets **uniform threshold classification**, not the original
+      separation itself.
+remaining_gap: >-
+  Consolidated theorem catalog with proofs of uniformity and explicit handling of each threshold family named
+  above.
+status_explanation: >-
+  “Threshold” is disambiguated on-page (zero-frequency / algebraic / superradiant edge); not a vague umbrella
+  phrase.
+math_required: >-
+  ODE spectral theory; Frobenius methods; connection formulas; Teukolsky equations; asymptotic analysis of
+  eigenvalue branches.
+completion_criteria: >-
+  Complete catalog with checkable mode-wise proofs and $(M,a)$ uniformity.
+implications: >-
+  Strengthens QNM and scattering foundations used across clusters.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,39 +68,53 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Separated radial/angular ODEs with polynomial coefficients; threshold behavior is finite-
-  dimensional Sturm–Liouville / spectral edge analysis—natural for formal verification prototypes.
+  Separated radial/angular ODEs with polynomial coefficients; threshold behavior is finite-dimensional
+  spectral-edge analysis.
 progress_summary: >-
-  Teukolsky–Starobinsky formalism and QNM literature give partial mode-wise results; a consolidated
-  threshold classification with uniform parameter dependence is not asserted here. See
-  references/TODO.
-related_families_note: null
-caution_note: null
-statement: >-
-  For the separated ODEs arising from Teukolsky or Regge–Wheeler–type reductions on Kerr, classify
-  threshold resonant modes (zero-energy, algebraically special, or repeated-root regimes) with
-  uniform bounds as parameters vary in compact subintervals of subextremality.
-math_required: >-
-  ODE spectral theory; Frobenius methods; connection formulas; Teukolsky equations; asymptotic
-  analysis of eigenvalue branches.
-why_it_matters: >-
-  Threshold modes control low-frequency resolvent behavior and appear in stability and scattering
-  constructions.
-completion_criteria: >-
-  A complete catalog of threshold phenomena with proofs checkable mode-by-mode and uniformity
-  statements in $(M,a)$.
-implications: >-
-  Strengthens QNM and scattering foundations used in multiple clusters.
-difficulty: 4
+  Mode-wise QNM literature is large; a single uniform threshold classification matching this phrasing is the
+  open packaging.
 dependencies:
   - K-303
-related:
+related_problem_ids:
+  - K-303
   - K-401
   - K-405
+  - K-506
+related:
+  - K-303
+  - K-401
+  - K-405
+  - K-506
 references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - key: teukolsky-1973-I
+    authors: Teukolsky, S. A.
+    title: 'Perturbations of a rotating black hole. I. Fundamental equations for gravitational, electromagnetic, and neutrino-field perturbations'
+    venue: Astrophysical Journal
+    year: 1973
+    url: https://ui.adsabs.harvard.edu/abs/1973ApJ...185..635T/abstract
+    kind: primary
+    relevance: >-
+      Original separated ODE framework whose threshold structure this entry seeks to classify uniformly.
+  - key: press-teukolsky-1973-II
+    authors: Press, Teukolsky
+    title: 'Perturbations of a rotating black hole. II. Dynamical stability of the Kerr metric'
+    venue: Astrophysical Journal
+    year: 1973
+    url: https://ui.adsabs.harvard.edu/abs/1973ApJ...185..649P/abstract
+    kind: primary
+    relevance: >-
+      Companion stability analysis using the master equations; historical anchor for mode-wise threshold
+      discussions.
+tags: []
+aliases: []
+related_families_note: null
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
-notes: Math-leaning formal verification track problem.
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
 last_updated: '2026-04-06'

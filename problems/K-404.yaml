@@ -1,7 +1,48 @@
 id: K-404
 title: Zero-frequency structure and tail universality
+short_title: Zero-frequency structure and tail universality
 cluster: spectral-scattering
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Zero-frequency structure and tail universality
+problem_statement: >-
+  Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws,
+  including logarithmic singularities and their coefficients.
+statement: >-
+  Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws,
+  including logarithmic singularities and their coefficients.
+why_it_matters: The tail law is a spectral statement in disguise.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: spectral-operator.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must provide explicit resolvent expansions and derive the corresponding
+  time-domain asymptotics with sharp remainders.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion of Laplace/Fourier
+  transforms.
+completion_criteria: >-
+  A complete answer must provide explicit resolvent expansions and derive the corresponding
+  time-domain asymptotics with sharp remainders.
+implications: Would unify QNM language and Price-law language in a single framework.
+difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,31 +54,35 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-401
+  - K-402
+  - K-403
+  - K-405
+  - K-406
+  - K-407
+related:
+  - K-401
+  - K-402
+  - K-403
+  - K-405
+  - K-406
+  - K-407
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws,
-  including logarithmic singularities and their coefficients.
-math_required: >-
-  Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion of Laplace/Fourier
-  transforms.
-why_it_matters: The tail law is a spectral statement in disguise.
-completion_criteria: >-
-  A complete answer must provide explicit resolvent expansions and derive the corresponding
-  time-domain asymptotics with sharp remainders.
-implications: Would unify QNM language and Price-law language in a single framework.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

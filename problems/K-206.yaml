@@ -1,7 +1,50 @@
 id: K-206
 title: Extremal interior SCC and Cauchy-horizon regularity
+short_title: Extremal interior SCC and Cauchy-horizon regularity
 cluster: extremal
-status: open
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Extremal interior SCC and Cauchy-horizon regularity
+problem_statement: >-
+  Determine the interior stability or instability picture for extremal Kerr and identify the correct
+  extendibility threshold across its inner horizon structure.
+statement: >-
+  Determine the interior stability or instability picture for extremal Kerr and identify the correct
+  extendibility threshold across its inner horizon structure.
+why_it_matters: >-
+  The extremal interior is much less understood than the subextremal one and may not fit the usual
+  weak-null-singularity paradigm.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must specify the relevant extremal horizon geometry, the extension class, and
+  the precise blow-up or continuity mechanism.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Degenerate interior analysis; coupling of horizon and interior asymptotics; extremal transport
+  estimates.
+completion_criteria: >-
+  A complete answer must specify the relevant extremal horizon geometry, the extension class, and
+  the precise blow-up or continuity mechanism.
+implications: Would complete the extremal analogue of SCC.
+difficulty: 4
 family: nhek
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,32 +57,39 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-205
+  - K-207
+  - K-208
+  - K-209
+related:
+  - K-201
+  - K-202
+  - K-203
+  - K-204
+  - K-205
+  - K-207
+  - K-208
+  - K-209
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Determine the interior stability or instability picture for extremal Kerr and identify the correct
-  extendibility threshold across its inner horizon structure.
-math_required: >-
-  Degenerate interior analysis; coupling of horizon and interior asymptotics; extremal transport
-  estimates.
-why_it_matters: >-
-  The extremal interior is much less understood than the subextremal one and may not fit the usual
-  weak-null-singularity paradigm.
-completion_criteria: >-
-  A complete answer must specify the relevant extremal horizon geometry, the extension class, and
-  the precise blow-up or continuity mechanism.
-implications: Would complete the extremal analogue of SCC.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
+  community consensus differs.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

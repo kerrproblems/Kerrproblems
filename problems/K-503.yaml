@@ -1,7 +1,61 @@
 id: K-503
-title: Uniqueness of the Carter symmetry operator on Kerr
+title: Uniqueness questions for Carter-type symmetry operators on Kerr
+short_title: Carter operator uniqueness (scoping variants)
 cluster: rigidity-uniqueness
-status: open
+theorem_status: open
+problem_type: formalization_target
+maturity: provisional
+evidence_level: primary_refs_present
+verification_state: editorial_revision_needed
+priority: low
+summary: >-
+  This entry intentionally lists multiple non-equivalent scoping variants for “uniqueness of the Carter
+  symmetry operator”; maintainers must pin one before treating the problem as flagship-class.
+problem_statement: >-
+  Clarify and then solve an appropriate uniqueness statement for Carter-type quadratic conserved quantities /
+  symmetry operators for geodesic or scalar-wave motion on Kerr. At minimum distinguish: (a) exact operator
+  identities on exact Kerr within a stated finite-dimensional algebra of differential operators; (b)
+  uniqueness modulo adding functions of the obvious commuting conserved quantities; (c) robust statements
+  for perturbed metrics where only approximate commutation holds. The database does not endorse one reading
+  without further editorial verification.
+statement: >-
+  Clarify and then solve an appropriate uniqueness statement for Carter-type quadratic conserved quantities /
+  symmetry operators for geodesic or scalar-wave motion on Kerr. At minimum distinguish: (a) exact operator
+  identities on exact Kerr within a stated finite-dimensional algebra of differential operators; (b)
+  uniqueness modulo adding functions of the obvious commuting conserved quantities; (c) robust statements
+  for perturbed metrics where only approximate commutation holds. The database does not endorse one reading
+  without further editorial verification.
+why_it_matters: >-
+  Separability on Kerr is not accidental; pinning an operator-level uniqueness theorem clarifies what
+  survives under perturbation (cf. K-306, K-508).
+scope:
+  background: Exact Kerr and, for variant (c), smooth perturbations; geodesic flow and/or scalar wave operator.
+  equation_type: Hamiltonian/Wave-operator commutator algebra; finite-order differential operators on the phase space / spacetime.
+  linearity: >-
+    Variants (a–b) are typically exact algebraic; variant (c) involves approximate commutation with error
+    control.
+  regularity: Smooth coefficients on the relevant bundles unless a weaker class is explicitly fixed.
+  parameter_regime: Subextremal Kerr parameters; perturbation size for (c) must be quantified.
+  asymptotics: Local / algebraic on Kerr; global issues only if explicitly posed.
+  gauge_or_formulation: >-
+    Operator classes must be specified (order, locality, polynomial momentum dependence) to avoid trivial
+    reformulations.
+known_results: []
+remaining_gap: >-
+  Editorial: choose a single precise formulation (or split into separate problem IDs). Mathematical: prove
+  or refute uniqueness under that formulation.
+status_explanation: >-
+  `editorial_revision_needed` because the original one-line statement blended distinct mathematical targets;
+  this page surfaces the split explicitly rather than guessing which variant the literature addresses.
+math_required: >-
+  Symplectic geometry; Killing tensors; Carter’s theory; spectral theory on stationary backgrounds; separation
+  of variables for wave operators.
+completion_criteria: >-
+  A uniqueness proof under explicit hypotheses on operator order, locality, and commutation with the
+  Hamiltonian or wave operator—for the chosen variant.
+implications: >-
+  Algebraic backbone for Kerr scattering and QNM separability programs if a sharp theorem is obtained.
+difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,38 +68,65 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Separation constants and commuting operators admit algebraic characterizations in Kerr; suitable
-  for formalizing operator identities and representation on eigenspaces.
+  Separation constants and commuting operators admit algebraic characterizations in Kerr; suitable for
+  formalizing operator identities and representations on eigenspaces.
 progress_summary: >-
-  Carter’s constant and separability are classical; a sharp uniqueness theorem for the symmetry
-  operator in a stated functorial or spectral class is not recorded as settled on this site. See
-  references/TODO.
-related_families_note: null
-caution_note: null
-statement: >-
-  Characterize the Carter constant as the unique (up to normalization and addition of functions of
-  conserved quantities) second-order symmetry operator for geodesic or scalar wave motion on Kerr
-  within a precise class of differential operators polynomial in momenta.
-math_required: >-
-  Symplectic geometry; Killing tensors; Carter’s theory; spectral theory on stationary backgrounds;
-  separation of variables for wave operators.
-why_it_matters: >-
-  Explains why Kerr’s integrable structure is rigid rather than an accident of coordinates, with
-  implications for perturbation theory.
-completion_criteria: >-
-  A uniqueness proof under explicit hypotheses on operator order, locality, and commutation with
-  the Hamiltonian or wave operator.
-implications: >-
-  Would solidify the algebraic backbone of Kerr scattering and QNM separability programs.
-difficulty: 4
+  Carter’s constant and separability on exact Kerr are classical; a sharp uniqueness theorem matching one of
+  the variants above is not summarized as closed here.
 dependencies: []
-related:
+related_problem_ids:
+  - K-301
   - K-302
   - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-307
+  - K-308
+  - K-508
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-307
+  - K-308
+  - K-508
 references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - key: carter-kerr-symmetry
+    authors: Carter
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Communications in Mathematical Physics
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: >-
+      Foundational construction of the fourth constant / operator-level structure on Kerr.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: >-
+      Broader black-hole uniqueness context; helps place operator questions relative to metric rigidity.
+tags: []
+aliases: []
+related_families_note: null
+caution_note: >-
+  Not promoted to flagship lists until one variant (a), (b), or (c) is pinned and literature-matched.
 posed_by: null
 posed_year: null
 prizes: null
-notes: Math-leaning formal verification track problem.
+notes: null
+editorial_notes: >-
+  Maintainer action: split into separate YAML entries if two variants both deserve independent tracking.
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
 last_updated: '2026-04-06'

@@ -1,7 +1,50 @@
 id: K-011
 title: Spin fields on dynamical near-Kerr backgrounds
+short_title: Spin fields on dynamical near-Kerr backgrounds
 cluster: exterior-stability
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Spin fields on dynamical near-Kerr backgrounds
+problem_statement: >-
+  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics
+  that stay close to Kerr within a nonlinear bootstrap regime.
+statement: >-
+  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics
+  that stay close to Kerr within a nonlinear bootstrap regime.
+why_it_matters: >-
+  Nonlinear Einstein proofs require estimates on fields propagating on dynamical, not exactly
+  stationary, backgrounds.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: stationary-reduction.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all
+  losses due to the time-dependent background.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Physical-space decay without exact separability; perturbative microlocal analysis; nonstationary
+  commutator methods.
+completion_criteria: >-
+  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all
+  losses due to the time-dependent background.
+implications: Would remove a major technical bottleneck between linear theory and a full nonlinear Kerr theorem.
+difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,33 +57,23 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
-related_families_note: null
-caution_note: null
-statement: >-
-  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics
-  that stay close to Kerr within a nonlinear bootstrap regime.
-math_required: >-
-  Physical-space decay without exact separability; perturbative microlocal analysis; nonstationary
-  commutator methods.
-why_it_matters: >-
-  Nonlinear Einstein proofs require estimates on fields propagating on dynamical, not exactly
-  stationary, backgrounds.
-completion_criteria: >-
-  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all
-  losses due to the time-dependent background.
-implications: Would remove a major technical bottleneck between linear theory and a full nonlinear Kerr theorem.
-difficulty: 3
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
 dependencies: []
+related_problem_ids: []
 related: []
 references: []
+tags: []
+aliases: []
+related_families_note: null
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

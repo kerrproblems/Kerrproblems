@@ -1,7 +1,54 @@
 id: K-308
 title: 'Rigidity and uniqueness with matter: full Kerr–Newman regime'
+short_title: Kerr–Newman stationary uniqueness (full regime)
 cluster: rigidity-uniqueness
-status: partial
+theorem_status: partial
+problem_type: classical_frontier
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Complete stationary uniqueness/rigidity for Kerr–Newman without smallness caveats; partial linearized
+  exterior progress exists (cf. K-008), but global stationary uniqueness in the smooth category remains
+  incomplete.
+problem_statement: >-
+  Prove the full stationary uniqueness and perturbative rigidity theory for asymptotically flat
+  Einstein–Maxwell black-hole solutions in the subextremal Kerr–Newman class—without small-charge or
+  slow-rotation restrictions once the sharp theorem is available.
+statement: >-
+  Prove the full stationary uniqueness and perturbative rigidity theory for asymptotically flat
+  Einstein–Maxwell black-hole solutions in the subextremal Kerr–Newman class—without small-charge or
+  slow-rotation restrictions once the sharp theorem is available.
+why_it_matters: >-
+  Charged rotating solutions are physically central; their rigidity theory lags the vacuum Carter–Robinson
+  picture in generality.
+scope:
+  background: Stationary Einstein–Maxwell, asymptotically flat, subextremal Kerr–Newman as target family.
+  equation_type: Stationary coupled elliptic-type reduction; EM gauge issues included.
+  linearity: Stationary nonlinear coupled system.
+  regularity: Smooth / high Sobolev as in rigidity programs.
+  parameter_regime: Full subextremal $(M,a,Q)$ range is the goal; partial results may cover restricted sets.
+  asymptotics: Asymptotically flat.
+  gauge_or_formulation: Lorenz / generalized wave-map gauges as in linearized stability literature.
+known_results:
+  - statement: >-
+      Linearized decay/stability for weakly charged, slowly rotating Kerr–Newman (partial exterior linear
+      result).
+    regime: Linearized Einstein–Maxwell as in arXiv:2301.08557.
+    significance: >-
+      Partial progress on dynamics; stationary uniqueness is a distinct stationary elliptic problem.
+remaining_gap: >-
+  Global smooth stationary uniqueness/rigidity matching vacuum rigidity strength across parameters.
+status_explanation: >-
+  Partial: coupled linearized results exist; full stationary uniqueness without smallness remains open.
+math_required: >-
+  Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon regularity; unique continuation.
+completion_criteria: >-
+  Sharp hypothesis theorem classifying stationary solutions as Kerr–Newman in the smooth category.
+implications: >-
+  Completes charged rotating rigidity parallel to vacuum Kerr uniqueness.
+difficulty: 3
 family: kerr-newman
 asymptotics: asymptotically-flat
 coupling: matter-coupled
@@ -14,32 +61,61 @@ relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Vacuum rigidity is more complete; Einstein–Maxwell stationary uniqueness in full parameters and partial
+  linearized stability are both active areas.
+dependencies: []
+related_problem_ids:
+  - K-007
+  - K-008
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-307
+related:
+  - K-007
+  - K-008
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+  - K-305
+  - K-306
+  - K-307
+references:
+  - key: he-linear-kn-stability
+    authors: He, L.
+    title: The linear stability of weakly charged and slowly rotating Kerr–Newman family of charged black holes
+    venue: arXiv
+    year: 2023
+    url: https://arxiv.org/abs/2301.08557
+    arxiv: '2301.08557'
+    kind: primary
+    relevance: >-
+      Partial linearized progress on coupled Einstein–Maxwell around Kerr–Newman; related but not identical
+      to stationary uniqueness.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: >-
+      Classical uniqueness landscape including charged settings at a survey level.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Prove the full stationary uniqueness and perturbative rigidity theory for Kerr–Newman without
-  smallness assumptions.
-math_required: >-
-  Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon regularity; unique
-  continuation.
-why_it_matters: >-
-  Kerr–Newman is the natural charged rotating family, but its full rigidity theory is still not as
-  complete as one would like.
-completion_criteria: >-
-  A complete answer must characterize the full stationary family under natural hypotheses and
-  support the coupled dynamical theory.
-implications: Would unify the stationary Einstein–Maxwell black-hole classification.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Contribute" description="How to propose edits responsibly to Kerr Problems.">
+  <h1>Contributing responsibly</h1>
+  <ol style="max-width: 68ch; line-height: 1.65">
+    <li>No uncited theorem claims on public fields: if you assert a partial or solved milestone, cite the exact paper in <code>references</code> and mirror a short statement in <code>known_results</code>.</li>
+    <li>No TODO/FIXME or “references pending” text in YAML fields that render publicly.</li>
+    <li>Fill the <code>scope</code> block (background, equation type, linearity, regularity, parameter regime, asymptotics).</li>
+    <li>
+      <code>theorem_status: solved</code> requires a <code>known_results</code> bullet that matches the cited theorem; otherwise use
+      <code>partial</code> or <code>needs_review</code>.
+    </li>
+    <li>
+      <code>problem_type: quantitative_sharpening</code> must point to the qualitative theorem already known (usually in
+      <code>known_results</code>).
+    </li>
+    <li>Prefer arXiv/journal DOIs you have checked; do not guess identifiers.</li>
+    <li>If literature support is uncertain, mark <code>theorem_status: needs_review</code> and explain in <code>status_explanation</code>.</li>
+  </ol>
+  <p style="max-width: 68ch">
+    Automated checks: <code>npm run validate</code> (taxonomy + editorial report to <code>docs/audit/problem_validation_report.md</code>).
+  </p>
+  <p style="margin-top: 1.5rem">
+    <a href="/methodology">Methodology &amp; taxonomy</a>
+    ·
+    <a href="/problems">Problems</a>
+  </p>
+</Base>

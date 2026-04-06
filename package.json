@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/export_problems_json.mjs",
     "preview": "astro preview",
-    "validate": "node scripts/validate_problems.mjs",
+    "validate": "node scripts/validate_problems.mjs && node scripts/validate_editorial.mjs",
     "migrate:taxonomy": "node scripts/migrate_taxonomy.mjs",
     "migrate:formal-verification": "node scripts/migrate_formal_verification.mjs",
     "export:problems": "node scripts/export_problems_json.mjs",

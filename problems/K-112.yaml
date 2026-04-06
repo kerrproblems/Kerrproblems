@@ -1,7 +1,53 @@
 id: K-112
 title: Teukolsky interior asymptotics beyond the current state of the art
+short_title: Teukolsky interior asymptotics beyond the current state of the art
 cluster: interior-scc
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Teukolsky interior asymptotics beyond the current state of the art
+problem_statement: >-
+  Extend precise interior asymptotics to both spin signs, prove genericity of leading coefficients,
+  and reconstruct metric perturbations in a regular gauge suited for SCC.
+statement: >-
+  Extend precise interior asymptotics to both spin signs, prove genericity of leading coefficients,
+  and reconstruct metric perturbations in a regular gauge suited for SCC.
+why_it_matters: >-
+  Teukolsky asymptotics are currently one of the cleanest windows into gravitational interior
+  instability.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise. Cauchy horizon / interior regularity formulations of strong cosmic censorship are in
+    play; distinguish $C^0$ vs higher regularity notions.
+  equation_type: 'Taxonomy equation levels: scalar-wave, linearized-gravity.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: >-
+    State intended regularity class for extensions across horizons explicitly (e.g. $C^0$,
+    Lipschitz, $C^2$).
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must cover both radiative scalars, reconstruction, and blow-up consequences in
+  metric-level norms.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Teukolsky equations; mode asymptotics; gauge reconstruction; regular frame analysis at the Cauchy
+  horizon.
+completion_criteria: >-
+  A complete answer must cover both radiative scalars, reconstruction, and blow-up consequences in
+  metric-level norms.
+implications: Would make the link between spin-field asymptotics and geometric inextendibility much tighter.
+difficulty: 3
 family: exact-kerr
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -16,33 +62,45 @@ fv_suitability: low
 fv_reason: >-
   Global nonlinear PDE or open-ended dynamics; not a practical first formalization target without
   major scoping.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-108
+  - K-109
+  - K-110
+  - K-111
+related:
+  - K-101
+  - K-102
+  - K-103
+  - K-104
+  - K-105
+  - K-106
+  - K-107
+  - K-108
+  - K-109
+  - K-110
+  - K-111
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Extend precise interior asymptotics to both spin signs, prove genericity of leading coefficients,
-  and reconstruct metric perturbations in a regular gauge suited for SCC.
-math_required: >-
-  Teukolsky equations; mode asymptotics; gauge reconstruction; regular frame analysis at the Cauchy
-  horizon.
-why_it_matters: >-
-  Teukolsky asymptotics are currently one of the cleanest windows into gravitational interior
-  instability.
-completion_criteria: >-
-  A complete answer must cover both radiative scalars, reconstruction, and blow-up consequences in
-  metric-level norms.
-implications: Would make the link between spin-field asymptotics and geometric inextendibility much tighter.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

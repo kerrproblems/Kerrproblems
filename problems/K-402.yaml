@@ -1,7 +1,50 @@
 id: K-402
 title: Nonlinear QNMs from full Einstein evolution
+short_title: Nonlinear QNMs from full Einstein evolution
 cluster: spectral-scattering
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Nonlinear QNMs from full Einstein evolution
+problem_statement: >-
+  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics,
+  including quadratic or higher corrections to linear QNM behavior.
+statement: >-
+  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics,
+  including quadratic or higher corrections to linear QNM behavior.
+why_it_matters: >-
+  Observational ringdown analysis increasingly depends on knowing when linear mode models are
+  justified and when nonlinear corrections matter.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: spectral-operator, full-einstein.'
+  linearity: Includes or emphasizes nonlinear dynamics.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must bound the difference between the full Einstein waveform and a stated
+  nonlinear QNM model over an explicit time interval.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Second-order perturbation theory; nonlinear normal forms; matched asymptotics; control of
+  nonlinear waveform remainders.
+completion_criteria: >-
+  A complete answer must bound the difference between the full Einstein waveform and a stated
+  nonlinear QNM model over an explicit time interval.
+implications: Would bridge rigorous PDE theory and high-precision black-hole spectroscopy.
+difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -16,41 +59,43 @@ relevance: physics-facing
 fv_suitability: medium
 fv_reason: >-
   Bridges full Einstein evolution with QNM-style expansions; some linearized spectral pieces are
-  structured, but nonlinear remainder control is a poor first formalization target compared to pure ODE
-  or stationary rigidity problems.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  structured, but nonlinear remainder control is a poor first formalization target compared to pure
+  ODE or stationary rigidity problems.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies:
+  - K-001
+  - K-401
+related_problem_ids:
+  - K-305
+  - K-401
+  - K-403
+  - K-404
+  - K-405
+  - K-406
+  - K-407
+related:
+  - K-305
+  - K-401
+  - K-403
+  - K-404
+  - K-405
+  - K-406
+  - K-407
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: >-
   Connects nonlinear exterior stability intuitions with spectral/QNM-level statements; dependencies
   are conceptual, not logical prerequisites in a proof assistant sense.
-statement: >-
-  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics,
-  including quadratic or higher corrections to linear QNM behavior.
-math_required: >-
-  Second-order perturbation theory; nonlinear normal forms; matched asymptotics; control of
-  nonlinear waveform remainders.
-why_it_matters: >-
-  Observational ringdown analysis increasingly depends on knowing when linear mode models are
-  justified and when nonlinear corrections matter.
-completion_criteria: >-
-  A complete answer must bound the difference between the full Einstein waveform and a stated
-  nonlinear QNM model over an explicit time interval.
-implications: Would bridge rigorous PDE theory and high-precision black-hole spectroscopy.
-difficulty: 3
-dependencies:
-  - K-001
-  - K-401
-related:
-  - K-305
-  - K-406
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'

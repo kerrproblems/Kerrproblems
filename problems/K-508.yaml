@@ -1,7 +1,56 @@
 id: K-508
-title: Stability or obstruction theory for approximate Killing–Yano tensors
+title: Stability or obstruction for approximate Killing–Yano tensors near Kerr
+short_title: Approximate Killing–Yano fields near Kerr
 cluster: rigidity-uniqueness
-status: open
+theorem_status: open
+problem_type: quantitative_sharpening
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  If the Killing–Yano equation is small in an agreed tensor norm, must the metric be near Kerr, or can one
+  build controlled counterexamples? Complements K-306 (Carter-type operators) with a 2-form/tensor PDE focus.
+problem_statement: >-
+  Consider vacuum spacetimes with a two-form $Y_{ab}$ whose Killing–Yano equation $\nabla_{(a}Y_{b)c}=0$ is
+  small in an agreed $L^2$ or $C^0$ norm on a suitable spacelike slice or domain. Prove either (i) a
+  quantitative stability statement toward Kerr with explicit bounds, or (ii) an explicit family of
+  near-vacuum solutions with small Yano violation but large distance to Kerr in a stated topology.
+statement: >-
+  Consider vacuum spacetimes with a two-form $Y_{ab}$ whose Killing–Yano equation $\nabla_{(a}Y_{b)c}=0$ is
+  small in an agreed $L^2$ or $C^0$ norm on a suitable spacelike slice or domain. Prove either (i) a
+  quantitative stability statement toward Kerr with explicit bounds, or (ii) an explicit family of
+  near-vacuum solutions with small Yano violation but large distance to Kerr in a stated topology.
+why_it_matters: >-
+  Killing–Yano tensors encode hidden symmetry; their stability under perturbation tests whether near-Kerr
+  geometry inherits usable algebraic structure.
+scope:
+  background: Four-dimensional vacuum near Kerr; local or global domains as stated.
+  equation_type: Geometric tensor PDE for $Y_{ab}$ coupled to vacuum Einstein constraints.
+  linearity: Fully nonlinear metric perturbations; linearization may be a first step only.
+  regularity: Elliptic systems on Riemannian slices; boundary conditions must be specified.
+  parameter_regime: Small Yano defect measured in the chosen norm vs Kerr distance functional.
+  asymptotics: Asymptotically flat if global statements are claimed.
+  gauge_or_formulation: Tensor norms must be coordinate-invariant or gauge-fixed consistently.
+known_results:
+  - statement: >-
+      Exact Killing–Yano structure and hidden symmetries on Kerr (classical).
+    regime: Exact Kerr geometry.
+    significance: >-
+      Baseline “known qualitative” structure; this entry asks for **approximate** stability or obstruction.
+remaining_gap: >-
+  Quantitative theorem with either stability toward Kerr or sharp counterexamples.
+status_explanation: >-
+  Paired with K-306: K-306 emphasizes operator commutators / Carter constants; this entry emphasizes the
+  Killing–Yano 2-form PDE itself.
+math_required: >-
+  Two-forms; Killing–Yano equations; elliptic systems on slices; perturbation theory of geometric PDE
+  constraints.
+completion_criteria: >-
+  Either quantitative stability toward Kerr or explicit near-vacuum counterexamples with stated norms.
+implications: >-
+  Clarifies how much Kerr algebra persists under nonlinear perturbation.
+difficulty: 5
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -14,37 +63,54 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: >-
-  Tensor norms and approximate closure identities can be formalized; global nonlinear stability of
-  “almost Yano” fields remains broad.
+  Tensor norms and approximate closure identities can be formalized; global nonlinear stability remains broad.
 progress_summary: >-
-  Exact Killing–Yano tensors characterize Kerr among vacuum solutions in certain classes; approximate
-  versions are used heuristically. No single obstruction/stability theorem is verified here. See
-  references/TODO.
-related_families_note: null
-caution_note: null
-statement: >-
-  If a vacuum spacetime admits a tensor field whose Killing–Yano equation is small in an agreed
-  $L^2$ or $C^0$ norm, must the metric be close to Kerr, or can one construct controlled counterexamples?
-math_required: >-
-  Two-forms; Killing–Yano equations; elliptic systems on Riemannian slices; perturbation theory of
-  geometric PDE constraints.
-why_it_matters: >-
-  Hidden symmetry tensors underpin separability; their stability under perturbation reflects
-  whether near-Kerr dynamics inherit integrable structure.
-completion_criteria: >-
-  Either a quantitative stability theorem toward Kerr or an explicit family of near-vacuum solutions
-  with small Yano violation but large Kerr distance.
-implications: >-
-  Clarifies how much of Kerr’s algebra persists under nonlinear perturbation.
-difficulty: 5
+  Exact Yano structure on Kerr is classical; approximate versions at theorem level are not established here.
 dependencies:
   - K-301
-related:
+related_problem_ids:
+  - K-301
   - K-303
+  - K-306
+  - K-307
+  - K-504
+related:
+  - K-301
+  - K-303
+  - K-306
+  - K-307
+  - K-504
 references:
-  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+  - key: mars-kerr-characterization
+    authors: Mars, M.
+    title: A spacetime characterization of the Kerr metric
+    venue: arXiv
+    year: 1999
+    url: https://arxiv.org/abs/gr-qc/9904070
+    arxiv: gr-qc/9904070
+    kind: primary
+    relevance: >-
+      Tensor-level rigidity context for special algebraic structures tied to Kerr.
+  - key: carter-kerr-symmetry
+    authors: Carter, B.
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Communications in Mathematical Physics
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: >-
+      Foundational hidden-symmetry / separability mechanism on Kerr related to Yano tensors.
+tags: []
+aliases: []
+related_families_note: null
+caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
-notes: Math-leaning formal verification track problem.
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
 last_updated: '2026-04-06'

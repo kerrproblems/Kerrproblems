@@ -15,6 +15,7 @@
   --partial:      #b8860b;
   --conditional:  #1565c0;
   --solved:       #2e7d32;
+  --needs-review: #6a1b9a;
 
   --exterior:     #1b5e20;
   --interior:     #b71c1c;
@@ -93,10 +94,75 @@ hr {
 .badge-partial::before     { background: var(--partial); }
 .badge-conditional::before { background: var(--conditional); }
 .badge-solved::before      { background: var(--solved); }
+.badge-needs_review::before { background: var(--needs-review); }
 .badge-open        { color: var(--open); }
 .badge-partial     { color: var(--partial); }
 .badge-conditional { color: var(--conditional); }
 .badge-solved      { color: var(--solved); }
+.badge-needs_review { color: var(--needs-review); }
+
+.badge-problem-type {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: none;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.45em;
+}
+.badge-maturity {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-faint);
+  border-bottom: 1px dotted var(--border);
+}
+
+.editorial-banner {
+  border: 1px solid var(--border);
+  background: #faf8fc;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+  max-width: 68ch;
+}
+.editorial-banner strong {
+  font-weight: 600;
+}
+
+.scope-block {
+  border-left: 3px solid var(--border);
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  font-size: 0.92rem;
+}
+.scope-block dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+.scope-block dd {
+  margin: 0.15rem 0 0 0;
+}
+
+.known-results-list {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+}
+.known-results-list li {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+.known-results-list li:last-child {
+  border-bottom: none;
+}
+.ref-list .ref-kind {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-right: 0.35rem;
+}
 
 /* Cluster: small plain label, colour only */
 .cluster-tag {

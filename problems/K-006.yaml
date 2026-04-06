@@ -1,7 +1,60 @@
 id: K-006
 title: Kerr stability with BMS charges and nonlinear memory
+short_title: BMS charges, memory, and Kerr stability compatibility
 cluster: exterior-stability
-status: open
+theorem_status: open
+problem_type: literature_reformulation
+maturity: well_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
+priority: normal
+summary: >-
+  Package asymptotic charges, BMS gauge choices, and nonlinear memory into a stability statement compatible
+  with rigorous Kerr stability theory—a synthesis rather than a single classical one-line conjecture.
+problem_statement: >-
+  Build a formulation of asymptotically flat vacuum stability compatible with Bondi–Metzner–Sachs (BMS)
+  charge bookkeeping and nonlinear gravitational memory: define charges and memory observables in the
+  regularity class used by the stability proof, prove their finiteness and flux laws, and show consistency
+  with convergence to a final Kerr state modulo gauge and parameter modulation.
+statement: >-
+  Build a formulation of asymptotically flat vacuum stability compatible with Bondi–Metzner–Sachs (BMS)
+  charge bookkeeping and nonlinear gravitational memory: define charges and memory observables in the
+  regularity class used by the stability proof, prove their finiteness and flux laws, and show consistency
+  with convergence to a final Kerr state modulo gauge and parameter modulation.
+why_it_matters: >-
+  A black-hole stability theorem should align with the asymptotic observables used in waveform and memory
+  analysis, not only with interior decay rates.
+scope:
+  background: Asymptotically flat vacuum Einstein equations; future null infinity and BMS framework.
+  equation_type: Full nonlinear vacuum Einstein (stability-scale regularity).
+  linearity: Nonlinear memory and BMS transformations are inherently nonlinear in the metric.
+  regularity: >-
+    Must match the function spaces of the chosen stability theorem (e.g. weighted Sobolev / polyhomogeneous
+    classes at null infinity).
+  parameter_regime: Compatible with near-subextremal Kerr stability regimes as they are proved (currently
+    including small-$|a|$ windows).
+  asymptotics: Asymptotically flat.
+  gauge_or_formulation: >-
+    BMS gauge fixing and memory definitions must be tied to the gauge used in the nonlinear stability
+    construction.
+known_results: []
+remaining_gap: >-
+  Decompose the target into: (i) define BMS charges and memory in the gauge of the near-Kerr stability
+  framework; (ii) control nonlinear memory contributions under the same bootstrap; (iii) connect the
+  charge/memory picture to the final Kerr identification and modulation of parameters. All three must be
+  executed at theorem level.
+status_explanation: >-
+  This entry bundles infrastructure problems around a future stability statement; it is not a standard
+  single-sentence “famous conjecture” but a quantitative/synthesis frontier built on stability theory.
+math_required: >-
+  Bondi–Sachs expansions; asymptotic symmetries; flux laws; gauge fixing at null infinity; nonlinear
+  radiation estimates.
+completion_criteria: >-
+  A complete answer must define charges and memory in the chosen regularity class, prove finiteness and flux
+  laws, and show consistency with final Kerr parameters.
+implications: >-
+  Connects rigorous PDE stability with the mathematical structure behind gravitational-wave observables.
+difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -15,33 +68,54 @@ relevance: physics-facing
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
 progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+  Nonlinear Kerr stability exists in restricted regimes; BMS/memory theorems on fixed or Minkowski-like
+  backgrounds are separate. The gap is unifying these threads in one stability-compatible theorem.
+dependencies: []
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+  - K-013
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+  - K-013
+references:
+  - key: grant-nichols-curve-deviation
+    authors: Grant, Nichols
+    title: 'Persistent gravitational wave observables: curve deviation in asymptotically flat spacetimes'
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2109.03832
+    arxiv: '2109.03832'
+    kind: primary
+    relevance: >-
+      Rigorous Bondi–Sachs framework for displacement/spin/center-of-mass memory and nonlinear flux
+      contributions—mathematical template for memory observables.
+  - key: ks-brief-intro
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: '2210.14400'
+    kind: survey
+    relevance: >-
+      States the current nonlinear Kerr stability landscape with which BMS/memory bookkeeping must be
+      compatible.
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Build a Kerr stability theorem that simultaneously controls Bondi mass/angular momentum aspects,
-  BMS ambiguities, and nonlinear memory observables.
-math_required: >-
-  Bondi-Sachs expansions; asymptotic symmetries; flux laws; gauge fixing at null infinity; nonlinear
-  radiation estimates.
-why_it_matters: >-
-  A stability theorem should describe not only decay, but also the asymptotic observables seen by
-  distant detectors.
-completion_criteria: >-
-  A complete answer must define charges and memory in the chosen regularity class, prove their
-  finiteness and flux laws, and show consistency with the final Kerr parameters.
-implications: >-
-  Would connect rigorous black-hole PDE theory to the clean mathematical structure behind
-  gravitational-wave observables.
-difficulty: 4
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site.
-  TODO(editorial): tighten if community consensus differs.
-last_updated: '2026-04-05'
+notes: null
+editorial_notes: null
+public_notes: null
+last_verified_at: '2026-04-06'
+last_verified_by: editorial-refactor
+last_updated: '2026-04-06'

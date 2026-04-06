@@ -21,24 +21,38 @@ import {
   RELEVANCE_LABELS,
   FV_SUITABILITY,
   FV_LABELS,
-  STATUSES,
+  THEOREM_STATUSES,
+  THEOREM_STATUS_LABELS,
+  PROBLEM_TYPES,
+  PROBLEM_TYPE_LABELS,
+  MATURITY_LEVELS,
+  MATURITY_LABELS,
 } from '../../lib/taxonomy.js';
 
 const problems = getAllProblems();
 const stats = getStats(problems);
 const counts = getTagCounts(problems);
 
-const statusLabels = {
-  open: 'open',
-  partial: 'partial',
-  conditional: 'conditional',
-  solved: 'solved',
-};
+function badgeTheoremClass(ts) {
+  return `badge-${String(ts || 'open').replace(/[^a-z_]/g, '')}`;
+}
+
+function hasPrimaryRef(p) {
+  return (p.references || []).some(r => r.kind === 'primary');
+}
+
+function recentlyVerified(p) {
+  const d = p.last_verified_at;
+  if (!d || !/^\d{4}-\d{2}-\d{2}$/.test(d)) return false;
+  const t = new Date(`${d}T12:00:00Z`).getTime();
+  return Date.now() - t < 365 * 86400000;
+}
 ---
 <Base title="All Problems">
   <h1 style="margin-bottom: 0.3rem">All Problems</h1>
   <p class="stats-line">
-    {stats.total} problems · {stats.open} open · {stats.partial} partial · {stats.conditional} conditional · {stats.solved} solved
+    {stats.total} problems · {stats.open} open · {stats.partial} partial · {stats.conditional} conditional ·{' '}
+    {stats.solved} solved · {stats.needs_review} needs review
   </p>
   <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 62ch; margin-bottom: 1.5rem">
     Without JavaScript, all entries remain listed below. Use the chips to filter when scripting is enabled.
@@ -49,13 +63,55 @@ const statusLabels = {
 
     <div class="filter-groups" id="filter-groups">
       <div>
-        <div class="filter-group-title">Status</div>
-        <div class="filter-chips" role="group" aria-label="Filter by status">
-          {STATUSES.map(s => (
-            <button type="button" class="filter-chip" data-filter-group="status" data-value={s} aria-pressed="false">
-              {statusLabels[s]}<span class="count">({counts.status[s] || 0})</span>
+        <div class="filter-group-title">Theorem status</div>
+        <div class="filter-chips" role="group" aria-label="Filter by theorem status">
+          {THEOREM_STATUSES.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="theorem_status" data-value={s} aria-pressed="false">
+              {THEOREM_STATUS_LABELS[s] || s}<span class="count">({counts.theorem_status[s] || 0})</span>
             </button>
           ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Problem type</div>
+        <div class="filter-chips" role="group" aria-label="Filter by problem type">
+          {PROBLEM_TYPES.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="problem_type" data-value={s} aria-pressed="false">
+              {PROBLEM_TYPE_LABELS[s] || s}<span class="count">({counts.problem_type[s] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Maturity</div>
+        <div class="filter-chips" role="group" aria-label="Filter by maturity">
+          {MATURITY_LEVELS.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="maturity" data-value={s} aria-pressed="false">
+              {MATURITY_LABELS[s] || s}<span class="count">({counts.maturity[s] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Primary references</div>
+        <div class="filter-chips" role="group" aria-label="Filter by primary references">
+          <button type="button" class="filter-chip" data-filter-group="has_primary" data-value="yes" aria-pressed="false">
+            Has primary<span class="count">({problems.filter(hasPrimaryRef).length})</span>
+          </button>
+          <button type="button" class="filter-chip" data-filter-group="has_primary" data-value="no" aria-pressed="false">
+            No primary<span class="count">({problems.filter(p => !hasPrimaryRef(p)).length})</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Recently verified</div>
+        <div class="filter-chips" role="group" aria-label="Filter by last editorial verification">
+          <button type="button" class="filter-chip" data-filter-group="recent_verified" data-value="yes" aria-pressed="false">
+            Last year<span class="count">({problems.filter(recentlyVerified).length})</span>
+          </button>
+          <button type="button" class="filter-chip" data-filter-group="recent_verified" data-value="no" aria-pressed="false">
+            Not recent<span class="count">({problems.filter(p => !recentlyVerified(p)).length})</span>
+          </button>
         </div>
       </div>
       <div>
@@ -162,7 +218,11 @@ const statusLabels = {
         href={`/problems/${p.id}`}
         class="problem-card problem-card--filterable"
         data-id={p.id}
-        data-status={p.status}
+        data-theorem_status={p.theorem_status}
+        data-problem_type={p.problem_type}
+        data-maturity={p.maturity}
+        data-has_primary={hasPrimaryRef(p) ? 'yes' : 'no'}
+        data-recent_verified={recentlyVerified(p) ? 'yes' : 'no'}
         data-cluster={p.cluster}
         data-family={p.family}
         data-asymptotics={p.asymptotics}
@@ -178,7 +238,8 @@ const statusLabels = {
         <div class="card-id">{p.id}</div>
         <div class="card-title">{p.title}</div>
         <div class="card-meta">
-          <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class={`badge ${badgeTheoremClass(p.theorem_status)}`}>{THEOREM_STATUS_LABELS[p.theorem_status] || p.theorem_status}</span>
+          <span class="badge-problem-type">{PROBLEM_TYPE_LABELS[p.problem_type] || p.problem_type}</span>
           <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
           <span class={`rel-badge rel-${p.relevance.replace(/-/g, '-')}`}>{RELEVANCE_LABELS[p.relevance]}</span>
           <span class={`fv-badge fv-badge--${p.fv_suitability}`}>{FV_LABELS[p.fv_suitability]}</span>
@@ -208,12 +269,16 @@ const statusLabels = {
 
   function applyFilters() {
     const q = (search?.value || '').trim().toLowerCase();
-    const groups = ['status', 'cluster', 'family', 'asymptotics', 'coupling', 'equation_level', 'regime', 'relevance', 'fv_suitability'];
+    const groups = ['theorem_status', 'problem_type', 'maturity', 'has_primary', 'recent_verified', 'cluster', 'family', 'asymptotics', 'coupling', 'equation_level', 'regime', 'relevance', 'fv_suitability'];
     let visible = 0;
     for (const card of cards()) {
       let ok = true;
       if (q && !(card.dataset.search || '').includes(q)) ok = false;
-      if (ok && selectedValues('status').length && !selectedValues('status').includes(card.dataset.status)) ok = false;
+      if (ok && selectedValues('theorem_status').length && !selectedValues('theorem_status').includes(card.dataset.theorem_status)) ok = false;
+      if (ok && selectedValues('problem_type').length && !selectedValues('problem_type').includes(card.dataset.problem_type)) ok = false;
+      if (ok && selectedValues('maturity').length && !selectedValues('maturity').includes(card.dataset.maturity)) ok = false;
+      if (ok && selectedValues('has_primary').length && !selectedValues('has_primary').includes(card.dataset.has_primary)) ok = false;
+      if (ok && selectedValues('recent_verified').length && !selectedValues('recent_verified').includes(card.dataset.recent_verified)) ok = false;
       if (ok && selectedValues('cluster').length && !selectedValues('cluster').includes(card.dataset.cluster)) ok = false;
       if (ok && selectedValues('family').length && !selectedValues('family').includes(card.dataset.family)) ok = false;
       if (ok && selectedValues('asymptotics').length && !selectedValues('asymptotics').includes(card.dataset.asymptotics)) ok = false;

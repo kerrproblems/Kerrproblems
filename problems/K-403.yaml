@@ -1,7 +1,50 @@
 id: K-403
 title: Scattering theory for linearized gravity on Kerr
+short_title: Scattering theory for linearized gravity on Kerr
 cluster: spectral-scattering
-status: partial
+theorem_status: needs_review
+problem_type: classical_frontier
+maturity: provisional
+evidence_level: refs_missing
+verification_state: editorial_revision_needed
+priority: normal
+summary: Scattering theory for linearized gravity on Kerr
+problem_statement: >-
+  Construct a complete gauge-invariant scattering theory for linearized vacuum Einstein
+  perturbations on Kerr, paralleling the scalar-wave case.
+statement: >-
+  Construct a complete gauge-invariant scattering theory for linearized vacuum Einstein
+  perturbations on Kerr, paralleling the scalar-wave case.
+why_it_matters: Decay results are stronger when organized into a full scattering theory.
+scope:
+  background: >-
+    Asymptotically flat four-dimensional general relativity unless the statement specifies
+    otherwise.
+  equation_type: 'Taxonomy equation levels: full-einstein.'
+  linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
+  regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
+  parameter_regime: >-
+    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
+    literature-aligned parameter annotations.
+  asymptotics: asymptotically-flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  A complete answer must define the scattering states, wave operators, and asymptotic completeness
+  modulo stationary/gauge modes.
+status_explanation: >-
+  Entry imported without two independent bibliographic pointers in this repository; treat
+  theorem-level claims as unverified here.
+math_required: >-
+  Gauge fixing; Teukolsky-to-metric reconstruction; horizon and infinity radiation fields;
+  asymptotic completeness for constrained systems.
+completion_criteria: >-
+  A complete answer must define the scattering states, wave operators, and asymptotic completeness
+  modulo stationary/gauge modes.
+implications: >-
+  Would give the definitive linearized-gravity input for both exterior stability and interior
+  genericity problems.
+difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
 coupling: vacuum
@@ -13,33 +56,35 @@ regime:
 relevance: mixed
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: >-
-  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
-  milestones.
+progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+dependencies: []
+related_problem_ids:
+  - K-401
+  - K-402
+  - K-404
+  - K-405
+  - K-406
+  - K-407
+related:
+  - K-401
+  - K-402
+  - K-404
+  - K-405
+  - K-406
+  - K-407
+references: []
+tags: []
+aliases: []
 related_families_note: null
 caution_note: null
-statement: >-
-  Construct a complete gauge-invariant scattering theory for linearized vacuum Einstein
-  perturbations on Kerr, paralleling the scalar-wave case.
-math_required: >-
-  Gauge fixing; Teukolsky-to-metric reconstruction; horizon and infinity radiation fields;
-  asymptotic completeness for constrained systems.
-why_it_matters: Decay results are stronger when organized into a full scattering theory.
-completion_criteria: >-
-  A complete answer must define the scattering states, wave operators, and asymptotic completeness
-  modulo stationary/gauge modes.
-implications: >-
-  Would give the definitive linearized-gravity input for both exterior stability and interior
-  genericity problems.
-difficulty: 3
-dependencies: []
-related: []
-references: []
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
   Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
-  conjectured.
+  fully settled. : replace with a precise description of what is proved vs. conjectured.
+editorial_notes: null
+public_notes: null
+last_verified_at: null
+last_verified_by: null
 last_updated: '2026-04-05'
