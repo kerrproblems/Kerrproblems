@@ -9,45 +9,21 @@ const flagship = ['K-001', 'K-101', 'K-201'];
 const flagshipProblems = flagship.map(id => problems.find(p => p.id === id));
 ---
 <Base>
-  <div class="hero">
-    <div class="tagline">Open Problems in Mathematical General Relativity</div>
-    <h1>The Kerr Problem Archive</h1>
-    <p>
-      A living, community-maintained database of open problems concerning 
-      the Kerr spacetime — the rotating black hole solution to Einstein's vacuum equations. 
-      Every problem is traceable to a primary source. Status updates as the field moves.
-    </p>
-    <a href="/problems" style="font-family: var(--font-mono); font-size: 0.82rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); border-bottom: 1px solid var(--accent-dim);">
-      Browse all {stats.total} problems →
-    </a>
-  </div>
-
-  <!-- Stats -->
-  <div class="stats-bar">
-    <div class="stat-cell">
-      <span class="stat-number" style="color: var(--text)">{stats.total}</span>
-      <span class="stat-label">Total</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number" style="color: var(--open)">{stats.open}</span>
-      <span class="stat-label">Open</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number" style="color: var(--partial)">{stats.partial}</span>
-      <span class="stat-label">Partial</span>
-    </div>
-    <div class="stat-cell">
-      <span class="stat-number" style="color: var(--solved)">{stats.solved + stats.conditional}</span>
-      <span class="stat-label">Conditional / Solved</span>
-    </div>
-  </div>
-
-  <!-- Flagship problems -->
-  <h2>Flagship Problems</h2>
-  <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
-    The three deepest open questions in the archive.
+  <p class="intro-prose">
+    A community-maintained list of open problems on Kerr spacetime, with each
+    statement tied to a primary source.
+    <a href="/problems">Browse all {stats.total} problems</a>.
   </p>
-  <div class="problem-grid" style="margin-bottom: 3rem">
+
+  <p class="stats-line">
+    {stats.total} problems · {stats.open} open · {stats.partial} partial · {stats.conditional} conditional · {stats.solved} solved
+  </p>
+
+  <h2>Flagship problems</h2>
+  <p style="color: var(--text-muted); font-size: 0.9375rem; margin-bottom: 1.25rem;">
+    Three central questions in the archive.
+  </p>
+  <div class="problem-grid" style="margin-bottom: 2.5rem">
     {flagshipProblems.map(p => (
       <a href={`/problems/${p.id}`} class="problem-card">
         <div class="card-id">{p.id}</div>
@@ -60,21 +36,20 @@ const flagshipProblems = flagship.map(id => problems.find(p => p.id === id));
     ))}
   </div>
 
-  <!-- Clusters -->
-  <h2>By Cluster</h2>
-  <div style="display: grid; gap: 0.5rem; margin-top: 1rem;">
+  <h2>By cluster</h2>
+  <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem;">
     {Object.entries(CLUSTER_LABELS).map(([slug, label]) => {
       const count = problems.filter(p => p.cluster === slug).length;
       const openCount = problems.filter(p => p.cluster === slug && p.status === 'open').length;
       return (
         <a href={`/clusters/${slug}`} class="problem-card" style="display: flex; justify-content: space-between; align-items: center;">
           <div>
-            <div class="card-id" style="margin-bottom: 0.2rem">{label}</div>
-            <div style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+            <div class="card-id" style="margin-bottom: 0.15rem">{label}</div>
+            <div style="font-size: 0.8125rem; color: var(--text-muted); font-family: var(--font-mono);">
               {openCount} open of {count}
             </div>
           </div>
-          <span style="font-family: var(--font-mono); color: var(--text-faint); font-size: 0.72rem;">→</span>
+          <span style="font-family: var(--font-mono); color: var(--text-faint); font-size: 0.75rem;">→</span>
         </a>
       );
     })}

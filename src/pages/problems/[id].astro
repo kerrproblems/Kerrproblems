@@ -19,17 +19,17 @@ function pips(n) {
 ---
 <Base title={`${p.id} — ${p.title}`} description={p.statement}>
   <!-- Breadcrumb -->
-  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-bottom: 2rem; letter-spacing: 0.04em;">
-    <a href="/problems" style="color: var(--text-faint); border-bottom: none;">Problems</a>
+  <div class="crumbs" style="margin-bottom: 2rem;">
+    <a href="/problems">Problems</a>
     <span style="margin: 0 0.5rem">→</span>
-    <a href={`/clusters/${p.cluster}`} style="color: var(--text-faint); border-bottom: none;">{CLUSTER_LABELS[p.cluster]}</a>
+    <a href={`/clusters/${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</a>
     <span style="margin: 0 0.5rem">→</span>
     {p.id}
   </div>
 
   <!-- Header -->
   <div style="margin-bottom: 2.5rem">
-    <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); letter-spacing: 0.1em; margin-bottom: 0.6rem">{p.id}</div>
+    <div class="problem-id-line" style="margin-bottom: 0.6rem">{p.id}</div>
     <h1 style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.2">{p.title}</h1>
     <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center">
       <span class={`badge badge-${p.status}`}>{p.status}</span>
@@ -114,10 +114,10 @@ function pips(n) {
   )}
 
   <hr />
-  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
+  <div class="page-meta">
     Last updated: {p.last_updated || 'April 2026'} · 
     <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} 
-       target="_blank" rel="noopener" style="color: var(--text-faint)">
+       target="_blank" rel="noopener">
       Edit on GitHub →
     </a>
   </div>
