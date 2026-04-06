@@ -20,6 +20,18 @@ const solved = problems.filter(p => p.status === 'solved').length;
       </footer>
     </blockquote>
 
+    <div class="home-intro-below-quote">
+      <p>
+        Most black holes in the observable universe are rotating. The Kerr spacetime &mdash; Roy Kerr&apos;s 1963 exact solution to Einstein&apos;s vacuum equations &mdash; is the geometry that describes them all. It is one of the most important objects in mathematical physics: simple enough to write in a single formula, rich enough to have resisted complete mathematical understanding for over sixty years.
+      </p>
+      <p>
+        This site exists to track that resistance. It is a living database of open problems in the rigorous mathematical study of Kerr black holes &mdash; problems in stability, singularities, scattering, uniqueness, and spectral theory. Every problem is stated precisely, traced to a primary source, and updated as the field moves. The goal is to make the frontier visible: to show what is known, what is partial, and what remains genuinely open.
+      </p>
+      <p>
+        We are at an unusual moment. Formal proof assistants like Lean are making it possible to verify arguments at a scale and speed previously unimaginable, and AI systems are beginning to contribute meaningfully to research-level mathematics &mdash; finding references, closing partial arguments, and in some cases generating genuine new proofs. The Kerr problem landscape is exactly the kind of structured, precisely-stated territory where these tools can have real impact. This database is designed with that future in mind: a shared map of the open problems, so that human mathematicians, formal verification projects, and AI systems can orient themselves and push the frontier forward together.
+      </p>
+    </div>
+
     <p class="home-count-line">
       There are {problems.length} problems in this database, of which {solved} have been fully solved.
     </p>
@@ -93,6 +105,17 @@ const solved = problems.filter(p => p.status === 'solved').length;
     color: #555;
     font-style: italic;
     margin-top: 1rem;
+  }
+
+  .home-intro-below-quote {
+    max-width: 62ch;
+    margin: 0 0 1.5rem;
+  }
+  .home-intro-below-quote p {
+    margin: 0 0 1rem;
+  }
+  .home-intro-below-quote p:last-child {
+    margin-bottom: 0;
   }
 
   .home-count-line {
