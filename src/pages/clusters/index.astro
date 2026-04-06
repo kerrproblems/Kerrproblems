@@ -1,22 +1,50 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllProblems, CLUSTER_LABELS } from '../../lib/problems.js';
+import { getAllProblems, CLUSTER_LABELS, loadClustersYaml } from '../../lib/problems.js';
+import { CLUSTERS } from '../../lib/taxonomy.js';
 
 const problems = getAllProblems();
+const clustersDoc = loadClustersYaml();
 ---
 <Base title="Clusters">
-  <h1 style="margin-bottom: 2rem">Problem Clusters</h1>
-  <div style="display: grid; gap: 1rem">
-    {Object.entries(CLUSTER_LABELS).map(([slug, label]) => {
+  <h1 style="margin-bottom: 0.75rem">Problem clusters</h1>
+  <p class="cluster-tagline">
+    Five coarse themes for navigation. Orthogonal tags (family, asymptotics, coupling, equation level,
+    regime, relevance, formal verification) refine each entry — see <a href="/about">About</a>.
+  </p>
+
+  <div style="display: grid; gap: 1.25rem">
+    {CLUSTERS.map(slug => {
+      const label = CLUSTER_LABELS[slug];
       const clusterProblems = problems.filter(p => p.cluster === slug);
       const openCount = clusterProblems.filter(p => p.status === 'open').length;
+      const meta = clustersDoc[slug];
+      const sample = clusterProblems.slice(0, 3);
       return (
-        <a href={`/clusters/${slug}`} class="problem-card">
-          <div class="card-title">{label}</div>
-          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-top: 0.4rem">
+        <article style="border: 1px solid var(--border); padding: 1.1rem 1.25rem; background: #fafafa">
+          <a href={`/clusters/${slug}`} style="text-decoration: none; color: inherit">
+            <h2 class={`cluster-tag cluster-${slug}`} style="font-size: 1.15rem; margin-bottom: 0.35rem">
+              {label}
+            </h2>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.65rem; max-width: 65ch; line-height: 1.5">
+            {meta?.description || ''}
+          </p>
+          <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-faint); margin-bottom: 0.5rem">
             {clusterProblems.length} problems · {openCount} open
           </div>
-        </a>
+          {sample.length > 0 && (
+            <div style="font-size: 0.85rem">
+              <span style="color: var(--text-faint)">Examples: </span>
+              {sample.map((p, i) => (
+                <>
+                  {i > 0 && ', '}
+                  <a href={`/problems/${p.id}`}>{p.id}</a>
+                </>
+              ))}
+            </div>
+          )}
+        </article>
       );
     })}
   </div>

@@ -2,16 +2,43 @@ id: K-207
 title: Extremal tail asymptotics versus conserved charges
 cluster: extremal
 status: partial
-statement: Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both infinity charges and horizon Aretakis charges.
-math_required: Low-frequency asymptotics; time inversion; charge extraction; mode coupling in degenerate horizon settings.
+family: related-rotating-black-hole
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove sharp late-time asymptotics for waves and spin fields on extremal Kerr in terms of both
+  infinity charges and horizon Aretakis charges.
+math_required: >-
+  Low-frequency asymptotics; time inversion; charge extraction; mode coupling in degenerate horizon
+  settings.
 why_it_matters: In extremal geometry, the horizon itself stores conserved information that changes the tail law.
-completion_criteria: A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in the exterior and on the horizon.
+completion_criteria: >-
+  A complete answer must give leading terms, error bounds, and genericity of nonzero coefficients in
+  the exterior and on the horizon.
 implications: Would quantify exactly how extremal tails differ from subextremal Price laws.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

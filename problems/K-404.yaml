@@ -2,16 +2,42 @@ id: K-404
 title: Zero-frequency structure and tail universality
 cluster: spectral-scattering
 status: partial
-statement: Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws, including logarithmic singularities and their coefficients.
-math_required: Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion of Laplace/Fourier transforms.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - spectral-operator
+regime:
+  - exterior
+  - nonlinear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Relate the low-energy resolvent structure of Kerr operators to universal late-time tail laws,
+  including logarithmic singularities and their coefficients.
+math_required: >-
+  Low-energy microlocal analysis; Tauberian arguments; asymptotic inversion of Laplace/Fourier
+  transforms.
 why_it_matters: The tail law is a spectral statement in disguise.
-completion_criteria: A complete answer must provide explicit resolvent expansions and derive the corresponding time-domain asymptotics with sharp remainders.
+completion_criteria: >-
+  A complete answer must provide explicit resolvent expansions and derive the corresponding
+  time-domain asymptotics with sharp remainders.
 implications: Would unify QNM language and Price-law language in a single framework.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

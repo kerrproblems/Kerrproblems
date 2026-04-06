@@ -2,16 +2,47 @@ id: K-005
 title: Sharp nonlinear Price law for curvature
 cluster: exterior-stability
 status: partial
-statement: Prove optimal late-time inverse-power decay for gauge-invariant curvature quantities and relevant metric coefficients in nonlinear near-Kerr evolution.
-math_required: Sharp $r^p$ hierarchies; resonance/low-frequency analysis; nonlinear bootstrap estimates; Bianchi equations; asymptotic mode coupling.
-why_it_matters: Sharp tails control how exterior decay feeds into interior instability and into the interpretation of ringdown signals.
-completion_criteria: A complete answer must state exact exponents, identify generic nonvanishing leading coefficients, and prove matching upper and lower bounds.
-implications: Would connect linear tail predictions to the full Einstein dynamics and feed directly into SCC formulations.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+  - nonlinear
+  - linear
+relevance: physics-facing
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove optimal late-time inverse-power decay for gauge-invariant curvature quantities and relevant
+  metric coefficients in nonlinear near-Kerr evolution.
+math_required: >-
+  Sharp $r^p$ hierarchies; resonance/low-frequency analysis; nonlinear bootstrap estimates; Bianchi
+  equations; asymptotic mode coupling.
+why_it_matters: >-
+  Sharp tails control how exterior decay feeds into interior instability and into the interpretation
+  of ringdown signals.
+completion_criteria: >-
+  A complete answer must state exact exponents, identify generic nonvanishing leading coefficients,
+  and prove matching upper and lower bounds.
+implications: >-
+  Would connect linear tail predictions to the full Einstein dynamics and feed directly into SCC
+  formulations.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

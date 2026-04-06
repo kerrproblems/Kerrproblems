@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KerrProblems problem entry",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "cluster",
+    "status",
+    "statement",
+    "math_required",
+    "why_it_matters",
+    "completion_criteria",
+    "implications",
+    "difficulty",
+    "family",
+    "asymptotics",
+    "coupling",
+    "equation_level",
+    "regime",
+    "relevance",
+    "fv_suitability",
+    "fv_reason",
+    "progress_summary",
+    "dependencies",
+    "references"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^K-[0-9]{3}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "cluster": {
+      "enum": [
+        "exterior-stability",
+        "interior-scc",
+        "extremal",
+        "rigidity-uniqueness",
+        "spectral-scattering"
+      ]
+    },
+    "status": { "enum": ["open", "partial", "conditional", "solved"] },
+    "difficulty": { "type": "integer", "minimum": 1, "maximum": 5 },
+    "family": {
+      "type": "string",
+      "enum": [
+        "exact-kerr",
+        "near-kerr-vacuum",
+        "kerr-newman",
+        "kerr-de-sitter",
+        "kerr-ads",
+        "nhek",
+        "related-rotating-black-hole"
+      ]
+    },
+    "asymptotics": {
+      "type": "string",
+      "enum": [
+        "asymptotically-flat",
+        "de-sitter",
+        "anti-de-sitter",
+        "mixed"
+      ]
+    },
+    "coupling": { "enum": ["vacuum", "matter-coupled"] },
+    "equation_level": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "null-geodesics",
+          "scalar-wave",
+          "maxwell",
+          "linearized-gravity",
+          "full-einstein",
+          "einstein-maxwell",
+          "stationary-reduction",
+          "spectral-operator",
+          "inverse-problem"
+        ]
+      },
+      "minItems": 1
+    },
+    "regime": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "stationary",
+          "linear",
+          "nonlinear",
+          "exterior",
+          "interior",
+          "extremal",
+          "near-extremal"
+        ]
+      },
+      "minItems": 1
+    },
+    "relevance": { "enum": ["pure-math", "mixed", "physics-facing"] },
+    "fv_suitability": { "enum": ["high", "medium", "low"] },
+    "fv_reason": { "type": "string", "minLength": 1 },
+    "progress_summary": { "type": "string", "minLength": 1 },
+    "dependencies": { "type": "array", "items": { "type": "string", "pattern": "^K-[0-9]{3}$" } },
+    "related": { "type": "array", "items": { "type": "string", "pattern": "^K-[0-9]{3}$" } },
+    "related_families_note": { "type": ["string", "null"] },
+    "caution_note": { "type": ["string", "null"] },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "arxiv": { "type": "string" },
+          "doi": { "type": "string" },
+          "note": { "type": "string" },
+          "placeholder": { "type": "string" }
+        }
+      }
+    }
+  }
+}

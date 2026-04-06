@@ -2,16 +2,46 @@ id: K-106
 title: Genericity of lower bounds for linearized-gravity interior instability
 cluster: interior-scc
 status: open
-statement: Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift instability results are generic for exterior initial data.
-math_required: Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data spaces.
-why_it_matters: Instability theorems are strongest when their hypotheses are shown to hold for open dense or full-measure sets of data.
-completion_criteria: A complete answer must specify the data topology and prove generic nonvanishing of the instability-triggering quantity.
+family: exact-kerr
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - interior
+  - nonlinear
+  - linear
+relevance: pure-math
+fv_suitability: low
+fv_reason: >-
+  Global nonlinear PDE or open-ended dynamics; not a practical first formalization target without
+  major scoping.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
+  instability results are generic for exterior initial data.
+math_required: >-
+  Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data
+  spaces.
+why_it_matters: >-
+  Instability theorems are strongest when their hypotheses are shown to hold for open dense or
+  full-measure sets of data.
+completion_criteria: >-
+  A complete answer must specify the data topology and prove generic nonvanishing of the
+  instability-triggering quantity.
 implications: Would turn conditional interior blow-up statements into genuinely generic ones.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

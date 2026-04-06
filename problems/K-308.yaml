@@ -2,16 +2,44 @@ id: K-308
 title: 'Rigidity and uniqueness with matter: full Kerr–Newman regime'
 cluster: rigidity-uniqueness
 status: partial
-statement: Prove the full stationary uniqueness and perturbative rigidity theory for Kerr–Newman without smallness assumptions.
-math_required: Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon regularity; unique continuation.
-why_it_matters: Kerr–Newman is the natural charged rotating family, but its full rigidity theory is still not as complete as one would like.
-completion_criteria: A complete answer must characterize the full stationary family under natural hypotheses and support the coupled dynamical theory.
+family: kerr-newman
+asymptotics: asymptotically-flat
+coupling: matter-coupled
+equation_level:
+  - stationary-reduction
+  - einstein-maxwell
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove the full stationary uniqueness and perturbative rigidity theory for Kerr–Newman without
+  smallness assumptions.
+math_required: >-
+  Einstein–Maxwell stationary reduction; coupled invariant tensors; horizon regularity; unique
+  continuation.
+why_it_matters: >-
+  Kerr–Newman is the natural charged rotating family, but its full rigidity theory is still not as
+  complete as one would like.
+completion_criteria: >-
+  A complete answer must characterize the full stationary family under natural hypotheses and
+  support the coupled dynamical theory.
 implications: Would unify the stationary Einstein–Maxwell black-hole classification.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

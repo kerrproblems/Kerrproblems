@@ -2,16 +2,40 @@ id: K-304
 title: Near-Kerr implies Kerr with computable constants
 cluster: rigidity-uniqueness
 status: open
-statement: Upgrade perturbative uniqueness theorems near Kerr so that the hypotheses are checkable geometric inequalities with explicit constants.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: high
+fv_reason: >-
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
+  formalization boundaries.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Upgrade perturbative uniqueness theorems near Kerr so that the hypotheses are checkable geometric
+  inequalities with explicit constants.
 math_required: Perturbative uniqueness; unique continuation; invariant boundary data; effective estimates.
 why_it_matters: Current near-Kerr rigidity results are often too implicit for direct geometric use.
-completion_criteria: A complete answer must state finite, computable conditions implying exact Kerrness and give quantitative parameter control.
+completion_criteria: >-
+  A complete answer must state finite, computable conditions implying exact Kerrness and give
+  quantitative parameter control.
 implications: Would make rigidity much more usable for both analysis and numerical relativity.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

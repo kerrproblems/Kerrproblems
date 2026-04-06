@@ -1,40 +1,187 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllProblems, getStats, CLUSTER_LABELS } from '../../lib/problems.js';
+import {
+  getAllProblems,
+  getStats,
+  CLUSTER_LABELS,
+  getTagCounts,
+} from '../../lib/problems.js';
+import {
+  FAMILIES,
+  FAMILY_LABELS,
+  ASYMPTOTICS,
+  ASYMPTOTICS_LABELS,
+  COUPLINGS,
+  COUPLING_LABELS,
+  EQUATION_LEVELS,
+  EQUATION_LEVEL_LABELS,
+  REGIMES,
+  REGIME_LABELS,
+  RELEVANCE,
+  RELEVANCE_LABELS,
+  FV_SUITABILITY,
+  FV_LABELS,
+  STATUSES,
+} from '../../lib/taxonomy.js';
 
 const problems = getAllProblems();
 const stats = getStats(problems);
+const counts = getTagCounts(problems);
+
+const statusLabels = {
+  open: 'open',
+  partial: 'partial',
+  conditional: 'conditional',
+  solved: 'solved',
+};
 ---
 <Base title="All Problems">
   <h1 style="margin-bottom: 0.3rem">All Problems</h1>
-  <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 2rem;">
-    {stats.total} problems · {stats.open} open · {stats.partial} partial · status: April 2026
+  <p class="stats-line">
+    {stats.total} problems · {stats.open} open · {stats.partial} partial · {stats.conditional} conditional · {stats.solved} solved
+  </p>
+  <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 62ch; margin-bottom: 1.5rem">
+    Without JavaScript, all entries remain listed below. Use the chips to filter when scripting is enabled.
   </p>
 
-  <!-- Client-side filter bar -->
-  <div class="filter-bar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="open">Open</button>
-    <button class="filter-btn" data-filter="partial">Partial</button>
-    <button class="filter-btn" data-filter="conditional">Conditional</button>
-    {Object.entries(CLUSTER_LABELS).map(([slug, label]) => (
-      <button class="filter-btn" data-filter={slug}>{label}</button>
-    ))}
+  <div class="problems-toolbar">
+    <input type="search" class="problems-search" id="problem-search" placeholder="Search id or title…" autocomplete="off" />
+
+    <div class="filter-groups" id="filter-groups">
+      <div>
+        <div class="filter-group-title">Status</div>
+        <div class="filter-chips" role="group" aria-label="Filter by status">
+          {STATUSES.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="status" data-value={s} aria-pressed="false">
+              {statusLabels[s]}<span class="count">({counts.status[s] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Cluster</div>
+        <div class="filter-chips" role="group" aria-label="Filter by cluster">
+          {Object.entries(CLUSTER_LABELS).map(([slug, label]) => (
+            <button type="button" class="filter-chip" data-filter-group="cluster" data-value={slug} aria-pressed="false">
+              {label}<span class="count">({counts.cluster[slug] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Family</div>
+        <div class="filter-chips" role="group" aria-label="Filter by family">
+          {FAMILIES.map(f => (
+            <button type="button" class="filter-chip" data-filter-group="family" data-value={f} aria-pressed="false">
+              {FAMILY_LABELS[f] || f}<span class="count">({counts.family[f] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Asymptotics</div>
+        <div class="filter-chips" role="group" aria-label="Filter by asymptotics">
+          {ASYMPTOTICS.map(a => (
+            <button type="button" class="filter-chip" data-filter-group="asymptotics" data-value={a} aria-pressed="false">
+              {ASYMPTOTICS_LABELS[a] || a}<span class="count">({counts.asymptotics[a] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Coupling</div>
+        <div class="filter-chips" role="group" aria-label="Filter by coupling">
+          {COUPLINGS.map(c => (
+            <button type="button" class="filter-chip" data-filter-group="coupling" data-value={c} aria-pressed="false">
+              {COUPLING_LABELS[c] || c}<span class="count">({counts.coupling[c] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Equation level</div>
+        <div class="filter-chips" role="group" aria-label="Filter by equation level">
+          {EQUATION_LEVELS.map(e => (
+            <button type="button" class="filter-chip" data-filter-group="equation_level" data-value={e} aria-pressed="false">
+              {EQUATION_LEVEL_LABELS[e] || e}<span class="count">({counts.equation_level[e] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Regime</div>
+        <div class="filter-chips" role="group" aria-label="Filter by regime">
+          {REGIMES.map(r => (
+            <button type="button" class="filter-chip" data-filter-group="regime" data-value={r} aria-pressed="false">
+              {REGIME_LABELS[r] || r}<span class="count">({counts.regime[r] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Relevance</div>
+        <div class="filter-chips" role="group" aria-label="Filter by relevance">
+          {RELEVANCE.map(r => (
+            <button type="button" class="filter-chip" data-filter-group="relevance" data-value={r} aria-pressed="false">
+              {RELEVANCE_LABELS[r] || r}<span class="count">({counts.relevance[r] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Formal verification</div>
+        <div class="filter-chips" role="group" aria-label="Filter by FV suitability">
+          {FV_SUITABILITY.map(fv => (
+            <button type="button" class="filter-chip" data-filter-group="fv_suitability" data-value={fv} aria-pressed="false">
+              {FV_LABELS[fv] || fv}<span class="count">({counts.fv_suitability[fv] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="problems-sort-row">
+      <label for="sort-select">Sort</label>
+      <select id="sort-select" aria-label="Sort problems">
+        <option value="id-asc">ID (ascending)</option>
+        <option value="id-desc">ID (descending)</option>
+        <option value="difficulty-asc">Difficulty (low first)</option>
+        <option value="difficulty-desc">Difficulty (high first)</option>
+        <option value="updated-desc">Recently updated</option>
+        <option value="fv-asc">FV suitability (high first)</option>
+      </select>
+      <button type="button" class="filter-reset" id="filter-reset">Clear filters</button>
+    </div>
   </div>
+
+  <p class="page-meta" id="filter-count-line" style="margin-bottom: 1rem"></p>
 
   <div class="problem-grid" id="problem-grid">
     {problems.map(p => (
-      <a 
-        href={`/problems/${p.id}`} 
-        class="problem-card"
+      <a
+        href={`/problems/${p.id}`}
+        class="problem-card problem-card--filterable"
+        data-id={p.id}
         data-status={p.status}
         data-cluster={p.cluster}
+        data-family={p.family}
+        data-asymptotics={p.asymptotics}
+        data-coupling={p.coupling}
+        data-relevance={p.relevance}
+        data-fv_suitability={p.fv_suitability}
+        data-difficulty={p.difficulty}
+        data-last_updated={p.last_updated || ''}
+        data-equation_level={(p.equation_level || []).join(',')}
+        data-regime={(p.regime || []).join(',')}
+        data-search={`${p.id} ${p.title}`.toLowerCase()}
       >
         <div class="card-id">{p.id}</div>
         <div class="card-title">{p.title}</div>
         <div class="card-meta">
           <span class={`badge badge-${p.status}`}>{p.status}</span>
           <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
+          <span class={`rel-badge rel-${p.relevance.replace(/-/g, '-')}`}>{RELEVANCE_LABELS[p.relevance]}</span>
+          <span class={`fv-badge fv-badge--${p.fv_suitability}`}>{FV_LABELS[p.fv_suitability]}</span>
         </div>
       </a>
     ))}
@@ -42,20 +189,85 @@ const stats = getStats(problems);
 </Base>
 
 <script>
-const btns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.problem-card[data-status]');
+  const grid = document.getElementById('problem-grid');
+  const cards = () => [...document.querySelectorAll('.problem-card--filterable')];
+  const search = document.getElementById('problem-search');
+  const sortSelect = document.getElementById('sort-select');
+  const countLine = document.getElementById('filter-count-line');
+  const resetBtn = document.getElementById('filter-reset');
 
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const f = btn.dataset.filter;
-    cards.forEach(card => {
-      const show = f === 'all' 
-        || card.dataset.status === f 
-        || card.dataset.cluster === f;
-      card.style.display = show ? 'block' : 'none';
+  function selectedValues(group) {
+    return [...document.querySelectorAll(`[data-filter-group="${group}"][aria-pressed="true"]`)].map(b => b.dataset.value);
+  }
+
+  function multiMatch(cardVal, selected) {
+    if (selected.length === 0) return true;
+    const parts = (cardVal || '').split(',').filter(Boolean);
+    return selected.some(s => parts.includes(s));
+  }
+
+  function applyFilters() {
+    const q = (search?.value || '').trim().toLowerCase();
+    const groups = ['status', 'cluster', 'family', 'asymptotics', 'coupling', 'equation_level', 'regime', 'relevance', 'fv_suitability'];
+    let visible = 0;
+    for (const card of cards()) {
+      let ok = true;
+      if (q && !(card.dataset.search || '').includes(q)) ok = false;
+      if (ok && selectedValues('status').length && !selectedValues('status').includes(card.dataset.status)) ok = false;
+      if (ok && selectedValues('cluster').length && !selectedValues('cluster').includes(card.dataset.cluster)) ok = false;
+      if (ok && selectedValues('family').length && !selectedValues('family').includes(card.dataset.family)) ok = false;
+      if (ok && selectedValues('asymptotics').length && !selectedValues('asymptotics').includes(card.dataset.asymptotics)) ok = false;
+      if (ok && selectedValues('coupling').length && !selectedValues('coupling').includes(card.dataset.coupling)) ok = false;
+      if (ok && !multiMatch(card.dataset.equation_level, selectedValues('equation_level'))) ok = false;
+      if (ok && !multiMatch(card.dataset.regime, selectedValues('regime'))) ok = false;
+      if (ok && selectedValues('relevance').length && !selectedValues('relevance').includes(card.dataset.relevance)) ok = false;
+      if (ok && selectedValues('fv_suitability').length && !selectedValues('fv_suitability').includes(card.dataset.fv_suitability)) ok = false;
+      card.style.display = ok ? 'block' : 'none';
+      if (ok) visible += 1;
+    }
+    if (countLine) countLine.textContent = `Showing ${visible} of ${cards().length} problems.`;
+  }
+
+  const fvOrder = { high: 0, medium: 1, low: 2 };
+
+  function sortCards() {
+    const mode = sortSelect?.value || 'id-asc';
+    const list = cards();
+    const parent = grid;
+    list.sort((a, b) => {
+      if (mode === 'id-asc') return (a.dataset.id || '').localeCompare(b.dataset.id || '');
+      if (mode === 'id-desc') return (b.dataset.id || '').localeCompare(a.dataset.id || '');
+      const da = parseInt(a.dataset.difficulty || '0', 10);
+      const db = parseInt(b.dataset.difficulty || '0', 10);
+      if (mode === 'difficulty-asc') return da - db || a.id.localeCompare(b.id);
+      if (mode === 'difficulty-desc') return db - da || a.id.localeCompare(b.id);
+      if (mode === 'updated-desc') {
+        return (b.dataset.last_updated || '').localeCompare(a.dataset.last_updated || '') || a.id.localeCompare(b.id);
+      }
+      if (mode === 'fv-asc') {
+        return (fvOrder[a.dataset.fv_suitability] ?? 9) - (fvOrder[b.dataset.fv_suitability] ?? 9) || a.id.localeCompare(b.id);
+      }
+      return 0;
+    });
+    for (const c of list) parent.appendChild(c);
+  }
+
+  document.querySelectorAll('.filter-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pressed = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', pressed ? 'false' : 'true');
+      applyFilters();
     });
   });
-});
+
+  search?.addEventListener('input', applyFilters);
+  sortSelect?.addEventListener('change', () => { sortCards(); applyFilters(); });
+  resetBtn?.addEventListener('click', () => {
+    document.querySelectorAll('.filter-chip').forEach(b => b.setAttribute('aria-pressed', 'false'));
+    if (search) search.value = '';
+    applyFilters();
+  });
+
+  sortCards();
+  applyFilters();
 </script>

@@ -1,6 +1,21 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllProblems, CLUSTER_LABELS } from '../../lib/problems.js';
+import {
+  getAllProblems,
+  CLUSTER_LABELS,
+  getUnlocksMap,
+  getRelatedByTags,
+  needsReferencesCuration,
+} from '../../lib/problems.js';
+import {
+  FAMILY_LABELS,
+  ASYMPTOTICS_LABELS,
+  COUPLING_LABELS,
+  EQUATION_LEVEL_LABELS,
+  REGIME_LABELS,
+  RELEVANCE_LABELS,
+  FV_LABELS,
+} from '../../lib/taxonomy.js';
 
 export async function getStaticPaths() {
   const problems = getAllProblems();
@@ -11,114 +26,247 @@ export async function getStaticPaths() {
 }
 
 const { problem: p, all } = Astro.props;
+const unlocksMap = getUnlocksMap(all);
+const unlockIds = unlocksMap[p.id] || [];
+const unlocks = unlockIds.map(id => all.find(x => x.id === id)).filter(Boolean);
 const related = (p.related || []).map(id => all.find(x => x.id === id)).filter(Boolean);
+const depends = (p.dependencies || []).map(id => all.find(x => x.id === id)).filter(Boolean);
+const relatedByTags = getRelatedByTags(p, all, 8).filter(
+  x => !p.related?.includes(x.id) && x.id !== p.id,
+);
+const refNeeded = needsReferencesCuration(p);
 
 function pips(n) {
-  return Array.from({length: 5}, (_, i) => `<span class="pip${i < n ? ' filled' : ''}"></span>`).join('');
+  return Array.from({ length: 5 }, (_, i) => `<span class="pip${i < n ? ' filled' : ''}"></span>`).join('');
+}
+
+function fvClass(s) {
+  if (s === 'high') return 'fv-badge--high';
+  if (s === 'medium') return 'fv-badge--medium';
+  return 'fv-badge--low';
+}
+
+function relClass(r) {
+  if (r === 'pure-math') return 'rel-pure-math';
+  if (r === 'mixed') return 'rel-mixed';
+  return 'rel-physics-facing';
 }
 ---
 <Base title={`${p.id} — ${p.title}`} description={p.statement}>
-  <!-- Breadcrumb -->
-  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-bottom: 2rem; letter-spacing: 0.04em;">
-    <a href="/problems" style="color: var(--text-faint); border-bottom: none;">Problems</a>
+  <div class="crumbs">
+    <a href="/problems">Problems</a>
     <span style="margin: 0 0.5rem">→</span>
-    <a href={`/clusters/${p.cluster}`} style="color: var(--text-faint); border-bottom: none;">{CLUSTER_LABELS[p.cluster]}</a>
+    <a href={`/clusters/${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</a>
     <span style="margin: 0 0.5rem">→</span>
     {p.id}
   </div>
 
-  <!-- Header -->
-  <div style="margin-bottom: 2.5rem">
-    <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); letter-spacing: 0.1em; margin-bottom: 0.6rem">{p.id}</div>
-    <h1 style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.2">{p.title}</h1>
-    <div style="display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center">
-      <span class={`badge badge-${p.status}`}>{p.status}</span>
-      <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
-      <span class="difficulty-pips" set:html={pips(p.difficulty)} style="margin-left: 0.4rem" title={`Difficulty: ${p.difficulty}/5`}></span>
-    </div>
-  </div>
-
-  <hr />
-
-  <!-- Statement -->
-  <div class="problem-section">
-    <h3>Statement</h3>
-    <p>{p.statement}</p>
-  </div>
-
-  <!-- Math required -->
-  <div class="problem-section">
-    <h3>Mathematical prerequisites</h3>
-    <p>{p.math_required}</p>
-  </div>
-
-  <!-- Why it matters -->
-  <div class="problem-section">
-    <h3>Why it matters</h3>
-    <p>{p.why_it_matters}</p>
-  </div>
-
-  <!-- Completion criteria -->
-  <div class="problem-section">
-    <h3>Completion criteria</h3>
-    <p>{p.completion_criteria}</p>
-  </div>
-
-  <!-- Implications -->
-  <div class="problem-section">
-    <h3>Implications if solved</h3>
-    <p>{p.implications}</p>
-  </div>
-
-  <!-- References -->
-  {p.references && p.references.length > 0 && (
-    <div class="problem-section">
-      <h3>Key references</h3>
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
-        {p.references.map(ref => (
-          <li style="font-family: var(--font-mono); font-size: 0.78rem;">
-            {ref.arxiv
-              ? <a href={`https://arxiv.org/abs/${ref.arxiv}`} target="_blank" rel="noopener">arXiv:{ref.arxiv}</a>
-              : null}
-            {ref.note ? <span style="color: var(--text-muted); margin-left: 0.6rem">— {ref.note}</span> : null}
-          </li>
-        ))}
-      </ul>
-    </div>
-  )}
-
-  <!-- Related problems -->
-  {related.length > 0 && (
-    <div class="problem-section">
-      <h3>Related problems</h3>
-      <div class="problem-grid" style="margin-top: 0.6rem">
-        {related.map(r => (
-          <a href={`/problems/${r.id}`} class="problem-card">
-            <div class="card-id">{r.id}</div>
-            <div class="card-title">{r.title}</div>
-            <div class="card-meta">
-              <span class={`badge badge-${r.status}`}>{r.status}</span>
-            </div>
-          </a>
-        ))}
+  <div class="problem-layout">
+    <article class="problem-main">
+      <div style="margin-bottom: 1.5rem">
+        <div class="problem-id-line">{p.id}</div>
+        <h1 style="font-size: 2rem; margin-bottom: 1rem; line-height: 1.2">{p.title}</h1>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; margin-bottom: 0.75rem">
+          <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class={`cluster-tag cluster-${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</span>
+          <span class={`rel-badge ${relClass(p.relevance)}`} title="Relevance class">{RELEVANCE_LABELS[p.relevance]}</span>
+          <span class={`fv-badge ${fvClass(p.fv_suitability)}`} title={p.fv_reason}>{FV_LABELS[p.fv_suitability]}</span>
+          {refNeeded && <span class="badge-ref-needed">References need curation</span>}
+          <span class="difficulty-pips" set:html={pips(p.difficulty)} title={`Difficulty: ${p.difficulty}/5`}></span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; margin-top: 0.5rem">
+          <span class="tag-chip tag-chip--family" title="Family">{FAMILY_LABELS[p.family] || p.family}</span>
+          <span class="tag-chip tag-chip--asymptotics">{ASYMPTOTICS_LABELS[p.asymptotics] || p.asymptotics}</span>
+          <span class="tag-chip tag-chip--coupling">{COUPLING_LABELS[p.coupling] || p.coupling}</span>
+          {(p.equation_level || []).map(e => (
+            <span class="tag-chip tag-chip--equation">{EQUATION_LEVEL_LABELS[e] || e}</span>
+          ))}
+          {(p.regime || []).map(r => (
+            <span class="tag-chip tag-chip--regime">{REGIME_LABELS[r] || r}</span>
+          ))}
+        </div>
       </div>
-    </div>
-  )}
 
-  <!-- Notes -->
-  {p.notes && (
-    <div class="problem-section">
-      <h3>Maintainer notes</h3>
-      <p style="color: var(--text-muted); font-style: italic">{p.notes}</p>
-    </div>
-  )}
+      <hr />
 
-  <hr />
-  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-faint);">
-    Last updated: {p.last_updated || 'April 2026'} · 
-    <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} 
-       target="_blank" rel="noopener" style="color: var(--text-faint)">
-      Edit on GitHub →
-    </a>
+      <div class="problem-section">
+        <h3>Statement</h3>
+        <p>{p.statement}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Mathematical prerequisites</h3>
+        <p>{p.math_required}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Known progress</h3>
+        <p>{p.progress_summary}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Why it matters</h3>
+        <p>{p.why_it_matters}</p>
+      </div>
+
+      {(p.related_families_note || p.caution_note) && (
+        <div class="problem-section">
+          <h3>Scope / taxonomy note</h3>
+          {p.related_families_note && (
+            <div class="callout callout--caution">
+              <strong>Family nuance:</strong> {p.related_families_note}
+            </div>
+          )}
+          {p.caution_note && (
+            <div class="callout callout--caution">
+              <strong>Caution:</strong> {p.caution_note}
+            </div>
+          )}
+        </div>
+      )}
+
+      <div class="problem-section">
+        <h3>Completion criteria</h3>
+        <p>{p.completion_criteria}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Implications if solved</h3>
+        <p>{p.implications}</p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Formal verification suitability</h3>
+        <p>
+          <span class={`fv-badge ${fvClass(p.fv_suitability)}`}>{FV_LABELS[p.fv_suitability]}</span>
+        </p>
+        <p style="margin-top: 0.5rem; max-width: 66ch">{p.fv_reason}</p>
+        <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--text-muted)">
+          See <a href="/formal-verification">Formal verification</a> for how this database uses these labels.
+        </p>
+      </div>
+
+      <div class="problem-section">
+        <h3>Key references</h3>
+        {refNeeded ? (
+          <div class="callout callout--empty">
+            <strong>References pending / needs curation.</strong> This entry does not yet list verified
+            bibliographic pointers in YAML. Editors should add <code>arxiv</code>, <code>doi</code>, or
+            vetted <code>note</code> fields — not guessed citations.
+          </div>
+        ) : (
+          <ul class="ref-list">
+            {p.references.map((ref, i) => (
+              <li>
+                {ref.arxiv && (
+                  <a href={`https://arxiv.org/abs/${ref.arxiv}`} target="_blank" rel="noopener">arXiv:{ref.arxiv}</a>
+                )}
+                {ref.doi && (
+                  <>
+                    {ref.arxiv ? ' · ' : ''}
+                    <a href={`https://doi.org/${ref.doi}`} target="_blank" rel="noopener">doi:{ref.doi}</a>
+                  </>
+                )}
+                {ref.placeholder && <span>{ref.placeholder}</span>}
+                {ref.note && (
+                  <span style="color: var(--text-muted); margin-left: 0.5rem">— {ref.note}</span>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {depends.length > 0 && (
+        <div class="problem-section">
+          <h3>Depends on</h3>
+          <p class="page-meta" style="margin-bottom: 0.5rem">Conceptual dependencies (not necessarily logical lemmas in a proof assistant).</p>
+          <ul class="dep-list">
+            {depends.map(d => (
+              <li><a href={`/problems/${d.id}`}>{d.id}</a> — {d.title}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {unlocks.length > 0 && (
+        <div class="problem-section">
+          <h3>Unlocks (other problems list this one as a dependency)</h3>
+          <ul class="dep-list">
+            {unlocks.map(d => (
+              <li><a href={`/problems/${d.id}`}>{d.id}</a> — {d.title}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {related.length > 0 && (
+        <div class="problem-section">
+          <h3>Related problems</h3>
+          <div class="problem-grid" style="margin-top: 0.6rem">
+            {related.map(r => (
+              <a href={`/problems/${r.id}`} class="problem-card">
+                <div class="card-id">{r.id}</div>
+                <div class="card-title">{r.title}</div>
+                <div class="card-meta">
+                  <span class={`badge badge-${r.status}`}>{r.status}</span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {relatedByTags.length > 0 && (
+        <div class="problem-section">
+          <h3>Related by shared tags</h3>
+          <p class="page-meta" style="margin-bottom: 0.5rem">Heuristic matches on family, cluster, equation level, asymptotics, and relevance.</p>
+          <ul class="dep-list">
+            {relatedByTags.map(r => (
+              <li><a href={`/problems/${r.id}`}>{r.id}</a> — {r.title}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {p.notes && (
+        <div class="problem-section">
+          <h3>Maintainer notes</h3>
+          <p style="color: var(--text-muted); font-style: italic; white-space: pre-wrap">{p.notes}</p>
+        </div>
+      )}
+
+      <hr />
+      <div class="page-meta">
+        Last updated: {p.last_updated || '—'} ·{' '}
+        <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} target="_blank" rel="noopener">Edit on GitHub →</a>
+      </div>
+    </article>
+
+    <aside class="problem-meta-aside" aria-label="Problem metadata">
+      <h2 style="font-size: 0.85rem; margin-bottom: 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem">Metadata</h2>
+      <dl class="metadata-dl">
+        <dt>Cluster</dt>
+        <dd><a href={`/clusters/${p.cluster}`}>{CLUSTER_LABELS[p.cluster]}</a></dd>
+        <dt>Status</dt>
+        <dd><span class={`badge badge-${p.status}`}>{p.status}</span></dd>
+        <dt>Difficulty</dt>
+        <dd>{p.difficulty} / 5</dd>
+        <dt>Family</dt>
+        <dd>{FAMILY_LABELS[p.family] || p.family}</dd>
+        <dt>Asymptotics</dt>
+        <dd>{ASYMPTOTICS_LABELS[p.asymptotics] || p.asymptotics}</dd>
+        <dt>Coupling</dt>
+        <dd>{COUPLING_LABELS[p.coupling] || p.coupling}</dd>
+        <dt>Equation level</dt>
+        <dd>{(p.equation_level || []).map(e => EQUATION_LEVEL_LABELS[e] || e).join(', ')}</dd>
+        <dt>Regime</dt>
+        <dd>{(p.regime || []).map(r => REGIME_LABELS[r] || r).join(', ')}</dd>
+        <dt>Relevance</dt>
+        <dd>{RELEVANCE_LABELS[p.relevance]}</dd>
+        <dt>FV suitability</dt>
+        <dd>{p.fv_suitability}</dd>
+      </dl>
+    </aside>
   </div>
 </Base>

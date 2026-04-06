@@ -2,16 +2,43 @@ id: K-406
 title: Spectral stability and pseudospectrum of Kerr QNMs
 cluster: spectral-scattering
 status: open
-statement: Quantify how Kerr resonances and pseudospectra move under small perturbations of the geometry or operator and identify transient-growth mechanisms associated with non-normality.
-math_required: Pseudospectral theory; non-selfadjoint semiclassics; resolvent norm growth; perturbation of resonances.
-why_it_matters: QNMs are not enough by themselves if non-normal transient amplification dominates some time windows.
-completion_criteria: A complete answer must give either stability theorems or explicit instability mechanisms for resonance motion and pseudospectral growth under a stated perturbation class.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - spectral-operator
+regime:
+  - exterior
+  - nonlinear
+relevance: mixed
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Quantify how Kerr resonances and pseudospectra move under small perturbations of the geometry or
+  operator and identify transient-growth mechanisms associated with non-normality.
+math_required: >-
+  Pseudospectral theory; non-selfadjoint semiclassics; resolvent norm growth; perturbation of
+  resonances.
+why_it_matters: >-
+  QNMs are not enough by themselves if non-normal transient amplification dominates some time
+  windows.
+completion_criteria: >-
+  A complete answer must give either stability theorems or explicit instability mechanisms for
+  resonance motion and pseudospectral growth under a stated perturbation class.
 implications: Would sharpen the mathematical meaning of mode stability in non-selfadjoint black-hole problems.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

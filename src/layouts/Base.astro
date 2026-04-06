@@ -4,7 +4,7 @@ import '../styles/global.css';
 const { title, description } = Astro.props;
 const siteTitle = "Kerr Problems";
 const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
-const desc = description || "A living database of open problems in Kerr black hole physics.";
+const desc = description || "Mathematical relativity database: Kerr and Kerr-related rotating black holes, with orthogonal taxonomy and a formal-verification track.";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@ const desc = description || "A living database of open problems in Kerr black ho
     <nav>
       <a href="/problems">Problems</a>
       <a href="/clusters">Clusters</a>
+      <a href="/formal-verification">Formal verification</a>
       <a href="/about">About</a>
       <a href="https://github.com/kerrproblems/Kerrproblems" target="_blank" rel="noopener">GitHub ↗</a>
     </nav>
@@ -39,7 +40,8 @@ const desc = description || "A living database of open problems in Kerr black ho
   </main>
 
   <footer class="site-footer">
-    Kerr Problems — open problems in Kerr black hole physics; sources cited; contributions welcome on GitHub.
+    Kerr Problems — mathematical relativity open problems (Kerr and related families); orthogonal tags
+    separate geometry from cluster themes; contributions welcome on GitHub.
   </footer>
   <script defer src="/katex-init.js"></script>
 </body>

@@ -302,3 +302,244 @@ hr {
   .site-header { padding: 0.85rem 1rem; }
   .page-main  { padding: 1.25rem 1rem 3rem; }
 }
+
+/* --- Taxonomy chips & badges --- */
+.tag-chip {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.2em 0.45em;
+  border: 1px solid var(--border);
+  background: #fafafa;
+  color: var(--text-muted);
+  margin: 0 0.35rem 0.35rem 0;
+  line-height: 1.3;
+}
+.tag-chip--family { border-left: 3px solid var(--rigidity); }
+.tag-chip--asymptotics { border-left: 3px solid var(--extremal); }
+.tag-chip--coupling { border-left: 3px solid var(--exterior); }
+.tag-chip--equation { border-left: 3px solid var(--spectral); }
+.tag-chip--regime { border-left: 3px solid #666; }
+
+.rel-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--border);
+}
+.rel-pure-math { background: #f5f0fa; }
+.rel-mixed { background: #f8f4e8; }
+.rel-physics-facing { background: #eaf2fa; }
+
+.fv-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--border);
+}
+.fv-badge--high { color: #1b5e20; border-color: #a5d6a7; background: #e8f5e9; }
+.fv-badge--medium { color: #e65100; border-color: #ffcc80; background: #fff3e0; }
+.fv-badge--low { color: #b71c1c; border-color: #ef9a9a; background: #ffebee; }
+
+.badge-ref-needed {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--partial);
+  border: 1px dashed var(--partial);
+  padding: 0.15em 0.4em;
+}
+
+/* Callouts */
+.callout {
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  max-width: 66ch;
+}
+.callout--caution {
+  background: #fffdf5;
+  border-color: #e0d4a8;
+}
+.callout--empty {
+  background: #fafafa;
+  border-style: dashed;
+  color: var(--text-muted);
+}
+
+/* Problem detail layout */
+.problem-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 260px);
+  gap: 2rem;
+  align-items: start;
+}
+.problem-main { min-width: 0; }
+.problem-meta-aside {
+  position: sticky;
+  top: 1rem;
+  font-size: 0.875rem;
+  border: 1px solid var(--border);
+  padding: 1rem;
+  background: #fafafa;
+}
+.metadata-dl dt {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-top: 0.65rem;
+}
+.metadata-dl dt:first-child { margin-top: 0; }
+.metadata-dl dd {
+  margin: 0.2rem 0 0;
+  color: var(--text);
+}
+
+.ref-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  max-width: 66ch;
+}
+.ref-list li {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.dep-list {
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+.dep-list li { margin-bottom: 0.35rem; }
+
+/* Problems index toolbar */
+.problems-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.problems-search {
+  width: 100%;
+  max-width: 36ch;
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border);
+}
+.filter-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.filter-group-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-bottom: 0.35rem;
+}
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+.filter-chip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  padding: 0.2em 0.45em;
+  color: var(--text-muted);
+}
+.filter-chip:hover { border-color: #999; }
+.filter-chip[aria-pressed="true"] {
+  border-color: var(--text);
+  color: var(--text);
+  font-weight: 600;
+}
+.filter-chip .count {
+  color: var(--text-faint);
+  margin-left: 0.25em;
+}
+.problems-sort-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+.problems-sort-row label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.problems-sort-row select {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.35rem;
+  border: 1px solid var(--border);
+}
+.filter-reset {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: none;
+  border: 1px dashed var(--border);
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  color: var(--link);
+}
+
+.cluster-tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 62ch;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.taxonomy-legend {
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  max-width: 72ch;
+  background: #fafafa;
+}
+.taxonomy-legend__title {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+.taxonomy-legend__dl {
+  display: grid;
+  grid-template-columns: minmax(5rem, 9rem) 1fr;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+.taxonomy-legend__dl dt {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+}
+.taxonomy-legend__dl dd { margin: 0; color: var(--text); }
+
+@media (max-width: 720px) {
+  .problem-layout {
+    grid-template-columns: 1fr;
+  }
+  .problem-meta-aside {
+    position: static;
+  }
+  .taxonomy-legend__dl {
+    grid-template-columns: 1fr;
+  }
+}

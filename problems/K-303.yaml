@@ -2,16 +2,41 @@ id: K-303
 title: Quantitative Kerr characterization via the Mars–Simon tensor
 cluster: rigidity-uniqueness
 status: partial
-statement: Turn the invariant characterization of Kerr by vanishing Mars–Simon tensor into a stable quantitative theorem with explicit constants.
+family: exact-kerr
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: high
+fv_reason: >-
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
+  formalization boundaries.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Turn the invariant characterization of Kerr by vanishing Mars–Simon tensor into a stable
+  quantitative theorem with explicit constants.
 math_required: Invariant tensors; stationary Einstein equations; elliptic estimates; quantitative rigidity.
 why_it_matters: An exact characterization is powerful, but a stability theorem needs quantitative control.
-completion_criteria: A complete answer must bound distance to Kerr in terms of an explicit norm of the Mars–Simon tensor and recover the nearby parameters effectively.
+completion_criteria: >-
+  A complete answer must bound distance to Kerr in terms of an explicit norm of the Mars–Simon
+  tensor and recover the nearby parameters effectively.
 implications: Would produce a practical near-Kerr recognition theorem.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

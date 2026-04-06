@@ -1,29 +1,102 @@
-# Problem Schema Reference
+# Problem schema reference
 
-Every file in /problems/ is a YAML file named {ID}.yaml (e.g. K-001.yaml).
+Each file in `/problems/` is `{id}.yaml` (e.g. `K-001.yaml`). The `id` must match the filename stem.
 
 ## Required fields
 
-id:           string   # e.g. K-001. Must match filename.
-title:        string   # short descriptive title
-cluster:      string   # one of: exterior-stability | interior-scc | 
-                       #   extremal | rigidity-uniqueness | spectral-scattering
-status:       string   # one of: open | partial | conditional | solved
-statement:    string   # precise problem statement (multiline ok)
-math_required: string  # mathematical prerequisites
-why_it_matters: string
-completion_criteria: string
-implications: string
-difficulty:   integer  # 1 (accessible) to 5 (frontier)
+| Field | Type | Description |
+|-------|------|-------------|
+| `id` | string | `K-` + three digits |
+| `title` | string | Short descriptive title |
+| `cluster` | string | One of: `exterior-stability`, `interior-scc`, `extremal`, `rigidity-uniqueness`, `spectral-scattering` |
+| `status` | string | `open` \| `partial` \| `conditional` \| `solved` |
+| `statement` | string | Precise problem statement (multiline OK) |
+| `math_required` | string | Mathematical prerequisites |
+| `why_it_matters` | string | Motivation |
+| `completion_criteria` | string | What counts as a solution |
+| `implications` | string | Consequences if solved |
+| `difficulty` | int | 1 (accessible)–5 (frontier) |
+| `family` | string | Kerr geometry class (see enums below) |
+| `asymptotics` | string | Asymptotic structure |
+| `coupling` | string | `vacuum` \| `matter-coupled` |
+| `equation_level` | string[] | Non-empty; PDE / model level (see enums) |
+| `regime` | string[] | Non-empty; dynamical / spatial regime |
+| `relevance` | string | `pure-math` \| `mixed` \| `physics-facing` |
+| `fv_suitability` | string | `high` \| `medium` \| `low` (formal verification) |
+| `fv_reason` | string | Short justification for FV suitability |
+| `progress_summary` | string | Conservative summary of what is known (no fabricated theorems) |
+| `dependencies` | string[] | Problem IDs this entry conceptually builds on |
+| `related` | string[] | Related problems (peer links; may be empty) |
+| `references` | list | Bibliographic entries (may use TODO placeholders; empty triggers UI + validator warnings) |
 
 ## Optional fields
 
-posed_by:     string
-posed_year:   integer
-references:   list
-  - arxiv: string      # arXiv ID e.g. 2104.11857
-    note:   string
-related:      list     # list of IDs e.g. [K-002, K-003]
-prizes:       string   # null if none
-notes:        string   # maintainer notes
-last_updated: date     # YYYY-MM-DD
+| Field | Type | Description |
+|-------|------|-------------|
+| `related_families_note` | string \| null | When “Kerr” in the title is broader or ambiguous |
+| `caution_note` | string \| null | Subtle categorization or scope warnings |
+| `posed_by` | string \| null | |
+| `posed_year` | int \| null | |
+| `prizes` | string \| null | |
+| `notes` | string \| null | Maintainer notes |
+| `last_updated` | date | `YYYY-MM-DD` |
+
+## `references` item shape
+
+Each entry may include any of:
+
+- `arxiv`: arXiv id (e.g. `2104.11857`)
+- `doi`: DOI string
+- `note`: free-text description or curation comment
+- `placeholder`: explicit TODO when nothing is verified locally
+
+Do **not** invent arXiv IDs or DOIs.
+
+## Taxonomy enums
+
+### `family`
+
+- `exact-kerr` — the fixed Kerr geometry or exact solution class
+- `near-kerr-vacuum` — perturbations / dynamics near vacuum Kerr
+- `kerr-newman` — charged rotating family
+- `kerr-de-sitter` — positive Λ extensions
+- `kerr-ads` — AdS extensions
+- `nhek` — near-horizon extremal Kerr–like limits
+- `related-rotating-black-hole` — other rotating black-hole models tied to the same mathematical circle
+
+### `asymptotics`
+
+- `asymptotically-flat`
+- `de-sitter`
+- `anti-de-sitter`
+- `mixed`
+
+### `equation_level`
+
+- `null-geodesics`
+- `scalar-wave`
+- `maxwell`
+- `linearized-gravity`
+- `full-einstein`
+- `einstein-maxwell`
+- `stationary-reduction`
+- `spectral-operator`
+- `inverse-problem`
+
+### `regime`
+
+- `stationary`, `linear`, `nonlinear`, `exterior`, `interior`, `extremal`, `near-extremal`
+
+### `relevance`
+
+- `pure-math` — primarily mathematical relativity / analysis
+- `mixed` — substantial overlap
+- `physics-facing` — closer to observationally motivated or modeling language (still may be rigorous mathematics)
+
+## Machine-readable schema
+
+See `data/schema.json` (structural reference; the authoritative checks are `npm run validate`).
+
+## Legacy fields (removed by migration)
+
+Older files used `equationType`, `matterModel`, `relevanceProfile`, `formalizationReadiness`, `dependsOn`, `relatedProblems`, etc. The site loader still maps those for safety, but new edits should use the canonical names above.

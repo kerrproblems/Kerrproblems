@@ -2,16 +2,52 @@ id: K-008
 title: Full stability of asymptotically flat Kerr–Newman
 cluster: exterior-stability
 status: partial
-statement: Prove linear and then nonlinear stability of the full subextremal Kerr–Newman family without small-charge or slow-rotation assumptions.
-math_required: Non-selfadjoint spectral theory; coupled gravito-EM perturbation equations; physical-space energy estimates; nonlinear modulation of mass, charge, and spin.
-why_it_matters: Kerr–Newman is the natural stationary Einstein–Maxwell black-hole family and a major benchmark after Kerr.
-completion_criteria: A complete answer must treat the full subextremal parameter range $a^2+Q^2<M^2$ and produce decay to linearized or nonlinear Kerr–Newman modulo gauge and parameter shifts.
-implications: Would give a coupled-field analogue of the Kerr stability theorem and reshape the Einstein–Maxwell scattering picture.
+family: kerr-newman
+asymptotics: asymptotically-flat
+coupling: matter-coupled
+equation_level:
+  - maxwell
+  - stationary-reduction
+  - full-einstein
+  - einstein-maxwell
+regime:
+  - exterior
+  - nonlinear
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: >-
+  Coupled Einstein–Maxwell perturbation theory; full nonlinear theorem remains large, but structured
+  linearized subproblems exist.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove linear and then nonlinear stability of the full subextremal Kerr–Newman family without
+  small-charge or slow-rotation assumptions.
+math_required: >-
+  Non-selfadjoint spectral theory; coupled gravito-EM perturbation equations; physical-space energy
+  estimates; nonlinear modulation of mass, charge, and spin.
+why_it_matters: >-
+  Kerr–Newman is the natural stationary Einstein–Maxwell black-hole family and a major benchmark
+  after Kerr.
+completion_criteria: >-
+  A complete answer must treat the full subextremal parameter range $a^2+Q^2<M^2$ and produce decay
+  to linearized or nonlinear Kerr–Newman modulo gauge and parameter shifts.
+implications: >-
+  Would give a coupled-field analogue of the Kerr stability theorem and reshape the Einstein–Maxwell
+  scattering picture.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

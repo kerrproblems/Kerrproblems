@@ -1,0 +1,50 @@
+id: K-508
+title: Stability or obstruction theory for approximate Killing–Yano tensors
+cluster: rigidity-uniqueness
+status: open
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+  - stationary-reduction
+regime:
+  - stationary
+  - nonlinear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: >-
+  Tensor norms and approximate closure identities can be formalized; global nonlinear stability of
+  “almost Yano” fields remains broad.
+progress_summary: >-
+  Exact Killing–Yano tensors characterize Kerr among vacuum solutions in certain classes; approximate
+  versions are used heuristically. No single obstruction/stability theorem is verified here. See
+  references/TODO.
+related_families_note: null
+caution_note: null
+statement: >-
+  If a vacuum spacetime admits a tensor field whose Killing–Yano equation is small in an agreed
+  $L^2$ or $C^0$ norm, must the metric be close to Kerr, or can one construct controlled counterexamples?
+math_required: >-
+  Two-forms; Killing–Yano equations; elliptic systems on Riemannian slices; perturbation theory of
+  geometric PDE constraints.
+why_it_matters: >-
+  Hidden symmetry tensors underpin separability; their stability under perturbation reflects
+  whether near-Kerr dynamics inherit integrable structure.
+completion_criteria: >-
+  Either a quantitative stability theorem toward Kerr or an explicit family of near-vacuum solutions
+  with small Yano violation but large Kerr distance.
+implications: >-
+  Clarifies how much of Kerr’s algebra persists under nonlinear perturbation.
+difficulty: 5
+dependencies:
+  - K-301
+related:
+  - K-303
+references:
+  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+posed_by: null
+posed_year: null
+prizes: null
+notes: Math-leaning formal verification track problem.
+last_updated: '2026-04-06'

@@ -1,54 +1,99 @@
 ---
 import Base from '../layouts/Base.astro';
+import TaxonomyLegend from '../components/TaxonomyLegend.astro';
 ---
 <Base title="About">
-  <h1 style="margin-bottom: 2rem">About</h1>
+  <h1 style="margin-bottom: 1.25rem">About</h1>
 
-  <div style="max-width: 62ch; display: flex; flex-direction: column; gap: 1.4rem; font-size: 1rem; color: var(--text)">
-
+  <div class="intro-prose" style="max-width: 68ch; display: flex; flex-direction: column; gap: 1.25rem">
     <p>
-      This site tracks open problems in the mathematics and physics of the Kerr 
-      spacetime — the exact rotating black hole solution to Einstein's vacuum field equations, 
-      discovered by Roy Kerr in 1963.
+      <strong>Kerr Problems</strong> is primarily a <strong>mathematical relativity</strong> database: open
+      questions stated in PDE, geometry, and spectral language around Kerr and closely related rotating
+      black-hole models. Some entries are <em>physics-facing</em> (motivated by observation or astrophysical
+      language) while remaining mathematical statements; others are <em>pure-math</em> in motivation. The
+      orthogonal <strong>relevance</strong> tag records that distinction without mixing it into cluster
+      navigation.
     </p>
-
     <p>
-      The database was started in April 2026. Every problem statement is traced to a 
-      primary source: a paper, a survey, or a recorded lecture by a researcher working 
-      in the field. This site curates and organises — it does not adjudicate.
+      The word <strong>&ldquo;Kerr&rdquo;</strong> is used in several senses on this site: the exact vacuum
+      Kerr solution; dynamical perturbations near it in vacuum; charged (Kerr–Newman) extensions; Λ ≠ 0
+      backgrounds (Kerr–de Sitter, Kerr–AdS); and near-horizon extremal limits (NHEK). Exact Kerr, near-Kerr
+      vacuum, Kerr–Newman, Kerr–dS, Kerr–AdS, and NHEK require <strong>separate tagging</strong> because
+      asymptotics, matter coupling, and boundary problems are not interchangeable.
     </p>
-
     <p>
-      The status labels mean:
+      <strong>Clusters</strong> are coarse research themes (five total). <strong>Orthogonal tags</strong> carry
+      the nuance: what geometry, what equations, what regime, and how formalization-friendly the statement
+      might be. A problem in &ldquo;Exterior stability&rdquo; can still be Kerr–AdS or matter-coupled; read
+      the tags and any <strong>caution_note</strong> on the problem page.
     </p>
-
-    <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; padding-left: 0">
-      <li><span class="badge badge-open">open</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">No theorem in the stated form is currently known.</span></li>
-      <li><span class="badge badge-partial">partial</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">Important special cases, reductions, or adjacent results exist.</span></li>
-      <li><span class="badge badge-conditional">conditional</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">The problem is reduced to a specific missing input.</span></li>
-      <li><span class="badge badge-solved">solved</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">A complete theorem in the stated form is known.</span></li>
-    </ul>
-
     <p>
-      Difficulty ratings (1–5) are heuristic estimates based on the current state of the 
-      field, not permanent verdicts. A problem rated 5 today may become 3 tomorrow.
+      The <a href="/formal-verification">formal verification track</a> explains heuristic suitability for proof
+      assistants and lists curated entries <strong>K-501–K-510</strong> plus other high/medium FV problems.
     </p>
-
-    <h2 style="margin-top: 1rem">Contributing</h2>
-
-    <p>
-      All problems are stored as YAML files in the 
-      <a href="https://github.com/kerrproblems/Kerrproblems">GitHub repository</a>.
-      To propose a correction, a new problem, or a status update, open a pull request.
-      See <a href="https://github.com/kerrproblems/Kerrproblems/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> 
-      for the full guide.
-    </p>
-
-    <p>
-      If you have worked on one of these problems and believe the statement or status 
-      is wrong, please open an issue or email <a href="mailto:admin@kerrproblems.com">admin@kerrproblems.com</a>. Accuracy is the 
-      site's only claim to authority.
-    </p>
-
   </div>
+
+  <h2 style="margin-top: 2.25rem">Status labels</h2>
+  <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; padding-left: 0; max-width: 68ch">
+    <li><span class="badge badge-open">open</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">No theorem in the stated form is currently known (on this site’s reading).</span></li>
+    <li><span class="badge badge-partial">partial</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">Important special cases, reductions, or adjacent results exist.</span></li>
+    <li><span class="badge badge-conditional">conditional</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">Progress assumes a identified missing input or restricted hypothesis class.</span></li>
+    <li><span class="badge badge-solved">solved</span> <span style="margin-left: 0.6rem; color: var(--text-muted)">A complete theorem in the stated form is known.</span></li>
+  </ul>
+
+  <p style="margin-top: 1rem; max-width: 65ch; color: var(--text-muted); font-size: 0.95rem">
+    Difficulty ratings (1–5) are heuristic, not permanent verdicts.
+  </p>
+
+  <h2 style="margin-top: 2rem">Orthogonal metadata tags</h2>
+  <p style="max-width: 65ch; margin-bottom: 0.75rem; font-size: 0.95rem">
+    Documented in <a href="https://github.com/kerrproblems/Kerrproblems/blob/main/data/schema.md"><code>data/schema.md</code></a> and enforced by <code>npm run validate</code>.
+  </p>
+  <TaxonomyLegend />
+
+  <h3 style="margin-top: 1.5rem; font-size: 1.05rem">Allowed values (summary)</h3>
+  <ul style="margin: 0.5rem 0 0 1.2rem; max-width: 68ch; line-height: 1.55; font-size: 0.92rem">
+    <li><strong>family:</strong> exact-kerr, near-kerr-vacuum, kerr-newman, kerr-de-sitter, kerr-ads, nhek, related-rotating-black-hole</li>
+    <li><strong>asymptotics:</strong> asymptotically-flat, de-sitter, anti-de-sitter, mixed</li>
+    <li><strong>coupling:</strong> vacuum, matter-coupled</li>
+    <li><strong>equation_level:</strong> null-geodesics, scalar-wave, maxwell, linearized-gravity, full-einstein, einstein-maxwell, stationary-reduction, spectral-operator, inverse-problem</li>
+    <li><strong>regime:</strong> stationary, linear, nonlinear, exterior, interior, extremal, near-extremal</li>
+    <li><strong>relevance:</strong> pure-math, mixed, physics-facing</li>
+    <li><strong>fv_suitability:</strong> high, medium, low (plus required <strong>fv_reason</strong> string)</li>
+    <li><strong>dependencies / related:</strong> arrays of problem IDs; <strong>progress_summary</strong> must stay conservative (no fabricated theorems)</li>
+  </ul>
+
+  <h2 style="margin-top: 2.25rem">What counts as a Kerr problem here?</h2>
+  <p style="max-width: 68ch; line-height: 1.55">
+    Any rigorously stated question where the Kerr geometry, its standard perturbations, or a clearly labeled
+    Kerr-related family (charged, Λ ≠ 0, near-horizon limit, rotating black-hole cousins) is essential to the
+    mathematical formulation. If the title says &ldquo;Kerr&rdquo; but the content is broader, look for
+    <strong>related_families_note</strong> and <strong>caution_note</strong> on the problem page.
+  </p>
+
+  <h2 style="margin-top: 1.75rem">Which problems are pure mathematics, and which are physics-facing?</h2>
+  <p style="max-width: 68ch; line-height: 1.55">
+    Use the <strong>relevance</strong> badge. <em>Pure-math</em> entries emphasize geometric / analytic /
+    foundational questions without observational framing. <em>Physics-facing</em> entries may use language
+    from astrophysics or detectors but should still be mathematical statements. <em>Mixed</em> is intentional
+    overlap. Physics-facing wording on a pure-math tag should carry a <strong>caution_note</strong> when the
+    mismatch could confuse readers.
+  </p>
+
+  <h2 style="margin-top: 1.75rem">Which problems are promising for formal verification?</h2>
+  <p style="max-width: 68ch; line-height: 1.55">
+    See <strong>fv_suitability</strong> and <strong>fv_reason</strong> on each problem, and the dedicated
+    <a href="/formal-verification">Formal verification</a> page for criteria and curated lists (including
+    K-501–K-510). High suitability usually means stationary structure, ODE/separable models, or finite-
+    dimensional rigidity — not full nonlinear global Einstein evolution.
+  </p>
+
+  <h2 style="margin-top: 2rem">Contributing</h2>
+  <p style="max-width: 68ch">
+    Problems live as YAML in the
+    <a href="https://github.com/kerrproblems/Kerrproblems">GitHub repository</a>.
+    Pull requests should preserve schema validity (<code>npm run validate</code>). See
+    <a href="https://github.com/kerrproblems/Kerrproblems/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a>.
+    For accuracy concerns, open an issue or email <a href="mailto:admin@kerrproblems.com">admin@kerrproblems.com</a>.
+  </p>
 </Base>

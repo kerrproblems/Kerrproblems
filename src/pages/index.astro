@@ -1,15 +1,31 @@
 ---
 import Base from '../layouts/Base.astro';
+import {
+  getAllProblems,
+  getFormalVerificationProblems,
+  CLUSTER_LABELS,
+} from '../lib/problems.js';
+import TaxonomyLegend from '../components/TaxonomyLegend.astro';
+
+const problems = getAllProblems();
+const flagship = problems
+  .filter(p => p.status === 'open' && p.difficulty >= 4)
+  .sort((a, b) => b.difficulty - a.difficulty || a.id.localeCompare(b.id))
+  .slice(0, 5);
+const fvFriendly = getFormalVerificationProblems(problems, 'high').slice(0, 6);
+const recent = [...problems]
+  .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || '') || a.id.localeCompare(b.id))
+  .slice(0, 6);
 ---
 <Base>
   <div class="home-landing">
     <blockquote class="chandrasekhar-quote">
       <p>
-        &ldquo;In my entire scientific life, extending over forty-five years, the most
-        shattering experience has been the realization that an exact solution of
-        Einstein&apos;s equations of general relativity, discovered by the New Zealand
-        mathematician, Roy Kerr, provides the absolutely exact representation of
-        untold numbers of massive black holes that populate the universe.&rdquo;
+        &ldquo;In my entire scientific life, extending over forty-five years, the most shattering
+        experience has been the realization that an exact solution of Einstein&apos;s equations of
+        general relativity, discovered by the New Zealand mathematician, Roy Kerr, provides the
+        absolutely exact representation of untold numbers of massive black holes that populate the
+        universe.&rdquo;
       </p>
       <footer>
         &mdash; S. Chandrasekhar, <em>Shakespeare, Newton, and Beethoven</em>, 1975
@@ -18,60 +34,96 @@ import Base from '../layouts/Base.astro';
 
     <div class="home-intro-below-quote">
       <p>
-        Most black holes in the observable universe are rotating. The Kerr spacetime &mdash; Roy Kerr&apos;s 1963 exact solution to Einstein&apos;s vacuum equations &mdash; is the geometry that describes them all. It is one of the most important objects in mathematical physics: simple enough to write in a single formula, rich enough to have resisted complete mathematical understanding for over sixty years.
+        This site is a <strong>mathematical relativity</strong> database centred on Kerr and
+        <strong>Kerr-related</strong> rotating black-hole models. The mathematics of exact Kerr is a
+        benchmark, but many entries concern <em>near-Kerr vacuum dynamics</em>, <em>Kerr–Newman</em>,
+        <em>Kerr–de Sitter</em>, <em>Kerr–AdS</em>, or <em>near-horizon (NHEK)</em> limits. Those settings
+        differ in asymptotics, field content, and PDE boundary conditions — they are tagged explicitly so
+        problems are not misread as interchangeable &ldquo;Kerr&rdquo; questions.
       </p>
       <p>
-        This site exists to track that resistance. It is a living database of open problems in the rigorous mathematical study of Kerr black holes &mdash; problems in stability, singularities, scattering, uniqueness, and spectral theory. Every problem is stated precisely, traced to a primary source, and updated as the field moves. The goal is to make the frontier visible: to show what is known, what is partial, and what remains genuinely open.
-      </p>
-      <p>
-        We are at an unusual moment. Formal proof assistants like Lean are making it possible to verify arguments at a scale and speed previously unimaginable, and AI systems are beginning to contribute meaningfully to research-level mathematics &mdash; finding references, closing partial arguments, and in some cases generating genuine new proofs. The Kerr problem landscape is exactly the kind of structured, precisely-stated territory where these tools can have real impact. This database is designed with that future in mind: a shared map of the open problems, so that human mathematicians, formal verification projects, and AI systems can orient themselves and push the frontier forward together.
+        A parallel axis is <a href="/formal-verification">formal verification</a>: which statements have
+        structured, finite-dimensional, or ODE-level content that proof assistants can plausibly attack
+        first? Every problem records heuristic <strong>FV suitability</strong> and a short reason.
       </p>
     </div>
+
+    <section style="margin: 2rem 0 2.5rem; max-width: 72ch">
+      <h2 class="home-pill">How to read this database</h2>
+      <ul style="margin: 0.75rem 0 0 1.2rem; line-height: 1.55; font-size: 0.98rem">
+        <li>
+          <strong>Five clusters</strong> (Exterior stability, Interior / SCC, Extremal, Rigidity / Uniqueness,
+          Spectral / scattering) organize <em>research themes</em>. They are intentionally coarse.
+        </li>
+        <li>
+          <strong>Orthogonal tags</strong> (family, asymptotics, coupling, equation level, regime) say what
+          <em>geometry and PDE class</em> the statement belongs to, independent of cluster placement.
+        </li>
+        <li>
+          <strong>Relevance</strong> marks pure mathematics vs mixed vs physics-facing motivation (still
+          rigorous statements — not observational claims).
+        </li>
+        <li>
+          The <a href="/formal-verification">formal verification track</a> highlights math-leaning problems
+          (including <strong>K-501–K-510</strong>) suited to early prover efforts.
+        </li>
+      </ul>
+      <div style="margin-top: 1.25rem">
+        <TaxonomyLegend />
+      </div>
+    </section>
 
     <div class="home-columns">
       <section class="home-col">
-        <h2 class="home-pill">Recent progress</h2>
-        <div class="home-col-stack">
-          <div class="home-progress-item">
-            <a href="/problems/K-001">K-001 &nbsp; Full nonlinear stability of subextremal Kerr</a>
-            <div class="home-progress-date">(April 2026)</div>
-          </div>
-          <div class="home-progress-item">
-            <a href="/problems/K-101">K-101 &nbsp; Strong Cosmic Censorship threshold for Kerr interiors</a>
-            <div class="home-progress-date">(April 2026)</div>
-          </div>
-          <div class="home-progress-item">
-            <a href="/problems/K-201">K-201 &nbsp; Nonlinear codimension-1 stability of extremal Kerr</a>
-            <div class="home-progress-date">(April 2026)</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-col">
-        <h2 class="home-pill">Key references</h2>
-        <div class="home-col-stack">
-          <div class="home-ref-item">
-            Giorgi, Klainerman, Szeftel &mdash; Full stability of Schwarzschild{' '}
-            <a href="https://arxiv.org/abs/2205.14808">arXiv:2205.14808</a>
-          </div>
-          <div class="home-ref-item">
-            Dafermos, Luk &mdash; Interior of dynamical vacuum black holes{' '}
-            <a href="https://arxiv.org/abs/1710.01722">arXiv:1710.01722</a>
-          </div>
-          <div class="home-ref-item">
-            Teukolsky &mdash; The Kerr metric (review){' '}
-            <a href="https://arxiv.org/abs/1410.2130">arXiv:1410.2130</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="home-col">
-        <h2 class="home-pill">Open &rarr; solved</h2>
-        <p class="home-solved-placeholder">
-          Problems whose status changes to solved will be listed here with the date this site was updated.
+        <h2 class="home-pill">Flagship open problems</h2>
+        <p class="home-solved-placeholder" style="margin-bottom: 0.6rem; font-size: 0.82rem">
+          Open entries rated difficulty ≥ 4 (heuristic).
         </p>
+        <div class="home-col-stack">
+          {flagship.map(p => (
+            <div class="home-progress-item">
+              <a href={`/problems/${p.id}`}>{p.id} — {p.title}</a>
+              <div class="home-progress-date">{CLUSTER_LABELS[p.cluster]} · difficulty {p.difficulty}/5</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="home-col">
+        <h2 class="home-pill">Most formalization-friendly</h2>
+        <p class="home-solved-placeholder" style="margin-bottom: 0.6rem; font-size: 0.82rem">
+          High FV suitability (see <a href="/formal-verification">FV track</a>).
+        </p>
+        <div class="home-col-stack">
+          {fvFriendly.map(p => (
+            <div class="home-progress-item">
+              <a href={`/problems/${p.id}`}>{p.id} — {p.title}</a>
+              <div class="home-progress-date">{CLUSTER_LABELS[p.cluster]}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="home-col">
+        <h2 class="home-pill">Recently updated</h2>
+        <div class="home-col-stack">
+          {recent.map(p => (
+            <div class="home-progress-item">
+              <a href={`/problems/${p.id}`}>{p.id} — {p.title}</a>
+              <div class="home-progress-date">{p.last_updated || '—'}</div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
+
+    <p style="margin-top: 2rem; font-size: 0.9rem; max-width: 62ch">
+      <a href="/problems">All problems</a>
+      ·
+      <a href="/formal-verification">Formal verification</a>
+      ·
+      <a href="/about">About &amp; tag definitions</a>
+    </p>
   </div>
 </Base>
 
@@ -96,7 +148,7 @@ import Base from '../layouts/Base.astro';
   }
 
   .home-intro-below-quote {
-    max-width: 62ch;
+    max-width: 68ch;
     margin: 0 0 1.5rem;
   }
   .home-intro-below-quote p {
@@ -125,7 +177,7 @@ import Base from '../layouts/Base.astro';
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
-    margin-top: 2.5rem;
+    margin-top: 1rem;
     align-items: start;
   }
 
@@ -149,24 +201,13 @@ import Base from '../layouts/Base.astro';
     margin-top: 0.15rem;
   }
 
-  .home-ref-item {
-    font-size: inherit;
-  }
-  .home-ref-item a {
-    color: var(--link, #0066cc);
-    text-decoration: none;
-  }
-  .home-ref-item a:hover {
-    text-decoration: underline;
-  }
-
   .home-solved-placeholder {
     margin: 0;
     font-style: italic;
     color: #777;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     .home-columns {
       grid-template-columns: 1fr;
     }

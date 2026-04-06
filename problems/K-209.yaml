@@ -2,16 +2,43 @@ id: K-209
 title: Codimension and modulation theory for extremal endstates
 cluster: extremal
 status: open
-statement: Build a nonlinear stable-manifold/modulation framework showing precisely which perturbations converge to extremal versus subextremal Kerr endstates.
-math_required: Invariant manifold theory in PDE; modulation equations; degenerate parameter dynamics; constraint control.
+family: related-rotating-black-hole
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Build a nonlinear stable-manifold/modulation framework showing precisely which perturbations
+  converge to extremal versus subextremal Kerr endstates.
+math_required: >-
+  Invariant manifold theory in PDE; modulation equations; degenerate parameter dynamics; constraint
+  control.
 why_it_matters: The phrase 'codimension-1 extremal stability' needs a concrete theorem-level dynamical meaning.
-completion_criteria: A complete answer must define the stable manifold, prove transversality, and describe the flow off the manifold.
+completion_criteria: >-
+  A complete answer must define the stable manifold, prove transversality, and describe the flow off
+  the manifold.
 implications: Would turn the current conjectural picture of extremal dynamics into a structured phase portrait.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

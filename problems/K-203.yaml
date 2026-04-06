@@ -2,16 +2,45 @@ id: K-203
 title: Nonlinear fate of Aretakis instability
 cluster: extremal
 status: open
-statement: Determine whether generic small perturbations of extremal Kerr settle to subextremal Kerr, remain extremal with horizon hair, or develop a stronger nonlinear instability.
-math_required: Nonlinear continuation near degenerate horizons; parameter drift; horizon-local blow-up criteria; conserved-charge dynamics.
-why_it_matters: The key physical question is whether the linear Aretakis effect survives, saturates, or resolves nonlinearly.
-completion_criteria: A complete answer must prove one of the possible nonlinear outcomes for a generic class of perturbations and quantify the transition mechanism.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Determine whether generic small perturbations of extremal Kerr settle to subextremal Kerr, remain
+  extremal with horizon hair, or develop a stronger nonlinear instability.
+math_required: >-
+  Nonlinear continuation near degenerate horizons; parameter drift; horizon-local blow-up criteria;
+  conserved-charge dynamics.
+why_it_matters: >-
+  The key physical question is whether the linear Aretakis effect survives, saturates, or resolves
+  nonlinearly.
+completion_criteria: >-
+  A complete answer must prove one of the possible nonlinear outcomes for a generic class of
+  perturbations and quantify the transition mechanism.
 implications: Would tell us whether extremality is dynamically fragile or structurally persistent.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

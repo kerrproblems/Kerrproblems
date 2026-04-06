@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import TaxonomyLegend from '../components/TaxonomyLegend.astro';
+import {
+  getAllProblems,
+  getFormalVerificationProblems,
+  CLUSTER_LABELS,
+} from '../lib/problems.js';
+import { FV_LABELS, RELEVANCE_LABELS } from '../lib/taxonomy.js';
+
+const all = getAllProblems();
+const high = getFormalVerificationProblems(all, 'high');
+const medium = getFormalVerificationProblems(all, 'medium');
+const trackIds = new Set(['K-501', 'K-502', 'K-503', 'K-504', 'K-505', 'K-506', 'K-507', 'K-508', 'K-509', 'K-510']);
+const trackProblems = [...trackIds].map(id => all.find(p => p.id === id)).filter(Boolean);
+const highNotTrack = high.filter(p => !trackIds.has(p.id)).slice(0, 12);
+const mediumOnly = medium.filter(p => p.fv_suitability === 'medium' && !trackIds.has(p.id)).slice(0, 8);
+const moonshots = all.filter(p => p.fv_suitability === 'low').slice(0, 8);
+---
+<Base title="Formal verification track">
+  <h1 style="margin-bottom: 1rem">Formal verification &amp; math-leaning problems</h1>
+
+  <div class="intro-prose" style="max-width: 68ch">
+    <p>
+      This site is primarily a <strong>mathematical relativity</strong> problem database. Formal proof assistants
+      (Lean, Coq, Isabelle, …) are most effective when statements have clear boundaries: finite-dimensional
+      data, commuting operators, algebraic tensor identities, or separated ODEs with explicit parameters.
+    </p>
+    <p>
+      Orthogonal tags mark <strong>fv_suitability</strong> (high / medium / low) with a short <strong>fv_reason</strong> on
+      every problem. These are <em>heuristics</em>, not judgments about intrinsic importance.
+    </p>
+  </div>
+
+  <TaxonomyLegend />
+
+  <h2 style="margin-top: 2rem">Why some Kerr problems formalize more easily</h2>
+  <ul style="max-width: 68ch; margin: 0.75rem 0 1.5rem 1.2rem; line-height: 1.55">
+    <li><strong>Exact / stationary / symmetry-rich</strong> backgrounds reduce the problem to algebra, ODEs, or elliptic PDE on lower-dimensional domains.</li>
+    <li><strong>Separable modes and spectral edges</strong> produce countable families of inequalities with checkable hypotheses.</li>
+    <li><strong>Finite-dimensional rigidity</strong> (tensors, horizon data, Carter-type operators) maps naturally to dependent-type formalization.</li>
+    <li><strong>Explicit tensor identities</strong> (Mars–Simon, Killing–Yano, Ernst reductions) are textbook material for proof libraries.</li>
+  </ul>
+
+  <div class="callout callout--caution" style="max-width: 68ch">
+    <strong>What to defer.</strong> Full <a href="/problems/K-001">K-001</a>-style nonlinear stability of subextremal Kerr is a global Einstein
+    PDE program. It remains scientifically central, but it is a poor <em>first</em> formalization target: too many
+    moving parts (gauge, modulation, trapping, radiation) for an initial library unless aggressively scoped to lemmas.
+  </div>
+
+  <h2 style="margin-top: 2rem">Best first targets</h2>
+  <p style="max-width: 65ch; font-size: 0.95rem; color: var(--text-muted)">
+    High FV suitability; emphasis on algebra, ODEs, and stationary reductions. Includes the curated track <strong>K-501–K-510</strong>.
+  </p>
+  <ul class="dep-list" style="margin: 0.75rem 0 1.5rem 0; max-width: 72ch">
+    {trackProblems.map(p => (
+      <li style="margin-bottom: 0.5rem">
+        <a href={`/problems/${p.id}`}><strong>{p.id}</strong></a> — {p.title}
+        <span style="color: var(--text-faint)"> · {RELEVANCE_LABELS[p.relevance]}</span>
+      </li>
+    ))}
+    {highNotTrack.map(p => (
+      <li style="margin-bottom: 0.35rem">
+        <a href={`/problems/${p.id}`}>{p.id}</a> — {p.title}
+        <span class="fv-badge fv-badge--high" style="margin-left: 0.35rem; font-size: 0.6rem">{FV_LABELS[p.fv_suitability]}</span>
+      </li>
+    ))}
+  </ul>
+
+  <h2>Intermediate targets</h2>
+  <p style="max-width: 65ch; font-size: 0.95rem; color: var(--text-muted)">
+    Medium suitability: still structured, but microlocal remainders, coupled fields, or parameter uniformity add cost.
+  </p>
+  <ul class="dep-list" style="margin: 0.75rem 0 1.5rem 0; max-width: 72ch">
+    {mediumOnly.map(p => (
+      <li style="margin-bottom: 0.35rem">
+        <a href={`/problems/${p.id}`}>{p.id}</a> — {p.title}
+      </li>
+    ))}
+  </ul>
+
+  <h2>Long-term moonshots (illustrative)</h2>
+  <p style="max-width: 65ch; font-size: 0.95rem; color: var(--text-muted)">
+    Low FV suitability on this rubric — global dynamics, rough data, or open-ended modeling. Not “unimportant”; just poor first formalization objects.
+  </p>
+  <ul class="dep-list" style="margin: 0.75rem 0 2rem 0; max-width: 72ch">
+    {moonshots.map(p => (
+      <li style="margin-bottom: 0.35rem">
+        <a href={`/problems/${p.id}`}>{p.id}</a> — {p.title}
+        <span style="color: var(--text-faint)"> ({CLUSTER_LABELS[p.cluster]})</span>
+      </li>
+    ))}
+  </ul>
+
+  <p class="page-meta">
+    <a href="/problems">Browse all problems with FV filters</a>
+    ·
+    <a href="/about">Metadata definitions</a>
+  </p>
+</Base>

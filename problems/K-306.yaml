@@ -2,16 +2,42 @@ id: K-306
 title: Hidden symmetries under perturbation
 cluster: rigidity-uniqueness
 status: open
-statement: Determine whether near-Kerr spacetimes admit robust approximate hidden symmetries strong enough to reproduce useful Carter-type commutators or conserved quantities.
-math_required: Killing tensors and Killing–Yano structures; perturbation theory of integrable systems; commutator algebra for PDE estimates.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Determine whether near-Kerr spacetimes admit robust approximate hidden symmetries strong enough to
+  reproduce useful Carter-type commutators or conserved quantities.
+math_required: >-
+  Killing tensors and Killing–Yano structures; perturbation theory of integrable systems; commutator
+  algebra for PDE estimates.
 why_it_matters: Kerr owes much of its analytic tractability to hidden symmetry and separability.
-completion_criteria: A complete answer must either construct approximate symmetry operators with usable error control or prove a no-go theorem.
-implications: Would reveal whether Kerr’s special integrable structure survives in a useful approximate sense under perturbation.
+completion_criteria: >-
+  A complete answer must either construct approximate symmetry operators with usable error control
+  or prove a no-go theorem.
+implications: >-
+  Would reveal whether Kerr’s special integrable structure survives in a useful approximate sense
+  under perturbation.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

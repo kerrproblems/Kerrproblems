@@ -1,0 +1,50 @@
+id: K-510
+title: Stationary-axisymmetric Ernst reduction uniqueness domain for Kerr
+cluster: rigidity-uniqueness
+status: open
+family: exact-kerr
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - stationary-reduction
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: high
+fv_reason: >-
+  Ernst potential formulations reduce Einstein equations to elliptic PDE in 2D; uniqueness in fixed
+  function classes is a natural formalization target.
+progress_summary: >-
+  Classical reductions and uniqueness under strong hypotheses exist in the literature; the maximal
+  sharp uniqueness domain for Kerr within the Ernst picture is not summarized as closed on this
+  site. See references/TODO.
+related_families_note: null
+caution_note: null
+statement: >-
+  Characterize the largest natural function class (on the orbit space / rod structure) in which the
+  Ernst reduction uniquely characterizes the Kerr solution among stationary axisymmetric vacuum
+  spacetimes with given boundary/infinity data.
+math_required: >-
+  Ernst equation; harmonic maps; boundary value problems for elliptic PDE; rod-structure formalism;
+  inverse scattering techniques in 2+1 reductions where applicable.
+why_it_matters: >-
+  The Ernst reduction is a workhorse for uniqueness; pinning down sharp domains feeds both rigidity
+  and numerical reconstruction algorithms.
+completion_criteria: >-
+  A theorem stating uniqueness (or non-uniqueness with explicit counterexamples) with hypotheses
+  checkable without gauge ambiguity.
+implications: >-
+  Strengthens stationary uniqueness cluster and informs inverse problems for multipole moments.
+difficulty: 4
+dependencies:
+  - K-301
+  - K-302
+related:
+  - K-303
+references:
+  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+posed_by: null
+posed_year: null
+prizes: null
+notes: Math-leaning formal verification track problem.
+last_updated: '2026-04-06'

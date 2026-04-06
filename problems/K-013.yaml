@@ -2,16 +2,41 @@ id: K-013
 title: Formation plus relaxation to Kerr
 cluster: exterior-stability
 status: open
-statement: Prove a global theorem in which generic asymptotically flat vacuum data form a black hole and the exterior subsequently relaxes to Kerr with quantitative radiation control.
-math_required: Trapped-surface formation; global causal geometry; continuation criteria; matching formation and relaxation regimes.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+  - nonlinear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove a global theorem in which generic asymptotically flat vacuum data form a black hole and the
+  exterior subsequently relaxes to Kerr with quantitative radiation control.
+math_required: >-
+  Trapped-surface formation; global causal geometry; continuation criteria; matching formation and
+  relaxation regimes.
 why_it_matters: This would turn the standard numerical-relativity narrative into a theorem.
-completion_criteria: A complete answer must specify an open class of initial data, prove black-hole formation, establish complete null infinity, and show quantitative Kerr asymptotics outside the hole.
+completion_criteria: >-
+  A complete answer must specify an open class of initial data, prove black-hole formation,
+  establish complete null infinity, and show quantitative Kerr asymptotics outside the hole.
 implications: Would unite collapse theory and Kerr stability into one coherent mathematical picture.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

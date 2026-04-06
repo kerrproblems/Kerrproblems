@@ -2,16 +2,44 @@ id: K-202
 title: Full linear theory for extremal Kerr (spin 2)
 cluster: extremal
 status: partial
-statement: Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein perturbations of extremal Kerr.
-math_required: Degenerate vector-field method; zero-energy analysis; extremal Teukolsky theory; gauge-invariant reconstruction.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein
+  perturbations of extremal Kerr.
+math_required: >-
+  Degenerate vector-field method; zero-energy analysis; extremal Teukolsky theory; gauge-invariant
+  reconstruction.
 why_it_matters: The linear theory is the mandatory first step before any nonlinear extremal theorem.
-completion_criteria: A complete answer must separate decay away from the horizon from conserved or growing horizon quantities and handle gauge issues explicitly.
+completion_criteria: >-
+  A complete answer must separate decay away from the horizon from conserved or growing horizon
+  quantities and handle gauge issues explicitly.
 implications: Would become the linear backbone of extremal Kerr dynamics.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

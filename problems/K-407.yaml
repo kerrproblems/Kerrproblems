@@ -2,16 +2,47 @@ id: K-407
 title: QNM excitation factors and universality theorems
 cluster: spectral-scattering
 status: open
-statement: Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are excited by broad classes of initial data.
-math_required: Green-function residues; asymptotics of radial and angular mode solutions; contour methods; genericity in data spaces.
-why_it_matters: Even if modes exist, one still needs to know which ones are actually visible for generic perturbations.
-completion_criteria: A complete answer must bound excitation coefficients in terms of initial-data norms and prove generic nonzero excitation for specified mode families.
-implications: Would make the interpretive link between mathematical modes and observed ringdown structure much sharper.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - spectral-operator
+regime:
+  - exterior
+  - linear
+relevance: mixed
+fv_suitability: high
+fv_reason: >-
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
+  formalization boundaries.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are
+  excited by broad classes of initial data.
+math_required: >-
+  Green-function residues; asymptotics of radial and angular mode solutions; contour methods;
+  genericity in data spaces.
+why_it_matters: >-
+  Even if modes exist, one still needs to know which ones are actually visible for generic
+  perturbations.
+completion_criteria: >-
+  A complete answer must bound excitation coefficients in terms of initial-data norms and prove
+  generic nonzero excitation for specified mode families.
+implications: >-
+  Would make the interpretive link between mathematical modes and observed ringdown structure much
+  sharper.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

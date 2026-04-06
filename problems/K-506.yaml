@@ -1,0 +1,50 @@
+id: K-506
+title: High-frequency Kerr quasinormal-mode quantization with explicit remainders
+cluster: spectral-scattering
+status: open
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - spectral-operator
+regime:
+  - exterior
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: >-
+  High-frequency regimes connect to geometric optics and quantizable phase integrals; remainders
+  involve microlocal error terms that are substantial but more structured than full nonlinear
+  Einstein evolution.
+progress_summary: >-
+  Physics and mathematics literature contains asymptotic QNM constructions; a single theorem
+  matching this site’s “explicit remainder” phrasing is not verified here. See references/TODO.
+related_families_note: >-
+  High-frequency QNM laws often treat Kerr or near-Kerr backgrounds interchangeably at leading
+  order; verify which hypotheses are used in any cited source.
+caution_note: null
+statement: >-
+  Prove an asymptotic quantization law for high-frequency quasinormal frequencies on Kerr (or an
+  agreed near-Kerr class) with explicit remainder estimates in frequency and in black-hole
+  parameters.
+math_required: >-
+  Semiclassical analysis; phase-integral methods; microlocal analysis near trapped sets; spectral
+  theory of non-selfadjoint operators.
+why_it_matters: >-
+  Bridges rigorous spectral theory with asymptotic formulas used in ringdown interpretation.
+completion_criteria: >-
+  Theorem-level bounds on $| \omega_n - f(n;M,a) |$ with explicit rates and domains of validity.
+implications: >-
+  Sharpens inverse-spectral programs (cf. K-507) and scattering-phase intuition.
+difficulty: 5
+dependencies:
+  - K-401
+related:
+  - K-407
+references:
+  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+posed_by: null
+posed_year: null
+prizes: null
+notes: Formal verification track; medium suitability due to microlocal remainder complexity.
+last_updated: '2026-04-06'

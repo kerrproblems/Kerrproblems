@@ -1,6 +1,16 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllProblems, getStats, CLUSTER_LABELS } from '../../lib/problems.js';
+import {
+  getAllProblems,
+  getStats,
+  CLUSTER_LABELS,
+  loadClustersYaml,
+  getTagCounts,
+} from '../../lib/problems.js';
+import {
+  FAMILY_LABELS,
+  RELEVANCE_LABELS,
+} from '../../lib/taxonomy.js';
 
 export async function getStaticPaths() {
   return Object.keys(CLUSTER_LABELS).map(slug => ({
@@ -13,22 +23,69 @@ const allProblems = getAllProblems();
 const problems = allProblems.filter(p => p.cluster === slug);
 const stats = getStats(problems);
 const label = CLUSTER_LABELS[slug];
+const meta = loadClustersYaml()[slug] || {};
+const tagCounts = getTagCounts(problems);
+
+const familyEntries = Object.entries(tagCounts.family).filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1]);
+const relevanceEntries = Object.entries(tagCounts.relevance).filter(([, n]) => n > 0);
 ---
 <Base title={label}>
-  <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-faint); margin-bottom: 1.5rem">
-    <a href="/problems" style="color: var(--text-faint); border-bottom: none">Problems</a>
+  <div class="crumbs">
+    <a href="/clusters">Clusters</a>
     <span style="margin: 0 0.5rem">→</span>
     {label}
   </div>
 
-  <h1 style="margin-bottom: 1rem">{label}</h1>
+  <h1 style="margin-bottom: 0.75rem" class={`cluster-tag cluster-${slug}`}>{label}</h1>
 
-  <div style="display: flex; gap: 1.5rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 2.5rem">
+  <p class="cluster-tagline">{meta.description}</p>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 1rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.25rem">
     <span>{stats.total} problems</span>
     <span style="color: var(--open)">{stats.open} open</span>
     <span style="color: var(--partial)">{stats.partial} partial</span>
   </div>
 
+  <div class="cluster-summary-panels">
+    {familyEntries.length > 0 && (
+      <div style="border: 1px solid var(--border); padding: 0.85rem; background: #fafafa">
+        <div class="filter-group-title" style="margin-bottom: 0.5rem">By family (this cluster)</div>
+        <ul style="list-style: none; margin: 0; padding: 0">
+          {familyEntries.map(([f, n]) => (
+            <li style="margin-bottom: 0.25rem">
+              {FAMILY_LABELS[f] || f}
+              <span style="color: var(--text-faint)"> ({n})</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+    {relevanceEntries.length > 0 && (
+      <div style="border: 1px solid var(--border); padding: 0.85rem; background: #fafafa">
+        <div class="filter-group-title" style="margin-bottom: 0.5rem">By relevance</div>
+        <ul style="list-style: none; margin: 0; padding: 0">
+          {relevanceEntries.map(([r, n]) => (
+            <li style="margin-bottom: 0.25rem">
+              {RELEVANCE_LABELS[r] || r}
+              <span style="color: var(--text-faint)"> ({n})</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+  </div>
+
+  <div class="callout callout--caution" style="margin-bottom: 1.5rem; max-width: 65ch">
+    <strong>Taxonomy caveat.</strong> Cluster placement is a coarse editorial choice. Check each problem’s
+    family and asymptotics tags — e.g. Kerr–AdS and Kerr–de Sitter entries differ sharply from asymptotically
+    flat Kerr, even when they sit in “Exterior Stability” or “Interior / SCC”.
+  </div>
+
+  <p style="margin-bottom: 1rem; font-size: 0.9rem">
+    Filter the full database on the <a href="/problems">Problems</a> page (family, asymptotics, FV suitability, …).
+  </p>
+
+  <h2 style="font-size: 1.05rem; margin-bottom: 0.75rem">Problems in this cluster</h2>
   <div class="problem-grid">
     {problems.map(p => (
       <a href={`/problems/${p.id}`} class="problem-card">
@@ -36,8 +93,25 @@ const label = CLUSTER_LABELS[slug];
         <div class="card-title">{p.title}</div>
         <div class="card-meta">
           <span class={`badge badge-${p.status}`}>{p.status}</span>
+          <span class="tag-chip tag-chip--family">{FAMILY_LABELS[p.family] || p.family}</span>
+          <span class={`rel-badge rel-${p.relevance === 'pure-math' ? 'pure-math' : p.relevance === 'mixed' ? 'mixed' : 'physics-facing'}`}>{RELEVANCE_LABELS[p.relevance]}</span>
         </div>
       </a>
     ))}
   </div>
 </Base>
+
+<style>
+  .cluster-summary-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    font-size: 0.88rem;
+  }
+  @media (max-width: 640px) {
+    .cluster-summary-panels {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

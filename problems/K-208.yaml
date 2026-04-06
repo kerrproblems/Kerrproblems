@@ -2,16 +2,46 @@ id: K-208
 title: Near-extremal QNM accumulation and branch-cut structure
 cluster: extremal
 status: open
-statement: Classify what happens to Kerr quasinormal modes and low-frequency singular structure as the black hole approaches extremality.
-math_required: Semiclassical resonance theory; branch-cut analysis; near-throat scaling; non-selfadjoint perturbation theory.
-why_it_matters: Ringdown behavior near extremality depends sensitively on spectral accumulation and low-energy structure.
-completion_criteria: A complete answer must identify resonance trajectories, any limiting continuum or branch phenomena, and the corresponding time-domain consequences.
+family: related-rotating-black-hole
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - spectral-operator
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+relevance: physics-facing
+fv_suitability: high
+fv_reason: >-
+  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
+  formalization boundaries.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Classify what happens to Kerr quasinormal modes and low-frequency singular structure as the black
+  hole approaches extremality.
+math_required: >-
+  Semiclassical resonance theory; branch-cut analysis; near-throat scaling; non-selfadjoint
+  perturbation theory.
+why_it_matters: >-
+  Ringdown behavior near extremality depends sensitively on spectral accumulation and low-energy
+  structure.
+completion_criteria: >-
+  A complete answer must identify resonance trajectories, any limiting continuum or branch
+  phenomena, and the corresponding time-domain consequences.
 implications: Would resolve a major uncertainty in near-extremal black-hole spectroscopy.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

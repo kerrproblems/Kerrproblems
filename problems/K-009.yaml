@@ -2,16 +2,42 @@ id: K-009
 title: Einstein–massive Klein–Gordon near Kerr endstates
 cluster: exterior-stability
 status: open
-statement: Classify whether small Einstein–massive KG perturbations near Kerr disperse to Kerr, form long-lived clouds, or trigger nonlinear superradiant phenomena.
-math_required: Massive wave spectral theory; quasi-bound states; nonlinear bifurcation; dispersive estimates with trapping and superradiance.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - scalar-wave
+regime:
+  - exterior
+  - nonlinear
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Classify whether small Einstein–massive KG perturbations near Kerr disperse to Kerr, form
+  long-lived clouds, or trigger nonlinear superradiant phenomena.
+math_required: >-
+  Massive wave spectral theory; quasi-bound states; nonlinear bifurcation; dispersive estimates with
+  trapping and superradiance.
 why_it_matters: Massive fields are the canonical place where the clean vacuum dispersive picture may fail.
-completion_criteria: A complete answer must give a theorem-level dynamical classification with explicit parameter regimes and asymptotic alternatives.
+completion_criteria: >-
+  A complete answer must give a theorem-level dynamical classification with explicit parameter
+  regimes and asymptotic alternatives.
 implications: Would clarify the long-time dynamics of rotating black holes coupled to realistic matter models.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

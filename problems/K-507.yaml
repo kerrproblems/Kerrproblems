@@ -1,0 +1,52 @@
+id: K-507
+title: Finite-data inverse resonance recovery of Kerr parameters
+cluster: spectral-scattering
+status: open
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - inverse-problem
+  - spectral-operator
+regime:
+  - exterior
+  - linear
+relevance: mixed
+fv_suitability: medium
+fv_reason: >-
+  Finite-dimensional parameter recovery from finitely many spectral data points is closer to
+  classical analysis than full nonlinear stability, though uniqueness proofs may still be analytic.
+progress_summary: >-
+  Linearized spectral uniqueness programs exist in fragments; a definitive finite-data theorem with
+  realistic noise model is not asserted on this site. See references/TODO.
+related_families_note: null
+caution_note: >-
+  Inverse results are sensitive to asymptotics, mode counting, and whether data come from linearized
+  theory vs. physical waveforms; hypotheses must be stated precisely.
+statement: >-
+  From a finite set of observed quasinormal frequencies (with stated error bars) associated to a
+  subextremal Kerr background, derive stability estimates for $(M,a)$ and quantify when uniqueness
+  fails (e.g. isospectral ambiguities).
+math_required: >-
+  Complex analysis of resonance poles; inverse spectral theory; stability of nonlinear least-
+  squares maps; possible connections to scattering phase.
+why_it_matters: >-
+  Clarifies what mathematical inverse problems can and cannot justify for “spectroscopy” claims.
+completion_criteria: >-
+  Explicit theorems with hypotheses on mode set, error, and parameter range, plus counterexamples or
+  non-uniqueness mechanisms where they occur.
+implications: >-
+  Grounds physics-facing inference in rigorous spectral inverse theory.
+difficulty: 5
+dependencies:
+  - K-401
+  - K-405
+related:
+  - K-402
+references:
+  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+posed_by: null
+posed_year: null
+prizes: null
+notes: Mixed relevance; connects to observationally adjacent topics only through stated hypotheses.
+last_updated: '2026-04-06'

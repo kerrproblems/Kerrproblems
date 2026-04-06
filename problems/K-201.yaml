@@ -2,16 +2,45 @@ id: K-201
 title: Nonlinear codimension-1 stability of extremal Kerr with horizon hair
 cluster: extremal
 status: open
-statement: Prove that a codimension-1 family of perturbations of extremal Kerr stays globally close to an extremal endstate while exhibiting Aretakis-type horizon growth in transversal derivatives.
-math_required: Degenerate horizon geometry; conserved charges; nonlinear modulation with reduced parameter freedom; null structure at $\kappa = 0$.
-why_it_matters: Extremal Kerr is expected to be stable only in a codimension-1 sense, not in the same way as subextremal Kerr.
-completion_criteria: A complete answer must identify the stable manifold, prove global exterior control, describe the final extremal parameters, and quantify the horizon growth.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - extremal
+  - near-extremal
+  - exterior
+  - linear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Prove that a codimension-1 family of perturbations of extremal Kerr stays globally close to an
+  extremal endstate while exhibiting Aretakis-type horizon growth in transversal derivatives.
+math_required: >-
+  Degenerate horizon geometry; conserved charges; nonlinear modulation with reduced parameter
+  freedom; null structure at $\kappa = 0$.
+why_it_matters: >-
+  Extremal Kerr is expected to be stable only in a codimension-1 sense, not in the same way as
+  subextremal Kerr.
+completion_criteria: >-
+  A complete answer must identify the stable manifold, prove global exterior control, describe the
+  final extremal parameters, and quantify the horizon growth.
 implications: Would define the correct nonlinear stability statement for extremal rotating black holes.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

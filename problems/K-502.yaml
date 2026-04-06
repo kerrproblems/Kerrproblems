@@ -1,0 +1,52 @@
+id: K-502
+title: Horizon-data rigidity and effective reconstruction of Kerr parameters
+cluster: rigidity-uniqueness
+status: open
+family: exact-kerr
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - stationary-reduction
+  - inverse-problem
+regime:
+  - stationary
+  - linear
+relevance: pure-math
+fv_suitability: high
+fv_reason: >-
+  Isolated-horizon data are finite-dimensional at leading order; reconstruction inequalities can be
+  stated as algebraic and ODE constraints.
+progress_summary: >-
+  Partial progress exists in isolated-horizon and geometric characterization literature; a single
+  quantitative “effective reconstruction” theorem with explicit stability is not catalogued here.
+  See references/TODO.
+related_families_note: null
+caution_note: null
+statement: >-
+  From a minimal package of intrinsic data on a cross-section of a stationary event horizon (e.g.
+  induced metric, expansion/shear class, or spin coefficients restricted to the horizon), derive
+  stability estimates that determine mass and angular momentum parameters of the ambient Kerr
+  solution within explicit error bounds.
+math_required: >-
+  Isolated horizons; Newman–Penrose spin coefficients; geometric analysis on 2-spheres; inverse
+  problems for spectral or curvature invariants on compact surfaces.
+why_it_matters: >-
+  Connects horizon observables (as idealized in mathematical relativity) to uniqueness parameters
+  without requiring full spacetime knowledge.
+completion_criteria: >-
+  A precise theorem: horizon data in stated function classes implies closeness to Kerr horizon data
+  and recovers $(M,a)$ modulo gauge with quantitative bounds.
+implications: >-
+  Feeds both uniqueness theory and idealized “black hole spectroscopy from horizons” mathematics.
+difficulty: 4
+dependencies:
+  - K-305
+related:
+  - K-305
+references:
+  - note: 'TODO: add verified primary sources; no in-repo bibliographic verification performed.'
+posed_by: null
+posed_year: null
+prizes: null
+notes: Math-leaning formal verification track problem.
+last_updated: '2026-04-06'

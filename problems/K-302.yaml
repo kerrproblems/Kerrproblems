@@ -2,16 +2,42 @@ id: K-302
 title: Rigidity for extremal horizons
 cluster: rigidity-uniqueness
 status: open
-statement: Extend black-hole rigidity and axisymmetry results to extremal stationary horizons where nondegeneracy assumptions fail.
-math_required: Degenerate horizon geometry; near-horizon expansion; unique continuation in degenerate settings; Killing field extension.
+family: exact-kerr
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - stationary-reduction
+regime:
+  - stationary
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Extend black-hole rigidity and axisymmetry results to extremal stationary horizons where
+  nondegeneracy assumptions fail.
+math_required: >-
+  Degenerate horizon geometry; near-horizon expansion; unique continuation in degenerate settings;
+  Killing field extension.
 why_it_matters: Extremal horizons fall outside some of the standard rigidity machinery.
-completion_criteria: A complete answer must prove the existence of the needed symmetry or identify a counterexample under natural hypotheses.
-implications: Would clarify whether extremal stationary black holes are as rigid as their nonextremal counterparts.
+completion_criteria: >-
+  A complete answer must prove the existence of the needed symmetry or identify a counterexample
+  under natural hypotheses.
+implications: >-
+  Would clarify whether extremal stationary black holes are as rigid as their nonextremal
+  counterparts.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'

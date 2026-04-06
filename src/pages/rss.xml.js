@@ -32,7 +32,7 @@ export async function GET() {
   <channel>
     <title>Kerr Problems — Recent Updates</title>
     <link>https://kerrproblems.com</link>
-    <description>Open problems in Kerr black hole physics</description>
+    <description>Mathematical relativity open problems — Kerr and Kerr-related families</description>
     ${items}
   </channel>
 </rss>`, {

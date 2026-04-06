@@ -2,16 +2,44 @@ id: K-101
 title: Strong Cosmic Censorship threshold for Kerr interiors
 cluster: interior-scc
 status: partial
-statement: Determine the strongest regularity class in which the maximal globally hyperbolic development of generic near-Kerr vacuum data is inextendible across the Cauchy horizon.
-math_required: Interior Einstein dynamics; blue-shift amplification; weak null singularities; regularity-sensitive extension theory.
-why_it_matters: For Kerr, $C^0$-extendibility and stronger inextendibility can coexist, so the regularity threshold matters.
-completion_criteria: A complete answer must state genericity precisely, identify both any weak extendibility and any stronger inextendibility, and prove the relevant blow-up or continuity mechanisms.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: matter-coupled
+equation_level:
+  - full-einstein
+regime:
+  - interior
+  - nonlinear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Determine the strongest regularity class in which the maximal globally hyperbolic development of
+  generic near-Kerr vacuum data is inextendible across the Cauchy horizon.
+math_required: >-
+  Interior Einstein dynamics; blue-shift amplification; weak null singularities;
+  regularity-sensitive extension theory.
+why_it_matters: >-
+  For Kerr, $C^0$-extendibility and stronger inextendibility can coexist, so the regularity
+  threshold matters.
+completion_criteria: >-
+  A complete answer must state genericity precisely, identify both any weak extendibility and any
+  stronger inextendibility, and prove the relevant blow-up or continuity mechanisms.
 implications: Would sharpen Strong Cosmic Censorship specifically for rotating vacuum black holes.
 difficulty: 3
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not
+  fully settled. TODO(editorial): replace with a precise description of what is proved vs.
+  conjectured.
 last_updated: '2026-04-05'

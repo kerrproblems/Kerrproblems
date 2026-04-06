@@ -2,16 +2,42 @@ id: K-104
 title: Generic $C^2$- or Lipschitz-inextendibility of near-Kerr MGHDs
 cluster: interior-scc
 status: open
-statement: Show that although $C^0$ extensions can exist, generic near-Kerr vacuum developments admit no extension with enough regularity to preserve a meaningful Einstein evolution across the Cauchy horizon.
-math_required: Curvature lower bounds; regularity comparison; extension theory; blow-up of connection or curvature invariants.
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - interior
+  - nonlinear
+relevance: pure-math
+fv_suitability: medium
+fv_reason: Some subquestions may formalize before the full statement.
+progress_summary: >-
+  Partial progress exists in adjacent regimes; see references/TODO for precise theorem-level
+  milestones.
+related_families_note: null
+caution_note: null
+statement: >-
+  Show that although $C^0$ extensions can exist, generic near-Kerr vacuum developments admit no
+  extension with enough regularity to preserve a meaningful Einstein evolution across the Cauchy
+  horizon.
+math_required: >-
+  Curvature lower bounds; regularity comparison; extension theory; blow-up of connection or
+  curvature invariants.
 why_it_matters: This is the strongest currently plausible version of SCC for Kerr-type interiors.
-completion_criteria: A complete answer must specify the regularity class, prove generic blow-up of the corresponding geometric quantity, and rule out every extension in that class.
+completion_criteria: >-
+  A complete answer must specify the regularity class, prove generic blow-up of the corresponding
+  geometric quantity, and rule out every extension in that class.
 implications: Would restore deterministic predictability at the correct mathematical regularity level.
 difficulty: 4
+dependencies: []
+related: []
+references: []
 posed_by: null
 posed_year: null
-references: []
-related: []
 prizes: null
-notes: null
+notes: >-
+  Open: no complete theorem matching the statement is currently recorded on this site.
+  TODO(editorial): tighten if community consensus differs.
 last_updated: '2026-04-05'
