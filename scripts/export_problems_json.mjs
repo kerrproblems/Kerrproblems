@@ -20,6 +20,7 @@ function main() {
       const clean = { ...rest };
       delete clean.families;
       delete clean.asymptotics_list;
+      delete clean.yamlRelativePath;
       return clean;
     }),
   };

@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import {
-  getAllProblems,
+  getPublishedProblems,
   getStats,
   CLUSTER_LABELS,
   getTagCounts,
@@ -27,9 +27,13 @@ import {
   PROBLEM_TYPE_LABELS,
   MATURITY_LEVELS,
   MATURITY_LABELS,
+  RESEARCH_STATES,
+  RESEARCH_STATE_LABELS,
+  EVIDENCE_LEVELS,
+  EVIDENCE_LEVEL_LABELS,
 } from '../../lib/taxonomy.js';
 
-const problems = getAllProblems();
+const problems = getPublishedProblems();
 const stats = getStats(problems);
 const counts = getTagCounts(problems);
 
@@ -55,7 +59,9 @@ function recentlyVerified(p) {
     {stats.solved} solved · {stats.needs_review} needs review
   </p>
   <p style="font-size: 0.88rem; color: var(--text-muted); max-width: 62ch; margin-bottom: 1.5rem">
-    Without JavaScript, all entries remain listed below. Use the chips to filter when scripting is enabled.
+    This index lists <strong>published</strong> entries only. Without JavaScript, all published entries remain
+    listed below. Use the chips to filter when scripting is enabled. Unpublished drafts:{' '}
+    <a href="/audit/provisional-problems">provisional pipeline</a>.
   </p>
 
   <div class="problems-toolbar">
@@ -78,6 +84,26 @@ function recentlyVerified(p) {
           {PROBLEM_TYPES.map(s => (
             <button type="button" class="filter-chip" data-filter-group="problem_type" data-value={s} aria-pressed="false">
               {PROBLEM_TYPE_LABELS[s] || s}<span class="count">({counts.problem_type[s] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Research state</div>
+        <div class="filter-chips" role="group" aria-label="Filter by research state">
+          {RESEARCH_STATES.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="research_state" data-value={s} aria-pressed="false">
+              {RESEARCH_STATE_LABELS[s] || s}<span class="count">({counts.research_state[s] || 0})</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div>
+        <div class="filter-group-title">Evidence level</div>
+        <div class="filter-chips" role="group" aria-label="Filter by evidence level">
+          {EVIDENCE_LEVELS.map(s => (
+            <button type="button" class="filter-chip" data-filter-group="evidence_level" data-value={s} aria-pressed="false">
+              {EVIDENCE_LEVEL_LABELS[s] || s}<span class="count">({counts.evidence_level[s] || 0})</span>
             </button>
           ))}
         </div>
@@ -220,6 +246,8 @@ function recentlyVerified(p) {
         data-id={p.id}
         data-theorem_status={p.theorem_status}
         data-problem_type={p.problem_type}
+        data-research_state={p.research_state}
+        data-evidence_level={p.evidence_level}
         data-maturity={p.maturity}
         data-has_primary={hasPrimaryRef(p) ? 'yes' : 'no'}
         data-recent_verified={recentlyVerified(p) ? 'yes' : 'no'}
@@ -269,13 +297,15 @@ function recentlyVerified(p) {
 
   function applyFilters() {
     const q = (search?.value || '').trim().toLowerCase();
-    const groups = ['theorem_status', 'problem_type', 'maturity', 'has_primary', 'recent_verified', 'cluster', 'family', 'asymptotics', 'coupling', 'equation_level', 'regime', 'relevance', 'fv_suitability'];
+    const groups = ['theorem_status', 'problem_type', 'research_state', 'evidence_level', 'maturity', 'has_primary', 'recent_verified', 'cluster', 'family', 'asymptotics', 'coupling', 'equation_level', 'regime', 'relevance', 'fv_suitability'];
     let visible = 0;
     for (const card of cards()) {
       let ok = true;
       if (q && !(card.dataset.search || '').includes(q)) ok = false;
       if (ok && selectedValues('theorem_status').length && !selectedValues('theorem_status').includes(card.dataset.theorem_status)) ok = false;
       if (ok && selectedValues('problem_type').length && !selectedValues('problem_type').includes(card.dataset.problem_type)) ok = false;
+      if (ok && selectedValues('research_state').length && !selectedValues('research_state').includes(card.dataset.research_state)) ok = false;
+      if (ok && selectedValues('evidence_level').length && !selectedValues('evidence_level').includes(card.dataset.evidence_level)) ok = false;
       if (ok && selectedValues('maturity').length && !selectedValues('maturity').includes(card.dataset.maturity)) ok = false;
       if (ok && selectedValues('has_primary').length && !selectedValues('has_primary').includes(card.dataset.has_primary)) ok = false;
       if (ok && selectedValues('recent_verified').length && !selectedValues('recent_verified').includes(card.dataset.recent_verified)) ok = false;

@@ -1,0 +1,99 @@
+id: K-648
+title: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+short_title: Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (compu…
+cluster: rigidity-uniqueness
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+problem_statement: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+statement: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+why_it_matters: Bridges invariants and reconstruction.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-048. Manifest “Solved in literature?” note: Open 30. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Bridges invariants and reconstruction.
+why_this_should_be_a_problem: Bridges invariants and reconstruction.
+minimal_formal_statement: >-
+  Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable
+  error-to-parameter map).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-048 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+dependencies: []
+aliases:
+  - N-048
+tags:
+  - expansion-2026
+  - manifest-N-048
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Bridges invariants and reconstruction."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

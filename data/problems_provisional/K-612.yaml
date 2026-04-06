@@ -1,0 +1,92 @@
+id: K-612
+title: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+short_title: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+cluster: exterior-stability
+theorem_status: partial
+problem_type: quantitative_sharpening
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+problem_statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+why_it_matters: Needed to turn conditional interior blow-up into generic blow-up.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results:
+  - statement: >-
+      The expansion manifest flags partial literature progress for this target; this repository has not attached
+      verified theorem statements or citations to that progress.
+    regime: To be replaced with literature-aligned regimes when curated.
+    significance: Editorial placeholder only—not an assertion about what is proved in any named paper.
+remaining_gap: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-012. Manifest “Solved in literature?” note: Open (criteria known) 17.
+  No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary until
+  references are curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Needed to turn conditional interior blow-up into generic blow-up.
+why_this_should_be_a_problem: Needed to turn conditional interior blow-up into generic blow-up.
+minimal_formal_statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-012 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-012
+tags:
+  - expansion-2026
+  - manifest-N-012
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Needed to turn conditional interior blow-up into generic blow-up."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

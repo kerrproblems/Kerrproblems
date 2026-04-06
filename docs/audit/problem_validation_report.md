@@ -1,6 +1,9 @@
 # Problem validation report
 
-Generated: 2026-04-06T18:47:15.500Z
+Generated: 2026-04-06T19:19:18.236Z
+
+- Scanned **published** dir: `problems/` and **provisional** dir: `data/problems_provisional/`.
+- Relaxed reference / partial rules apply to provisional entries (`publish: false` or provisional path).
 
 **Errors:** 0 · **Warnings:** 0
 

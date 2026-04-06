@@ -1,6 +1,6 @@
 # Problem YAML schema (authoritative field list)
 
-Each file is `problems/K-XXX.yaml`. The loader in `src/lib/problems.js` normalizes legacy keys (`status` → `theorem_status`, etc.).
+Published files live in `problems/K-XXX.yaml`. **Provisional** batches may live in `data/problems_provisional/K-XXX.yaml` with `publish: false`. The loader in `src/lib/problems.js` normalizes legacy keys (`status` → `theorem_status`, etc.) and merges both directories.
 
 ## Required for build + taxonomy validator
 
@@ -14,7 +14,11 @@ Each file is `problems/K-XXX.yaml`. The loader in `src/lib/problems.js` normaliz
 
 ## Editorial metadata (required for editorial validator on non–needs_review rows)
 
+- `research_state` (`solved_in_literature` \| `open_in_literature` \| `high_value_unformalized_direction`; defaulted in the loader when omitted)
+- `publish` (`boolean`; default `true` under `problems/`, default `false` when loading `data/problems_provisional/`)
 - `problem_type`, `maturity`, `evidence_level`, `verification_state`
+- `origin_type` (optional; e.g. `synthesized_from_field-needs` for manifest imports)
+- `solution_pointer` (required when `theorem_status: solved`): `{ theorem_statement, solved_by?, year?, citation_key? }`
 - `short_title`, `summary`
 - `scope` object with at least: `background`, `equation_type`, `linearity`, `regularity`, `parameter_regime`, `asymptotics`
 - `known_results[]` (may be empty; encouraged for `partial`)

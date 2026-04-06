@@ -32,6 +32,19 @@ export const VERIFICATION_STATES = [
   'editorial_revision_needed',
 ];
 
+/** How the target sits relative to published mathematics (orthogonal to theorem_status on this site). */
+export const RESEARCH_STATES = [
+  'solved_in_literature',
+  'open_in_literature',
+  'high_value_unformalized_direction',
+];
+
+export const RESEARCH_STATE_LABELS = {
+  solved_in_literature: 'Solved in literature (classical)',
+  open_in_literature: 'Open in literature',
+  high_value_unformalized_direction: 'High-value / unformalized direction',
+};
+
 export const FAMILIES = [
   'exact-kerr',
   'near-kerr-vacuum',

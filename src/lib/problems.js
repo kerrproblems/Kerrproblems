@@ -15,10 +15,12 @@ import {
   MATURITY_LEVELS,
   EVIDENCE_LEVELS,
   VERIFICATION_STATES,
+  RESEARCH_STATES,
   ASYMPTOTICS_LABELS,
 } from './taxonomy.js';
 
 const PROBLEMS_DIR = path.join(process.cwd(), 'problems');
+const PROVISIONAL_DIR = path.join(process.cwd(), 'data', 'problems_provisional');
 const CLUSTERS_PATH = path.join(process.cwd(), 'data', 'clusters.yaml');
 
 const LEGACY_FAMILY = {
@@ -207,8 +209,11 @@ function buildScope(raw, regime, equation_level, asymptoticsPrimary) {
  * Normalize raw YAML into the canonical shape used by the site.
  * Accepts legacy keys: equationType, matterModel, relevanceProfile, formalizationReadiness,
  * dependsOn, relatedProblems, knownProgress, family spelling related-rotating, status -> theorem_status.
+ * @param {object} [opts]
+ * @param {string} [opts.yamlRelativePath] — repo path to YAML (for “Edit on GitHub”).
+ * @param {boolean} [opts.defaultPublish=true] — when `publish` omitted, use this default.
  */
-export function normalizeProblem(raw) {
+export function normalizeProblem(raw, opts = {}) {
   if (!raw || typeof raw !== 'object') return raw;
 
   const familySet = new Set(FAMILIES);
@@ -266,12 +271,23 @@ export function normalizeProblem(raw) {
   );
 
   const problem_type = pickEnum(raw.problem_type, PROBLEM_TYPES, 'classical_frontier');
+  const rsIn = raw.research_state == null ? '' : String(raw.research_state).trim();
+  let research_state = RESEARCH_STATES.includes(rsIn) ? rsIn : '';
+  if (!research_state) {
+    if (theorem_status === 'solved') research_state = 'solved_in_literature';
+    else research_state = 'open_in_literature';
+  }
   const maturity = pickEnum(raw.maturity, MATURITY_LEVELS, 'mostly_scoped');
   let verification_state = pickEnum(
     raw.verification_state,
     VERIFICATION_STATES,
     'imported_unverified',
   );
+
+  let publish = raw.publish;
+  if (publish === undefined || publish === null) {
+    publish = opts.defaultPublish !== false;
+  }
 
   const references = normalizeReferencesList(raw.references);
   let evidence_level = EVIDENCE_LEVELS.includes(raw.evidence_level)
@@ -325,6 +341,17 @@ export function normalizeProblem(raw) {
   const editorial_notes = raw.editorial_notes != null ? String(raw.editorial_notes).trim() : null;
   const public_notes = raw.public_notes != null ? String(raw.public_notes).trim() : null;
 
+  const yamlRelativePath =
+    opts.yamlRelativePath ||
+    (raw.id ? `problems/${raw.id}.yaml` : 'problems/unknown.yaml');
+
+  const solution_pointer =
+    raw.solution_pointer && typeof raw.solution_pointer === 'object' ? raw.solution_pointer : null;
+  const origin_type =
+    raw.origin_type != null && String(raw.origin_type).trim()
+      ? String(raw.origin_type).trim()
+      : 'standard_problem';
+
   return {
     ...raw,
     family: familyPrimary,
@@ -348,9 +375,14 @@ export function normalizeProblem(raw) {
     theorem_status,
     status: theorem_status,
     problem_type,
+    research_state,
     maturity,
     evidence_level,
     verification_state,
+    publish,
+    yamlRelativePath,
+    solution_pointer,
+    origin_type,
     problem_statement,
     statement: problem_statement,
     summary,
@@ -392,15 +424,37 @@ export const CLUSTER_LABELS = Object.fromEntries(
   }),
 );
 
-export function getAllProblems() {
+function loadProblemsFromDir(dir, { provisional = false } = {}) {
+  if (!fs.existsSync(dir)) return [];
+  const defaultPublish = !provisional;
+  const yamlRel = provisional ? 'data/problems_provisional' : 'problems';
   return fs
-    .readdirSync(PROBLEMS_DIR)
+    .readdirSync(dir)
     .filter(f => f.endsWith('.yaml'))
     .map(f => {
-      const raw = yaml.load(fs.readFileSync(path.join(PROBLEMS_DIR, f), 'utf8'));
-      return normalizeProblem(raw);
-    })
-    .sort((a, b) => a.id.localeCompare(b.id));
+      const raw = yaml.load(fs.readFileSync(path.join(dir, f), 'utf8'));
+      const id = raw && raw.id;
+      return normalizeProblem(raw, {
+        yamlRelativePath: id ? `${yamlRel}/${id}.yaml` : `${yamlRel}/${f}`,
+        defaultPublish,
+      });
+    });
+}
+
+/** Published + provisional entries (static routes for both). */
+export function getAllProblems() {
+  const main = loadProblemsFromDir(PROBLEMS_DIR, { provisional: false });
+  const prov = loadProblemsFromDir(PROVISIONAL_DIR, { provisional: true });
+  return [...main, ...prov].sort((a, b) => a.id.localeCompare(b.id));
+}
+
+/** Main index, clusters, RSS: only entries intended for public listing. */
+export function getPublishedProblems() {
+  return getAllProblems().filter(p => p.publish !== false);
+}
+
+export function getProvisionalProblems() {
+  return getAllProblems().filter(p => p.publish === false);
 }
 
 export function getProblemById(id) {
@@ -451,6 +505,10 @@ export function filterProblems(problems, filters = {}) {
     const tStatus = filters.theorem_status || filters.status;
     if (!matchesFilterValue(p.theorem_status, tStatus)) return false;
     if (!matchesFilterValue(p.problem_type, filters.problem_type)) return false;
+    if (!matchesFilterValue(p.research_state, filters.research_state)) return false;
+    if (!matchesFilterValue(p.evidence_level, filters.evidence_level)) return false;
+    if (filters.publish === 'published' && p.publish === false) return false;
+    if (filters.publish === 'provisional' && p.publish !== false) return false;
     if (!matchesFilterValue(p.maturity, filters.maturity)) return false;
     if (filters.has_primary === true && !p.references?.some(r => r.kind === 'primary')) return false;
     if (filters.has_primary === false && p.references?.some(r => r.kind === 'primary')) return false;
@@ -490,6 +548,8 @@ export function getTagCounts(problems) {
     status: {},
     theorem_status: {},
     problem_type: {},
+    research_state: {},
+    evidence_level: {},
     maturity: {},
     cluster: {},
     family: {},
@@ -504,6 +564,8 @@ export function getTagCounts(problems) {
     incrementCount(counts.status, p.theorem_status);
     incrementCount(counts.theorem_status, p.theorem_status);
     incrementCount(counts.problem_type, p.problem_type);
+    incrementCount(counts.research_state, p.research_state);
+    incrementCount(counts.evidence_level, p.evidence_level);
     incrementCount(counts.maturity, p.maturity);
     incrementCount(counts.cluster, p.cluster);
     incrementCount(counts.family, p.family);
@@ -574,7 +636,11 @@ export function getRelatedByTags(problem, all, limit = 6) {
 
 /** Visible when entry should not be cited as literature-grounded yet. */
 export function needsEditorialBanner(p) {
-  return p.theorem_status === 'needs_review' || p.evidence_level === 'refs_missing';
+  return (
+    p.theorem_status === 'needs_review' ||
+    p.evidence_level === 'refs_missing' ||
+    p.verification_state === 'editorial_revision_needed'
+  );
 }
 
 export function hasPrimaryReference(p) {

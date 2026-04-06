@@ -1,6 +1,8 @@
 # Contributing to kerrproblems.com
 
-All problems live in `problems/` as YAML (`K-XXX.yaml`). Pushes to `main` should pass `npm run validate`.
+Published problems live in `problems/` as YAML (`K-XXX.yaml`). **Provisional** drafts may live in `data/problems_provisional/` with `publish: false` until references meet policy; then move to `problems/` and flip `publish: true`. Pushes to `main` should pass `npm run validate`.
+
+To regenerate the manifest-driven expansion stubs from `data/expansion_from_manifest.tsv`, run `npm run ingest:expansion`.
 
 ## Quick rules
 

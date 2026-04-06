@@ -10,6 +10,7 @@
     "migrate:taxonomy": "node scripts/migrate_taxonomy.mjs",
     "migrate:formal-verification": "node scripts/migrate_formal_verification.mjs",
     "export:problems": "node scripts/export_problems_json.mjs",
+    "ingest:expansion": "node scripts/ingest_expansion_manifest.mjs",
     "check": "npm run validate && npm run build"
   },
   "dependencies": {

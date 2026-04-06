@@ -1,13 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 import {
-  getAllProblems,
+  getPublishedProblems,
+  getProvisionalProblems,
   getFormalVerificationProblems,
   CLUSTER_LABELS,
 } from '../lib/problems.js';
 import TaxonomyLegend from '../components/TaxonomyLegend.astro';
 
-const problems = getAllProblems();
+const problems = getPublishedProblems();
+const provisionalCount = getProvisionalProblems().length;
 const flagship = problems
   .filter(
     p =>
@@ -52,6 +54,13 @@ const recent = [...problems]
         structured, finite-dimensional, or ODE-level content that proof assistants can plausibly attack
         first? Every problem records heuristic <strong>FV suitability</strong> and a short reason.
       </p>
+      {provisionalCount > 0 && (
+        <p class="page-meta" style="margin-top: 0.75rem">
+          <strong>{provisionalCount}</strong> additional entries live in the{' '}
+          <a href="/audit/provisional-problems">provisional pipeline</a> (unpublished until references and
+          editorial checks are complete).
+        </p>
+      )}
     </div>
 
     <section style="margin: 2rem 0 2.5rem; max-width: 72ch">

@@ -1,0 +1,89 @@
+id: K-601
+title: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+short_title: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full…
+cluster: exterior-stability
+theorem_status: needs_review
+problem_type: classical_frontier
+research_state: solved_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+problem_statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+why_it_matters: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-001. Manifest “Solved in literature?” note: Solved (claim in preprint)
+  3. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary until
+  references are curated. A “solved” indication in the manifest is not upgraded to theorem_status: solved here without a
+  verified solution_pointer and primary citations. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
+why_this_should_be_a_problem: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
+minimal_formal_statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-001 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-001
+tags:
+  - expansion-2026
+  - manifest-N-001
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - linear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Consolidates linear theory into a canonical reference and enables downstream nonlinear work."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

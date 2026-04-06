@@ -23,6 +23,27 @@ import Base from '../layouts/Base.astro';
     <dd>Bibliography or scope is not yet literature-anchored in-repo; may have empty references by policy.</dd>
   </dl>
 
+  <h2>Research state</h2>
+  <p style="max-width: 68ch; margin-bottom: 0.75rem">
+    Orthogonal to <strong>theorem status</strong> (what this site marks as proved, partial, or open on the page):
+    where the target sits relative to published mathematics.
+  </p>
+  <ul style="max-width: 72ch; margin-bottom: 1.5rem">
+    <li>
+      <strong>Solved in literature (classical)</strong> — a classical theorem is understood to exist; this site still
+      requires a <code>solution_pointer</code> and curated references before using <code>theorem_status: solved</code>.
+    </li>
+    <li>
+      <strong>Open in literature</strong> — standard research question with identifiable paper trail (once references are
+      attached).
+    </li>
+    <li>
+      <strong>High-value / unformalized direction</strong> — synthesized targets, formalization-first packaging, or
+      community-artifact roadmaps; the page should say so plainly in <code>status_explanation</code> or{' '}
+      <code>origin_type</code>.
+    </li>
+  </ul>
+
   <h2>Problem type</h2>
   <ul style="max-width: 72ch">
     <li><strong>Classical frontier</strong> — community-scale conjectures or standard research targets.</li>
@@ -38,6 +59,18 @@ import Base from '../layouts/Base.astro';
     <li><strong>Evidence level</strong> — whether primary literature pointers are attached (<code>primary_refs_present</code>, <code>secondary_refs_only</code>, <code>refs_missing</code>).</li>
     <li><strong>Verification state</strong> — editorial pipeline (<code>verified_recently</code>, <code>imported_unverified</code>, <code>editorial_revision_needed</code>).</li>
   </ul>
+
+  <h2 id="publication">Publication vs provisional</h2>
+  <p style="max-width: 68ch; margin-bottom: 0.75rem">
+    Entries with <code>publish: false</code> are kept under <code>data/problems_provisional/</code> (the expansion
+    batch uses this path). They are <strong>not</strong> listed on the main index, in clusters, or in RSS until promoted.
+    Maintainer listing: <a href="/audit/provisional-problems">Provisional pipeline</a>.
+  </p>
+  <p style="max-width: 68ch; margin-bottom: 1.5rem">
+    A live public page needs theorem status, problem type, a filled <code>scope</code> block, at least two references
+    with a primary pointer (unless <code>theorem_status: needs_review</code> under the editorial exception), and no
+    placeholder language in public fields.
+  </p>
 
   <h2>Reference policy (summary)</h2>
   <p style="max-width: 68ch">

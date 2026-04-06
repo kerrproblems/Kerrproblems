@@ -128,6 +128,19 @@ hr {
   font-weight: 600;
 }
 
+.editorial-banner--provisional {
+  background: #fffaf0;
+  border-color: #d4a84b;
+}
+
+.badge-research-state {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #37474f;
+  border: 1px dashed var(--border);
+  padding: 0.15em 0.45em;
+}
+
 .scope-block {
   border-left: 3px solid var(--border);
   padding-left: 1rem;

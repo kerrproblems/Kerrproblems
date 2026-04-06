@@ -9,11 +9,17 @@
 
 ## Axes
 
-- **theorem_status** — solution state of the mathematical target.
+- **theorem_status** — solution state of the mathematical target **as recorded on this site** (not a substitute for a bibliography).
+- **research_state** — whether the target is classically solved in the literature, open there, or a synthesized / high-value unformalized direction.
 - **problem_type** — intellectual genre (classical vs quantitative sharpening vs formalization, etc.).
 - **maturity** — how complete the scoping metadata is.
 - **evidence_level** — whether primary literature is attached.
 - **verification_state** — editorial pipeline state.
+- **publish** — if `false`, the entry stays out of the main index, clusters, and RSS until promoted (see `data/problems_provisional/` and `/audit/provisional-problems/`).
+
+## Solved entries
+
+Use **`theorem_status: solved`** only together with a filled **`solution_pointer`** (theorem text + attribution or citation key) and references that verify the claim. Manifest or conversational hints of “solved” are **not** sufficient.
 
 ## References
 

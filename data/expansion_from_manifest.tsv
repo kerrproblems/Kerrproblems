@@ -1,0 +1,101 @@
+N-ID	Concise statement	Priority	Solved in literature?	Rationale
+N-001	Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.	high	Solved (claim in preprint) 3	Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
+N-002	Prove nonlinear stability of Kerr for the full subextremal range |a|<M.	high	Open 5	Central dynamical stability conjecture.
+N-003	Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).	high	Open 3	Upgrades decay to Kerr into a full scattering map with data-to-radiation control.
+N-004	Establish a sharp peeling/polyhomogeneity theorem at future null infinity ($\mathcal{I}^+$) for nonlinear near-Kerr evolutions.	medium	Open 1	Needed for precise radiation/charge/memory structure.
+N-005	Prove sharp nonlinear Price-law tails for curvature in near-Kerr vacuum.	high	Open 1	Links interior blow-up thresholds and exterior decay in a sharp way.
+N-006	Prove Kerr-Newman linear stability for a wider parameter regime beyond weak charge/slow rotation.	high	Open (partial known) 11	Extends Einstein-Maxwell stability program toward the full family.
+N-007	Prove nonlinear stability of Kerr-Newman in the asymptotically flat setting (full coupling).	high	Open 11	Major coupled-field analogue of Kerr stability.
+N-008	Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.	medium	Solved (new proof available) 19	Important Lambda>0 testbed where spectral gaps aid decay.
+N-009	Prove conditional nonlinear stability of Kerr-de Sitter in the full subextremal range under explicit mode-stability assumptions.	medium	Open (conditional progress exists) 27	Clarifies what remains once mode stability is established.
+N-010	Establish sharp SCC thresholds in Kerr interiors for C0 vs C1 vs C2 formulations.	high	Open (C0 picture advanced) 4	Regularity formulation is now known to be decisive.
+N-011	Prove generic Lipschitz (or C1) inextendibility of near-Kerr MGHDs.	high	Open 4	Targets the revised SCC expected after C0-extendibility.
+N-012	Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.	high	Open (criteria known) 17	Needed to turn conditional interior blow-up into generic blow-up.
+N-013	Build an explicit linearized-gravity scattering map exterior to Cauchy horizon for Kerr.	medium	Open 18	Completes the linear interior data propagation story.
+N-014	Prove sharp asymptotics for the Teukolsky field in the Kerr interior (Price law inside).	medium	Open 17	Determines precise blow-up rates and regularity losses.
+N-015	Show that small vacuum perturbations of Kerr produce weak null singularities generically at the Cauchy horizon.	high	Open (strong evidence) 4	Converts extendible but singular heuristics into theorem-level genericity.
+N-016	Prove robust control of trapping geometry under dynamical near-Kerr perturbations in a sharp topology.	high	Open 23	Trapping is a core obstruction in decay/stability analysis.
+N-017	Prove a quantitative distance-to-Kerr estimate from a small invariant (Mars-Simon-type) with computable constants.	medium	Open 7	Turns qualitative rigidity into effective rigidity.
+N-018	Prove global Kerr uniqueness without analyticity under minimal smoothness/decay hypotheses.	high	Open (perturbative solved) 21	Finishes classical stationary uniqueness in smooth category.
+N-019	Prove uniqueness of stationary black holes with small deviations in asymptotic charges (effective inverse problems).	medium	Open 21	Bridges rigidity and inverse scattering directions.
+N-020	Establish a rigorous nonlinear theory for extremal Kerr dynamics incorporating Aretakis charges.	high	Open 9	Extremal behavior is qualitatively different and poorly understood nonlinearly.
+N-021	Prove a definitive linear stability/instability dichotomy for extremal Kerr spin-2 with sharp norms.	high	Open 28	Needed before any nonlinear extremal Kerr theorem.
+N-022	Prove uniform (in kappa) energy/decay estimates for near-extremal Kerr approaching kappa to 0.	high	Open 9	Key missing uniformity for near-extremal analysis.
+N-023	Build a rigorous scattering theory for NHEK matching to global Kerr exterior at near-extremality.	medium	Open 9	Would systematize near-horizon scaling laws and mode clustering.
+N-024	Prove a sharp characterization of near-extremal QNM clustering with explicit remainders.	medium	Open 16	Underpins quantitative ringdown modeling and SCC competition arguments.
+N-025	Prove completeness/expansion of solutions in Kerr via QNMs plus branch-cut contributions (mathematical ringdown expansion).	high	Open 16	Central unresolved spectral representation problem.
+N-026	Prove a Kerr inverse problem: determine (M,a) from finitely many resonances with stability estimates.	medium	Open 23	Foundational identifiability question for inverse spectral theory.
+N-027	Establish pseudospectrum bounds for Kerr wave operators and relate to transient growth near superradiance.	medium	Open 16	Addresses non-normality effects beyond eigenvalue stability.
+N-028	Derive rigorous late-time tail constants for scalar wave on Kerr in full subextremal range.	medium	Open 24	Needed for sharp interior thresholds and precise asymptotics.
+N-029	Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.	medium	Open 3	Spin-field control is a building block for coupled systems.
+N-030	Prove nonlinear stability of Schwarzschild without codimension restrictions (full moduli convergence to Kerr).	medium	Open (codimension issues known) 29	Connects Schwarzschild stability to rotation generation and Kerr endstates.
+N-031	Prove a unified framework for gauge choices in nonlinear black-hole stability compatible with $\mathcal{I}^+$ expansions and interior analysis.	high	Open 5	Many gaps are gauge interface rather than purely analytic.
+N-032	Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity certification).	medium	Open 30	Bridges pure rigidity invariants with computational diagnostics.
+N-033	Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE estimates).	high	Open 22	Would export separability-type structure to perturbative settings.
+N-034	Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.	low	Likely solved/known in special literature (not re-verified here)	Useful for formal verification track; needs precise references.
+N-035	Establish quantitative stability of photon regions for small metric perturbations in Ck/Sobolev norms.	high	Open 23	Trapping structure stability is core for resolvent/decay estimates.
+N-036	Prove sharp semiclassical quantization of Kerr QNMs with explicit high-frequency error bounds.	medium	Open 23	Improves QNM asymptotics into fully controlled mathematics.
+N-037	Prove rigorous existence and nonlinear stability/instability classification of Kerr-AdS endstates (black resonators/geons).	medium	Open 13	Kerr-AdS is a key superradiant laboratory.
+N-038	Prove nonlinear instability of Kerr-AdS in a theorem (beyond numerics/backreaction studies).	medium	Partially solved numerically/partially rigorous modes 13	Moves simulations/mode constructions into PDE-level theorem.
+N-039	Classify superradiant instability windows for massive scalar fields on Kerr in fully rigorous parameter inequalities.	low	Partially solved (existence of unstable modes) 12	Turns existence into sharp parameter-domain characterization.
+N-040	Prove nonlinear outcomes of Einstein-Klein-Gordon near Kerr in regimes with linear superradiant instability.	medium	Open 12	Nonlinear saturation vs blow-up vs new stationary states.
+N-041	Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic initial data).	high	Open 17	Removes conditional hypotheses in interior instability results.
+N-042	Prove analogous Cauchy-horizon instability results for coupled gravito-electromagnetic perturbations on Kerr-Newman.	medium	Open 11	Needed for SCC and stability in charged rotating interiors.
+N-043	Establish a sharp criterion for when Kerr interior admits C0 extension vs stronger regularity failure (in terms of horizon tails).	high	Open 4	Connects exterior decay to interior regularity in a definitive way.
+N-044	Prove a full nonlinear characteristic IVP theorem from event-horizon data to the interior boundary in near-Kerr vacuum.	medium	Open 4	Would formalize interior from horizon asymptotics program.
+N-045	Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null singularity).	high	Open 4	Key for understanding singularity structure and SCC strength.
+N-046	Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.	medium	Open 31	Clarifies the sharp hypothesis set for uniqueness theorems.
+N-047	Prove a minimal-data theorem: finite set of horizon multipoles determines Kerr parameters with stability bounds.	medium	Open 7	Effective horizon-data reconstruction.
+N-048	Prove existence/uniqueness of approximate Kerr solutions given approximate Killing spinors (computable error-to-parameter map).	medium	Open 30	Bridges invariants and reconstruction.
+N-049	Formalize in a proof assistant: the exact Kerr separability structure and Carter constant derivation.	low	Solved classically (formalization open)	High FV value; low research novelty.
+N-050	Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr.	low	Solved in literature (formalization open) 10	Enables machine-checked components of linear stability proofs.
+N-051	Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge maps.	medium	Partially solved / active 10	Gauge-robust stability is valuable for nonlinear extensions.
+N-052	Prove nonlinear stability of Kerr under weaker asymptotic flatness (polyhomogeneous/rough null infinity assumptions).	medium	Open 5	Extends stability to broader physically relevant data classes.
+N-053	Establish sharp decay for Teukolsky equation on Kerr in full range with quantitative constants usable as blackboxes.	high	Open (partial literature exists; not re-audited fully here)	A key input to many dependent results.
+N-054	Prove robust boundedness/decay for scalar waves at the Kerr Cauchy horizon in full range and sharp regularity.	medium	Partially solved (slow rotation + microlocal) 24	Extends interior scalar wave theory beyond known regimes.
+N-055	Prove explicit sharp late-time asymptotics for scalar field along the event horizon in Kerr (full range).	medium	Open 24	Needed for sharp interior instability thresholds.
+N-056	Prove decay/growth dichotomy for extremal Kerr perturbations with explicit identification of conserved charges.	medium	Partially solved for scalar/extremal horizons 9	Consolidates extremal linear theory into a complete picture.
+N-057	Prove nonlinear evolution of near-horizon conserved quantities in extremal Kerr produces curvature singularity (or not).	high	Open 9	Core unknown in extremal nonlinear regime.
+N-058	Prove linear stability/instability classification for extremal Kerr-Newman under coupled perturbations.	medium	Open	Charged extremal rotations combine two difficult degeneracies.
+N-059	Prove sharp resolvent bounds near omega=0 for Kerr linearized Einstein operator, uniform in a/M.	high	Open (key for scattering and decay) 3	Zero-frequency analysis is repeatedly cited as delicate.
+N-060	Establish a full nonlinear ringdown plus tail decomposition for near-Kerr vacuum spacetimes.	high	Open 16	Bridges PDE decay with physically observed waveform structure.
+N-061	Determine whether QNM expansions are stable under small nonlinearities (nonlinear resonance theory).	medium	Open 16	Non-selfadjoint plus nonlinear resonance is largely unexplored.
+N-062	Develop a rigorous theory of excitation factors in Kerr and prove universal bounds across (l,m).	low	Open 25	Needed for universal ringdown amplitude claims.
+N-063	Prove stability of the photon sphere/trapped set for families of metrics satisfying Einstein vacuum approximately.	medium	Open	Dynamical trapping stability with PDE feedback.
+N-064	Prove robust decay estimates for wave/Teukolsky equations on perturbed Kerr backgrounds without separability.	high	Open 22	Key step toward nonlinear theory without hidden symmetries.
+N-065	Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.	medium	Open (conditional program exists) 27	Closes conditional gaps in Lambda>0 stability.
+N-066	Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.	medium	Open 6	Makes Lambda>0 SCC precise and verifiable.
+N-067	Prove stability/instability of the Cauchy horizon for Kerr-de Sitter under linearized gravity with sharp norms.	medium	Open	Extends SCC analysis to rotating Lambda>0 setting.
+N-068	Prove a nonlinear interior from exterior theorem: decay on event horizon implies interior weak null singularity.	high	Open 4	Matches the roadmap suggested by existing interior work.
+N-069	Prove global existence and weak cosmic censorship for small perturbations of Kerr data in an appropriate gauge.	high	Open	Stronger than stability; includes global causal structure control.
+N-070	Prove existence of trapped surfaces in vacuum from very low regularity characteristic data.	low	Open / speculative	Extends collapse theory to rough data regimes.
+N-071	Derive sharp stability thresholds for massive fields on Kerr: identify stable/unstable mass windows with proofs.	low	Partially solved (instability exists) 12	Clarifies when K-009-like endstate questions are meaningful.
+N-072	Prove that generic small perturbations of Kerr generate nonzero angular momentum in the asymptotic Kerr parameter (modulation).	medium	Open	Needed for full formation plus relaxation story.
+N-073	Prove a quantitative angular-momentum extraction formula from $\mathcal{I}^+$ radiation for near-Kerr vacuum spacetimes.	medium	Open	Links radiative loss to final Kerr parameters.
+N-074	Prove that near-Kerr spacetimes admit a robust foliation by generalized GCM spheres with quantified control.	medium	Partially solved in certain programs (not fully re-verified here)	Structural geometric ingredient for stability proofs.
+N-075	Prove uniqueness/stability of event-horizon generators and their expansion/shear in near-Kerr evolution.	medium	Open	Horizon geometry control is key for interior matching.
+N-076	Prove sharp bounds on superradiant amplification for waves on Kerr uniform in a/M.	low	Open	Quantifies energy extraction efficiency in PDE framework.
+N-077	Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.	medium	Open	Extends stability beyond vacuum/massless fields.
+N-078	Prove nonlinear stability of Kerr under polarized symmetry-breaking perturbations (intermediate symmetry classes).	medium	Open	Bridges polarized and fully general dynamics.
+N-079	Prove stability/instability of higher-dimensional Kerr (Myers-Perry) in PDE sense for small angular momentum.	low	Open	Cross-checks methods in a different symmetry environment.
+N-080	Prove rigorous statements about tails vs memory interaction in near-Kerr: do late-time tails source measurable memory at $\mathcal{I}^+$?	low	Open	Links asymptotics at script I+ to observable signals.
+N-081	Develop a mathematically rigorous definition of nonlinear QNMs as poles of a suitable nonlinear response functional.	low	Open	Novel conceptual foundation for nonlinear ringdown.
+N-082	Prove that Kerr QNMs are stable under small perturbations of the metric in a topology relevant to stability proofs.	medium	Open	Needed for perturbative spectral continuity.
+N-083	Prove a sharp characterization of the Kerr trapped set as a normally hyperbolic invariant manifold uniformly in a/M.	medium	Open / partially known	Central for microlocal estimates; needs uniformity and sharp constants.
+N-084	Prove that the linearized Einstein operator on Kerr has no embedded eigenvalues/resonances on the real axis beyond gauge.	medium	Open / partially addressed	Supports clean scattering picture.
+N-085	Prove quantitative stability of the Carter constant for geodesics under small metric perturbations.	low	Open	Geodesic integrability robustness.
+N-086	Prove an effective theorem translating small Mars-Simon tensor into existence of approximate Killing spinors.	low	Open	Bridges invariant smallness to hidden symmetmetries.
+N-087	Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.	medium	Open	Stationary uniqueness with Lambda>0 and charge/rotation.
+N-088	Prove a fully rigorous PDE theorem for nonlinear superradiant instability of Kerr in a confining setting (mirror/AdS).	medium	Open	Would formalize famous black hole bomb phenomenon.
+N-089	Prove existence and stability of time-periodic near-Kerr solutions (vacuum or with fields) if any.	low	Open/speculative	Addresses possible nonlinear resonant structures.
+N-090	Prove robust constraints on nonlinear energy cascades near Kerr (no-turbulence regimes) under small data.	low	Open	Nonlinear dynamics beyond convergence.
+N-091	Prove that event-horizon redshift estimates remain valid for near-extremal Kerr with uniform constants away from kappa=0.	high	Open	Key uniformity step for near-extremal stability.
+N-092	Prove sharp mapping properties of the Kerr scattering operator in weighted Sobolev spaces matching physical radiation norms.	medium	Open	Needed for precise asymptotic completeness formulations.
+N-093	Prove deterministic stability results for Kerr under stochastic perturbations (noise robustness in PDE sense).	low	Open/speculative	Not standard in GR, but potentially interesting.
+N-094	Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).	low	Open/speculative	Bridges rigorous GR and numerical relativity.
+N-095	Formalize in a proof assistant: Carter separability and associated conserved quantities for Kerr geodesics.	low	Solved classically (formalization open)	High FV suitability; supports K-503/K-504-style goals.
+N-096	Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton).	low	Solved in literature (formalization open) 21	High FV value; helps convert qualitative to quantitative.
+N-097	Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.	medium	Open	Effective uniqueness via multipoles.
+N-098	Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).	high	Open 4	Core revised SCC target.
+N-099	Prove that generic near-Kerr perturbations lead to curvature blow-up rates matching those predicted by linear theory.	high	Open 17	Bridges linear criteria to nonlinear rates.
+N-100	Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.	medium	Open (as a community artifact) 8	Would directly address the maintainer needs of kerrproblems.com.

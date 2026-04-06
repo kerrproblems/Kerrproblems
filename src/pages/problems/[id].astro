@@ -18,6 +18,9 @@ import {
   THEOREM_STATUS_LABELS,
   PROBLEM_TYPE_LABELS,
   MATURITY_LABELS,
+  RESEARCH_STATE_LABELS,
+  EVIDENCE_LEVEL_LABELS,
+  VERIFICATION_STATE_LABELS,
 } from '../../lib/taxonomy.js';
 
 export async function getStaticPaths() {
@@ -37,7 +40,10 @@ const depends = (p.dependencies || []).map(id => all.find(x => x.id === id)).fil
 const relatedByTags = getRelatedByTags(p, all, 8).filter(
   x => !p.related?.includes(x.id) && x.id !== p.id,
 );
-const showEditorialBanner = needsEditorialBanner(p);
+const isProvisional = p.publish === false;
+const showEditorialBanner = !isProvisional && needsEditorialBanner(p);
+const ghYamlPath = p.yamlRelativePath || `problems/${p.id}.yaml`;
+const sp = p.solution_pointer && typeof p.solution_pointer === 'object' ? p.solution_pointer : null;
 
 function pips(n) {
   return Array.from({ length: 5 }, (_, i) => `<span class="pip${i < n ? ' filled' : ''}"></span>`).join('');
@@ -74,6 +80,13 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
 
   <div class="problem-layout">
     <article class="problem-main">
+      {isProvisional && (
+        <div class="editorial-banner editorial-banner--provisional" role="status">
+          <strong>Unpublished provisional entry.</strong>{' '}
+          It is excluded from the main problem index until publication criteria are met (references, scope, and
+          editorial sign-off). The URL is available for maintainers and reviewers.
+        </div>
+      )}
       {showEditorialBanner && (
         <div class="editorial-banner" role="status">
           <strong>Editorial notice.</strong>{' '}
@@ -91,6 +104,9 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
           </span>
           <span class="badge-problem-type" title="Problem type">
             {PROBLEM_TYPE_LABELS[p.problem_type] || p.problem_type}
+          </span>
+          <span class="badge-research-state" title="Research state (literature vs synthesized target)">
+            {RESEARCH_STATE_LABELS[p.research_state] || p.research_state}
           </span>
           <span class="badge-maturity" title="Scoping maturity">
             {MATURITY_LABELS[p.maturity] || p.maturity}
@@ -193,6 +209,26 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
         <h3>What remains open</h3>
         <p>{p.remaining_gap || p.completion_criteria}</p>
       </div>
+
+      {sp && String(sp.theorem_statement || '').trim() && (
+        <div class="problem-section">
+          <h3>Solution pointer</h3>
+          <p>{sp.theorem_statement}</p>
+          <ul style="margin: 0.5rem 0 0 1.2rem; font-size: 0.92rem; color: var(--text-muted)">
+            {sp.solved_by && (
+              <li>
+                <em>Attributed to:</em> {sp.solved_by}
+                {sp.year && ` (${sp.year})`}
+              </li>
+            )}
+            {sp.citation_key && (
+              <li>
+                <em>Citation key:</em> {sp.citation_key}
+              </li>
+            )}
+          </ul>
+        </div>
+      )}
 
       <div class="problem-section">
         <h3>Mathematical prerequisites</h3>
@@ -339,7 +375,7 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
           </>
         )}
         {' · '}
-        <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/problems/${p.id}.yaml`} target="_blank" rel="noopener">Edit on GitHub →</a>
+        <a href={`https://github.com/kerrproblems/Kerrproblems/blob/main/${ghYamlPath}`} target="_blank" rel="noopener">Edit on GitHub →</a>
       </div>
     </article>
 
@@ -354,10 +390,14 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
         <dd>{PROBLEM_TYPE_LABELS[p.problem_type]}</dd>
         <dt>Maturity</dt>
         <dd>{MATURITY_LABELS[p.maturity]}</dd>
+        <dt>Research state</dt>
+        <dd>{RESEARCH_STATE_LABELS[p.research_state] || p.research_state}</dd>
         <dt>Evidence</dt>
-        <dd>{p.evidence_level}</dd>
+        <dd>{EVIDENCE_LEVEL_LABELS[p.evidence_level] || p.evidence_level}</dd>
         <dt>Verification</dt>
-        <dd>{p.verification_state}</dd>
+        <dd>{VERIFICATION_STATE_LABELS[p.verification_state] || p.verification_state}</dd>
+        <dt>Published</dt>
+        <dd>{p.publish === false ? 'No (provisional)' : 'Yes'}</dd>
         <dt>Difficulty</dt>
         <dd>{p.difficulty} / 5</dd>
         <dt>Family</dt>

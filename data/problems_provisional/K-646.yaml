@@ -1,0 +1,87 @@
+id: K-646
+title: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+short_title: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and conn…
+cluster: rigidity-uniqueness
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+problem_statement: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+statement: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+why_it_matters: Clarifies the sharp hypothesis set for uniqueness theorems.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-046. Manifest “Solved in literature?” note: Open 31. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Clarifies the sharp hypothesis set for uniqueness theorems.
+why_this_should_be_a_problem: Clarifies the sharp hypothesis set for uniqueness theorems.
+minimal_formal_statement: Prove global uniqueness/rigidity for Kerr with minimal assumptions on horizon regularity and connectedness.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-046 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+dependencies: []
+aliases:
+  - N-046
+tags:
+  - expansion-2026
+  - manifest-N-046
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Clarifies the sharp hypothesis set for uniqueness theorems."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

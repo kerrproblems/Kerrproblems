@@ -1,0 +1,101 @@
+id: K-645
+title: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+short_title: Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation …
+cluster: interior-scc
+theorem_status: open
+problem_type: quantitative_sharpening
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+problem_statement: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+statement: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+why_it_matters: Key for understanding singularity structure and SCC strength.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: both linearized and fully nonlinear aspects
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-045. Manifest “Solved in literature?” note: Open 4. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Key for understanding singularity structure and SCC strength.
+why_this_should_be_a_problem: Key for understanding singularity structure and SCC strength.
+minimal_formal_statement: >-
+  Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null
+  singularity).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-045 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+related:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+dependencies: []
+aliases:
+  - N-045
+tags:
+  - expansion-2026
+  - manifest-N-045
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - nonlinear
+  - linear
+  - interior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Key for understanding singularity structure and SCC strength."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

@@ -1,0 +1,88 @@
+id: K-694
+title: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+short_title: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation err…
+cluster: exterior-stability
+theorem_status: open
+problem_type: speculative_direction
+research_state: high_value_unformalized_direction
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: low
+summary: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+problem_statement: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+statement: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+why_it_matters: Bridges rigorous GR and numerical relativity.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-094. Manifest “Solved in literature?” note: Open/speculative. No
+  bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary until
+  references are curated. Research state is marked as a high-value unformalized or synthesized direction where the
+  manifest frames the target that way. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Bridges rigorous GR and numerical relativity.
+why_this_should_be_a_problem: Bridges rigorous GR and numerical relativity.
+minimal_formal_statement: Prove sharp stability of Kerr under small violations of vacuum Einstein (numerical truncation errors).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-094 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-094
+tags:
+  - expansion-2026
+  - manifest-N-094
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 2
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Speculative or open-ended; formalization boundary unclear.
+progress_summary: "Manifest rationale: Bridges rigorous GR and numerical relativity."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

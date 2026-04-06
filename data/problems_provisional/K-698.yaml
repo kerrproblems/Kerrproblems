@@ -1,0 +1,89 @@
+id: K-698
+title: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+short_title: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with ge…
+cluster: interior-scc
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+problem_statement: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+statement: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+why_it_matters: Core revised SCC target.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: both linearized and fully nonlinear aspects
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-098. Manifest “Solved in literature?” note: Open 4. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Core revised SCC target.
+why_this_should_be_a_problem: Core revised SCC target.
+minimal_formal_statement: Prove stability/instability of the Kerr Cauchy horizon for nonlinear vacuum perturbations with genericity (beyond C0).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-098 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+related:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+dependencies: []
+aliases:
+  - N-098
+tags:
+  - expansion-2026
+  - manifest-N-098
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - nonlinear
+  - linear
+  - interior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Core revised SCC target."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

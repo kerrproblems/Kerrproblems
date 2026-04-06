@@ -2,13 +2,13 @@
 import Base from '../layouts/Base.astro';
 import TaxonomyLegend from '../components/TaxonomyLegend.astro';
 import {
-  getAllProblems,
+  getPublishedProblems,
   getFormalVerificationProblems,
   CLUSTER_LABELS,
 } from '../lib/problems.js';
 import { FV_LABELS, RELEVANCE_LABELS } from '../lib/taxonomy.js';
 
-const all = getAllProblems();
+const all = getPublishedProblems();
 const high = getFormalVerificationProblems(all, 'high');
 const medium = getFormalVerificationProblems(all, 'medium');
 const trackIds = new Set(['K-501', 'K-502', 'K-503', 'K-504', 'K-505', 'K-506', 'K-507', 'K-508', 'K-509', 'K-510']);

@@ -1,0 +1,92 @@
+id: K-608
+title: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+short_title: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+cluster: exterior-stability
+theorem_status: needs_review
+problem_type: classical_frontier
+research_state: solved_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+problem_statement: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+statement: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+why_it_matters: Important Lambda>0 testbed where spectral gaps aid decay.
+scope:
+  background: de sitter general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: both linearized and fully nonlinear aspects
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: de sitter
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-008. Manifest “Solved in literature?” note: Solved (new proof
+  available) 19. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status
+  summary until references are curated. A “solved” indication in the manifest is not upgraded to theorem_status: solved
+  here without a verified solution_pointer and primary citations. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Important Lambda>0 testbed where spectral gaps aid decay.
+why_this_should_be_a_problem: Important Lambda>0 testbed where spectral gaps aid decay.
+minimal_formal_statement: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-008 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-205
+  - K-206
+  - K-001
+  - K-003
+  - K-005
+related:
+  - K-205
+  - K-206
+  - K-001
+  - K-003
+  - K-005
+dependencies: []
+aliases:
+  - N-008
+tags:
+  - expansion-2026
+  - manifest-N-008
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: kerr-de-sitter
+asymptotics: de-sitter
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - nonlinear
+  - linear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Important Lambda>0 testbed where spectral gaps aid decay."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

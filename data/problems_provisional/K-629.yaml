@@ -1,0 +1,87 @@
+id: K-629
+title: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+short_title: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sha…
+cluster: exterior-stability
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+problem_statement: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+statement: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+why_it_matters: Spin-field control is a building block for coupled systems.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: maxwell."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-029. Manifest “Solved in literature?” note: Open 3. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Spin-field control is a building block for coupled systems.
+why_this_should_be_a_problem: Spin-field control is a building block for coupled systems.
+minimal_formal_statement: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-029 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-029
+tags:
+  - expansion-2026
+  - manifest-N-029
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: matter-coupled
+equation_level:
+  - maxwell
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Spin-field control is a building block for coupled systems."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

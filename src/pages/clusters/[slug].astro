@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import {
-  getAllProblems,
+  getPublishedProblems,
   getStats,
   CLUSTER_LABELS,
   loadClustersYaml,
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const allProblems = getAllProblems();
+const allProblems = getPublishedProblems();
 const problems = allProblems.filter(p => p.cluster === slug);
 const stats = getStats(problems);
 const label = CLUSTER_LABELS[slug];

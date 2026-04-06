@@ -1,0 +1,99 @@
+id: K-633
+title: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+short_title: Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (u…
+cluster: rigidity-uniqueness
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+problem_statement: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+statement: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+why_it_matters: Would export separability-type structure to perturbative settings.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-033. Manifest “Solved in literature?” note: Open 22. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Would export separability-type structure to perturbative settings.
+why_this_should_be_a_problem: Would export separability-type structure to perturbative settings.
+minimal_formal_statement: >-
+  Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE
+  estimates).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-033 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+dependencies: []
+aliases:
+  - N-033
+tags:
+  - expansion-2026
+  - manifest-N-033
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Would export separability-type structure to perturbative settings."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

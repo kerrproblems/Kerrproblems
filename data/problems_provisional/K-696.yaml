@@ -1,0 +1,88 @@
+id: K-696
+title: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+short_title: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable…"
+cluster: rigidity-uniqueness
+theorem_status: needs_review
+problem_type: formalization_target
+research_state: solved_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: low
+summary: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+problem_statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+why_it_matters: High FV value; helps convert qualitative to quantitative.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-096. Manifest “Solved in literature?” note: Solved in literature
+  (formalization open) 21. No bibliographic packet was supplied in that manifest; this entry is not a
+  literature-grounded status summary until references are curated. A “solved” indication in the manifest is not upgraded
+  to theorem_status: solved here without a verified solution_pointer and primary citations. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: High FV value; helps convert qualitative to quantitative.
+why_this_should_be_a_problem: High FV value; helps convert qualitative to quantitative.
+minimal_formal_statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-096 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+dependencies: []
+aliases:
+  - N-096
+tags:
+  - expansion-2026
+  - manifest-N-096
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 2
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: high
+fv_reason: Formalization targets map naturally to proof-assistant-sized subtasks once scoped.
+progress_summary: "Manifest rationale: High FV value; helps convert qualitative to quantitative."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

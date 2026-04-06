@@ -1,0 +1,100 @@
+id: K-641
+title: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+short_title: Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions …
+cluster: interior-scc
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+problem_statement: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+statement: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+why_it_matters: Removes conditional hypotheses in interior instability results.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-041. Manifest “Solved in literature?” note: Open 17. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Removes conditional hypotheses in interior instability results.
+why_this_should_be_a_problem: Removes conditional hypotheses in interior instability results.
+minimal_formal_statement: >-
+  Prove the interior blue-shift blow-up for linearized gravity without auxiliary decay assumptions (purely from generic
+  initial data).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-041 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+related:
+  - K-006
+  - K-007
+  - K-008
+  - K-009
+dependencies: []
+aliases:
+  - N-041
+tags:
+  - expansion-2026
+  - manifest-N-041
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - linear
+  - interior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Removes conditional hypotheses in interior instability results."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

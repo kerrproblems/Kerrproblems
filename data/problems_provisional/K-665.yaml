@@ -1,0 +1,94 @@
+id: K-665
+title: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+short_title: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonl…
+cluster: exterior-stability
+theorem_status: conditional
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+problem_statement: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+statement: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+why_it_matters: Closes conditional gaps in Lambda>0 stability.
+scope:
+  background: de sitter general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: both linearized and fully nonlinear aspects
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: de sitter
+  gauge_or_formulation: >-
+    Conditional results depend on explicit spectral/mode-stability or gauge hypotheses; see status_explanation when
+    curated.
+known_results: []
+remaining_gap: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-065. Manifest “Solved in literature?” note: Open (conditional program
+  exists) 27. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status
+  summary until references are curated. Conditional results in the literature are understood modulo explicit spectral,
+  mode-stability, or gauge hypotheses to be spelled out when this entry is curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Closes conditional gaps in Lambda>0 stability.
+why_this_should_be_a_problem: Closes conditional gaps in Lambda>0 stability.
+minimal_formal_statement: Prove quantitative mode stability for Kerr-de Sitter in full subextremal range and feed into nonlinear stability.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-065 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-205
+  - K-206
+  - K-001
+  - K-003
+  - K-005
+related:
+  - K-205
+  - K-206
+  - K-001
+  - K-003
+  - K-005
+dependencies: []
+aliases:
+  - N-065
+tags:
+  - expansion-2026
+  - manifest-N-065
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: kerr-de-sitter
+asymptotics: de-sitter
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - nonlinear
+  - linear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Closes conditional gaps in Lambda>0 stability."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

@@ -1,0 +1,88 @@
+id: K-650
+title: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+short_title: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly…"
+cluster: exterior-stability
+theorem_status: needs_review
+problem_type: formalization_target
+research_state: solved_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: low
+summary: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+problem_statement: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+statement: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+why_it_matters: Enables machine-checked components of linear stability proofs.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-050. Manifest “Solved in literature?” note: Solved in literature
+  (formalization open) 10. No bibliographic packet was supplied in that manifest; this entry is not a
+  literature-grounded status summary until references are curated. A “solved” indication in the manifest is not upgraded
+  to theorem_status: solved here without a verified solution_pointer and primary citations. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Enables machine-checked components of linear stability proofs.
+why_this_should_be_a_problem: Enables machine-checked components of linear stability proofs.
+minimal_formal_statement: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-050 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-050
+tags:
+  - expansion-2026
+  - manifest-N-050
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 2
+family: related-rotating-black-hole
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: high
+fv_reason: Formalization targets map naturally to proof-assistant-sized subtasks once scoped.
+progress_summary: "Manifest rationale: Enables machine-checked components of linear stability proofs."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

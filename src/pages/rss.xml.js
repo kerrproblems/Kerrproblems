@@ -1,4 +1,4 @@
-import { getAllProblems } from '../lib/problems.js';
+import { getPublishedProblems } from '../lib/problems.js';
 
 export const prerender = true;
 
@@ -12,7 +12,7 @@ function escapeXml(s) {
 }
 
 export async function GET() {
-  const problems = getAllProblems();
+  const problems = getPublishedProblems();
   const recent = problems
     .sort((a, b) => (b.last_updated || '').localeCompare(a.last_updated || ''))
     .slice(0, 20);

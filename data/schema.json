@@ -66,6 +66,31 @@
         "editorial_revision_needed"
       ]
     },
+    "research_state": {
+      "description": "Literature positioning vs synthesized targets (orthogonal to theorem_status).",
+      "enum": [
+        "solved_in_literature",
+        "open_in_literature",
+        "high_value_unformalized_direction"
+      ]
+    },
+    "publish": {
+      "type": "boolean",
+      "description": "false excludes entry from main index / clusters / RSS; use provisional directory + pipeline page."
+    },
+    "origin_type": {
+      "type": "string",
+      "description": "e.g. standard_problem | extracted_from_partial_results | synthesized_from_field-needs"
+    },
+    "solution_pointer": {
+      "type": ["object", "null"],
+      "properties": {
+        "theorem_statement": { "type": "string" },
+        "solved_by": { "type": "string" },
+        "year": { "type": ["integer", "null"] },
+        "citation_key": { "type": "string" }
+      }
+    },
     "summary": { "type": "string" },
     "short_title": { "type": "string" },
     "problem_statement": { "type": "string" },

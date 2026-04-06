@@ -1,9 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllProblems, CLUSTER_LABELS, loadClustersYaml } from '../../lib/problems.js';
+import { getPublishedProblems, CLUSTER_LABELS, loadClustersYaml } from '../../lib/problems.js';
 import { CLUSTERS } from '../../lib/taxonomy.js';
 
-const problems = getAllProblems();
+const problems = getPublishedProblems();
 const clustersDoc = loadClustersYaml();
 ---
 <Base title="Clusters">

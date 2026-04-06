@@ -1,0 +1,99 @@
+id: K-632
+title: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+short_title: Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-re…
+cluster: exterior-stability
+theorem_status: open
+problem_type: quantitative_sharpening
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+problem_statement: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+statement: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+why_it_matters: Bridges pure rigidity invariants with computational diagnostics.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-032. Manifest “Solved in literature?” note: Open 30. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Bridges pure rigidity invariants with computational diagnostics.
+why_this_should_be_a_problem: Bridges pure rigidity invariants with computational diagnostics.
+minimal_formal_statement: >-
+  Quantify how much Kerrness can be certified from finite-radius curvature invariants (numerical-relativity
+  certification).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-032 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-032
+tags:
+  - expansion-2026
+  - manifest-N-032
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Bridges pure rigidity invariants with computational diagnostics."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

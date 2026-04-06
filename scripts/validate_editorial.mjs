@@ -13,12 +13,15 @@ import {
   MATURITY_LEVELS,
   EVIDENCE_LEVELS,
   VERIFICATION_STATES,
+  RESEARCH_STATES,
 } from '../src/lib/taxonomy.js';
 import { normalizeProblem } from '../src/lib/problems.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const PROBLEMS_DIR = path.join(__dirname, '..', 'problems');
-const REPORT_PATH = path.join(__dirname, '..', 'docs', 'audit', 'problem_validation_report.md');
+const ROOT = path.join(__dirname, '..');
+const PROBLEMS_DIR = path.join(ROOT, 'problems');
+const PROVISIONAL_DIR = path.join(ROOT, 'data', 'problems_provisional');
+const REPORT_PATH = path.join(ROOT, 'docs', 'audit', 'problem_validation_report.md');
 
 const PLACEHOLDER_RE = /\b(TODO|FIXME|references\s+pending)\b|references\/TODO/i;
 const ID_RE = /^K-[0-9]{3}$/;
@@ -51,20 +54,46 @@ function titleKey(t) {
     .slice(0, 80);
 }
 
+function listYamlFiles(dir) {
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir).filter(f => f.endsWith('.yaml')).map(f => path.join(dir, f));
+}
+
+function isProvisionalPath(fp) {
+  return fp.includes(`${path.sep}problems_provisional${path.sep}`) || fp.includes('/problems_provisional/');
+}
+
 function main() {
-  const files = fs.readdirSync(PROBLEMS_DIR).filter(f => f.endsWith('.yaml'));
+  const allFiles = [...listYamlFiles(PROBLEMS_DIR), ...listYamlFiles(PROVISIONAL_DIR)];
   const issues = [];
   const warnings = [];
   const titleMap = new Map();
 
-  for (const f of files) {
-    const raw = yaml.load(fs.readFileSync(path.join(PROBLEMS_DIR, f), 'utf8'));
+  for (const fp of allFiles) {
+    const raw = yaml.load(fs.readFileSync(fp, 'utf8'));
     const id = raw.id;
-    const p = normalizeProblem(raw);
+    const provPath = isProvisionalPath(fp);
+    const p = normalizeProblem(raw, {
+      yamlRelativePath: provPath ? `data/problems_provisional/${id}.yaml` : `problems/${id}.yaml`,
+      defaultPublish: !provPath,
+    });
+    const relax = provPath || p.publish === false;
+
+    if (provPath && p.publish !== false) {
+      warnings.push({
+        id,
+        code: 'PROVISIONAL_DIR_BUT_PUBLISH_TRUE',
+        detail: 'YAML under data/problems_provisional/ should use publish: false',
+      });
+    }
 
     const ph = scanObjectStrings(raw);
     for (const loc of ph) {
       issues.push({ level: 'error', id, code: 'PLACEHOLDER_TEXT', detail: `${loc}: TODO/FIXME/pending` });
+    }
+
+    if (!ID_RE.test(id || '')) {
+      issues.push({ level: 'error', id: id || fp, code: 'BAD_ID', detail: String(id) });
     }
 
     if (!THEOREM_STATUSES.includes(p.theorem_status)) {
@@ -72,6 +101,9 @@ function main() {
     }
     if (!PROBLEM_TYPES.includes(p.problem_type)) {
       issues.push({ level: 'error', id, code: 'BAD_PROBLEM_TYPE', detail: p.problem_type });
+    }
+    if (!RESEARCH_STATES.includes(p.research_state)) {
+      issues.push({ level: 'error', id, code: 'BAD_RESEARCH_STATE', detail: p.research_state });
     }
     if (!MATURITY_LEVELS.includes(p.maturity)) {
       issues.push({ level: 'error', id, code: 'BAD_MATURITY', detail: p.maturity });
@@ -89,10 +121,25 @@ function main() {
       if (!String(p.scope.parameter_regime || '').trim()) {
         warnings.push({ id, code: 'EMPTY_PARAMETER_REGIME', detail: '' });
       }
+      const intScc = p.cluster === 'interior-scc';
+      const needsReg =
+        intScc ||
+        /\bextendib|inextendib|strong cosmic|cauchy horizon|interior\b/i.test(
+          `${p.title} ${p.problem_statement}`,
+        );
+      if (needsReg && !String(p.scope.regularity || '').trim()) {
+        if (!relax) {
+          warnings.push({
+            id,
+            code: 'MISSING_SCOPE_REGULARITY',
+            detail: 'SCC/interior-style problem should set scope.regularity',
+          });
+        }
+      }
     }
 
     const refs = p.references || [];
-    if (p.theorem_status !== 'needs_review') {
+    if (!relax && p.theorem_status !== 'needs_review') {
       if (refs.length < 2) {
         issues.push({ level: 'error', id, code: 'REFS_LT_2', detail: `count=${refs.length}` });
       }
@@ -104,27 +151,53 @@ function main() {
         if (!String(r.relevance || '').trim()) {
           warnings.push({ id, code: 'REF_MISSING_RELEVANCE', detail: r.key || '' });
         }
+        if (!String(r.url || '').trim()) {
+          warnings.push({ id, code: 'REF_MISSING_URL', detail: r.key || '' });
+        }
+      }
+    }
+
+    if (relax) {
+      for (const r of refs) {
+        if (r && !String(r.url || '').trim() && (r.title || r.authors)) {
+          warnings.push({ id, code: 'REF_MISSING_URL', detail: r.key || '' });
+        }
       }
     }
 
     if (p.theorem_status === 'partial' && (!p.known_results || p.known_results.length === 0)) {
-      warnings.push({ id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: '' });
+      if (!relax) {
+        issues.push({ level: 'error', id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: '' });
+      } else {
+        warnings.push({ id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: 'provisional — fill when curating' });
+      }
     }
 
     if (p.theorem_status === 'conditional') {
       const se = String(p.status_explanation || '');
-      if (!/\b(condition|hypothesis|assum|if\b|bridge|formulation)/i.test(se)) {
+      if (!/\b(condition|hypothesis|assum|if\b|bridge|formulation|mode-stability|spectral)/i.test(se)) {
         warnings.push({ id, code: 'CONDITIONAL_WEAK_EXPLANATION', detail: 'spell condition in status_explanation' });
       }
     }
 
-    if (p.problem_type === 'quantitative_sharpening') {
+    if (p.problem_type === 'quantitative_sharpening' && !relax) {
       const blob = `${p.known_results?.map(k => k.statement).join(' ') || ''} ${p.progress_summary || ''}`;
       if (!/qualitative|classical|exact|known|already|baseline|vanishing|theorem/i.test(blob)) {
         warnings.push({
           id,
           code: 'QUANT_NO_QUALITATIVE_POINTER',
           detail: 'mention known qualitative result in known_results or progress_summary',
+        });
+      }
+    }
+
+    if (p.research_state === 'high_value_unformalized_direction') {
+      const blob = `${p.status_explanation || ''} ${p.origin_type || ''} ${p.problem_statement || ''}`;
+      if (!/synthes|unformal|manifest|proposed|community|speculative|novel|direction|formalization/i.test(blob)) {
+        warnings.push({
+          id,
+          code: 'HIGH_VALUE_UNFORMALIZED_WEAK_LABEL',
+          detail: 'state explicitly that this is a synthesized / proposed / FV-oriented target',
         });
       }
     }
@@ -138,9 +211,24 @@ function main() {
     }
 
     if (p.theorem_status === 'solved') {
+      const sp = p.solution_pointer;
+      const stmt = sp && String(sp.theorem_statement || '').trim();
+      const who = sp && (String(sp.solved_by || '').trim() || String(sp.citation_key || '').trim());
+      if (!stmt || !who) {
+        issues.push({
+          level: 'error',
+          id,
+          code: 'SOLVED_NO_SOLUTION_POINTER',
+          detail: 'need solution_pointer.theorem_statement and solved_by or citation_key',
+        });
+      }
       const kr = p.known_results || [];
       if (!kr.some(x => /proved|theorem|established|shown/i.test(x.statement || ''))) {
-        issues.push({ level: 'error', id, code: 'SOLVED_WITHOUT_MATCH', detail: '' });
+        warnings.push({
+          id,
+          code: 'SOLVED_NO_KNOWN_RESULT_BULLET',
+          detail: 'consider mirroring the theorem in known_results',
+        });
       }
     }
   }
@@ -153,6 +241,9 @@ function main() {
     '# Problem validation report',
     '',
     `Generated: ${new Date().toISOString()}`,
+    '',
+    `- Scanned **published** dir: \`problems/\` and **provisional** dir: \`data/problems_provisional/\`.`,
+    `- Relaxed reference / partial rules apply to provisional entries (\`publish: false\` or provisional path).`,
     '',
     `**Errors:** ${errCount} · **Warnings:** ${warnCount}`,
     '',

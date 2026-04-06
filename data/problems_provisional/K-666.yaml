@@ -1,0 +1,89 @@
+id: K-666
+title: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+short_title: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spec…
+cluster: interior-scc
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+problem_statement: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+statement: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+why_it_matters: Makes Lambda>0 SCC precise and verifiable.
+scope:
+  background: de sitter general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: spectral-operator."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: de sitter
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-066. Manifest “Solved in literature?” note: Open 6. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Makes Lambda>0 SCC precise and verifiable.
+why_this_should_be_a_problem: Makes Lambda>0 SCC precise and verifiable.
+minimal_formal_statement: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-066 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-101
+  - K-106
+  - K-205
+  - K-206
+  - K-006
+related:
+  - K-101
+  - K-106
+  - K-205
+  - K-206
+  - K-006
+dependencies: []
+aliases:
+  - N-066
+tags:
+  - expansion-2026
+  - manifest-N-066
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: kerr-newman
+asymptotics: de-sitter
+coupling: matter-coupled
+equation_level:
+  - spectral-operator
+regime:
+  - interior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Makes Lambda>0 SCC precise and verifiable."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

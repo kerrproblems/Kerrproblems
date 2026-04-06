@@ -22,3 +22,11 @@ The database was **conceptually strong** (problems align with real research fron
 ## Residual risk
 
 Rows marked `needs_review` remain until maintainers attach two vetted references (unless policy explicitly keeps them flagged). Human literature verification is still required for edge cases and for tightening conditional SCC wordings.
+
+## Expansion batch (same month)
+
+- **100** new stubs (**K-601–K-700**) ingested from `data/expansion_from_manifest.tsv` into `data/problems_provisional/`, **`publish: false`**, with explicit **`research_state`** and cross-links to existing cluster anchors.
+- **Publication vs listing** is enforced in the Astro layer: the main index, clusters, RSS, and home highlights use **`getPublishedProblems()`** only; provisional rows remain addressable by direct URL and on **`/audit/provisional-problems/`**.
+- **`research_state`** separates “open in the literature” from **high-value unformalized / synthesized** targets without collapsing them into `theorem_status`.
+- References are **first-class** for promotion: provisional rows must not move to `problems/` with `publish: true` until the usual two-reference / primary-ref policy is met.
+- Quantitative and formalization-style targets stay visible via **`problem_type`** and badges so they are not mistaken for classical flagship conjectures.

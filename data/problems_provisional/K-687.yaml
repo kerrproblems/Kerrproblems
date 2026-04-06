@@ -1,0 +1,89 @@
+id: K-687
+title: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+short_title: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smoot…
+cluster: rigidity-uniqueness
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+problem_statement: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+statement: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+why_it_matters: Stationary uniqueness with Lambda>0 and charge/rotation.
+scope:
+  background: de sitter general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: de sitter
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-087. Manifest “Solved in literature?” note: Open. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Stationary uniqueness with Lambda>0 and charge/rotation.
+why_this_should_be_a_problem: Stationary uniqueness with Lambda>0 and charge/rotation.
+minimal_formal_statement: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-087 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-101
+  - K-106
+  - K-301
+  - K-302
+  - K-303
+related:
+  - K-101
+  - K-106
+  - K-301
+  - K-302
+  - K-303
+dependencies: []
+aliases:
+  - N-087
+tags:
+  - expansion-2026
+  - manifest-N-087
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: kerr-newman
+asymptotics: de-sitter
+coupling: matter-coupled
+equation_level:
+  - full-einstein
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Stationary uniqueness with Lambda>0 and charge/rotation."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

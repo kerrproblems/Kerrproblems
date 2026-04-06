@@ -1,0 +1,89 @@
+id: K-603
+title: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+short_title: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+cluster: spectral-scattering
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: high
+summary: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+problem_statement: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+statement: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+why_it_matters: Upgrades decay to Kerr into a full scattering map with data-to-radiation control.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: both linearized and fully nonlinear aspects
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-003. Manifest “Solved in literature?” note: Open 3. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Upgrades decay to Kerr into a full scattering map with data-to-radiation control.
+why_this_should_be_a_problem: Upgrades decay to Kerr into a full scattering map with data-to-radiation control.
+minimal_formal_statement: Prove nonlinear stability of Kerr with quantitative scattering (asymptotic completeness near Kerr).
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-003 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-401
+  - K-402
+  - K-403
+  - K-404
+related:
+  - K-401
+  - K-402
+  - K-403
+  - K-404
+dependencies: []
+aliases:
+  - N-003
+tags:
+  - expansion-2026
+  - manifest-N-003
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 4
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - nonlinear
+  - linear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Upgrades decay to Kerr into a full scattering map with data-to-radiation control."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

@@ -1,0 +1,105 @@
+id: K-651
+title: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+short_title: Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) …
+cluster: exterior-stability
+theorem_status: partial
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+problem_statement: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+statement: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+why_it_matters: Gauge-robust stability is valuable for nonlinear extensions.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: linearized-gravity."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results:
+  - statement: >-
+      The expansion manifest flags partial literature progress for this target; this repository has not attached
+      verified theorem statements or citations to that progress.
+    regime: To be replaced with literature-aligned regimes when curated.
+    significance: Editorial placeholder only—not an assertion about what is proved in any named paper.
+remaining_gap: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-051. Manifest “Solved in literature?” note: Partially solved / active
+  10. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary
+  until references are curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Gauge-robust stability is valuable for nonlinear extensions.
+why_this_should_be_a_problem: Gauge-robust stability is valuable for nonlinear extensions.
+minimal_formal_statement: >-
+  Prove linear stability of Kerr in alternative gauges (radiation gauges, generalized wave gauges) with explicit gauge
+  maps.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-051 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-051
+tags:
+  - expansion-2026
+  - manifest-N-051
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - linearized-gravity
+regime:
+  - linear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Gauge-robust stability is valuable for nonlinear extensions."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

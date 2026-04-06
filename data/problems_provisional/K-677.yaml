@@ -1,0 +1,88 @@
+id: K-677
+title: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+short_title: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Ke…
+cluster: exterior-stability
+theorem_status: open
+problem_type: classical_frontier
+research_state: open_in_literature
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: medium
+summary: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+problem_statement: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+statement: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+why_it_matters: Extends stability beyond vacuum/massless fields.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: full-einstein."
+  linearity: nonlinear
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-077. Manifest “Solved in literature?” note: Open. No bibliographic
+  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
+  curated. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Extends stability beyond vacuum/massless fields.
+why_this_should_be_a_problem: Extends stability beyond vacuum/massless fields.
+minimal_formal_statement: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-077 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+related:
+  - K-001
+  - K-003
+  - K-005
+  - K-012
+dependencies: []
+aliases:
+  - N-077
+tags:
+  - expansion-2026
+  - manifest-N-077
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 3
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: matter-coupled
+equation_level:
+  - full-einstein
+regime:
+  - nonlinear
+  - exterior
+relevance: pure-math
+fv_suitability: low
+fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
+progress_summary: "Manifest rationale: Extends stability beyond vacuum/massless fields."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"

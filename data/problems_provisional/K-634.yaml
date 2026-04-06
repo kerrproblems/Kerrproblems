@@ -1,0 +1,89 @@
+id: K-634
+title: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+short_title: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+cluster: rigidity-uniqueness
+theorem_status: needs_review
+problem_type: formalization_target
+research_state: high_value_unformalized_direction
+maturity: provisional
+evidence_level: refs_missing
+verification_state: imported_unverified
+publish: false
+priority: low
+summary: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+problem_statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+why_it_matters: Useful for formal verification track; needs precise references.
+scope:
+  background: asymptotically flat general relativity context; see family and coupling tags for matter model.
+  equation_type: "Taxonomy equation levels: scalar-wave."
+  linearity: linearized
+  regularity: >-
+    Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
+    minimal regularity.
+  parameter_regime: >-
+    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
+    fixed here.
+  asymptotics: asymptotically flat
+  gauge_or_formulation: null
+known_results: []
+remaining_gap: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+partial_progress: null
+frontier_gap: null
+solution_pointer: null
+status_explanation: >-
+  Imported from the site expansion manifest row N-034. Manifest “Solved in literature?” note: Likely solved/known in
+  special literature (not re-verified here). No bibliographic packet was supplied in that manifest; this entry is not a
+  literature-grounded status summary until references are curated. A “solved” indication in the manifest is not upgraded
+  to theorem_status: solved here without a verified solution_pointer and primary citations. Research state is marked as
+  a high-value unformalized or synthesized direction where the manifest frames the target that way. 
+references: []
+origin_type: synthesized_from_field-needs
+motivation: Useful for formal verification track; needs precise references.
+why_this_should_be_a_problem: Useful for formal verification track; needs precise references.
+minimal_formal_statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+last_verified_at: null
+last_verified_by: null
+editorial_notes: >-
+  Source manifest: N-034 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
+  this repository.
+related_problem_ids:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+related:
+  - K-301
+  - K-302
+  - K-303
+  - K-304
+dependencies: []
+aliases:
+  - N-034
+tags:
+  - expansion-2026
+  - manifest-N-034
+public_notes: null
+math_required: >-
+  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
+  mathematical target only.
+completion_criteria: >-
+  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
+  references are added.
+implications: Depends on problem family; to be sharpened when curated.
+difficulty: 2
+family: near-kerr-vacuum
+asymptotics: asymptotically-flat
+coupling: vacuum
+equation_level:
+  - scalar-wave
+regime:
+  - exterior
+relevance: pure-math
+fv_suitability: high
+fv_reason: Formalization targets map naturally to proof-assistant-sized subtasks once scoped.
+progress_summary: "Manifest rationale: Useful for formal verification track; needs precise references."
+related_families_note: null
+caution_note: null
+notes: null
+last_updated: "2026-04-06"
