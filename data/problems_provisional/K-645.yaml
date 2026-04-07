@@ -10,7 +10,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: >-
   Quantify the nonlinear backreaction of Price-law tails on Kerr interior geometry (mass inflation vs weak null

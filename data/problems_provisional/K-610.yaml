@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: Establish sharp SCC thresholds in Kerr interiors for C0 vs C1 vs C2 formulations.
 problem_statement: Establish sharp SCC thresholds in Kerr interiors for C0 vs C1 vs C2 formulations.

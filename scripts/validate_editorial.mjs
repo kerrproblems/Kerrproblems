@@ -79,14 +79,6 @@ function main() {
     });
     const relax = provPath || p.publish === false;
 
-    if (provPath && p.publish !== false) {
-      warnings.push({
-        id,
-        code: 'PROVISIONAL_DIR_BUT_PUBLISH_TRUE',
-        detail: 'YAML under data/problems_provisional/ should use publish: false',
-      });
-    }
-
     const ph = scanObjectStrings(raw);
     for (const loc of ph) {
       issues.push({ level: 'error', id, code: 'PLACEHOLDER_TEXT', detail: `${loc}: TODO/FIXME/pending` });

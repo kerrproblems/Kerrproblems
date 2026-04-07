@@ -62,9 +62,10 @@ import Base from '../layouts/Base.astro';
 
   <h2 id="publication">Publication vs provisional</h2>
   <p style="max-width: 68ch; margin-bottom: 0.75rem">
-    Entries with <code>publish: false</code> are kept under <code>data/problems_provisional/</code> (the expansion
-    batch uses this path). They are <strong>not</strong> listed on the main index, in clusters, or in RSS until promoted.
-    Maintainer listing: <a href="/audit/provisional-problems">Provisional pipeline</a>.
+    <code>publish: false</code> omits an entry from the main index, clusters, and RSS. YAML may still live under{' '}
+    <code>data/problems_provisional/</code> as a maintainer bucket (expansion batch); those rows can use{' '}
+    <code>publish: true</code> so they appear on the index before files are moved into <code>problems/</code>.{' '}
+    <a href="/audit/provisional-problems">Provisional pipeline</a> lists everything still in that directory.
   </p>
   <p style="max-width: 68ch; margin-bottom: 1.5rem">
     A live public page needs theorem status, problem type, a filled <code>scope</code> block, at least two references

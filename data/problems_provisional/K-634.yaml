@@ -8,7 +8,7 @@ research_state: high_value_unformalized_direction
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
 problem_statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.

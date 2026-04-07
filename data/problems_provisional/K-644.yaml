@@ -10,7 +10,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: >-
   Prove a full nonlinear characteristic IVP theorem from event-horizon data to the interior boundary in near-Kerr

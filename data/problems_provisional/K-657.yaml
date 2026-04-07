@@ -10,7 +10,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: >-
   Prove nonlinear evolution of near-horizon conserved quantities in extremal Kerr produces curvature singularity (or

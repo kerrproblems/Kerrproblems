@@ -8,7 +8,7 @@ research_state: solved_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."
 problem_statement: "Formalize: equivalence of Teukolsky and Regge-Wheeler transformations in Schwarzschild and slowly rotating Kerr."

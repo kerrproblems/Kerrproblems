@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.
 problem_statement: Prove stability of Kerr under small non-vacuum perturbations (e.g., Einstein-Vlasov) in a near-Kerr regime.

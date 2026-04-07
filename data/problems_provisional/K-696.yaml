@@ -8,7 +8,7 @@ research_state: solved_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
 problem_statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."

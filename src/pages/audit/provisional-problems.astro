@@ -1,13 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getProvisionalProblems, CLUSTER_LABELS } from '../../lib/problems.js';
+import { getProvisionalProblems, getProvisionalDirectoryProblems, CLUSTER_LABELS } from '../../lib/problems.js';
 import {
   THEOREM_STATUS_LABELS,
   RESEARCH_STATE_LABELS,
   PROBLEM_TYPE_LABELS,
 } from '../../lib/taxonomy.js';
 
-const provisional = getProvisionalProblems().sort((a, b) => a.id.localeCompare(b.id));
+const unpublished = getProvisionalProblems().sort((a, b) => a.id.localeCompare(b.id));
+const inProvisionalDir = getProvisionalDirectoryProblems().sort((a, b) => a.id.localeCompare(b.id));
 ---
 <Base title="Provisional pipeline">
   <div class="crumbs">
@@ -18,18 +19,20 @@ const provisional = getProvisionalProblems().sort((a, b) => a.id.localeCompare(b
 
   <h1 style="margin-bottom: 0.5rem">Provisional pipeline</h1>
   <p style="max-width: 68ch; color: var(--text-muted); margin-bottom: 1.5rem">
-    These entries have <code>publish: false</code> (currently all live under{' '}
-    <code>data/problems_provisional/</code>). They are omitted from the main problem index and from cluster/RSS
-    listings until references and editorial checks meet{' '}
-    <a href="/methodology#publication">publication criteria</a>. Direct URLs remain valid for review.
+    <strong>Unpublished</strong> (<code>publish: false</code>): omitted from the main index until curated —{' '}
+    <strong>{unpublished.length}</strong> {unpublished.length === 1 ? 'entry' : 'entries'}.
+    <strong> YAML in</strong> <code>data/problems_provisional/</code> (may still be listed on the index if{' '}
+    <code>publish: true</code>): <strong>{inProvisionalDir.length}</strong> for editorial tracking until files move to{' '}
+    <code>problems/</code>. See <a href="/methodology#publication">publication criteria</a>.
   </p>
 
+  <h2 style="font-size: 1.1rem; margin: 1.25rem 0 0.5rem">Files in <code>data/problems_provisional/</code></h2>
   <p style="margin-bottom: 1rem">
-    <strong>{provisional.length}</strong> unpublished {provisional.length === 1 ? 'entry' : 'entries'}.
+    <strong>{inProvisionalDir.length}</strong> {inProvisionalDir.length === 1 ? 'entry' : 'entries'}.
   </p>
 
   <ul class="dep-list" style="max-width: 72ch">
-    {provisional.map(p => (
+    {inProvisionalDir.map(p => (
       <li style="margin-bottom: 0.65rem">
         <a href={`/problems/${p.id}`} style="font-weight: 600">{p.id}</a>
         {' — '}

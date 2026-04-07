@@ -4,7 +4,7 @@ Problems with `maturity: provisional`, `verification_state: editorial_revision_n
 
 ## Pipeline directory
 
-The April 2026 **expansion batch** (manifest rows N-001–N-100) lives as **K-601–K-700** under `data/problems_provisional/`, all with `publish: false`, `evidence_level: refs_missing`, and **no references** until curators attach verified pointers. Listing: [`/audit/provisional-problems`](/audit/provisional-problems) (built site) or this repo’s `src/pages/audit/provisional-problems.astro`.
+The April 2026 **expansion batch** (manifest rows N-001–N-100) lives as **K-601–K-700** under `data/problems_provisional/` with **`publish: true`** so they appear on the main index; they still have `evidence_level: refs_missing` and **no references** until curated (then move YAML to `problems/` when convenient). Maintainer directory listing: [`/audit/provisional-problems`](/audit/provisional-problems).
 
 ## Older in-repo examples (published path, still fragile)
 

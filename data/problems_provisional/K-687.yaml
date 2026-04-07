@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.
 problem_statement: Prove a black-hole uniqueness theorem for near Kerr-Newman-de Sitter without analyticity in smooth category.

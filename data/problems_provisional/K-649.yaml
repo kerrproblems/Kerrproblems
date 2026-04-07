@@ -8,7 +8,7 @@ research_state: high_value_unformalized_direction
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: "Formalize in a proof assistant: the exact Kerr separability structure and Carter constant derivation."
 problem_statement: "Formalize in a proof assistant: the exact Kerr separability structure and Carter constant derivation."

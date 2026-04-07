@@ -10,7 +10,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: >-
   Prove that near-Kerr spacetimes admit approximate Carter operators with controlled commutators (usable in PDE

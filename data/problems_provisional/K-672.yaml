@@ -10,7 +10,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: >-
   Prove that generic small perturbations of Kerr generate nonzero angular momentum in the asymptotic Kerr parameter

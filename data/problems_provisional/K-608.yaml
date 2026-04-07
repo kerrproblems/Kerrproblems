@@ -8,7 +8,7 @@ research_state: solved_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.
 problem_statement: Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.

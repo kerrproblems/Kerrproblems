@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.
 problem_statement: Prove SCC threshold for Kerr-de Sitter and Kerr-Newman-de Sitter with explicit dependence on spectral gap.

@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: Prove an effective theorem translating small Mars-Simon tensor into existence of approximate Killing spinors.
 problem_statement: Prove an effective theorem translating small Mars-Simon tensor into existence of approximate Killing spinors.

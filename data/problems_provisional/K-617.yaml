@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove a quantitative distance-to-Kerr estimate from a small invariant (Mars-Simon-type) with computable constants.
 problem_statement: Prove a quantitative distance-to-Kerr estimate from a small invariant (Mars-Simon-type) with computable constants.

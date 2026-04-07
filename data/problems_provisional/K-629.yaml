@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.
 problem_statement: Prove robust decay estimates for Maxwell/Dirac fields on Kerr without small-a restriction, in sharp norms.

@@ -457,6 +457,13 @@ export function getProvisionalProblems() {
   return getAllProblems().filter(p => p.publish === false);
 }
 
+/** YAML still under `data/problems_provisional/` (maintainer bucket), regardless of `publish`. */
+export function getProvisionalDirectoryProblems() {
+  return getAllProblems().filter(p =>
+    String(p.yamlRelativePath || '').includes('problems_provisional'),
+  );
+}
+
 export function getProblemById(id) {
   const all = getAllProblems();
   return all.find(p => p.id === id) || null;

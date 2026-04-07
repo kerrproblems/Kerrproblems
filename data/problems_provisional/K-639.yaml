@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: Classify superradiant instability windows for massive scalar fields on Kerr in fully rigorous parameter inequalities.
 problem_statement: Classify superradiant instability windows for massive scalar fields on Kerr in fully rigorous parameter inequalities.

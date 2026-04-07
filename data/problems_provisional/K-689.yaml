@@ -8,7 +8,7 @@ research_state: high_value_unformalized_direction
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: low
 summary: Prove existence and stability of time-periodic near-Kerr solutions (vacuum or with fields) if any.
 problem_statement: Prove existence and stability of time-periodic near-Kerr solutions (vacuum or with fields) if any.

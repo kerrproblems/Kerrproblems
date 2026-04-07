@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: Establish sharp decay for Teukolsky equation on Kerr in full range with quantitative constants usable as blackboxes.
 problem_statement: Establish sharp decay for Teukolsky equation on Kerr in full range with quantitative constants usable as blackboxes.

@@ -8,7 +8,7 @@ research_state: high_value_unformalized_direction
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
 problem_statement: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.

@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove a fully rigorous PDE theorem for nonlinear superradiant instability of Kerr in a confining setting (mirror/AdS).
 problem_statement: Prove a fully rigorous PDE theorem for nonlinear superradiant instability of Kerr in a confining setting (mirror/AdS).

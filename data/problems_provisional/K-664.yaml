@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: Prove robust decay estimates for wave/Teukolsky equations on perturbed Kerr backgrounds without separability.
 problem_statement: Prove robust decay estimates for wave/Teukolsky equations on perturbed Kerr backgrounds without separability.

@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: Prove generic Lipschitz (or C1) inextendibility of near-Kerr MGHDs.
 problem_statement: Prove generic Lipschitz (or C1) inextendibility of near-Kerr MGHDs.

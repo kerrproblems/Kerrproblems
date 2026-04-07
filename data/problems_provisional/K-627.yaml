@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Establish pseudospectrum bounds for Kerr wave operators and relate to transient growth near superradiance.
 problem_statement: Establish pseudospectrum bounds for Kerr wave operators and relate to transient growth near superradiance.

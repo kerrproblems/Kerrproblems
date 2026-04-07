@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Build an explicit linearized-gravity scattering map exterior to Cauchy horizon for Kerr.
 problem_statement: Build an explicit linearized-gravity scattering map exterior to Cauchy horizon for Kerr.

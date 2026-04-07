@@ -8,7 +8,7 @@ research_state: open_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: medium
 summary: Prove stability/instability of the Cauchy horizon for Kerr-de Sitter under linearized gravity with sharp norms.
 problem_statement: Prove stability/instability of the Cauchy horizon for Kerr-de Sitter under linearized gravity with sharp norms.

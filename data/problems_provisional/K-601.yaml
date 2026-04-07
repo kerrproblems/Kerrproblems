@@ -8,7 +8,7 @@ research_state: solved_in_literature
 maturity: provisional
 evidence_level: refs_missing
 verification_state: imported_unverified
-publish: false
+publish: true
 priority: high
 summary: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
 problem_statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
