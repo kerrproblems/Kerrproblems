@@ -2,47 +2,117 @@ id: K-601
 title: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
 short_title: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full…
 cluster: exterior-stability
-theorem_status: needs_review
+theorem_status: partial
 problem_type: classical_frontier
-research_state: solved_in_literature
-maturity: provisional
-evidence_level: refs_missing
-verification_state: imported_unverified
+research_state: open_in_literature
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: verified_recently
 publish: true
 priority: high
-summary: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
-problem_statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
-statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
+summary: >-
+  Prove a definitive **linearized Einstein vacuum** stability statement for the full subextremal Kerr family $|a|<M$ in an
+  explicitly fixed gauge/regularity class, including sharp or integrable decay rates comparable to the Teukolsky
+  program. Boundedness and decay for the Teukolsky master equations on fixed Kerr are now developed through the full
+  subextremal range in the Dafermos–Holzegel–Rodnianski–Teixeira da Costa program; the remaining packaging issue is how
+  far this implies a single global theorem for the full linearized metric perturbation in a chosen gauge without hidden
+  small-$|a|/M$ restrictions.
+problem_statement: >-
+  Establish boundedness and quantitative decay for solutions to the **linearized Einstein vacuum equations** around
+  subextremal Kerr, for all $|a|<M$, in a named gauge (double-null, generalized harmonic, etc.) and Sobolev class—**or**
+  prove an equivalent formulation (e.g. master-variable/control norms) that is clearly equivalent to linearized metric
+  stability and records the sharp rates. The Teukolsky-equation results on the Kerr exterior should be cited as the
+  current theorem-level backbone.
+statement: >-
+  Establish boundedness and quantitative decay for solutions to the **linearized Einstein vacuum equations** around
+  subextremal Kerr, for all $|a|<M$, in a named gauge (double-null, generalized harmonic, etc.) and Sobolev class—**or**
+  prove an equivalent formulation (e.g. master-variable/control norms) that is clearly equivalent to linearized metric
+  stability and records the sharp rates. The Teukolsky-equation results on the Kerr exterior should be cited as the
+  current theorem-level backbone.
 why_it_matters: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: linearized-gravity."
+  equation_type: "PDE level: linearized-gravity."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Fixed subextremal Kerr background with $|a|<M$; linearized perturbations off that exact solution, all parameters in the
+    physical subextremal range.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Dafermos–Holzegel–Rodnianski–Teixeira da Costa develop **boundedness and polynomial decay** for Teukolsky equations of
+      spins $\pm1,\pm2$ on Kerr in the **full subextremal** parameter range (frequency-based series starting arXiv:2007.07211),
+      building on the small-$|a|/M$ case (arXiv:1711.07944).
+    regime: Linearized curvature master equations on exact subextremal Kerr, asymptotically flat exterior.
+    significance: >-
+      Closest unconditional “linear stability” result at the level of gauge-invariant master variables; metric-level
+      bookkeeping is the remaining packaging question for this entry.
+  - statement: >-
+      Linearized **scalar** wave decay on subextremal Kerr is classical in comparison; Teukolsky/gravitational degrees
+      require the spin-dependent framework above.
+    regime: Scalar vs spin-2 on Kerr.
+    significance: Separates scalar templates from the gravitational master equations actually addressed by the DHR program.
+  - statement: >-
+      Nonlinear Kerr stability is proved only for small $|a|/M$ (Klainerman–Szeftel program); this entry concerns linearized
+      theory but is motivated by wanting a **parameter-global** linear backbone matching the Teukolsky literature.
+    regime: Nonlinear vs linearized landscape.
+    significance: Clarifies that partial progress here is **not** claiming a new nonlinear theorem.
 remaining_gap: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
 status_explanation: >-
-  Imported from the site expansion manifest row N-001. Manifest “Solved in literature?” note: Solved (claim in preprint)
-  3. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary until
-  references are curated. A “solved” indication in the manifest is not upgraded to theorem_status: solved here without a
-  verified solution_pointer and primary citations. 
-references: []
+  **Partial:** Teukolsky master equations on fixed subextremal Kerr now have global boundedness/decay theorems in the full
+  $|a|<M$ regime (DHR–Teixeira da Costa program). What remains **open on this page’s phrasing** is a single
+  clean **metric-level linearized Einstein** statement in a fixed gauge, with rates transparently inherited from that
+  program—or a proved equivalence package spelling the norms.
+references:
+  - key: dhr-teukolsky-kerr-full-subextremal-frequency
+    authors: Dafermos, Holzegel, Rodnianski, Teixeira da Costa
+    title: >-
+      Boundedness and decay for the Teukolsky equation on Kerr in the full subextremal range $|a|<M$: frequency space
+      analysis
+    venue: arXiv
+    year: 2020
+    url: https://arxiv.org/abs/2007.07211
+    arxiv: "2007.07211"
+    kind: primary
+    relevance: >-
+      Foundational paper in the series proving Teukolsky boundedness/decay across the full subextremal Kerr range (spin
+      $\pm1,\pm2$).
+  - key: dhr-teukolsky-kerr-small-a
+    authors: Dafermos, Holzegel, Rodnianski
+    title: Boundedness and decay for the Teukolsky equation on Kerr spacetimes I - the case $|a|\ll M$
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1711.07944
+    arxiv: "1711.07944"
+    kind: primary
+    relevance: Earlier Teukolsky stability result for small $|a|/M$; conceptual precursor to the full-range series.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: >-
+      Survey context for how linearized decay tools feed (and do not automatically equal) full nonlinear Kerr stability.
 origin_type: synthesized_from_field-needs
 motivation: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
 why_this_should_be_a_problem: Consolidates linear theory into a canonical reference and enables downstream nonlinear work.
-minimal_formal_statement: Prove unconditional linear stability of Kerr (full subextremal range) in a fixed gauge, with full decay rates.
-last_verified_at: null
-last_verified_by: null
+minimal_formal_statement: >-
+  Metric-level linearized Einstein vacuum stability for all $|a|<M$ with decay rates matching the Teukolsky program, in
+  a fixed gauge.
+last_verified_at: "2026-04-07"
+last_verified_by: editorial-handoff
 editorial_notes: >-
   Source manifest: N-001 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -64,12 +134,14 @@ tags:
   - manifest-N-001
 public_notes: null
 math_required: >-
-  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
-  mathematical target only.
+  Teukolsky equations; metric reconstruction from curvature components; gauge-fixed linearized Einstein; weighted energy
+  estimates and trapping analysis on Kerr.
 completion_criteria: >-
-  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
-  references are added.
-implications: Depends on problem family; to be sharpened when curated.
+  A published-quality theorem for linearized metric perturbations or a proved equivalence to master-variable norms with
+  explicit decay rates, for all $|a|<M$.
+implications: >-
+  Provides a canonical linear backbone for nonlinear bootstrap arguments without hiding small-$|a|/M$ restrictions inside
+  linear tools.
 difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
@@ -82,7 +154,9 @@ regime:
 relevance: pure-math
 fv_suitability: low
 fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
-progress_summary: "Manifest rationale: Consolidates linear theory into a canonical reference and enables downstream nonlinear work."
+progress_summary: >-
+  Teukolsky-level linear stability is substantially settled in the full subextremal range; metric/gauge packaging of the
+  same information remains the active clarification target.
 related_families_note: null
 caution_note: null
 notes: null

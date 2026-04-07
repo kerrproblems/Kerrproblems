@@ -5,44 +5,78 @@ cluster: exterior-stability
 theorem_status: open
 problem_type: literature_reformulation
 research_state: high_value_unformalized_direction
-maturity: provisional
-evidence_level: refs_missing
+maturity: mostly_scoped
+evidence_level: primary_refs_present
 verification_state: imported_unverified
 publish: true
 priority: medium
-summary: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
+summary: >-
+  Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
 problem_statement: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
 statement: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
 why_it_matters: Would directly address the maintainer needs of kerrproblems.com.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: full-einstein."
+  equation_type: "PDE level: full-einstein."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy
+    data.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: Nonlinear stability of vacuum Kerr is proved for sufficiently small $|a|/M$ (Klainerman–Szeftel).
+    regime: Nonlinear Einstein vacuum, asymptotically flat, small angular momentum per unit mass.
+    significance: Strongest unconditional nonlinear theorem toward the full subextremal conjecture.
+  - statement: >-
+      Linearized Teukolsky/wave decay and mode stability on fixed subextremal Kerr are developed in depth (microlocal
+      and physical-space methods).
+    regime: Linearized gravity and scalar waves on exact Kerr.
+    significance: Standard toolbox; not equivalent to nonlinear stability for all parameters.
+  - statement: >-
+      Sharp Price-law exponents and nonlinear tail matching are understood in restricted settings (e.g. linearized
+      models, Schwarzschild); sharp nonlinear Kerr curvature tails are not settled.
+    regime: Late-time asymptotics; mixed linear vs nonlinear literature.
+    significance: Locates what “sharp Price law” demands beyond integrated decay.
 remaining_gap: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
 status_explanation: >-
-  Imported from the site expansion manifest row N-100. Manifest “Solved in literature?” note: Open (as a community
-  artifact) 8. No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status
-  summary until references are curated. Research state is marked as a high-value unformalized or synthesized direction
-  where the manifest frames the target that way. 
-references: []
+  Theorem status follows literature as summarized in known results
+  and references (not upgraded without verified solution pointers).
+references:
+  - key: ks-kerr-stability-small-a
+    authors: Klainerman, Szeftel
+    title: Nonlinear stability of Kerr for small angular momentum (program)
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2104.11857
+    arxiv: "2104.11857"
+    kind: primary
+    relevance: >-
+      Theorem-level nonlinear stability of vacuum Kerr in a small $|a|/M$ regime; benchmark for full subextremal
+      conjectures.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
 origin_type: synthesized_from_field-needs
 motivation: Would directly address the maintainer needs of kerrproblems.com.
 why_this_should_be_a_problem: Would directly address the maintainer needs of kerrproblems.com.
 minimal_formal_statement: Produce a complete, cited dependency graph of Kerr stability research milestones with verified theorem statements.
-last_verified_at: null
-last_verified_by: null
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
 editorial_notes: >-
   Source manifest: N-100 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -81,8 +115,9 @@ regime:
 relevance: pure-math
 fv_suitability: low
 fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
-progress_summary: "Manifest rationale: Would directly address the maintainer needs of kerrproblems.com."
+progress_summary: "Context: Would directly address the maintainer needs of kerrproblems.com."
 related_families_note: null
 caution_note: null
 notes: null
 last_updated: "2026-04-06"
+

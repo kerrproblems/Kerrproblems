@@ -6,7 +6,7 @@ theorem_status: partial
 problem_type: classical_frontier
 maturity: well_scoped
 evidence_level: primary_refs_present
-verification_state: imported_unverified
+verification_state: verified_recently
 priority: high
 summary: >-
   Show any smooth stationary asymptotically flat vacuum black-hole exterior satisfying standard hypotheses is

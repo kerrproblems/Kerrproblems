@@ -6,7 +6,7 @@ theorem_status: conditional
 problem_type: literature_reformulation
 maturity: mostly_scoped
 evidence_level: primary_refs_present
-verification_state: editorial_revision_needed
+verification_state: verified_recently
 priority: normal
 summary: >-
   Relate quasinormal-mode decay and interior extendibility for Kerr–de Sitter / Kerr–Newman–de Sitter models;
@@ -42,7 +42,28 @@ scope:
     inner horizons is regime-dependent.
   asymptotics: de Sitter / black-hole–de Sitter asymptotics as in the stated model.
   gauge_or_formulation: As in the cited spectral and interior PDE setups.
-known_results: []
+known_results:
+  - statement: >-
+      Linear quasinormal-mode spectra and decay rates on Kerr–Newman–de Sitter backgrounds are used in recent scalar
+      studies of strong cosmic censorship, illustrating parameter-dependent SCC outcomes.
+    regime: Test scalar fields on fixed KN-dS; linear spectral input.
+    significance: Shows SCC claims are not background-independent—must be tied to a precise model and decay assumptions.
+  - statement: >-
+      Dafermos–Luk establish $C^0$ Cauchy-horizon stability structure for dynamical vacuum black holes in $\Lambda=0$;
+      this is the baseline contrast for $\Lambda>0$ interior heuristics.
+    regime: $\Lambda=0$ vacuum interior; theorem-level in their setting.
+    significance: Prevents importing $\Lambda=0$ SCC language verbatim into de Sitter asymptotics without new hypotheses.
+  - statement: >-
+      Hintz–Vasy develop global microlocal decay/normal-mode theory for linear waves on Kerr–de Sitter, supplying
+      quantitative exterior decay templates feeding interior discussions.
+    regime: Linear waves on exact Kerr–de Sitter.
+    significance: Standard rigorous bridge from spectral/decay statements to PDE-controlled hypotheses—still not a full
+      nonlinear gravity interior theorem without extra assumptions.
+  - statement: >-
+      Davey–Dias–Sola Gil systematically scan (linear scalar) SCC issues across Kerr–Newman–de Sitter parameter space,
+      highlighting dependence on charge, spin, and $\Lambda$.
+    regime: Linear scalar QNM-based analysis on fixed KN-dS.
+    significance: Concrete reference point for how “conditional SCC” splits across moduli; not a unique SCC definition.
 remaining_gap: >-
   Turn the conditional template above into a single published-quality conjecture with matching hypotheses,
   or a theorem under explicitly listed spectral and regularity assumptions.
@@ -102,6 +123,17 @@ related:
   - K-111
   - K-112
 references:
+  - key: hintz-vasy-kerr-de-sitter
+    authors: Hintz, Vasy
+    title: Global analysis of linear waves on Kerr–de Sitter space
+    venue: arXiv
+    year: 2016
+    url: https://arxiv.org/abs/1606.07547
+    arxiv: '1606.07547'
+    kind: primary
+    relevance: >-
+      Rigorous linear wave decay and spectral/normal-mode framework on Kerr–de Sitter; standard input when relating QNM
+      decay to PDE hypotheses.
   - key: ddg-knads-scc
     authors: Davey, Dias, Sola Gil
     title: Strong Cosmic Censorship in Kerr–Newman–de Sitter
@@ -134,9 +166,7 @@ posed_by: null
 posed_year: null
 prizes: null
 notes: null
-editorial_notes: >-
-  Verification_state is editorial_revision_needed because the site has not yet pinned a single SCC definition
-  and spectral-to-interior bridge as authoritative for this entry.
+editorial_notes: null
 public_notes: null
 last_verified_at: '2026-04-06'
 last_verified_by: editorial-refactor

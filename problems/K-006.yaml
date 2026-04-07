@@ -37,7 +37,22 @@ scope:
   gauge_or_formulation: >-
     BMS gauge fixing and memory definitions must be tied to the gauge used in the nonlinear stability
     construction.
-known_results: []
+known_results:
+  - statement: >-
+      Rigorous Bondi–Sachs frameworks define BMS charges, flux laws, and gravitational memory in asymptotically flat
+      settings—including nonlinear memory contributions accessible in PDE formulations (e.g. curve-deviation memory).
+    regime: Asymptotically flat vacuum; null-infinity bookkeeping.
+    significance: Supplies honest definitions for the observables that a Kerr stability theorem should eventually align with.
+  - statement: >-
+      Klainerman–Szeftel’s Kerr stability program proves nonlinear stability in restricted subextremal windows with
+      explicit Cauchy/topology choices; BMS/memory compatibility is not yet a standard packaged corollary.
+    regime: Nonlinear vacuum near Kerr (small $|a|/M$ regime).
+    significance: Identifies where charge/memory theorems would need to be embedded in the stability bootstrap.
+  - statement: >-
+      Linearized BMS/memory on fixed backgrounds is more developed than the fully nonlinear Kerr-stability-compatible
+      synthesis targeted here.
+    regime: Linearized or Minkowski-centric memory literature.
+    significance: Clarifies that the open issue is **compatibility** with the nonlinear Kerr proof’s gauge and regularity.
 remaining_gap: >-
   Decompose the target into: (i) define BMS charges and memory in the gauge of the near-Kerr stability
   framework; (ii) control nonlinear memory contributions under the same bootstrap; (iii) connect the

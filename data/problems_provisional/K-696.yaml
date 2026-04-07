@@ -2,47 +2,105 @@ id: K-696
 title: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
 short_title: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable…"
 cluster: rigidity-uniqueness
-theorem_status: needs_review
+theorem_status: open
 problem_type: formalization_target
-research_state: solved_in_literature
-maturity: provisional
-evidence_level: refs_missing
-verification_state: imported_unverified
+research_state: open_in_literature
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: verified_recently
 publish: true
 priority: low
-summary: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
-problem_statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
-statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
-why_it_matters: High FV value; helps convert qualitative to quantitative.
+summary: >-
+  Stationary, asymptotically flat vacuum spacetimes admit tensorial characterizations of the Kerr geometry via the
+  (spacetime) Simon/Mars tensor and related Weyl–Killing alignment conditions (Mars, CQG 1999). Separately, perturbative
+  stationary uniqueness near Kerr often proceeds via Carleman-type estimates and curvature tensors in weighted Sobolev
+  classes. This **formalization** problem asks for a proof-assistant–ready modularization: state minimal axioms (smoothness,
+  stationarity, AF fall-off, smallness in a named norm), list lemmas with precise hypotheses, and isolate where
+  Simon/Mars identities substitute for raw tensor estimates—without claiming a new PDE theorem beyond the literature.
+problem_statement: >-
+  Produce a machine-checkable proof skeleton (e.g. Lean/Coq) that derives a stated **local** perturbative uniqueness or
+  rigidity lemma for smooth stationary AF vacuum metrics near Kerr, following a published Carleman/unique continuation
+  route, and explicitly interfaces any use of the Mars/Simon tensor characterization as algebraic lemmas (not as a black
+  box “Kerr uniqueness”).
+statement: >-
+  Produce a machine-checkable proof skeleton (e.g. Lean/Coq) that derives a stated **local** perturbative uniqueness or
+  rigidity lemma for smooth stationary AF vacuum metrics near Kerr, following a published Carleman/unique continuation
+  route, and explicitly interfaces any use of the Mars/Simon tensor characterization as algebraic lemmas (not as a black
+  box “Kerr uniqueness”).
+why_it_matters: >-
+  Separates tensorial Kerr characterizations from PDE stability formalizations; high formal-verification value for
+  rigidity modules reused in wider relativity formalization efforts.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: full-einstein."
+  equation_type: "PDE level: full-einstein."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Neighborhood of a fixed subextremal Kerr solution in a stationary AF vacuum class; smallness in weighted Sobolev (or
+    equivalent) norms as in the chosen Carleman route—**not** a dynamical Cauchy stability problem.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
-known_results: []
-remaining_gap: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Mars gives a spacetime Simon tensor characterization: stationary AF vacuum with vanishing spacetime Simon tensor is
+      locally isometric to Kerr (CQG 1999; arXiv:gr-qc/9904070).
+    regime: Stationary AF vacuum; local isometry conclusion.
+    significance: Sharp tensorial certificate of Kerr geometry—potential algebraic layer in a formalized perturbative
+      argument if hypotheses match.
+  - statement: >-
+      Global smooth stationary uniqueness without analyticity (K-301) remains a separate open PDE benchmark; formalizing
+      **local** Carleman lemmas near Kerr is a smaller, well-scoped target.
+    regime: Stationary uniqueness cluster.
+    significance: Prevents conflating this formalization task with full global uniqueness programs.
+  - statement: >-
+      Surveys (e.g. Mazur) summarize Carter–Robinson–Mazur lines and reduction routes; use them for bibliographic context,
+      not as a substitute for checking hypotheses in code.
+    regime: Stationary uniqueness literature.
+    significance: Orientation for where tensor characterizations sit relative to global theorems.
+remaining_gap: >-
+  Deliver an actual formalization artifact (definitions + lemma statements + proof-term outline) tied to one published
+  Carleman/unique continuation argument; document any axioms that remain mathematically open.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
 status_explanation: >-
-  Imported from the site expansion manifest row N-096. Manifest “Solved in literature?” note: Solved in literature
-  (formalization open) 21. No bibliographic packet was supplied in that manifest; this entry is not a
-  literature-grounded status summary until references are curated. A “solved” indication in the manifest is not upgraded
-  to theorem_status: solved here without a verified solution_pointer and primary citations. 
-references: []
+  **Open (formalization):** the underlying analytic rigidity technology exists in the literature, but a
+  proof-assistant–checkable decomposition linking Mars/Simon tensor algebra to a concrete Carleman estimate package is not
+  recorded as completed here.
+references:
+  - key: mars-spacetime-simon-kerr
+    authors: Mars, Marc
+    title: A spacetime characterization of the Kerr metric
+    venue: Classical and Quantum Gravity
+    year: 1999
+    url: https://arxiv.org/abs/gr-qc/9904070
+    arxiv: gr-qc/9904070
+    doi: 10.1088/0264-9381/16/7/323
+    kind: primary
+    relevance: >-
+      Defines the spacetime Simon tensor and proves a Kerr characterization among stationary AF vacuum solutions—algebraic
+      input for any formalized perturbative uniqueness module that imports tensor identities.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: Survey of stationary uniqueness and reduction routes (including Ernst-type formulations).
 origin_type: synthesized_from_field-needs
 motivation: High FV value; helps convert qualitative to quantitative.
 why_this_should_be_a_problem: High FV value; helps convert qualitative to quantitative.
-minimal_formal_statement: "Formalize: perturbative uniqueness near Kerr using Mars-Simon tensor estimates (machine-checkable Carleman skeleton)."
-last_verified_at: null
-last_verified_by: null
+minimal_formal_statement: >-
+  Machine-checkable lemma bundle: stationary AF vacuum + smallness $\Rightarrow$ local rigidity to Kerr, with explicit
+  Simon/Mars tensor lemmas abstracted from Mars (1999).
+last_verified_at: "2026-04-06"
+last_verified_by: editorial-handoff
 editorial_notes: >-
   Source manifest: N-096 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -64,12 +122,13 @@ tags:
   - manifest-N-096
 public_notes: null
 math_required: >-
-  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
-  mathematical target only.
+  Proof-assistant infrastructure; tensor calculus; weighted Sobolev estimates; unique continuation/Carleman inequalities as
+  in the chosen primary PDE reference (to be pinned to one paper in a follow-up edit if needed).
 completion_criteria: >-
-  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
-  references are added.
-implications: Depends on problem family; to be sharpened when curated.
+  Public repository artifact compiling formal definitions, lemma statements, and completed or sketched proof terms for a
+  single named analytic argument, with explicit dependency graph to Mars (1999) lemmas.
+implications: >-
+  Reusable formal library for stationary uniqueness and near-Kerr rigidity lemmas inside larger GR formalization efforts.
 difficulty: 2
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
@@ -81,7 +140,9 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: Formalization targets map naturally to proof-assistant-sized subtasks once scoped.
-progress_summary: "Manifest rationale: High FV value; helps convert qualitative to quantitative."
+progress_summary: >-
+  Mars (1999) supplies a sharp Kerr characterization tensor; packaging it with a Carleman route into a proof assistant is
+  the remaining engineering/mathematics formalization work.
 related_families_note: null
 caution_note: null
 notes: null

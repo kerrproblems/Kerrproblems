@@ -2,47 +2,61 @@ id: K-402
 title: Nonlinear QNMs from full Einstein evolution
 short_title: Nonlinear QNMs from full Einstein evolution
 cluster: spectral-scattering
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: Nonlinear QNMs from full Einstein evolution
+summary: >-
+  Nonlinear QNMs from full Einstein evolution
 problem_statement: >-
-  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics,
-  including quadratic or higher corrections to linear QNM behavior.
+  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics, including quadratic or
+  higher corrections to linear QNM behavior.
 statement: >-
-  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics,
-  including quadratic or higher corrections to linear QNM behavior.
+  Derive theorem-level nonlinear ringdown expansions directly from near-Kerr Einstein dynamics, including quadratic or
+  higher corrections to linear QNM behavior.
 why_it_matters: >-
-  Observational ringdown analysis increasingly depends on knowing when linear mode models are
-  justified and when nonlinear corrections matter.
+  Observational ringdown analysis increasingly depends on knowing when linear mode models are justified and when
+  nonlinear corrections matter.
 scope:
-  background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise.
-  equation_type: 'Taxonomy equation levels: spectral-operator, full-einstein.'
+  background: Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise.
+  equation_type: "PDE level: spectral-operator, full-einstein."
   linearity: Includes or emphasizes nonlinear dynamics.
   regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Subextremal Kerr (or Kerr–de Sitter where tagged); spectral parameters $(l,m)$ and frequency $ω$ regimes as in cited
+    microlocal frameworks.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Microlocal/resolvent frameworks yield decay and mode stability for waves on exact Kerr and Kerr–de Sitter under
+      stated spectral assumptions.
+    regime: Linear waves; fixed background.
+    significance: Standard input for QNM expansions and superradiance discussions.
+  - statement: Nonlinear Kerr stability is proved in a small-$|a|/M$ vacuum window (Klainerman–Szeftel).
+    regime: Nonlinear vacuum, restricted parameters.
+    significance: Closest nonlinear analogue for exterior stability conjectures.
+  - statement: >-
+      Complete QNM expansion as a spectral representation (including branch cuts) for Kerr remains an open mathematical
+      framework problem.
+    regime: Spectral theory on Kerr.
+    significance: Distinguishes partial mode stability from full expansion/completeness.
 remaining_gap: >-
-  A complete answer must bound the difference between the full Einstein waveform and a stated
-  nonlinear QNM model over an explicit time interval.
+  A complete answer must bound the difference between the full Einstein waveform and a stated nonlinear QNM model over
+  an explicit time interval.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
 math_required: >-
-  Second-order perturbation theory; nonlinear normal forms; matched asymptotics; control of
-  nonlinear waveform remainders.
+  Second-order perturbation theory; nonlinear normal forms; matched asymptotics; control of nonlinear waveform
+  remainders.
 completion_criteria: >-
-  A complete answer must bound the difference between the full Einstein waveform and a stated
-  nonlinear QNM model over an explicit time interval.
+  A complete answer must bound the difference between the full Einstein waveform and a stated nonlinear QNM model over
+  an explicit time interval.
 implications: Would bridge rigorous PDE theory and high-precision black-hole spectroscopy.
 difficulty: 3
 family: near-kerr-vacuum
@@ -58,9 +72,8 @@ regime:
 relevance: physics-facing
 fv_suitability: medium
 fv_reason: >-
-  Bridges full Einstein evolution with QNM-style expansions; some linearized spectral pieces are
-  structured, but nonlinear remainder control is a poor first formalization target compared to pure
-  ODE or stationary rigidity problems.
+  Bridges full Einstein evolution with QNM-style expansions; some linearized spectral pieces are structured, but
+  nonlinear remainder control is a poor first formalization target compared to pure ODE or stationary rigidity problems.
 progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
 dependencies:
   - K-001
@@ -81,21 +94,40 @@ related:
   - K-405
   - K-406
   - K-407
-references: []
+references:
+  - key: hintz-vasy-kerr-de-sitter
+    authors: Hintz, Vasy
+    title: Global analysis of linear waves on Kerr–de Sitter space
+    venue: arXiv
+    year: 2016
+    url: https://arxiv.org/abs/1606.07547
+    arxiv: "1606.07547"
+    kind: primary
+    relevance: Linear wave decay and spectral gap on Kerr–de Sitter; standard microlocal input for $Lambda>0$ decay.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
 tags: []
 aliases: []
 related_families_note: null
 caution_note: >-
-  Connects nonlinear exterior stability intuitions with spectral/QNM-level statements; dependencies
-  are conceptual, not logical prerequisites in a proof assistant sense.
+  Connects nonlinear exterior stability intuitions with spectral/QNM-level statements; dependencies are conceptual, not
+  logical prerequisites in a proof assistant sense.
 posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. : replace with a precise description of what is proved vs. conjectured.
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not fully settled. :
+  replace with a precise description of what is proved vs. conjectured.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"
+

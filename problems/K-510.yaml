@@ -4,50 +4,68 @@ short_title: Ernst reduction uniqueness (domain TBD)
 cluster: rigidity-uniqueness
 theorem_status: needs_review
 problem_type: formalization_target
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: low
 summary: >-
-  Characterize the largest natural function class on the stationary axisymmetric orbit space where the Ernst
-  potential uniquely pins down Kerr among vacuum solutions—**the intended PDE domain and boundary data are not
-  yet literature-locked in this entry.**
+  Characterize the largest natural function class on the stationary axisymmetric orbit space where the Ernst potential
+  uniquely pins down Kerr among vacuum solutions—**the intended PDE domain and boundary data are not yet
+  literature-locked in this entry.**
 problem_statement: >-
-  Once a precise function class on the orbit/rod picture and boundary/asymptotic data are fixed, characterize
-  uniqueness (or non-uniqueness with counterexamples) of the Kerr solution within stationary axisymmetric vacuum
-  exteriors via the Ernst equation. **This YAML intentionally does not claim a final sharp theorem statement**
-  until editors attach verified citations matching one concrete formulation.
+  In the stationary axisymmetric vacuum reduction, fix **concrete** data: (i) a simply connected orbit domain
+  $\Omega \subset \mathbb{R}^2$ with stated boundary components (axis, horizon rods, infinity), (ii) a weighted Hölder
+  or Sobolev class for the complex Ernst potential $\mathcal{E}$ encoding asymptotically flat fall-off at the designated
+  end, and (iii) any auxiliary rod-structure/normalization conditions used in the Weyl/Papapetrou chart. **Theorem
+  target:** prove uniqueness of the Kerr member in that function class from the reduced boundary-value problem, **or**
+  exhibit non-uniqueness/counterexamples in the same class. The open database question is which maximal (in the
+  partial-order of domains/classes) choice of (i–iii) is already treated in the literature versus still conjectural.
 statement: >-
-  Once a precise function class on the orbit/rod picture and boundary/asymptotic data are fixed, characterize
-  uniqueness (or non-uniqueness with counterexamples) of the Kerr solution within stationary axisymmetric vacuum
-  exteriors via the Ernst equation. **This YAML intentionally does not claim a final sharp theorem statement**
-  until editors attach verified citations matching one concrete formulation.
+  In the stationary axisymmetric vacuum reduction, fix **concrete** data: (i) a simply connected orbit domain
+  $\Omega \subset \mathbb{R}^2$ with stated boundary components (axis, horizon rods, infinity), (ii) a weighted Hölder
+  or Sobolev class for the complex Ernst potential $\mathcal{E}$ encoding asymptotically flat fall-off at the designated
+  end, and (iii) any auxiliary rod-structure/normalization conditions used in the Weyl/Papapetrou chart. **Theorem
+  target:** prove uniqueness of the Kerr member in that function class from the reduced boundary-value problem, **or**
+  exhibit non-uniqueness/counterexamples in the same class. The open database question is which maximal (in the
+  partial-order of domains/classes) choice of (i–iii) is already treated in the literature versus still conjectural.
 why_it_matters: >-
-  The Ernst reduction is central to stationary uniqueness algorithms; sharp domains matter for numerics and
-  inverse problems.
+  The Ernst reduction is central to stationary uniqueness algorithms; sharp domains matter for numerics and inverse
+  problems.
 scope:
   background: Stationary axisymmetric vacuum; Ernst potential on orbit space.
   equation_type: Elliptic Ernst equation / harmonic maps with boundary conditions TBD.
   linearity: Stationary nonlinear elliptic problem.
-  regularity: >-
-    To be fixed (e.g. $C^{k,\alpha}$ on compactified orbit space, weighted Sobolev near axes/horizons).
+  regularity: To be fixed (e.g. $C^{k,\alpha}$ on compactified orbit space, weighted Sobolev near axes/horizons).
   parameter_regime: Not fixed until boundary data and topology of orbit space are pinned.
   asymptotics: Asymptotically flat fall-off encoded in Ernst boundary data—version-dependent.
   gauge_or_formulation: Rod-structure / Weyl coordinates vs other charts must be chosen consistently.
-known_results: []
+known_results:
+  - statement: >-
+      Analytic stationary uniqueness theorems identify Kerr in the asymptotically flat vacuum class
+      (Carter–Robinson–Mazur line).
+    regime: Real-analytic stationary vacuum.
+    significance: Classical baseline; smooth non-analytic uniqueness remains the sharp open gap for many formulations.
+  - statement: >-
+      Near-Kerr perturbative rigidity and Carter-type structures are studied in separability and hidden-symmetry
+      programs.
+    regime: Perturbations of Kerr; operator commutators.
+    significance: Context for approximate operators and photon-region stability questions.
+  - statement: >-
+      Ernst reduction and harmonic-map formulations package stationary axisymmetric vacuum equations; sharp global
+      uniqueness domains are formulation-dependent.
+    regime: 2D elliptic reductions.
+    significance: Explains why Ernst-domain questions must pin boundary data and function classes.
 remaining_gap: >-
   Editorial: import a literature-matching uniqueness statement or split into multiple precise problems; then
   mathematical: prove or disprove within that statement.
 status_explanation: >-
-  `needs_review` because the historical one-line prompt mixed maximal-domain rhetoric with unspecified
-  boundary-value data; do not cite this entry as a literature summary yet.
+  `needs_review` because the historical one-line prompt mixed maximal-domain rhetoric with unspecified boundary-value
+  data; do not cite this entry as a literature summary yet.
 math_required: >-
-  Ernst equation; harmonic maps; boundary value problems for elliptic PDE; rod-structure formalism; inverse
-  scattering techniques in reductions where applicable.
-completion_criteria: >-
-  Theorem or counterexample with checkable hypotheses once the domain/data are fixed.
-implications: >-
-  Strengthens stationary uniqueness cluster and informs multipole reconstruction algorithms—after scoping.
+  Ernst equation; harmonic maps; boundary value problems for elliptic PDE; rod-structure formalism; inverse scattering
+  techniques in reductions where applicable.
+completion_criteria: Theorem or counterexample with checkable hypotheses once the domain/data are fixed.
+implications: Strengthens stationary uniqueness cluster and informs multipole reconstruction algorithms—after scoping.
 difficulty: 4
 family: exact-kerr
 asymptotics: asymptotically-flat
@@ -59,8 +77,8 @@ regime:
 relevance: pure-math
 fv_suitability: high
 fv_reason: >-
-  Ernst potential formulations reduce Einstein equations to 2D elliptic PDE; natural formalization target once
-  the domain is fixed.
+  Ernst potential formulations reduce Einstein equations to 2D elliptic PDE; natural formalization target once the
+  domain is fixed.
 progress_summary: >-
   Classical reductions exist; a database-grade sharp uniqueness domain is not asserted here without primary
   verification.
@@ -75,7 +93,36 @@ related:
   - K-301
   - K-302
   - K-303
-references: []
+references:
+  - key: ernst-new-representation-1968
+    authors: Ernst, Frederick J.
+    title: New representation of the solutions of the equations for the gravitational field with one commuting symmetry
+    venue: Physical Review
+    year: 1968
+    url: https://doi.org/10.1103/PhysRev.167.1175
+    doi: 10.1103/PhysRev.167.1175
+    kind: primary
+    relevance: >-
+      Original Ernst potential formulation of stationary axisymmetric vacuum gravity; baseline PDE object for orbit-space
+      uniqueness questions.
+  - key: carter-kerr-symmetry-1968
+    authors: Carter
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Communications in Mathematical Physics
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: Fourth constant / separability structure on exact Kerr; operator-algebra backdrop for rigidity questions.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: Survey of stationary uniqueness and reduction routes (including Ernst-type formulations).
 tags: []
 aliases: []
 related_families_note: null
@@ -85,9 +132,9 @@ posed_year: null
 prizes: null
 notes: null
 editorial_notes: >-
-  Maintainer priority: replace `needs_review` with a scoped theorem statement + two primary references, or
-  demote/remove from automated “featured” lists until that happens.
+  Maintainer priority: replace `needs_review` with a scoped theorem statement + two primary references, or demote/remove
+  from automated “featured” lists until that happens.
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-06'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-06"

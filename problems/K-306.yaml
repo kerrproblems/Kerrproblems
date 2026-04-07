@@ -35,7 +35,22 @@ scope:
   parameter_regime: Smallness of Kerr distance in a stated topology.
   asymptotics: Asymptotically flat near-Kerr context as in stability/rigidity discussions.
   gauge_or_formulation: Operator definitions must be gauge-coherent or gauge-fixed.
-known_results: []
+known_results:
+  - statement: >-
+      On **exact** Kerr, Carter-type quadratic conserved operators and separability for $\Box_g$ are classical; this is the
+      algebraic benchmark any perturbative remnant must be compared against.
+    regime: Exact Kerr; geodesic and scalar wave operators.
+    significance: Establishes what “hidden symmetry” means at the integrable level before discussing near-Kerr remnants.
+  - statement: >-
+      Killing tensor / hidden-symmetry structures are rigid in highly symmetric settings; the near-Kerr question is
+      whether **approximate** commutators with controlled errors exist in open sets of metrics.
+    regime: Rigidity of tensors on symmetric backgrounds; perturbation theory context.
+    significance: Explains why the problem is genuinely about **stability of integrability**, not a restatement of Carter.
+  - statement: >-
+      Photon-region spectral geometry (K-504) and approximate Killing–Yano stability (K-508) are sibling questions but
+      target different geometric objects than general Carter-type operator algebras.
+    regime: Near-Kerr geometry; separate entry scopes.
+    significance: Prevents duplicating those problems while keeping operator-algebra focus here.
 remaining_gap: >-
   Construct approximate operators with uniform estimates or obstruct them with a sharp theorem.
 status_explanation: >-

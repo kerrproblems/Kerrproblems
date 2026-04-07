@@ -1,51 +1,80 @@
 id: K-110
-title: Bifurcation-sphere stability and full interior series completion
-short_title: Bifurcation-sphere stability and full interior series completion
+title: >-
+  Global bifurcation-sphere completion for perturbed Kerr-type interiors (vacuum, $\Lambda=0$, Dafermos–Luk class)
+short_title: Bifurcation-sphere completion (dynamical Kerr interior)
 cluster: interior-scc
-theorem_status: needs_review
+theorem_status: partial
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: verified_recently
 priority: normal
-summary: Bifurcation-sphere stability and full interior series completion
+summary: >-
+  In asymptotically flat vacuum general relativity, the Dafermos–Luk program establishes $C^0$-stability-type statements
+  for Cauchy horizons in dynamical black holes approaching Kerr. This problem isolates the **global interior boundary
+  completion** step: extend that control through the bifurcation sphere and along the full future boundary of the
+  perturbed interior (including articulation of the bifurcate null structure) in a stated regularity class, so that
+  “interior stability” is not only local near a horizon patch. It is a geometric/PDE target distinct from exterior decay
+  and from $\Lambda>0$ scalar QNM scans; success would sharpen what “generic” means for vacuum SCC-type questions in the
+  rotating case.
 problem_statement: >-
-  Complete the geometric analysis of the perturbed Kerr interior all the way to the bifurcation
-  sphere and global Cauchy-horizon structure.
+  For vacuum Einstein evolutions in the dynamical-class considered by Dafermos–Luk (small perturbations of Kerr-like
+  data), prove a **global** geometric statement that propagates the established Cauchy-horizon stability/control up to
+  and including the bifurcation sphere, specifying the chart class (double-null, generalized harmonic, etc.) and the
+  intended regularity ($C^0$, Lipschitz, or higher). The theorem target is a checkable statement about the full future
+  interior boundary—not a broader “complete the entire interior program” umbrella.
 statement: >-
-  Complete the geometric analysis of the perturbed Kerr interior all the way to the bifurcation
-  sphere and global Cauchy-horizon structure.
+  For vacuum Einstein evolutions in the dynamical-class considered by Dafermos–Luk (small perturbations of Kerr-like
+  data), prove a **global** geometric statement that propagates the established Cauchy-horizon stability/control up to
+  and including the bifurcation sphere, specifying the chart class (double-null, generalized harmonic, etc.) and the
+  intended regularity ($C^0$, Lipschitz, or higher). The theorem target is a checkable statement about the full future
+  interior boundary—not a broader “complete the entire interior program” umbrella.
 why_it_matters: >-
-  The interior picture is not complete until the full boundary geometry is understood, not just a
-  local Cauchy-horizon segment.
+  Bifurcate geometry organizes the maximal extension; without a global statement, interior SCC heuristics can conflate
+  local horizon estimates with global genericity claims. Broader “interior series” and charged/$\Lambda>0$ extensions
+  belong in separate problem entries once this vacuum, $\Lambda=0$ core target is sharpened.
 scope:
   background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise. Cauchy horizon / interior regularity formulations of strong cosmic censorship are in
-    play; distinguish $C^0$ vs higher regularity notions.
-  equation_type: 'Taxonomy equation levels: full-einstein.'
+    Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise. Cauchy horizon /
+    interior regularity formulations of strong cosmic censorship are in play; distinguish $C^0$ vs higher regularity
+    notions.
+  equation_type: "PDE level: full-einstein."
   linearity: Includes or emphasizes nonlinear dynamics.
-  regularity: >-
-    State intended regularity class for extensions across horizons explicitly (e.g. $C^0$,
-    Lipschitz, $C^2$).
+  regularity: State intended regularity class for extensions across horizons explicitly (e.g. $C^0$, Lipschitz, $C^2$).
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Subextremal Kerr interior up to Cauchy horizons; specify SCC regularity class ($C^0$, Lipschitz, $C^k$) in the
+    theorem.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      $C^0$-extendibility and weak regularity across Cauchy horizons are understood in substantial $Lambda=0$ vacuum
+      settings (Dafermos–Luk program); higher regularity and $Lambda>0$ charged models require separate hypotheses.
+    regime: Dynamical vacuum near Kerr, $Lambda=0$ baseline; contrast with $Lambda>0$ scalar scans.
+    significance: Sets what “partial” interior control means before claiming generic blow-up or extendibility.
+  - statement: >-
+      Linear scalar and Teukolsky-type decay on fixed subextremal Kerr exteriors is highly developed and feeds
+      conditional interior instability heuristics.
+    regime: Linearized fields on exact Kerr/Kerr–Newman.
+    significance: Supplies quantitative decay exponents used in bridge hypotheses to inner horizons.
+  - statement: >-
+      Polyhomogeneous/null-infinity technology exists for nonlinear Minkowski and some linearized Kerr contexts; sharp
+      nonlinear near-Kerr peeling is not packaged as one theorem.
+    regime: Null infinity / linearized models.
+    significance: Separates radiation asymptotics from interior SCC targets.
 remaining_gap: >-
-  A complete answer must classify all future interior boundary pieces and prove regularity
-  statements up to the bifurcation region.
+  A complete answer must classify all future interior boundary pieces and prove regularity statements up to the
+  bifurcation region.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
-math_required: >-
-  Double-null interior geometry; regularity propagation to bifurcate sets; characteristic PDE
-  methods.
+  **Open / partial:** $C^0$ Cauchy-horizon stability in dynamical vacuum black holes is theorem-level in the Dafermos–Luk
+  framework; extension to the **full bifurcation-sphere-inclusive** global boundary description as formulated here is not
+  recorded as a single closed theorem on this site.
+math_required: Double-null interior geometry; regularity propagation to bifurcate sets; characteristic PDE methods.
 completion_criteria: >-
-  A complete answer must classify all future interior boundary pieces and prove regularity
-  statements up to the bifurcation region.
+  A complete answer must classify all future interior boundary pieces and prove regularity statements up to the
+  bifurcation region.
 implications: Would finish the geometric part of the vacuum rotating interior program.
 difficulty: 3
 family: exact-kerr
@@ -59,7 +88,9 @@ regime:
 relevance: pure-math
 fv_suitability: medium
 fv_reason: Some subquestions may formalize before the full statement.
-progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
+progress_summary: >-
+  Dafermos–Luk supply the primary $C^0$ interior baseline; the gap is packaging a global bifurcation-sphere-inclusive
+  boundary theorem in a fixed gauge/regularity class.
 dependencies: []
 related_problem_ids:
   - K-101
@@ -85,7 +116,25 @@ related:
   - K-109
   - K-111
   - K-112
-references: []
+references:
+  - key: dafermos-luk-kerr-cauchy-horizon
+    authors: Dafermos, Luk
+    title: "The interior of dynamical vacuum black holes I: $C^0$-stability of the Kerr Cauchy horizon"
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1710.01722
+    arxiv: "1710.01722"
+    kind: primary
+    relevance: Foundational interior/Cauchy-horizon stability in $Lambda=0$ vacuum; context for SCC-type questions.
+  - key: hintz-vasy-polyhom-minkowski
+    authors: Hintz, Vasy
+    title: Stability of Minkowski space and polyhomogeneity of the metric
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1711.00195
+    arxiv: "1711.00195"
+    kind: primary
+    relevance: Sharp null-infinity asymptotics in a nonlinear vacuum setting; template for peeling/polyhomogeneous questions.
 tags: []
 aliases: []
 related_families_note: null
@@ -93,11 +142,9 @@ caution_note: null
 posed_by: null
 posed_year: null
 prizes: null
-notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. : replace with a precise description of what is proved vs. conjectured.
+notes: null
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"

@@ -2,47 +2,57 @@ id: K-011
 title: Spin fields on dynamical near-Kerr backgrounds
 short_title: Spin fields on dynamical near-Kerr backgrounds
 cluster: exterior-stability
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: Spin fields on dynamical near-Kerr backgrounds
+summary: >-
+  Spin fields on dynamical near-Kerr backgrounds
 problem_statement: >-
-  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics
-  that stay close to Kerr within a nonlinear bootstrap regime.
+  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics that stay close to
+  Kerr within a nonlinear bootstrap regime.
 statement: >-
-  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics
-  that stay close to Kerr within a nonlinear bootstrap regime.
-why_it_matters: >-
-  Nonlinear Einstein proofs require estimates on fields propagating on dynamical, not exactly
-  stationary, backgrounds.
+  Prove robust decay and Morawetz estimates for spin 1 and spin 2 fields on time-dependent metrics that stay close to
+  Kerr within a nonlinear bootstrap regime.
+why_it_matters: Nonlinear Einstein proofs require estimates on fields propagating on dynamical, not exactly stationary, backgrounds.
 scope:
-  background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise.
-  equation_type: 'Taxonomy equation levels: stationary-reduction.'
+  background: Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise.
+  equation_type: "PDE level: stationary-reduction."
   linearity: Includes or emphasizes nonlinear dynamics.
   regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy
+    data.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: Nonlinear stability of vacuum Kerr is proved for sufficiently small $|a|/M$ (Klainerman–Szeftel).
+    regime: Nonlinear Einstein vacuum, asymptotically flat, small angular momentum per unit mass.
+    significance: Strongest unconditional nonlinear theorem toward the full subextremal conjecture.
+  - statement: >-
+      Linearized Teukolsky/wave decay and mode stability on fixed subextremal Kerr are developed in depth (microlocal
+      and physical-space methods).
+    regime: Linearized gravity and scalar waves on exact Kerr.
+    significance: Standard toolbox; not equivalent to nonlinear stability for all parameters.
+  - statement: >-
+      Sharp Price-law exponents and nonlinear tail matching are understood in restricted settings (e.g. linearized
+      models, Schwarzschild); sharp nonlinear Kerr curvature tails are not settled.
+    regime: Late-time asymptotics; mixed linear vs nonlinear literature.
+    significance: Locates what “sharp Price law” demands beyond integrated decay.
 remaining_gap: >-
-  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all
-  losses due to the time-dependent background.
+  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all losses due to the
+  time-dependent background.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
-math_required: >-
-  Physical-space decay without exact separability; perturbative microlocal analysis; nonstationary
-  commutator methods.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
+math_required: Physical-space decay without exact separability; perturbative microlocal analysis; nonstationary commutator methods.
 completion_criteria: >-
-  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all
-  losses due to the time-dependent background.
+  A complete answer must give coercive estimates compatible with nonlinear closure and quantify all losses due to the
+  time-dependent background.
 implications: Would remove a major technical bottleneck between linear theory and a full nonlinear Kerr theorem.
 difficulty: 3
 family: near-kerr-vacuum
@@ -61,7 +71,27 @@ progress_summary: Partial progress exists in adjacent regimes; see  for precise 
 dependencies: []
 related_problem_ids: []
 related: []
-references: []
+references:
+  - key: ks-kerr-stability-small-a
+    authors: Klainerman, Szeftel
+    title: Nonlinear stability of Kerr for small angular momentum (program)
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2104.11857
+    arxiv: "2104.11857"
+    kind: primary
+    relevance: >-
+      Theorem-level nonlinear stability of vacuum Kerr in a small $|a|/M$ regime; benchmark for full subextremal
+      conjectures.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
 tags: []
 aliases: []
 related_families_note: null
@@ -70,10 +100,11 @@ posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. : replace with a precise description of what is proved vs. conjectured.
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not fully settled. :
+  replace with a precise description of what is proved vs. conjectured.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"
+

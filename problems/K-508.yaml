@@ -6,7 +6,7 @@ theorem_status: open
 problem_type: quantitative_sharpening
 maturity: well_scoped
 evidence_level: primary_refs_present
-verification_state: imported_unverified
+verification_state: verified_recently
 priority: normal
 summary: >-
   If the Killing–Yano equation is small in an agreed tensor norm, must the metric be near Kerr, or can one

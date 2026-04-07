@@ -34,7 +34,22 @@ scope:
   asymptotics: Asymptotically flat.
   gauge_or_formulation: >-
     Trapped-set statements should be diffeomorphism-invariant or stated modulo gauge used in decay theory.
-known_results: []
+known_results:
+  - statement: >-
+      On **fixed** subextremal Kerr, the normally hyperbolic trapped set is well understood microlocally; resolvent and
+      decay estimates with trapping losses are theorem-level in linear analysis.
+    regime: Linear waves on exact Kerr (and related models).
+    significance: Baseline geometry and PDE templates that a dynamical persistence theorem must quantitatively preserve.
+  - statement: >-
+      Nonlinear stability constructions control metric perturbations in specific topologies; converting that into
+      **uniform** trapped-set hypotheses for time-dependent geometries is the missing link.
+    regime: Nonlinear Einstein near Kerr (small-$|a|/M$ theorems and related frameworks).
+    significance: Identifies the gap between “metric close to Kerr” and “trapped set close in microlocal sense.”
+  - statement: >-
+      Static photon-region deformation (K-504) addresses a different geometry-only variant; this entry emphasizes
+      time-dependent metrics compatible with global nonlinear evolution.
+    regime: Near-Kerr; complementary scope to K-504.
+    significance: Keeps the dynamical trapping question distinct from purely stationary deformation problems.
 remaining_gap: >-
   Quantitative persistence of trapped-set geometry with uniform microlocal constants under the dynamical
   class considered.

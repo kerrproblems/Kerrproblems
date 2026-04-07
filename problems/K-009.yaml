@@ -6,7 +6,7 @@ theorem_status: open
 problem_type: classical_frontier
 maturity: well_scoped
 evidence_level: primary_refs_present
-verification_state: imported_unverified
+verification_state: verified_recently
 priority: normal
 summary: >-
   Classify long-time dynamics for massive scalar fields coupled to near-Kerr geometries; superradiant

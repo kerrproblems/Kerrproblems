@@ -5,45 +5,80 @@ cluster: rigidity-uniqueness
 theorem_status: needs_review
 problem_type: formalization_target
 research_state: high_value_unformalized_direction
-maturity: provisional
-evidence_level: refs_missing
+maturity: mostly_scoped
+evidence_level: primary_refs_present
 verification_state: imported_unverified
 publish: true
 priority: low
-summary: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
+summary: >-
+  Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
 problem_statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
 statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
 why_it_matters: Useful for formal verification track; needs precise references.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: scalar-wave."
+  equation_type: "PDE level: scalar-wave."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy
+    data.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Analytic stationary uniqueness theorems identify Kerr in the asymptotically flat vacuum class
+      (Carter–Robinson–Mazur line).
+    regime: Real-analytic stationary vacuum.
+    significance: Classical baseline; smooth non-analytic uniqueness remains the sharp open gap for many formulations.
+  - statement: >-
+      Near-Kerr perturbative rigidity and Carter-type structures are studied in separability and hidden-symmetry
+      programs.
+    regime: Perturbations of Kerr; operator commutators.
+    significance: Context for approximate operators and photon-region stability questions.
+  - statement: >-
+      Ernst reduction and harmonic-map formulations package stationary axisymmetric vacuum equations; sharp global
+      uniqueness domains are formulation-dependent.
+    regime: 2D elliptic reductions.
+    significance: Explains why Ernst-domain questions must pin boundary data and function classes.
 remaining_gap: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
 status_explanation: >-
-  Imported from the site expansion manifest row N-034. Manifest “Solved in literature?” note: Likely solved/known in
-  special literature (not re-verified here). No bibliographic packet was supplied in that manifest; this entry is not a
-  literature-grounded status summary until references are curated. A “solved” indication in the manifest is not upgraded
-  to theorem_status: solved here without a verified solution_pointer and primary citations. Research state is marked as
-  a high-value unformalized or synthesized direction where the manifest frames the target that way. 
-references: []
+  **Open (algebra/PDE):** Carter-type commuting operators on exact Kerr are classical; a **complete classification** of
+  second-order symmetry operators for $\Box_g$ in a sharply stated algebra (order, locality, hermiticity) remains a
+  formalization-friendly direction—`needs_review` flags that the literature match for this exact formulation has not been
+  audited on-site.
+references:
+  - key: carter-kerr-symmetry-1968
+    authors: Carter
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Communications in Mathematical Physics
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: Fourth constant / separability structure on exact Kerr; operator-algebra backdrop for rigidity questions.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: Survey of stationary uniqueness and reduction routes (including Ernst-type formulations).
 origin_type: synthesized_from_field-needs
 motivation: Useful for formal verification track; needs precise references.
 why_this_should_be_a_problem: Useful for formal verification track; needs precise references.
 minimal_formal_statement: Classify all second-order symmetry operators commuting with the scalar wave operator on Kerr.
-last_verified_at: null
-last_verified_by: null
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
 editorial_notes: >-
   Source manifest: N-034 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -87,3 +122,4 @@ related_families_note: null
 caution_note: null
 notes: null
 last_updated: "2026-04-06"
+

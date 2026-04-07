@@ -2,50 +2,58 @@ id: K-407
 title: QNM excitation factors and universality theorems
 short_title: QNM excitation factors and universality theorems
 cluster: spectral-scattering
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: QNM excitation factors and universality theorems
+summary: >-
+  QNM excitation factors and universality theorems
 problem_statement: >-
-  Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are
-  excited by broad classes of initial data.
+  Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are excited by broad
+  classes of initial data.
 statement: >-
-  Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are
-  excited by broad classes of initial data.
-why_it_matters: >-
-  Even if modes exist, one still needs to know which ones are actually visible for generic
-  perturbations.
+  Prove rigorous bounds and genericity results for how strongly specific Kerr quasinormal modes are excited by broad
+  classes of initial data.
+why_it_matters: Even if modes exist, one still needs to know which ones are actually visible for generic perturbations.
 scope:
-  background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise.
-  equation_type: 'Taxonomy equation levels: spectral-operator.'
+  background: Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise.
+  equation_type: "PDE level: spectral-operator."
   linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
   regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Subextremal Kerr (or Kerr–de Sitter where tagged); spectral parameters $(l,m)$ and frequency $ω$ regimes as in cited
+    microlocal frameworks.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Microlocal/resolvent frameworks yield decay and mode stability for waves on exact Kerr and Kerr–de Sitter under
+      stated spectral assumptions.
+    regime: Linear waves; fixed background.
+    significance: Standard input for QNM expansions and superradiance discussions.
+  - statement: Nonlinear Kerr stability is proved in a small-$|a|/M$ vacuum window (Klainerman–Szeftel).
+    regime: Nonlinear vacuum, restricted parameters.
+    significance: Closest nonlinear analogue for exterior stability conjectures.
+  - statement: >-
+      Complete QNM expansion as a spectral representation (including branch cuts) for Kerr remains an open mathematical
+      framework problem.
+    regime: Spectral theory on Kerr.
+    significance: Distinguishes partial mode stability from full expansion/completeness.
 remaining_gap: >-
-  A complete answer must bound excitation coefficients in terms of initial-data norms and prove
-  generic nonzero excitation for specified mode families.
+  A complete answer must bound excitation coefficients in terms of initial-data norms and prove generic nonzero
+  excitation for specified mode families.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
-math_required: >-
-  Green-function residues; asymptotics of radial and angular mode solutions; contour methods;
-  genericity in data spaces.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
+math_required: Green-function residues; asymptotics of radial and angular mode solutions; contour methods; genericity in data spaces.
 completion_criteria: >-
-  A complete answer must bound excitation coefficients in terms of initial-data norms and prove
-  generic nonzero excitation for specified mode families.
-implications: >-
-  Would make the interpretive link between mathematical modes and observed ringdown structure much
-  sharper.
+  A complete answer must bound excitation coefficients in terms of initial-data norms and prove generic nonzero
+  excitation for specified mode families.
+implications: Would make the interpretive link between mathematical modes and observed ringdown structure much sharper.
 difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
@@ -57,9 +65,7 @@ regime:
   - linear
 relevance: mixed
 fv_suitability: high
-fv_reason: >-
-  Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer
-  formalization boundaries.
+fv_reason: Stationary, algebraic, ODE/separable, or finite-dimensional substatements admit clearer formalization boundaries.
 progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
 dependencies: []
 related_problem_ids:
@@ -76,7 +82,25 @@ related:
   - K-404
   - K-405
   - K-406
-references: []
+references:
+  - key: hintz-vasy-kerr-de-sitter
+    authors: Hintz, Vasy
+    title: Global analysis of linear waves on Kerr–de Sitter space
+    venue: arXiv
+    year: 2016
+    url: https://arxiv.org/abs/1606.07547
+    arxiv: "1606.07547"
+    kind: primary
+    relevance: Linear wave decay and spectral gap on Kerr–de Sitter; standard microlocal input for $Lambda>0$ decay.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
 tags: []
 aliases: []
 related_families_note: null
@@ -85,10 +109,11 @@ posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
-  community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if community consensus
+  differs.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"
+

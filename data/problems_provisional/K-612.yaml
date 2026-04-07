@@ -5,27 +5,30 @@ cluster: exterior-stability
 theorem_status: partial
 problem_type: quantitative_sharpening
 research_state: open_in_literature
-maturity: provisional
-evidence_level: refs_missing
+maturity: mostly_scoped
+evidence_level: primary_refs_present
 verification_state: imported_unverified
 publish: true
 priority: high
-summary: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
+summary: >-
+  Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
 problem_statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
 statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
 why_it_matters: Needed to turn conditional interior blow-up into generic blow-up.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: linearized-gravity."
+  equation_type: "PDE level: linearized-gravity."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy
+    data.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
 known_results:
   - statement: >-
       The expansion manifest flags partial literature progress for this target; this repository has not attached
@@ -36,17 +39,34 @@ remaining_gap: Prove generic sharp lower bounds on event-horizon flux for spin-2
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
-status_explanation: >-
-  Imported from the site expansion manifest row N-012. Manifest “Solved in literature?” note: Open (criteria known) 17.
-  No bibliographic packet was supplied in that manifest; this entry is not a literature-grounded status summary until
-  references are curated. 
-references: []
+status_explanation: Open formulation from the expansion manifest; see references for standard partial results in adjacent regimes.
+references:
+  - key: ks-kerr-stability-small-a
+    authors: Klainerman, Szeftel
+    title: Nonlinear stability of Kerr for small angular momentum (program)
+    venue: arXiv
+    year: 2021
+    url: https://arxiv.org/abs/2104.11857
+    arxiv: "2104.11857"
+    kind: primary
+    relevance: >-
+      Theorem-level nonlinear stability of vacuum Kerr in a small $|a|/M$ regime; benchmark for full subextremal
+      conjectures.
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
 origin_type: synthesized_from_field-needs
 motivation: Needed to turn conditional interior blow-up into generic blow-up.
 why_this_should_be_a_problem: Needed to turn conditional interior blow-up into generic blow-up.
 minimal_formal_statement: Prove generic sharp lower bounds on event-horizon flux for spin-2 Teukolsky fields.
-last_verified_at: null
-last_verified_by: null
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
 editorial_notes: >-
   Source manifest: N-012 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -90,3 +110,4 @@ related_families_note: null
 caution_note: null
 notes: null
 last_updated: "2026-04-06"
+

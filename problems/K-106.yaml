@@ -2,50 +2,64 @@ id: K-106
 title: Genericity of lower bounds for linearized-gravity interior instability
 short_title: Genericity of lower bounds for linearized-gravity interior instability
 cluster: interior-scc
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: Genericity of lower bounds for linearized-gravity interior instability
+summary: >-
+  Genericity of lower bounds for linearized-gravity interior instability
 problem_statement: >-
-  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
-  instability results are generic for exterior initial data.
+  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift instability results are
+  generic for exterior initial data.
 statement: >-
-  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift
-  instability results are generic for exterior initial data.
+  Prove that the nontrivial lower-bound assumptions appearing in linearized-gravity blue-shift instability results are
+  generic for exterior initial data.
 why_it_matters: >-
-  Instability theorems are strongest when their hypotheses are shown to hold for open dense or
-  full-measure sets of data.
+  Instability theorems are strongest when their hypotheses are shown to hold for open dense or full-measure sets of
+  data.
 scope:
   background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise. Cauchy horizon / interior regularity formulations of strong cosmic censorship are in
-    play; distinguish $C^0$ vs higher regularity notions.
-  equation_type: 'Taxonomy equation levels: full-einstein.'
+    Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise. Cauchy horizon /
+    interior regularity formulations of strong cosmic censorship are in play; distinguish $C^0$ vs higher regularity
+    notions.
+  equation_type: "PDE level: full-einstein."
   linearity: Includes or emphasizes nonlinear dynamics.
-  regularity: >-
-    State intended regularity class for extensions across horizons explicitly (e.g. $C^0$,
-    Lipschitz, $C^2$).
+  regularity: State intended regularity class for extensions across horizons explicitly (e.g. $C^0$, Lipschitz, $C^2$).
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Subextremal Kerr interior up to Cauchy horizons; specify SCC regularity class ($C^0$, Lipschitz, $C^k$) in the
+    theorem.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      $C^0$-extendibility and weak regularity across Cauchy horizons are understood in substantial $Lambda=0$ vacuum
+      settings (Dafermos–Luk program); higher regularity and $Lambda>0$ charged models require separate hypotheses.
+    regime: Dynamical vacuum near Kerr, $Lambda=0$ baseline; contrast with $Lambda>0$ scalar scans.
+    significance: Sets what “partial” interior control means before claiming generic blow-up or extendibility.
+  - statement: >-
+      Linear scalar and Teukolsky-type decay on fixed subextremal Kerr exteriors is highly developed and feeds
+      conditional interior instability heuristics.
+    regime: Linearized fields on exact Kerr/Kerr–Newman.
+    significance: Supplies quantitative decay exponents used in bridge hypotheses to inner horizons.
+  - statement: >-
+      Polyhomogeneous/null-infinity technology exists for nonlinear Minkowski and some linearized Kerr contexts; sharp
+      nonlinear near-Kerr peeling is not packaged as one theorem.
+    regime: Null infinity / linearized models.
+    significance: Separates radiation asymptotics from interior SCC targets.
 remaining_gap: >-
-  A complete answer must specify the data topology and prove generic nonvanishing of the
-  instability-triggering quantity.
+  A complete answer must specify the data topology and prove generic nonvanishing of the instability-triggering
+  quantity.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
-math_required: >-
-  Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data
-  spaces.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
+math_required: Linearized-gravity scattering; horizon charges; genericity arguments in infinite-dimensional data spaces.
 completion_criteria: >-
-  A complete answer must specify the data topology and prove generic nonvanishing of the
-  instability-triggering quantity.
+  A complete answer must specify the data topology and prove generic nonvanishing of the instability-triggering
+  quantity.
 implications: Would turn conditional interior blow-up statements into genuinely generic ones.
 difficulty: 4
 family: exact-kerr
@@ -59,9 +73,7 @@ regime:
   - linear
 relevance: pure-math
 fv_suitability: low
-fv_reason: >-
-  Global nonlinear PDE or open-ended dynamics; not a practical first formalization target without
-  major scoping.
+fv_reason: Global nonlinear PDE or open-ended dynamics; not a practical first formalization target without major scoping.
 progress_summary: Partial progress exists in adjacent regimes; see  for precise theorem-level milestones.
 dependencies: []
 related_problem_ids:
@@ -88,7 +100,25 @@ related:
   - K-110
   - K-111
   - K-112
-references: []
+references:
+  - key: dafermos-luk-kerr-cauchy-horizon
+    authors: Dafermos, Luk
+    title: "The interior of dynamical vacuum black holes I: $C^0$-stability of the Kerr Cauchy horizon"
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1710.01722
+    arxiv: "1710.01722"
+    kind: primary
+    relevance: Foundational interior/Cauchy-horizon stability in $Lambda=0$ vacuum; context for SCC-type questions.
+  - key: hintz-vasy-polyhom-minkowski
+    authors: Hintz, Vasy
+    title: Stability of Minkowski space and polyhomogeneity of the metric
+    venue: arXiv
+    year: 2017
+    url: https://arxiv.org/abs/1711.00195
+    arxiv: "1711.00195"
+    kind: primary
+    relevance: Sharp null-infinity asymptotics in a nonlinear vacuum setting; template for peeling/polyhomogeneous questions.
 tags: []
 aliases: []
 related_families_note: null
@@ -97,10 +127,11 @@ posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if
-  community consensus differs.
+  Open: no complete theorem matching the statement is currently recorded on this site. : tighten if community consensus
+  differs.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"
+

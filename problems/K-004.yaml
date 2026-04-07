@@ -36,7 +36,23 @@ scope:
   gauge_or_formulation: >-
     Expansion should be stated in a Bondi or conformal gauge class compatible with the nonlinear stability
     framework (not a purely formal expansion without remainder control).
-known_results: []
+known_results:
+  - statement: >-
+      Nonlinear stability of Minkowski space is established with **polyhomogeneous** expansions at null infinity (Hintz–Vasy),
+      giving a rigorous template for sharp $\mathscr{I}^+$ asymptotics in vacuum GR.
+    regime: Nonlinear vacuum near Minkowski.
+    significance: Closest nonlinear peeling/polyhomogeneity analogue; near-Kerr remains to replicate that package.
+  - statement: >-
+      Klainerman–Szeftel prove nonlinear stability of Kerr for sufficiently small $|a|/M$, supplying a global Cauchy
+      theory compatible in principle with null-infinity questions—but without a packaged polyhomogeneous peeling theorem
+      for near-Kerr data.
+    regime: Nonlinear vacuum, small angular momentum per unit mass.
+    significance: Natural function spaces/bootstrap within which a future peeling theorem would need to be stated.
+  - statement: >-
+      Linearized Teukolsky/wave decay on fixed subextremal Kerr is highly developed; comparing nonlinear near-Kerr
+      radiation to linearized peeling exponents is informative but not logically sufficient.
+    regime: Linearized fields on exact Kerr.
+    significance: Separates what is known pointwise/in weighted norms from a nonlinear expansion with remainder control.
 remaining_gap: >-
   Provide a theorem-level polyhomogeneous or peeling-compatible expansion with remainder estimates for
   solutions controlled by the nonlinear stability program (or an alternative global Cauchy theory), not

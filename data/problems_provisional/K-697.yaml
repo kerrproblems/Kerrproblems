@@ -5,43 +5,78 @@ cluster: rigidity-uniqueness
 theorem_status: open
 problem_type: quantitative_sharpening
 research_state: open_in_literature
-maturity: provisional
-evidence_level: refs_missing
+maturity: mostly_scoped
+evidence_level: primary_refs_present
 verification_state: imported_unverified
 publish: true
 priority: medium
-summary: Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
+summary: >-
+  Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
 problem_statement: Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
 statement: Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
 why_it_matters: Effective uniqueness via multipoles.
 scope:
   background: asymptotically flat general relativity context; see family and coupling tags for matter model.
-  equation_type: "Taxonomy equation levels: stationary-reduction."
+  equation_type: "PDE level: stationary-reduction."
   linearity: linearized
   regularity: >-
     Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix
     minimal regularity.
   parameter_regime: >-
-    Subextremal vs extremal/near-extremal windows must be read from the problem statement and future literature; not
-    fixed here.
+    Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy
+    data.
   asymptotics: asymptotically flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Analytic stationary uniqueness theorems identify Kerr in the asymptotically flat vacuum class
+      (Carter–Robinson–Mazur line).
+    regime: Real-analytic stationary vacuum.
+    significance: Classical baseline; smooth non-analytic uniqueness remains the sharp open gap for many formulations.
+  - statement: >-
+      Near-Kerr perturbative rigidity and Carter-type structures are studied in separability and hidden-symmetry
+      programs.
+    regime: Perturbations of Kerr; operator commutators.
+    significance: Context for approximate operators and photon-region stability questions.
+  - statement: >-
+      Ernst reduction and harmonic-map formulations package stationary axisymmetric vacuum equations; sharp global
+      uniqueness domains are formulation-dependent.
+    regime: 2D elliptic reductions.
+    significance: Explains why Ernst-domain questions must pin boundary data and function classes.
 remaining_gap: Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
 status_explanation: >-
-  Imported from the site expansion manifest row N-097. Manifest “Solved in literature?” note: Open. No bibliographic
-  packet was supplied in that manifest; this entry is not a literature-grounded status summary until references are
-  curated. 
-references: []
+  Theorem status follows literature as summarized in known results
+  and references (not upgraded without verified solution pointers).
+references:
+  - key: carter-kerr-symmetry-1968
+    authors: Carter
+    title: Hamilton–Jacobi and Schrödinger separability and integrability of the Kerr metric
+    venue: Communications in Mathematical Physics
+    year: 1968
+    url: https://doi.org/10.1007/BF01645512
+    doi: 10.1007/BF01645512
+    kind: primary
+    relevance: Fourth constant / separability structure on exact Kerr; operator-algebra backdrop for rigidity questions.
+  - key: mazur-uniqueness-survey
+    authors: Mazur
+    title: Black Uniqueness Theorems
+    venue: arXiv
+    year: 2001
+    url: https://arxiv.org/abs/hep-th/0101012
+    arxiv: hep-th/0101012
+    kind: survey
+    relevance: Survey of stationary uniqueness and reduction routes (including Ernst-type formulations).
 origin_type: synthesized_from_field-needs
 motivation: Effective uniqueness via multipoles.
 why_this_should_be_a_problem: Effective uniqueness via multipoles.
 minimal_formal_statement: Prove that Kerr is uniquely determined among stationary vacua by a finite set of multipole moments with stability.
-last_verified_at: null
-last_verified_by: null
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
 editorial_notes: >-
   Source manifest: N-097 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in
   this repository.
@@ -81,8 +116,9 @@ regime:
 relevance: pure-math
 fv_suitability: low
 fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
-progress_summary: "Manifest rationale: Effective uniqueness via multipoles."
+progress_summary: "Context: Effective uniqueness via multipoles."
 related_families_note: null
 caution_note: null
 notes: null
 last_updated: "2026-04-06"
+

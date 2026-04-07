@@ -2,45 +2,55 @@ id: K-202
 title: Full linear theory for extremal Kerr (spin 2)
 short_title: Full linear theory for extremal Kerr (spin 2)
 cluster: extremal
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: Full linear theory for extremal Kerr (spin 2)
+summary: >-
+  Full linear theory for extremal Kerr (spin 2)
 problem_statement: >-
-  Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein
-  perturbations of extremal Kerr.
+  Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein perturbations of extremal
+  Kerr.
 statement: >-
-  Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein
-  perturbations of extremal Kerr.
+  Develop a complete boundedness, decay, and instability theory for linearized vacuum Einstein perturbations of extremal
+  Kerr.
 why_it_matters: The linear theory is the mandatory first step before any nonlinear extremal theorem.
 scope:
-  background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise.
-  equation_type: 'Taxonomy equation levels: full-einstein.'
+  background: Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise.
+  equation_type: "PDE level: full-einstein."
   linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
   regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Extremal or near-extremal Kerr-type parameters; quantify smallness of $|1-|a|/M|$ or surface gravity $κ$ in any
+    claim.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Aretakis instability and conserved charges on extremal horizons are established for scalar test fields; spin-2 and
+      nonlinear extremal dynamics are much less complete.
+    regime: Extremal horizons; often linear scalar.
+    significance: Shows qualitative difference from subextremal decay.
+  - statement: Subextremal nonlinear Kerr stability is known for small $|a|/M$; uniformity as $|a|\to M$ is not a corollary.
+    regime: Nonlinear vacuum, restricted subextremal window.
+    significance: Separates near-extremal uniformity from existing subextremal theorems.
+  - statement: Near-horizon NHEK limits capture extremal mode structure but matching to global Kerr is an open PDE bridge.
+    regime: Near-horizon scaling limits.
+    significance: Clarifies what NHEK analyses do and do not imply globally.
 remaining_gap: >-
-  A complete answer must separate decay away from the horizon from conserved or growing horizon
-  quantities and handle gauge issues explicitly.
+  A complete answer must separate decay away from the horizon from conserved or growing horizon quantities and handle
+  gauge issues explicitly.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
-math_required: >-
-  Degenerate vector-field method; zero-energy analysis; extremal Teukolsky theory; gauge-invariant
-  reconstruction.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
+math_required: Degenerate vector-field method; zero-energy analysis; extremal Teukolsky theory; gauge-invariant reconstruction.
 completion_criteria: >-
-  A complete answer must separate decay away from the horizon from conserved or growing horizon
-  quantities and handle gauge issues explicitly.
+  A complete answer must separate decay away from the horizon from conserved or growing horizon quantities and handle
+  gauge issues explicitly.
 implications: Would become the linear backbone of extremal Kerr dynamics.
 difficulty: 3
 family: near-kerr-vacuum
@@ -76,7 +86,25 @@ related:
   - K-207
   - K-208
   - K-209
-references: []
+references:
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
+  - key: hintz-vasy-kerr-de-sitter
+    authors: Hintz, Vasy
+    title: Global analysis of linear waves on Kerr–de Sitter space
+    venue: arXiv
+    year: 2016
+    url: https://arxiv.org/abs/1606.07547
+    arxiv: "1606.07547"
+    kind: primary
+    relevance: Linear wave decay and spectral gap on Kerr–de Sitter; standard microlocal input for $Lambda>0$ decay.
 tags: []
 aliases: []
 related_families_note: null
@@ -85,10 +113,11 @@ posed_by: null
 posed_year: null
 prizes: null
 notes: >-
-  Partial: substantial adjacent results or special cases exist, but the statement as written is not
-  fully settled. : replace with a precise description of what is proved vs. conjectured.
+  Partial: substantial adjacent results or special cases exist, but the statement as written is not fully settled. :
+  replace with a precise description of what is proved vs. conjectured.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-05'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-05"
+

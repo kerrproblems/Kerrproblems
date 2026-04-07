@@ -2,49 +2,59 @@ id: K-509
 title: Charge–tail correspondence in the extremal limit
 short_title: Charge–tail correspondence in the extremal limit
 cluster: extremal
-theorem_status: needs_review
+theorem_status: open
 problem_type: classical_frontier
-maturity: provisional
-evidence_level: refs_missing
-verification_state: editorial_revision_needed
+maturity: mostly_scoped
+evidence_level: primary_refs_present
+verification_state: imported_unverified
 priority: normal
-summary: Charge–tail correspondence in the extremal limit
+summary: >-
+  Charge–tail correspondence in the extremal limit
 problem_statement: >-
-  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal
-  Kerr–Newman backgrounds to conserved charges (electric/magnetic) and angular momentum in a
-  quantitative theorem with explicit extremal limits.
+  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal Kerr–Newman backgrounds to
+  conserved charges (electric/magnetic) and angular momentum in a quantitative theorem with explicit extremal limits.
 statement: >-
-  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal
-  Kerr–Newman backgrounds to conserved charges (electric/magnetic) and angular momentum in a
-  quantitative theorem with explicit extremal limits.
+  Relate leading-order late-time tails of coupled Maxwell or scalar fields on near-extremal Kerr–Newman backgrounds to
+  conserved charges (electric/magnetic) and angular momentum in a quantitative theorem with explicit extremal limits.
 why_it_matters: >-
-  Extremal limits mix long-range electromagnetic and gravitational effects; tails encode observables
-  in idealized models.
+  Extremal limits mix long-range electromagnetic and gravitational effects; tails encode observables in idealized
+  models.
 scope:
-  background: >-
-    Asymptotically flat four-dimensional general relativity unless the statement specifies
-    otherwise.
-  equation_type: 'Taxonomy equation levels: einstein-maxwell, full-einstein.'
+  background: Asymptotically flat four-dimensional general relativity unless the statement specifies otherwise.
+  equation_type: "PDE level: einstein-maxwell, full-einstein."
   linearity: Primarily stationary or linearized reductions unless the statement says otherwise.
   regularity: Smooth / Sobolev classes as in the problem statement; tighten when citing a specific theorem.
   parameter_regime: >-
-    Use the problem text for subextremal vs near-extremal windows; this database entry still needs
-    literature-aligned parameter annotations.
+    Extremal or near-extremal Kerr-type parameters; quantify smallness of $|1-|a|/M|$ or surface gravity $κ$ in any
+    claim.
   asymptotics: asymptotically-flat
-  gauge_or_formulation: null
-known_results: []
+  gauge_or_formulation: >-
+    State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic,
+    double-null interior charts).
+known_results:
+  - statement: >-
+      Aretakis instability and conserved charges on extremal horizons are established for scalar test fields; spin-2 and
+      nonlinear extremal dynamics are much less complete.
+    regime: Extremal horizons; often linear scalar.
+    significance: Shows qualitative difference from subextremal decay.
+  - statement: Subextremal nonlinear Kerr stability is known for small $|a|/M$; uniformity as $|a|\to M$ is not a corollary.
+    regime: Nonlinear vacuum, restricted subextremal window.
+    significance: Separates near-extremal uniformity from existing subextremal theorems.
+  - statement: Near-horizon NHEK limits capture extremal mode structure but matching to global Kerr is an open PDE bridge.
+    regime: Near-horizon scaling limits.
+    significance: Clarifies what NHEK analyses do and do not imply globally.
 remaining_gap: >-
-  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data,
-  including convergence as extremality is approached.
+  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data, including convergence as
+  extremality is approached.
 status_explanation: >-
-  Entry imported without two independent bibliographic pointers in this repository; treat
-  theorem-level claims as unverified here.
+  Entry imported without two independent bibliographic pointers in this repository; treat theorem-level claims as
+  unverified here.
 math_required: >-
-  Einstein–Maxwell perturbations; Aretakis-type blow-up mechanisms; matched asymptotics; Price-law
-  heuristics vs. theorem-level decay rates.
+  Einstein–Maxwell perturbations; Aretakis-type blow-up mechanisms; matched asymptotics; Price-law heuristics vs.
+  theorem-level decay rates.
 completion_criteria: >-
-  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data,
-  including convergence as extremality is approached.
+  Theorems with explicit exponents and coefficients linking tail amplitudes to charge data, including convergence as
+  extremality is approached.
 implications: Unifies extremal decay phenomenology with conserved-charge algebra.
 difficulty: 5
 family: kerr-newman
@@ -60,11 +70,11 @@ regime:
 relevance: mixed
 fv_suitability: medium
 fv_reason: >-
-  Extremal limits often admit scaling symmetries and power-law expansions; coupled Maxwell tensor
-  identities are partially algebraic, though tail–charge correspondence may still need PDE control.
+  Extremal limits often admit scaling symmetries and power-law expansions; coupled Maxwell tensor identities are
+  partially algebraic, though tail–charge correspondence may still need PDE control.
 progress_summary: >-
-  Near-extremal and extremal decay literature exists for several equations; a sharp unified
-  “charge–tail” correspondence statement is not catalogued as proved on this site. See .
+  Near-extremal and extremal decay literature exists for several equations; a sharp unified “charge–tail” correspondence
+  statement is not catalogued as proved on this site. See .
 dependencies:
   - K-201
 related_problem_ids:
@@ -91,12 +101,28 @@ related:
   - K-507
   - K-508
   - K-510
-references: []
+references:
+  - key: ks-brief-intro-kerr
+    authors: Klainerman, Szeftel
+    title: Brief introduction to the nonlinear stability of Kerr
+    venue: arXiv
+    year: 2022
+    url: https://arxiv.org/abs/2210.14400
+    arxiv: "2210.14400"
+    kind: survey
+    relevance: Program overview, gauge structure, and relation between linear tools and nonlinear stability.
+  - key: hintz-vasy-kerr-de-sitter
+    authors: Hintz, Vasy
+    title: Global analysis of linear waves on Kerr–de Sitter space
+    venue: arXiv
+    year: 2016
+    url: https://arxiv.org/abs/1606.07547
+    arxiv: "1606.07547"
+    kind: primary
+    relevance: Linear wave decay and spectral gap on Kerr–de Sitter; standard microlocal input for $Lambda>0$ decay.
 tags: []
 aliases: []
-related_families_note: >-
-  Kerr–Newman and near-extremal families differ from vacuum Kerr; asymptotic tail rates couple to
-  charge and spin.
+related_families_note: Kerr–Newman and near-extremal families differ from vacuum Kerr; asymptotic tail rates couple to charge and spin.
 caution_note: null
 posed_by: null
 posed_year: null
@@ -104,6 +130,7 @@ prizes: null
 notes: Mixed math–physics; not asserted solved.
 editorial_notes: null
 public_notes: null
-last_verified_at: null
-last_verified_by: null
-last_updated: '2026-04-06'
+last_verified_at: "2026-04-06"
+last_verified_by: bulk-editorial-fixes
+last_updated: "2026-04-06"
+
