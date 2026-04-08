@@ -5,6 +5,7 @@ const { title, description } = Astro.props;
 const siteTitle = "Kerr Problems";
 const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
 const desc = description || "Mathematical relativity database: Kerr and Kerr-related rotating black holes, with orthogonal taxonomy and a formal-verification track.";
+const kofiUrl = "https://ko-fi.com/kerrproblems";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -26,16 +27,19 @@ const desc = description || "Mathematical relativity database: Kerr and Kerr-rel
 <body>
   <header class="site-header">
     <a href="/" class="wordmark">kerrproblems.com</a>
-    <nav>
-      <a href="/problems">Problems</a>
-      <a href="/clusters">Clusters</a>
-      <a href="/methodology">Methodology</a>
-      <a href="/formal-verification">Formal verification</a>
-      <a href="/contribute">Contribute</a>
-      <a href="/audit/provisional-problems">Provisional</a>
-      <a href="/about">About</a>
-      <a href="https://github.com/kerrproblems/Kerrproblems" target="_blank" rel="noopener">GitHub ↗</a>
-    </nav>
+    <div class="site-header__tray">
+      <nav>
+        <a href="/problems">Problems</a>
+        <a href="/clusters">Clusters</a>
+        <a href="/methodology">Methodology</a>
+        <a href="/formal-verification">Formal verification</a>
+        <a href="/contribute">Contribute</a>
+        <a href="/audit/provisional-problems">Provisional</a>
+        <a href="/about">About</a>
+        <a href="https://github.com/kerrproblems/Kerrproblems" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+      <a class="kofi-cta" href={kofiUrl} target="_blank" rel="noopener noreferrer">Support Me on Ko-fi</a>
+    </div>
   </header>
 
   <main class="page-main">
@@ -43,8 +47,13 @@ const desc = description || "Mathematical relativity database: Kerr and Kerr-rel
   </main>
 
   <footer class="site-footer">
-    Kerr Problems — mathematical relativity open problems (Kerr and related families); orthogonal tags
-    separate geometry from cluster themes; contributions welcome on GitHub.
+    <p class="site-footer__blurb">
+      Kerr Problems — mathematical relativity open problems (Kerr and related families); orthogonal tags
+      separate geometry from cluster themes; contributions welcome on GitHub.
+    </p>
+    <p class="site-footer__kofi">
+      <a class="kofi-cta kofi-cta--footer" href={kofiUrl} target="_blank" rel="noopener noreferrer">Support Me on Ko-fi</a>
+    </p>
   </footer>
   <script defer src="/katex-init.js"></script>
   <script is:inline type="text/javascript" src="https://ko-fi.com/widgets/widget_2.js"></script>

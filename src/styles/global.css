@@ -22,6 +22,8 @@
   --extremal:     #0d47a1;
   --rigidity:     #4a148c;
   --spectral:     #e65100;
+
+  --kofi:         #29abe0;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -254,6 +256,41 @@ hr {
   text-decoration: underline;
 }
 
+.site-header__tray {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem 1.25rem;
+}
+
+.kofi-cta {
+  font-family: var(--font-serif);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--kofi);
+  padding: 0.4em 0.95em;
+  border-radius: 4px;
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid #2299cc;
+}
+.kofi-cta:hover {
+  background: #2299cc;
+  color: #fff;
+  text-decoration: none;
+}
+.kofi-cta:focus-visible {
+  outline: 2px solid var(--kofi);
+  outline-offset: 2px;
+}
+
+.kofi-cta--footer {
+  font-size: 0.75rem;
+  padding: 0.35em 0.85em;
+}
+
 .page-main {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -265,6 +302,14 @@ hr {
   text-align: center;
   font-size: 0.75rem;
   color: var(--text-faint);
+}
+.site-footer__blurb {
+  max-width: 52rem;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+.site-footer__kofi {
+  margin: 1rem 0 0;
 }
 
 .problem-section {
