@@ -102,6 +102,11 @@
       "type": "array",
       "items": { "type": "string", "pattern": "^K-[0-9]{3}$" }
     },
+    "parent_problem_id": {
+      "type": ["string", "null"],
+      "pattern": "^K-[0-9]{3}$",
+      "description": "Canonical parent problem when this entry is an alias, subproblem, or deduplicated expansion item."
+    },
     "last_verified_at": { "type": ["string", "null"] },
     "last_verified_by": { "type": ["string", "null"] },
     "editorial_notes": { "type": ["string", "null"] },

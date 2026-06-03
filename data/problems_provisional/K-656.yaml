@@ -8,7 +8,8 @@ research_state: open_in_literature
 maturity: mostly_scoped
 evidence_level: primary_refs_present
 verification_state: imported_unverified
-publish: true
+publish: false
+parent_problem_id: K-202
 priority: medium
 summary: >-
   Prove decay/growth dichotomy for extremal Kerr perturbations with explicit identification of conserved charges.
@@ -31,15 +32,14 @@ scope:
     double-null interior charts).
 known_results:
   - statement: >-
-      The expansion manifest flags partial literature progress for this target; this repository has not attached
-      verified theorem statements or citations to that progress.
-    regime: To be replaced with literature-aligned regimes when curated.
-    significance: Editorial placeholder only—not an assertion about what is proved in any named paper.
+      Named papers in the reference list establish partial or neighboring results under explicit hypotheses; treat those as the proved baseline.
+    regime: As stated in cited references (often restricted parameters or linearized settings).
+    significance: Orients readers to literature without equating it with the full title-length target.
 remaining_gap: Prove decay/growth dichotomy for extremal Kerr perturbations with explicit identification of conserved charges.
 partial_progress: null
 frontier_gap: null
 solution_pointer: null
-status_explanation: Open formulation from the expansion manifest; see references for standard partial results in adjacent regimes.
+status_explanation: Partial results exist in adjacent regimes (see references); sharp alignment with this page’s exact target remains open.
 references:
   - key: ks-brief-intro-kerr
     authors: Klainerman, Szeftel
@@ -84,14 +84,13 @@ aliases:
 tags:
   - expansion-2026
   - manifest-N-056
-public_notes: null
+public_notes: >-
+  Deduplicated from the main index by the 2026-06-03 audit. Track this as a subproblem or alias of K-202.
 math_required: >-
-  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
-  mathematical target only.
+  Match hypotheses to primary sources cited on this page; state minimal regularity, gauge class, and parameter windows in any claimed theorem.
 completion_criteria: >-
-  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
-  references are added.
-implications: Depends on problem family; to be sharpened when curated.
+  Prove a theorem or give a rigorous counterexample that matches the scoped statement under explicitly listed hypotheses.
+implications: Impact depends on the solved formulation; sharpen once the statement is pinned to a literature-compatible theorem.
 difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat

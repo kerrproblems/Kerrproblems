@@ -20,6 +20,7 @@ Each file in `/problems/` is `{id}.yaml` (e.g. `K-001.yaml`). The `id` must matc
 | `status_explanation` | string | Especially for `conditional` / editorial nuance |
 | `summary` / `short_title` | string | One-line summary and card title |
 | `related_problem_ids` | list | IDs (merged with `related` in the loader) |
+| `parent_problem_id` | string \| null | Canonical parent when this entry is an alias, subproblem, or deduplicated expansion item |
 | `last_verified_at` / `last_verified_by` | string | Editorial audit trail |
 | `editorial_notes` / `public_notes` | string | Maintainer-only vs public-facing notes |
 | `statement` | string | Precise problem statement (multiline OK) |

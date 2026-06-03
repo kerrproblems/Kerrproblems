@@ -2,7 +2,8 @@ id: K-505
 title: Threshold phenomena in separated Teukolsky-type ODEs on Kerr (zero modes, algebraically special limits, superradiant edges)
 short_title: Kerr separated ODEs — threshold classification
 cluster: spectral-scattering
-theorem_status: open
+theorem_status: partial
+research_state: open_in_literature
 problem_type: quantitative_sharpening
 maturity: mostly_scoped
 evidence_level: primary_refs_present
@@ -43,12 +44,46 @@ known_results:
     significance: >-
       Foundational ODE setup; this entry targets **uniform threshold classification**, not the original
       separation itself.
+  - statement: >-
+      Real-axis mode stability for separated Teukolsky radial ODEs rules out nontrivial outgoing modes for
+      admissible real frequencies, and gives quantitative Wronskian nonvanishing on compact real-frequency
+      sets away from the expected zero-frequency and threshold exclusions.
+    regime: Exact Kerr; Teukolsky spins; real nonzero frequencies.
+    significance: >-
+      Settles the nonzero real-frequency outgoing-mode obstruction and supplies much of the Wronskian control
+      needed for the catalog away from threshold endpoints.
+  - statement: >-
+      Algebraically special frequencies are identified by vanishing of the radial Teukolsky-Starobinsky
+      constant; the Teukolsky-Starobinsky identities show these are transform degeneracies rather than
+      physical outgoing radial modes.
+    regime: Exact Kerr radial Teukolsky ODEs.
+    significance: >-
+      Strongly supports the algebraically-special part of the K-505 catalog.
+  - statement: >-
+      Full-subextremal frequency-space estimates for spin ±1 and ±2 Teukolsky equations provide uniform
+      separated-ODE estimates in the separation parameters, later upgraded to physical-space boundedness and
+      decay.
+    regime: Subextremal Kerr, spin ±1 and ±2 Teukolsky equations.
+    significance: >-
+      Supplies uniform frequency-space technology relevant to compact-subextremal threshold packaging, though
+      it is not itself a mode-wise zero-frequency catalog.
+  - statement: >-
+      Low-energy Fredholm and resolvent analyses for Teukolsky equations give substantial control near
+      zero frequency, including invertibility and mapping estimates in transformed frameworks.
+    regime: Full subextremal Kerr, low-energy Teukolsky resolvent.
+    significance: >-
+      Provides serious evidence for the zero-frequency part, but still needs translation into the explicit
+      separated-ODE Frobenius/connection catalog requested here.
 remaining_gap: >-
-  Consolidated theorem catalog with proofs of uniformity and explicit handling of each threshold family named
-  above.
+  Prove or cite a single theorem giving the zero-frequency Frobenius/connection catalog for each spin and
+  angular branch, identify all non-radiative stationary/gauge/charge exceptions, translate low-energy Fredholm
+  resolvent results into separated-ODE language, compare Teukolsky and Regge-Wheeler-type normalizations, and
+  package compact-subextremal $(M,a)$ uniformity across all threshold families.
 status_explanation: >-
-  “Threshold” is disambiguated on-page (zero-frequency / algebraic / superradiant edge); not a vague umbrella
-  phrase.
+  **Partial / strong literature-supported reduction:** nonzero real-frequency mode stability and the
+  algebraically-special Teukolsky-Starobinsky degeneracy are well supported by primary literature. The decisive
+  missing piece is still the consolidated zero-frequency and normalization-dependent threshold catalog requested
+  by this page.
 math_required: >-
   ODE spectral theory; Frobenius methods; connection formulas; Teukolsky equations; asymptotic analysis of
   eigenvalue branches.
@@ -71,8 +106,11 @@ fv_reason: >-
   Separated radial/angular ODEs with polynomial coefficients; threshold behavior is finite-dimensional
   spectral-edge analysis.
 progress_summary: >-
-  Mode-wise QNM literature is large; a single uniform threshold classification matching this phrasing is the
-  open packaging.
+  Nonzero real-frequency mode stability and quantitative Wronskian nonvanishing for Teukolsky modes are
+  established in the literature, and algebraically special frequencies are understood as Teukolsky-Starobinsky
+  transform degeneracies rather than outgoing resonances. The remaining open packaging is a complete mode-wise
+  threshold catalog, especially at zero frequency, including stationary/gauge exceptions and uniform
+  compact-subextremal parameter dependence.
 dependencies:
   - K-303
 related_problem_ids:
@@ -105,6 +143,51 @@ references:
     relevance: >-
       Companion stability analysis using the master equations; historical anchor for mode-wise threshold
       discussions.
+  - key: teixeira-da-costa-mode-stability-2020
+    authors: Teixeira da Costa, Rita
+    title: Mode Stability for the Teukolsky Equation on Extremal and Subextremal Kerr Spacetimes
+    venue: Communications in Mathematical Physics
+    year: 2020
+    url: https://doi.org/10.1007/s00220-020-03796-z
+    doi: 10.1007/s00220-020-03796-z
+    arxiv: "1910.02854"
+    kind: primary
+    relevance: >-
+      Proves real-axis and upper-half-plane mode stability, defines the Wronskian criterion, treats
+      algebraically special frequencies, and gives quantitative Wronskian bounds away from threshold exclusions.
+  - key: shlapentokh-rothman-teixeira-frequency-2020
+    authors: Shlapentokh-Rothman, Yakov; Teixeira da Costa, Rita
+    title: 'Boundedness and decay for the Teukolsky equation on Kerr in the full subextremal range |a|<M: frequency space analysis'
+    venue: arXiv
+    year: 2020
+    url: https://arxiv.org/abs/2007.07211
+    arxiv: "2007.07211"
+    kind: primary
+    relevance: >-
+      Develops full-subextremal fixed-frequency estimates for separated Teukolsky ODEs, uniform in separation
+      parameters.
+  - key: shlapentokh-rothman-teixeira-physical-2023
+    authors: Shlapentokh-Rothman, Yakov; Teixeira da Costa, Rita
+    title: 'Boundedness and decay for the Teukolsky equation on Kerr in the full subextremal range |a|<M: physical space analysis'
+    venue: arXiv
+    year: 2023
+    url: https://arxiv.org/abs/2302.08916
+    arxiv: "2302.08916"
+    kind: primary
+    relevance: >-
+      Upgrades the frequency-space ODE estimates to physical-space boundedness and decay for spin ±1 and ±2
+      Teukolsky equations on full-subextremal Kerr.
+  - key: millet-optimal-teukolsky-decay-2023
+    authors: Millet, Pascal
+    title: Optimal decay for solutions of the Teukolsky equation on the Kerr metric for the full subextremal range |a| < M
+    venue: arXiv
+    year: 2023
+    url: https://arxiv.org/abs/2302.06946
+    arxiv: "2302.06946"
+    kind: primary
+    relevance: >-
+      Provides low-energy Fredholm/resolvent machinery and Price-law asymptotics; important input for the
+      zero-frequency catalog, but not yet a substitute for the explicit separated-ODE threshold theorem.
 tags: []
 aliases: []
 related_families_note: null
@@ -115,6 +198,6 @@ prizes: null
 notes: null
 editorial_notes: null
 public_notes: null
-last_verified_at: '2026-04-06'
-last_verified_by: editorial-refactor
-last_updated: '2026-04-06'
+last_verified_at: '2026-06-03'
+last_verified_by: codex-k505-literature-map
+last_updated: '2026-06-03'

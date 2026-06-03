@@ -37,6 +37,7 @@ const unlockIds = unlocksMap[p.id] || [];
 const unlocks = unlockIds.map(id => all.find(x => x.id === id)).filter(Boolean);
 const related = (p.related || []).map(id => all.find(x => x.id === id)).filter(Boolean);
 const depends = (p.dependencies || []).map(id => all.find(x => x.id === id)).filter(Boolean);
+const parentProblem = p.parent_problem_id ? all.find(x => x.id === p.parent_problem_id) : null;
 const relatedByTags = getRelatedByTags(p, all, 8).filter(
   x => !p.related?.includes(x.id) && x.id !== p.id,
 );
@@ -209,6 +210,18 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
         <h3>What remains open</h3>
         <p>{p.remaining_gap || p.completion_criteria}</p>
       </div>
+
+      {parentProblem && (
+        <div class="problem-section">
+          <h3>Parent problem</h3>
+          <p class="page-meta" style="margin-bottom: 0.5rem">
+            This entry is tracked as an alias, subproblem, or expansion item under the canonical problem below.
+          </p>
+          <ul class="dep-list">
+            <li><a href={`/problems/${parentProblem.id}`}>{parentProblem.id}</a> — {parentProblem.title}</li>
+          </ul>
+        </div>
+      )}
 
       {sp && String(sp.theorem_statement || '').trim() && (
         <div class="problem-section">
@@ -398,6 +411,12 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
         <dd>{VERIFICATION_STATE_LABELS[p.verification_state] || p.verification_state}</dd>
         <dt>Published</dt>
         <dd>{p.publish === false ? 'No (provisional)' : 'Yes'}</dd>
+        {p.parent_problem_id && (
+          <>
+            <dt>Parent problem</dt>
+            <dd><a href={`/problems/${p.parent_problem_id}`}>{p.parent_problem_id}</a></dd>
+          </>
+        )}
         <dt>Difficulty</dt>
         <dd>{p.difficulty} / 5</dd>
         <dt>Family</dt>

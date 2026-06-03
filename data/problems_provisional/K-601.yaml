@@ -8,7 +8,8 @@ research_state: open_in_literature
 maturity: mostly_scoped
 evidence_level: primary_refs_present
 verification_state: verified_recently
-publish: true
+publish: false
+parent_problem_id: K-403
 priority: high
 summary: >-
   Prove a definitive **linearized Einstein vacuum** stability statement for the full subextremal Kerr family $|a|<M$ in an
@@ -132,7 +133,8 @@ aliases:
 tags:
   - expansion-2026
   - manifest-N-001
-public_notes: null
+public_notes: >-
+  Deduplicated from the main index by the 2026-06-03 audit. Track this as a subproblem or alias of K-403.
 math_required: >-
   Teukolsky equations; metric reconstruction from curvature components; gauge-fixed linearized Einstein; weighted energy
   estimates and trapping analysis on Kerr.

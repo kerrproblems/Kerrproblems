@@ -96,12 +96,10 @@ tags:
   - manifest-N-028
 public_notes: null
 math_required: >-
-  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
-  mathematical target only.
+  Match hypotheses to primary sources cited on this page; state minimal regularity, gauge class, and parameter windows in any claimed theorem.
 completion_criteria: >-
-  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
-  references are added.
-implications: Depends on problem family; to be sharpened when curated.
+  Prove a theorem or give a rigorous counterexample that matches the scoped statement under explicitly listed hypotheses.
+implications: Impact depends on the solved formulation; sharpen once the statement is pinned to a literature-compatible theorem.
 difficulty: 3
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat
@@ -113,9 +111,10 @@ regime:
 relevance: pure-math
 fv_suitability: low
 fv_reason: Global PDE or phenomenological target; lemma-level formalization may be possible after scoping.
-progress_summary: "Context: Needed for sharp interior thresholds and precise asymptotics."
+progress_summary: >-
+  Known baseline: linear scalar decay and Price-law-style asymptotics are developed in restricted Kerr/Schwarzschild
+  settings; this entry asks for rigorous constants uniformly across the full subextremal Kerr range.
 related_families_note: null
 caution_note: null
 notes: null
 last_updated: "2026-04-06"
-

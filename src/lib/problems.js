@@ -263,6 +263,10 @@ export function normalizeProblem(raw, opts = {}) {
     ...toArray(raw.related ?? raw.relatedProblems).map(String),
     ...toArray(raw.related_problem_ids).map(String),
   ]);
+  const parent_problem_id =
+    raw.parent_problem_id != null && String(raw.parent_problem_id).trim()
+      ? String(raw.parent_problem_id).trim()
+      : null;
 
   let theorem_status = pickEnum(
     raw.theorem_status ?? raw.status,
@@ -367,6 +371,7 @@ export function normalizeProblem(raw, opts = {}) {
     dependencies,
     related: relatedIds,
     related_problem_ids: relatedIds,
+    parent_problem_id,
     progress_summary: String(progress_summary).trim(),
     related_families_note: raw.related_families_note ?? null,
     caution_note: raw.caution_note ?? null,

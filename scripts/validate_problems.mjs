@@ -115,6 +115,9 @@ function main() {
     for (const r of raw.related || []) {
       if (!ID_RE.test(r)) err(`${id}: bad related id "${r}"`);
     }
+    if (raw.parent_problem_id && !ID_RE.test(raw.parent_problem_id)) {
+      err(`${id}: bad parent_problem_id "${raw.parent_problem_id}"`);
+    }
 
     if (!raw.references.length && theoremStatus !== 'needs_review') {
       warn(`${id}: references empty — needs curation or mark theorem_status: needs_review`);
@@ -136,6 +139,9 @@ function main() {
     }
     for (const r of raw.related || []) {
       if (!allIds.has(r)) err(`${raw.id}: related ${r} not found`);
+    }
+    if (raw.parent_problem_id && !allIds.has(raw.parent_problem_id)) {
+      err(`${raw.id}: parent_problem_id ${raw.parent_problem_id} not found`);
     }
   }
 

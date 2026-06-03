@@ -1,17 +1,19 @@
 id: K-510
-title: Ernst reduction uniqueness — maximal sharp domain not yet fixed in this database
-short_title: Ernst reduction uniqueness (domain TBD)
+title: >-
+  Ernst equation on stationary axisymmetric vacuum exteriors — sharp uniqueness class for asymptotically flat Kerr
+  (boundary-value formulation)
+short_title: Ernst reduction uniqueness (AF Kerr, BVP class)
 cluster: rigidity-uniqueness
 theorem_status: needs_review
 problem_type: formalization_target
 maturity: mostly_scoped
 evidence_level: primary_refs_present
 verification_state: imported_unverified
+publish: false
 priority: low
 summary: >-
-  Characterize the largest natural function class on the stationary axisymmetric orbit space where the Ernst potential
-  uniquely pins down Kerr among vacuum solutions—**the intended PDE domain and boundary data are not yet
-  literature-locked in this entry.**
+  Stationary axisymmetric vacuum exteriors admit a 2D Ernst equation on orbit space. This is a scoping target, not a
+  certified open-problem page, until one concrete boundary-value formulation is pinned to primary references.
 problem_statement: >-
   In the stationary axisymmetric vacuum reduction, fix **concrete** data: (i) a simply connected orbit domain
   $\Omega \subset \mathbb{R}^2$ with stated boundary components (axis, horizon rods, infinity), (ii) a weighted Hölder
@@ -56,11 +58,12 @@ known_results:
     regime: 2D elliptic reductions.
     significance: Explains why Ernst-domain questions must pin boundary data and function classes.
 remaining_gap: >-
-  Editorial: import a literature-matching uniqueness statement or split into multiple precise problems; then
-  mathematical: prove or disprove within that statement.
+  Pin one boundary-value formulation (domain + function class + rod/normalization data) that either appears verbatim in a
+  primary uniqueness paper or is proved here; then supply uniqueness or non-uniqueness in that package.
 status_explanation: >-
-  `needs_review` because the historical one-line prompt mixed maximal-domain rhetoric with unspecified boundary-value
-  data; do not cite this entry as a literature summary yet.
+  **`needs_review`:** this page is intentionally conservative. Stationary uniqueness technology is spread across
+  analytic versus smooth formulations, and Ernst-domain statements are chart-dependent. Treat it as a scoping target
+  until maintainers attach a pinned reference set matching one concrete $(\Omega,\mathcal{E}\text{-class})$ choice.
 math_required: >-
   Ernst equation; harmonic maps; boundary value problems for elliptic PDE; rod-structure formalism; inverse scattering
   techniques in reductions where applicable.
@@ -135,6 +138,6 @@ editorial_notes: >-
   Maintainer priority: replace `needs_review` with a scoped theorem statement + two primary references, or demote/remove
   from automated “featured” lists until that happens.
 public_notes: null
-last_verified_at: "2026-04-06"
-last_verified_by: bulk-editorial-fixes
-last_updated: "2026-04-06"
+last_verified_at: "2026-06-03"
+last_verified_by: codex-audit-pass
+last_updated: "2026-06-03"

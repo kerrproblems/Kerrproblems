@@ -8,7 +8,8 @@ research_state: open_in_literature
 maturity: mostly_scoped
 evidence_level: primary_refs_present
 verification_state: imported_unverified
-publish: true
+publish: false
+parent_problem_id: K-201
 priority: high
 summary: >-
   Establish a rigorous nonlinear theory for extremal Kerr dynamics incorporating Aretakis charges.
@@ -92,14 +93,13 @@ aliases:
 tags:
   - expansion-2026
   - manifest-N-020
-public_notes: null
+public_notes: >-
+  Deduplicated from the main index by the 2026-06-03 audit. Track this as a subproblem or alias of K-201.
 math_required: >-
-  To be tightened against primary sources when this entry is promoted from provisional. The manifest statement names the
-  mathematical target only.
+  Match hypotheses to primary sources cited on this page; state minimal regularity, gauge class, and parameter windows in any claimed theorem.
 completion_criteria: >-
-  Establish rigorous theorems matching the scoped statement; precise hypotheses to be taken from the literature when
-  references are added.
-implications: Depends on problem family; to be sharpened when curated.
+  Prove a theorem or give a rigorous counterexample that matches the scoped statement under explicitly listed hypotheses.
+implications: Impact depends on the solved formulation; sharpen once the statement is pinned to a literature-compatible theorem.
 difficulty: 4
 family: near-kerr-vacuum
 asymptotics: asymptotically-flat

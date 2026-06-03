@@ -24,7 +24,25 @@ const PROVISIONAL_DIR = path.join(ROOT, 'data', 'problems_provisional');
 const REPORT_PATH = path.join(ROOT, 'docs', 'audit', 'problem_validation_report.md');
 
 const PLACEHOLDER_RE = /\b(TODO|FIXME|references\s+pending)\b|references\/TODO/i;
+
+/** Import / scaffold language that must not appear on finished public pages. */
+const IMPORT_LANGUAGE_RE =
+  /\b(expansion manifest|source manifest:|manifest row|numeric footnotes from the original table|to be tightened against primary sources when this entry is promoted|precise hypotheses to be taken from the literature when\s+references are added|depends on problem family;\s*to be sharpened when curated|no bibliographic packet|packet not supplied|old prompt mixed|not yet structured|placeholder\b|title-repetition|unpublishable)\b/i;
+
 const ID_RE = /^K-[0-9]{3}$/;
+
+const PUBLIC_TEXT_KEYS = [
+  'summary',
+  'problem_statement',
+  'statement',
+  'progress_summary',
+  'math_required',
+  'completion_criteria',
+  'implications',
+  'status_explanation',
+  'why_it_matters',
+  'remaining_gap',
+];
 
 function scanObjectStrings(obj, pathPrefix = '') {
   const hits = [];
@@ -77,11 +95,28 @@ function main() {
       yamlRelativePath: provPath ? `data/problems_provisional/${id}.yaml` : `problems/${id}.yaml`,
       defaultPublish: !provPath,
     });
-    const relax = provPath || p.publish === false;
+    /** Only `publish: false` skips listed-public rules; provisional-directory entries can still be published. */
+    const relax = p.publish === false;
+    const listedPublic = p.publish !== false;
+    const finishedPublic = listedPublic && p.theorem_status !== 'needs_review';
 
     const ph = scanObjectStrings(raw);
     for (const loc of ph) {
       issues.push({ level: 'error', id, code: 'PLACEHOLDER_TEXT', detail: `${loc}: TODO/FIXME/pending` });
+    }
+
+    if (finishedPublic) {
+      for (const k of PUBLIC_TEXT_KEYS) {
+        const v = raw[k];
+        if (typeof v === 'string' && IMPORT_LANGUAGE_RE.test(v)) {
+          issues.push({
+            level: 'error',
+            id,
+            code: 'IMPORT_LANGUAGE_PUBLIC_FIELD',
+            detail: `${k}: remove manifest/import scaffold phrasing or mark theorem_status: needs_review`,
+          });
+        }
+      }
     }
 
     if (!ID_RE.test(id || '')) {
@@ -120,7 +155,7 @@ function main() {
           `${p.title} ${p.problem_statement}`,
         );
       if (needsReg && !String(p.scope.regularity || '').trim()) {
-        if (!relax) {
+        if (listedPublic) {
           warnings.push({
             id,
             code: 'MISSING_SCOPE_REGULARITY',
@@ -131,7 +166,7 @@ function main() {
     }
 
     const refs = p.references || [];
-    if (!relax && p.theorem_status !== 'needs_review') {
+    if (finishedPublic) {
       if (refs.length < 2) {
         issues.push({ level: 'error', id, code: 'REFS_LT_2', detail: `count=${refs.length}` });
       }
@@ -158,10 +193,10 @@ function main() {
     }
 
     if (p.theorem_status === 'partial' && (!p.known_results || p.known_results.length === 0)) {
-      if (!relax) {
+      if (listedPublic) {
         issues.push({ level: 'error', id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: '' });
       } else {
-        warnings.push({ id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: 'provisional — fill when curating' });
+        warnings.push({ id, code: 'PARTIAL_NO_KNOWN_RESULTS', detail: 'unlisted provisional — fill when curating' });
       }
     }
 
@@ -172,7 +207,7 @@ function main() {
       }
     }
 
-    if (p.problem_type === 'quantitative_sharpening' && !relax) {
+    if (p.problem_type === 'quantitative_sharpening' && listedPublic) {
       const blob = `${p.known_results?.map(k => k.statement).join(' ') || ''} ${p.progress_summary || ''}`;
       if (!/qualitative|classical|exact|known|already|baseline|vanishing|theorem/i.test(blob)) {
         warnings.push({
@@ -235,7 +270,8 @@ function main() {
     `Generated: ${new Date().toISOString()}`,
     '',
     `- Scanned **published** dir: \`problems/\` and **provisional** dir: \`data/problems_provisional/\`.`,
-    `- Relaxed reference / partial rules apply to provisional entries (\`publish: false\` or provisional path).`,
+    `- **Listed public** = \`publish\` not false and \`theorem_status\` not \`needs_review\`. Reference / import-language rules apply to all YAML paths, including \`data/problems_provisional/\` when published.`,
+    `- Unlisted entries: \`publish: false\` only.`,
     '',
     `**Errors:** ${errCount} · **Warnings:** ${warnCount}`,
     '',
