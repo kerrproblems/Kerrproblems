@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-03T15:51:15.021Z",
+  "generated": "2026-06-03T20:58:19.182Z",
   "count": 160,
   "problems": [
     {
@@ -8377,7 +8377,7 @@
       "theorem_status": "solved",
       "problem_type": "literature_reformulation",
       "research_state": "solved_in_literature",
-      "maturity": "mostly_scoped",
+      "maturity": "well_scoped",
       "evidence_level": "primary_refs_present",
       "verification_state": "verified_recently",
       "publish": true,
@@ -8385,15 +8385,15 @@
       "summary": "The original expansion prompt asked for unconditional nonlinear stability of slowly rotating Kerr–de Sitter. That statement is solved in the literature; this page is retained as a solved literature pointer, not as an open problem.",
       "problem_statement": "Literature pointer: nonlinear stability of the slowly rotating Kerr–de Sitter family as solutions of the vacuum Einstein equations with positive cosmological constant.",
       "statement": "Literature pointer: nonlinear stability of the slowly rotating Kerr–de Sitter family as solutions of the vacuum Einstein equations with positive cosmological constant.",
-      "why_it_matters": "Important Lambda>0 testbed where spectral gaps aid decay.",
+      "why_it_matters": "Important $\\Lambda>0$ testbed where spectral gaps aid decay, and a clean example of a literature-solved stability problem that should not remain in the open-problem list.",
       "scope": {
-        "background": "de sitter general relativity context; see family and coupling tags for matter model.",
+        "background": "Four-dimensional Einstein vacuum equations with positive cosmological constant, $\\operatorname{Ric}(g)-\\Lambda g=0$.",
         "equation_type": "PDE level: full-einstein.",
-        "linearity": "both linearized and fully nonlinear aspects",
-        "regularity": "Smooth / Sobolev hypotheses must be stated precisely in any final theorem; this provisional entry does not fix minimal regularity.",
-        "parameter_regime": "Subextremal Kerr moduli $|a|<M$ (or stated KN/KdS extension); smallness measured in the stability topology on Cauchy data.",
+        "linearity": "Fully nonlinear Einstein evolution, with linearized stability as a proof input in Fang's route.",
+        "regularity": "Regularity and constraint hypotheses are those in the cited Hintz–Vasy and Fang theorems.",
+        "parameter_regime": "Slowly rotating Kerr–de Sitter parameters with $\\Lambda>0$; this closure does not cover the full subextremal Kerr–de Sitter range.",
         "asymptotics": "de sitter",
-        "gauge_or_formulation": "State gauge/fixing class compatible with cited stability or interior programs (e.g. generalized harmonic, double-null interior charts)."
+        "gauge_or_formulation": "Gauge/final-parameter modulation as in the cited nonlinear stability theorems."
       },
       "known_results": [
         {
@@ -8407,31 +8407,21 @@
           "significance": "Independent confirmation/alternative proof route for the solved statement."
         },
         {
-          "statement": "Nonlinear stability of vacuum Kerr is proved for sufficiently small $|a|/M$ (Klainerman–Szeftel).",
-          "regime": "Nonlinear Einstein vacuum, asymptotically flat, small angular momentum per unit mass.",
-          "significance": "Strongest unconditional nonlinear theorem toward the full subextremal conjecture."
-        },
-        {
-          "statement": "Linearized Teukolsky/wave decay and mode stability on fixed subextremal Kerr are developed in depth (microlocal and physical-space methods).",
-          "regime": "Linearized gravity and scalar waves on exact Kerr.",
-          "significance": "Standard toolbox; not equivalent to nonlinear stability for all parameters."
-        },
-        {
-          "statement": "Sharp Price-law exponents and nonlinear tail matching are understood in restricted settings (e.g. linearized models, Schwarzschild); sharp nonlinear Kerr curvature tails are not settled.",
-          "regime": "Late-time asymptotics; mixed linear vs nonlinear literature.",
-          "significance": "Locates what “sharp Price law” demands beyond integrated decay."
+          "statement": "Fang's linear stability theorem supplies the companion gauge-fixed linear theory used in the later nonlinear proof.",
+          "regime": "Linearized Einstein equations around slowly rotating Kerr–de Sitter.",
+          "significance": "Separates the nonlinear closure from related full-subextremal or interior problems."
         }
       ],
       "remaining_gap": "The slowly rotating Kerr–de Sitter statement is solved. Sharper open descendants should be split into new entries: full subextremal Kerr–de Sitter, lower regularity, explicit constants, or variant gauges/boundary formulations.",
       "partial_progress": null,
       "frontier_gap": null,
       "solution_pointer": {
-        "theorem_statement": "Global nonlinear stability of the Kerr–de Sitter family for small angular momenta as solutions of the Einstein vacuum equations with positive cosmological constant.",
+        "theorem_statement": "Small perturbations of slowly rotating Kerr–de Sitter initial data for the Einstein vacuum equations with $\\Lambda>0$ exist globally in the relevant exterior/cosmological region and converge exponentially, modulo gauge and final-parameter modulation, to a nearby Kerr–de Sitter metric.",
         "solved_by": "Hintz and Vasy; alternative proof by Fang",
         "year": 2018,
         "citation_key": "hintz-vasy-kds-nonlinear-stability"
       },
-      "status_explanation": "**Solved as written:** the imported prompt was too broad for a live open-problem index. Slowly rotating Kerr–de Sitter nonlinear stability is literature-solved; open variants require a sharper unsolved formulation.",
+      "status_explanation": "**Solved — literature closure submitted by abdulrahimiqbal.** K-608 asks for unconditional nonlinear stability of slowly rotating Kerr–de Sitter. This is exactly the slowly rotating $\\Lambda>0$ stability theorem proved by Hintz–Vasy and later reproved by Fang. This is not a new proof claim; full-subextremal Kerr–de Sitter stability, conditional mode-stability programs, and Kerr–de Sitter interior/SCC problems remain separate open targets.",
       "references": [
         {
           "key": "hintz-vasy-kds-nonlinear-stability",
@@ -8447,14 +8437,27 @@
         },
         {
           "key": "fang-kds-nonlinear-stability",
-          "authors": "Fang",
-          "title": "Nonlinear stability of the slowly-rotating Kerr-de Sitter family",
-          "venue": "arXiv",
-          "year": 2021,
-          "url": "https://arxiv.org/abs/2112.07183",
+          "authors": "Fang, Allen Juntao",
+          "title": "Nonlinear Stability of the Slowly-Rotating Kerr-de Sitter Family",
+          "venue": "Annals of PDE",
+          "year": 2026,
+          "url": "https://link.springer.com/article/10.1007/s40818-025-00227-x",
           "arxiv": "2112.07183",
+          "doi": "10.1007/s40818-025-00227-x",
           "kind": "primary",
           "relevance": "Alternative proof of nonlinear stability for the slowly rotating Kerr–de Sitter family."
+        },
+        {
+          "key": "fang-kds-linear-stability",
+          "authors": "Fang, Allen Juntao",
+          "title": "Linear Stability of the Slowly-Rotating Kerr-de Sitter Family",
+          "venue": "Annals of PDE",
+          "year": 2026,
+          "url": "https://link.springer.com/article/10.1007/s40818-026-00236-4",
+          "arxiv": "2207.07902",
+          "doi": "10.1007/s40818-026-00236-4",
+          "kind": "primary",
+          "relevance": "Companion gauge-fixed linear stability theorem used in Fang's nonlinear proof route."
         }
       ],
       "origin_type": "synthesized_from_field-needs",
@@ -8462,21 +8465,19 @@
       "why_this_should_be_a_problem": "Important Lambda>0 testbed where spectral gaps aid decay.",
       "minimal_formal_statement": "Prove unconditional nonlinear stability of slowly rotating Kerr-de Sitter.",
       "last_verified_at": "2026-06-03",
-      "last_verified_by": "codex-audit-pass",
-      "editorial_notes": "Source manifest: N-008 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in this repository.",
+      "last_verified_by": "abdulrahimiqbal",
+      "editorial_notes": "Source manifest: N-008 (expansion_from_manifest.tsv). Numeric footnotes from the original table are not reproduced in this repository. Closure proposal submitted by abdulrahimiqbal as a literature closure, not an original proof.",
       "related_problem_ids": [
-        "K-205",
-        "K-206",
-        "K-001",
-        "K-003",
-        "K-005"
+        "K-609",
+        "K-665",
+        "K-667",
+        "K-108"
       ],
       "related": [
-        "K-205",
-        "K-206",
-        "K-001",
-        "K-003",
-        "K-005"
+        "K-609",
+        "K-665",
+        "K-667",
+        "K-108"
       ],
       "dependencies": [],
       "aliases": [
@@ -8486,7 +8487,7 @@
         "expansion-2026",
         "manifest-N-008"
       ],
-      "public_notes": null,
+      "public_notes": "Closure proposal submitted by abdulrahimiqbal. This is a literature closure: credit for the theorem belongs to Hintz–Vasy and Fang.",
       "math_required": "Einstein vacuum equations with $\\Lambda>0$; microlocal analysis on asymptotically de Sitter spaces; constraint damping/gauge fixing; nonlinear stability bootstraps.",
       "completion_criteria": "Already met for the slowly rotating Kerr–de Sitter formulation by the references listed above.",
       "implications": "Provides the positive-cosmological-constant stability baseline; sharper descendants should be stated as separate open problems.",
@@ -8505,9 +8506,9 @@
       "relevance": "pure-math",
       "fv_suitability": "low",
       "fv_reason": "Global nonlinear PDE theorem; formalization would likely begin with scoped linear or microlocal lemmas.",
-      "progress_summary": "Solved as written: Hintz–Vasy prove the slowly rotating Kerr–de Sitter nonlinear stability theorem, and Fang gives a later proof.",
+      "progress_summary": "Solved as written: Hintz–Vasy prove slowly rotating Kerr–de Sitter nonlinear stability, and Fang gives a later nonlinear proof supported by a companion linear stability theorem.",
       "related_families_note": null,
-      "caution_note": null,
+      "caution_note": "Closure is restricted to the slowly rotating Kerr–de Sitter regime; full-subextremal Kerr–de Sitter stability remains a separate target.",
       "notes": null,
       "last_updated": "2026-06-03",
       "parent_problem_id": null,
