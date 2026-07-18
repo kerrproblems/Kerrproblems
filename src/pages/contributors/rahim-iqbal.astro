@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  name: 'Rahim Iqbal — Kerr Problems contribution record',
+  url: 'https://kerrproblems.com/contributors/rahim-iqbal',
+  dateModified: '2026-07-18',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://rahimiqbal.com/#person',
+    name: 'Rahim Iqbal',
+    url: 'https://rahimiqbal.com/',
+    sameAs: [
+      'https://github.com/abdulrahimiqbal',
+      'https://rahimiqbal.com/projects/kerr-formalization',
+    ],
+  },
+};
+---
+<Base
+  title="Rahim Iqbal — Contributor"
+  description="Auditable Kerr Problems contributions by Rahim Iqbal: the K-505 literature map, K-608 literature closure, and machine-checked Kerr formalization work."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+
+  <div class="crumbs"><a href="/about">About</a> → Contributors → Rahim Iqbal</div>
+  <article class="contributor-record">
+    <p class="page-meta">Contributor record</p>
+    <h1>Rahim Iqbal</h1>
+    <p class="contributor-deck">
+      Primary-literature review, problem-status repair, and formal verification work around Kerr geometry.
+    </p>
+
+    <section>
+      <h2>K-608 — literature closure</h2>
+      <p>
+        Rahim submitted the audit that closed K-608 as solved in the literature for the slowly rotating
+        Kerr-de Sitter regime. The underlying nonlinear-stability theorem belongs to Hintz and Vasy, with a
+        later proof by Fang; the contribution here was identifying the exact match, tightening the scope,
+        recording the primary references, and separating still-open descendants.
+      </p>
+      <p>
+        <a href="/problems/K-608">Inspect K-608 and its references →</a>
+        {' · '}
+        <a href="https://github.com/kerrproblems/Kerrproblems/commit/8870c15" target="_blank" rel="noopener">
+          Audit commit ↗
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>K-505 — documented partial advance</h2>
+      <p>
+        An attempted solution of the separated Teukolsky threshold-classification problem produced a
+        defensible literature map rather than a false completion claim. The contribution moved K-505 from
+        open to partial, documented the established nonzero-frequency and algebraically special results,
+        and made the remaining zero-frequency catalog explicit.
+      </p>
+      <p>
+        <a href="/problems/K-505">Inspect K-505 and the remaining gap →</a>
+        {' · '}
+        <a href="https://github.com/kerrproblems/Kerrproblems/commit/83640d2" target="_blank" rel="noopener">
+          Research-map commit ↗
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Machine-checked Kerr work</h2>
+      <p>
+        In a separate Lean 4 repository, Rahim built a checked coordinate-data core for Schwarzschild and
+        Kerr geometry. One narrow, directly inspectable theorem proves that the outer Kerr horizon radius is
+        a root of the Kerr Delta function when the discriminant is nonnegative. The repository publishes the
+        proof boundary and does not present unfinished Ricci, vacuum, or hidden-symmetry scaffolds as complete.
+      </p>
+      <p>
+        <a href="https://github.com/abdulrahimiqbal/KerrFormalization" target="_blank" rel="noopener">
+          Inspect the Lean repository ↗
+        </a>
+        {' · '}
+        <a href="https://rahimiqbal.com/projects/kerr-formalization">
+          Project overview ↗
+        </a>
+      </p>
+    </section>
+
+    <footer class="contributor-links">
+      <a href="https://rahimiqbal.com/">Rahim Iqbal — selected work ↗</a>
+      <a href="https://github.com/abdulrahimiqbal">GitHub ↗</a>
+    </footer>
+  </article>
+</Base>
