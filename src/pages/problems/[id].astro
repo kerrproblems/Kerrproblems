@@ -384,7 +384,11 @@ const knownResults = Array.isArray(p.known_results) ? p.known_results : [];
           <>
             {' '}
             · Last verified (editorial): {p.last_verified_at}
-            {p.last_verified_by && ` (${p.last_verified_by})`}
+            {p.last_verified_by === 'abdulrahimiqbal' ? (
+              <> (<a href="/contributors/rahim-iqbal">Rahim Iqbal</a>)</>
+            ) : p.last_verified_by ? (
+              ` (${p.last_verified_by})`
+            ) : null}
           </>
         )}
         {' · '}

@@ -12,7 +12,8 @@
     "export:problems": "node scripts/export_problems_json.mjs",
     "ingest:expansion": "node scripts/ingest_expansion_manifest.mjs",
     "scrub:provisional-imports": "node scripts/scrub_provisional_import_templates.mjs",
-    "check": "npm run validate && npm run build"
+    "check": "npm run validate && npm run build",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "astro": "^5.7.0",
